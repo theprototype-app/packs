@@ -1,0 +1,170 @@
+{
+  "id": "audio-essentials",
+  "name": "Audio Essentials",
+  "author": "Kenney, rubberduck, Pag, sketchman3 (all CC0)",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/theprototype-app/packs",
+  "items": [
+    {
+      "name": "Fire Crackle",
+      "file": "assets/fire-crackle.ogg",
+      "license": "CC0-1.0",
+      "author": "Pag (pagdev)",
+      "source": "https://opengameart.org/content/fireplace-sound-loop"
+    },
+    {
+      "name": "Wind Loop",
+      "file": "assets/wind-loop.ogg",
+      "license": "CC0-1.0",
+      "author": "sketchman3",
+      "source": "https://opengameart.org/content/wind-whoosh-loop"
+    },
+    {
+      "name": "Rain Loop",
+      "file": "assets/rain-loop.ogg",
+      "license": "CC0-1.0",
+      "author": "rubberduck",
+      "source": "https://opengameart.org/content/30-cc0-sfx-loops"
+    },
+    {
+      "name": "Water Stream",
+      "file": "assets/water-stream.ogg",
+      "license": "CC0-1.0",
+      "author": "rubberduck",
+      "source": "https://opengameart.org/content/30-cc0-sfx-loops"
+    },
+    {
+      "name": "Ambient Hum 1",
+      "file": "assets/ambient-hum-1.ogg",
+      "license": "CC0-1.0",
+      "author": "rubberduck",
+      "source": "https://opengameart.org/content/30-cc0-sfx-loops"
+    },
+    {
+      "name": "Ambient Hum 2",
+      "file": "assets/ambient-hum-2.ogg",
+      "license": "CC0-1.0",
+      "author": "rubberduck",
+      "source": "https://opengameart.org/content/30-cc0-sfx-loops"
+    },
+    {
+      "name": "Machine Loop",
+      "file": "assets/machine-loop.ogg",
+      "license": "CC0-1.0",
+      "author": "rubberduck",
+      "source": "https://opengameart.org/content/30-cc0-sfx-loops"
+    },
+    {
+      "name": "UI Click",
+      "file": "assets/ui-click.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "name": "UI Confirm",
+      "file": "assets/ui-confirm.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "name": "UI Error",
+      "file": "assets/ui-error.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "name": "UI Select",
+      "file": "assets/ui-select.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "name": "UI Back",
+      "file": "assets/ui-back.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "name": "Impact Wood",
+      "file": "assets/impact-wood.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds"
+    },
+    {
+      "name": "Impact Metal",
+      "file": "assets/impact-metal.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds"
+    },
+    {
+      "name": "Impact Glass",
+      "file": "assets/impact-glass.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds"
+    },
+    {
+      "name": "Impact Punch",
+      "file": "assets/impact-punch.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds"
+    },
+    {
+      "name": "Footstep Grass",
+      "file": "assets/footstep-grass.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds"
+    },
+    {
+      "name": "Footstep Wood",
+      "file": "assets/footstep-wood.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds"
+    },
+    {
+      "name": "Door Open",
+      "file": "assets/door-open.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/rpg-audio"
+    },
+    {
+      "name": "Door Close",
+      "file": "assets/door-close.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/rpg-audio"
+    },
+    {
+      "name": "Book Flip",
+      "file": "assets/book-flip.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/rpg-audio"
+    },
+    {
+      "name": "Wood Creak",
+      "file": "assets/wood-creak.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/rpg-audio"
+    },
+    {
+      "name": "Chop",
+      "file": "assets/chop.ogg",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/rpg-audio"
+    }
+  ]
+}

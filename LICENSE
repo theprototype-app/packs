@@ -1,0 +1,15 @@
+This repository aggregates content under several licenses. Per-pack:
+
+- default/            (c) The Prototype. Free to use within theprototype.app.
+                      The Svelte rune model references the Svelte logo
+                      (https://github.com/sveltejs/branding); no endorsement implied.
+- cube_diorama/       Blender Studio, CC0 1.0 (public domain dedication).
+                      https://www.blender.org/download/demo-files/
+- khronos-sample-assets/
+                      Index metadata only. The referenced models are (c) The Khronos
+                      Group and their respective authors, CC-BY 4.0 — see each model's
+                      README in https://github.com/KhronosGroup/glTF-Sample-Assets
+- audio-essentials/   CC0 1.0. Sources: Kenney (https://kenney.nl) and OpenGameArt
+                      authors listed per file in audio-essentials/CREDITS.md
+
+Everything else in this repository (index files, scripts, docs): CC0 1.0.

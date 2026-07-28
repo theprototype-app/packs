@@ -1,0 +1,98 @@
+[
+  {
+    "name": "PictureFrame",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Picture Frame",
+    "variants": {
+      "glTF-Binary": "cube_diorama-frame.glb"
+    }
+  },
+  {
+    "name": "Shelf",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Shelf",
+    "variants": {
+      "glTF-Binary": "cube_diorama-shelf.glb"
+    }
+  },
+  {
+    "name": "Cat",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Cat",
+    "variants": {
+      "glTF-Binary": "cat.glb"
+    }
+  },
+  {
+    "name": "Desk",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Desk",
+    "variants": {
+      "glTF-Binary": "desk.glb"
+    }
+  },
+  {
+    "name": "Dresser",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Dresser",
+    "variants": {
+      "glTF-Binary": "dresser.glb"
+    }
+  },
+  {
+    "name": "Floor",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Floor",
+    "variants": {
+      "glTF-Binary": "floor.glb"
+    }
+  },
+  {
+    "name": "Plant1",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Plant 1",
+    "variants": {
+      "glTF-Binary": "plant1.glb"
+    }
+  },
+  {
+    "name": "Plant2",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Plant 2",
+    "variants": {
+      "glTF-Binary": "plant2.glb"
+    }
+  },
+  {
+    "name": "Rug",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Rug",
+    "variants": {
+      "glTF-Binary": "rug.glb"
+    }
+  },
+  {
+    "name": "Wall1",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Wall 1",
+    "variants": {
+      "glTF-Binary": "wall1.glb"
+    }
+  },
+  {
+    "name": "Wall2",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Wall 2",
+    "variants": {
+      "glTF-Binary": "wall2.glb"
+    }
+  },
+  {
+    "name": "Window",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Window",
+    "variants": {
+      "glTF-Binary": "window.glb"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "default",
+    "title": "The Prototype",
+    "value": "default/default.json",
+    "attribution": "default/attribution.html",
+    "copyright": "(c) The Prototype",
+    "license": "",
+    "source": "https://github.com/theprototype-app/packs"
+  },
+  {
+    "name": "cube_diorama",
+    "title": "Cube Diorama",
+    "value": "cube_diorama/default.json",
+    "attribution": "cube_diorama/attribution.html",
+    "copyright": "(c) Blender Studio",
+    "license": "CC0-1.0",
+    "source": "https://www.blender.org/download/demo-files/"
+  },
+  {
+    "name": "khronos-sample-assets",
+    "title": "Khronos Sample Assets",
+    "value": "khronos-sample-assets/model-index-tp.json",
+    "attribution": "khronos-sample-assets/attribution.html",
+    "copyright": "(c) The Khronos Group",
+    "license": "CC-BY-4.0",
+    "source": "https://github.com/KhronosGroup/glTF-Sample-Assets"
+  },
+  {
+    "name": "audio-essentials",
+    "title": "Audio Essentials",
+    "zip": "/audio-essentials/audio-essentials.zip",
+    "attribution": "audio-essentials/attribution.html",
+    "copyright": "",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs"
+  }
+]

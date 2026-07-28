@@ -1,0 +1,170 @@
+[
+  {
+    "name": "AntiqueCamera",
+    "label": "Antique Camera",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/AntiqueCamera/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/AntiqueCamera/glTF-Binary/AntiqueCamera.glb"
+    }
+  },
+  {
+    "name": "CesiumMilkTruck",
+    "label": "Cesium Milk Truck",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CesiumMilkTruck/screenshot/screenshot.gif",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CesiumMilkTruck/glTF-Binary/CesiumMilkTruck.glb"
+    }
+  },
+  {
+    "name": "ChairDamaskPurplegold",
+    "label": "Chair Damask Purplegold",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ChairDamaskPurplegold/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ChairDamaskPurplegold/glTF-Binary/ChairDamaskPurplegold.glb"
+    }
+  },
+  {
+    "name": "ClearCoatCarPaint",
+    "label": "Clear Coat Car Paint",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearCoatCarPaint/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearCoatCarPaint/glTF-Binary/ClearCoatCarPaint.glb"
+    }
+  },
+  {
+    "name": "ClearcoatWicker",
+    "label": "Clearcoat Wicker",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearcoatWicker/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearcoatWicker/glTF-Binary/ClearcoatWicker.glb"
+    }
+  },
+  {
+    "name": "DamagedHelmet",
+    "label": "Damaged Helmet",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DamagedHelmet/screenshot/screenshot.png",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DamagedHelmet/glTF-Binary/DamagedHelmet.glb"
+    }
+  },
+  {
+    "name": "DragonAttenuation",
+    "label": "Dragon Attenuation",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonAttenuation/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonAttenuation/glTF-Binary/DragonAttenuation.glb"
+    }
+  },
+  {
+    "name": "DragonDispersion",
+    "label": "Dragon Dispersion",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonDispersion/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonDispersion/glTF-Binary/DragonDispersion.glb"
+    }
+  },
+  {
+    "name": "Duck",
+    "label": "Duck",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/screenshot/screenshot.png",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/glTF-Binary/Duck.glb"
+    }
+  },
+  {
+    "name": "GlamVelvetSofa",
+    "label": "GlamVelvetSofa",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlamVelvetSofa/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb"
+    }
+  },
+  {
+    "name": "IridescenceLamp",
+    "label": "Iridescence Lamp",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/IridescenceLamp/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/IridescenceLamp/glTF-Binary/IridescenceLamp.glb"
+    }
+  },
+  {
+    "name": "Lantern",
+    "label": "Lantern",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Lantern/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Lantern/glTF-Binary/Lantern.glb"
+    }
+  },
+  {
+    "name": "LightsPunctualLamp",
+    "label": "Lamp with Punctual Lights",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/LightsPunctualLamp/screenshot/screenshot.png",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/LightsPunctualLamp/glTF-Binary/LightsPunctualLamp.glb"
+    }
+  },
+  {
+    "name": "MosquitoInAmber",
+    "label": "Mosquito In Amber",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MosquitoInAmber/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MosquitoInAmber/glTF-Binary/MosquitoInAmber.glb"
+    }
+  },
+  {
+    "name": "RiggedFigure",
+    "label": "Rigged Figure",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/screenshot/screenshot.gif",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/glTF-Binary/RiggedFigure.glb"
+    }
+  },
+  {
+    "name": "RiggedSimple",
+    "label": "Rigged Simple",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedSimple/screenshot/screenshot.gif",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedSimple/glTF-Binary/RiggedSimple.glb"
+    }
+  },
+  {
+    "name": "SheenChair",
+    "label": "SheenChair",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
+    }
+  },
+  {
+    "name": "SheenWoodLeatherSofa",
+    "label": "SheenWoodLeatherSofa",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenWoodLeatherSofa/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenWoodLeatherSofa/glTF-Binary/SheenWoodLeatherSofa.glb"
+    }
+  },
+  {
+    "name": "SpecularSilkPouf",
+    "label": "SpecularSilkPouf",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SpecularSilkPouf/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SpecularSilkPouf/glTF-Binary/SpecularSilkPouf.glb"
+    }
+  },
+  {
+    "name": "ToyCar",
+    "label": "Toy Car",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/glTF-Binary/ToyCar.glb"
+    }
+  },
+  {
+    "name": "WaterBottle",
+    "label": "Water Bottle",
+    "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/WaterBottle/screenshot/screenshot.jpg",
+    "variants": {
+      "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/WaterBottle/glTF-Binary/WaterBottle.glb"
+    }
+  }
+]
