@@ -14,5 +14,13 @@
     "variants": {
       "glTF-Binary": "SvelteRune.glb"
     }
+  },
+  {
+    "name": "Duck",
+    "screenshot": "screenshot/screenshot.png",
+    "label": "Duck",
+    "variants": {
+      "glTF-Binary": "Duck.glb"
+    }
   }
 ]
