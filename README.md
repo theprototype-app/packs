@@ -1,7 +1,7 @@
 # theprototype.app packs
 
 Content packs for [theprototype.app](https://theprototype.app) — served to the app
-via the jsDelivr CDN (`https://cdn.jsdelivr.net/gh/theprototype-app/packs@v1`).
+via the jsDelivr CDN (`https://cdn.jsdelivr.net/gh/theprototype-app/packs@format-1`).
 
 ## Layout
 
@@ -21,8 +21,28 @@ installable pack. The formats are documented in the app repo's
 
 ## Versioning
 
-The app pins a tag (`@v1`) so pack changes never break released builds. Bump the tag
-after content changes; jsDelivr caches aggressively.
+The app pins a ref (`@format-1`, `PACKS_BASE` in core's `src/lib/packs.js`) so pack
+changes never break released builds. After a content change:
+
+```
+git tag -f format-1 && git push -f origin format-1     # re-point the serving ref
+curl https://purge.jsdelivr.net/gh/theprototype-app/packs@format-1/index.json
+# ...and each changed file path under the ref
+```
+
+jsDelivr caches a ref for up to 12 hours; the purge makes it immediate.
+
+**THE REF MUST NOT LOOK LIKE A VERSION.** jsDelivr parses `v1` as a SEMVER VERSION and
+caches a version's files PERMANENTLY (`cache-control: immutable`, one year) — a retag of
+`v1` is a no-op forever, and `purge.jsdelivr.net` reports `finished` without
+re-resolving it. `v1` is DEAD: it stays where jsDelivr first resolved it, for the builds
+that shipped against it. A ref jsDelivr cannot parse as a version (tag or branch) is
+reported as `x-jsd-version-type: branch` with a 12-hour `s-maxage`, which is what makes
+the ritual above work — measured on the scenes repo, core issue #230.
+
+The ref name tracks the `index.json` FORMAT, and a format bump takes a NEW ref
+(`format-2`, ...) — never reuse an old one, because builds already in the wild keep
+reading the ref they were built against.
 
 ## Licenses
 
