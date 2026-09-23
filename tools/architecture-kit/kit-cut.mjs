@@ -10,8 +10,9 @@
 //   cap   — close a cut edge: a quad from xy point a to xy point b spanning the slab's
 //           depth, facing `normal`; the front face's texture is folded round the corner
 //           onto it, so the jamb reads as the stone it was cut through
+//   wedge — a block into a ramp: heights scale from full at -Z down to `min` at +Z
 //   recenter — back to a bottom-centre pivot after a slice moved the bbox off the origin
-//   core  — a solid slab |z| <= depth inside the whole piece, textured with the piece's own
+//   core  — a solid slab |z| <= depth (or axis/range, e.g. a floor's y 0..0.07) inside the whole piece, textured with the piece's own
 //           mortar colour. Meshy builds a masonry wall as separate bricks with OPEN mortar
 //           joints (6 % of the refined wall was see-through); the core seals them and reads
 //           as recessed mortar. Apply it FIRST so every cut clips it with the bricks.
@@ -217,12 +218,12 @@ function capQuad(/** @type {number[][][]} */ source, /** @type {any} */ info, a,
  * The vertex record whose UV samples the mortar: among front-facing vertices, the one at
  * the 10th luminance percentile of the base colour (near-black atlas gutters excluded).
  */
-async function mortarVertex(/** @type {any} */ prim, /** @type {number[][][]} */ tris, /** @type {any} */ info) {
+async function mortarVertex(/** @type {any} */ prim, /** @type {number[][][]} */ tris, /** @type {any} */ info, axis = 2) {
 	const uvOff = info.off.TEXCOORD_0;
 	const img = prim.getMaterial()?.getBaseColorTexture()?.getImage();
 	const front = tris.filter((t) => {
 		const n = triN(t);
-		return n[2] / (Math.hypot(...n) || 1) > 0.5;
+		return n[axis] / (Math.hypot(...n) || 1) > 0.5;
 	});
 	if (!img || uvOff === undefined) return front[0][0];
 	const { data, info: im } = await sharp(Buffer.from(img)).removeAlpha().raw().toBuffer({ resolveWithObject: true });
@@ -289,14 +290,43 @@ export async function kitCut(input, output, ops) {
 	for (const op of ops) {
 		if (op.op === 'cut' || op.op === 'keep') tris = clip(tris, op.planes, op.op, nOff);
 		else if (op.op === 'core') {
-			const inset = op.inset ?? 0.001; // off the clamped end/top planes: no z-fight there
-			const proto = await mortarVertex(prim, original, info);
-			tris = tris.concat(
-				coreBox([b0.min[0] + inset, b0.min[1] + inset, -op.depth], [b0.max[0] - inset, b0.max[1] - inset, op.depth], proto, info)
-			);
+			// the thin axis: z for a wall (|z| <= depth), y for a floor tile (range [lo, hi]);
+			// the other two span the piece, 1 mm inside the clamped joint planes (no z-fight)
+			const inset = op.inset ?? 0.001;
+			const axis = { x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (op.axis ?? 'z')];
+			const lo = b0.min.map((v) => v + inset);
+			const hi = b0.max.map((v) => v - inset);
+			[lo[axis], hi[axis]] = op.range ?? [-op.depth, op.depth];
+			// optionally narrower on the other axes (a door's core only fills its doorway)
+			for (const [k, r] of Object.entries(op.extent ?? {})) [lo[{ x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (k)]], hi[{ x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (k)]]] = /** @type {number[]} */ (r);
+			const proto = await mortarVertex(prim, original, info, axis);
+			tris = tris.concat(coreBox(lo, hi, proto, info));
 		}
 		else if (op.op === 'cap') tris = tris.concat(capQuad(original, info, op.a, op.b, op.normal, z0, z1, op.from));
-		else if (op.op === 'recenter') {
+		else if (op.op === 'wedge') {
+			// a block becomes a ramp: every height is scaled by how far back it is (full height
+			// at -Z, `min` of it at +Z), and the up-facing normals tilt onto the slope
+			const lo = b0.min[1];
+			const h = b0.max[1] - lo;
+			const run = b0.max[2] - b0.min[2];
+			const f = (/** @type {number} */ z) => Math.max(op.min ?? 0.02, (b0.max[2] - z) / run);
+			const ns = Math.hypot(1, h / run);
+			tris = tris.map((t) =>
+				t.map((v) => {
+					const w = v.slice();
+					w[1] = lo + (v[1] - lo) * f(v[2]);
+					if (nOff >= 0 && v[nOff + 1] > 0.7) {
+						w[nOff] = 0;
+						w[nOff + 1] = 1 / ns;
+						w[nOff + 2] = h / run / ns;
+					}
+					return w;
+				})
+			);
+			// a bevelled back edge would leave the ramp a little short of the block: restore the exact rise
+			const top = Math.max(...tris.flatMap((t) => t.map((v) => v[1])));
+			if (top > lo) tris = tris.map((t) => t.map((v) => ((v[1] = lo + ((v[1] - lo) * h) / (top - lo)), v)));
+		} else if (op.op === 'recenter') {
 			// back to a bottom-centre pivot after a slice moved the bbox off the origin
 			const lo = [Infinity, Infinity, Infinity];
 			const hi = [-Infinity, -Infinity, -Infinity];

@@ -26,7 +26,7 @@ const req = createRequire(path.join(TOOLS, 'package.json'));
 const load = async (/** @type {string} */ id) => import(pathToFileURL(req.resolve(id)).href);
 const { NodeIO } = await load('@gltf-transform/core');
 const { ALL_EXTENSIONS } = await load('@gltf-transform/extensions');
-const { mergeDocuments, transformMesh, getBounds } = await load('@gltf-transform/functions');
+const { mergeDocuments, transformMesh, getBounds, unpartition, dedup, prune } = await load('@gltf-transform/functions');
 const { countTris } = await import(pathToFileURL(path.join(TOOLS, 'lib/post.js')).href);
 const { renderThumbs } = await import(pathToFileURL(path.join(TOOLS, 'lib/thumb.js')).href);
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
@@ -79,6 +79,8 @@ async function kitbash(parts, out) {
 		for (const node of extra.listChildren()) scene.addChild(node);
 		extra.dispose();
 	}
+	// one buffer (GLB), and the repeated parts share their textures and materials
+	await target.transform(unpartition(), dedup(), prune());
 	await io.write(out, target);
 }
 
@@ -139,7 +141,7 @@ for (const it of kit.items) {
 	const r = await buildItem(it);
 	results[it.name] = r;
 	console.log(JSON.stringify(r));
-	if (r.bytes > 5 * 1024 * 1024) throw new Error(`${it.name}: ${r.bytes} bytes is over the 5 MB share cap`);
+	if (!it.internal && r.bytes > 5 * 1024 * 1024) throw new Error(`${it.name}: ${r.bytes} bytes is over the 5 MB share cap`);
 }
 if (!args.includes('--no-thumbs')) {
 	const todo = kit.items.filter((/** @type {any} */ it) => !it.internal && (!only || only.has(it.name)));
@@ -147,6 +149,21 @@ if (!args.includes('--no-thumbs')) {
 		todo.map((/** @type {any} */ it) => ({ glb: glbOf(it), out: path.join(PACK, it.name, 'screenshot', 'screenshot.webp') })),
 		{ size: 512, bg: null, yaw: kit.thumbYaw ?? 35 }
 	);
+}
+// the pack cover: a diorama kitbashed from the kit's own pieces, rendered like a thumbnail
+if (kit.cover && !args.includes('--no-thumbs') && (!only || only.has(kit.cover.item))) {
+	const bg = kit.cover.bg ?? '#d8d4cc';
+	const raw = path.join(os.tmpdir(), `kit-cover-${process.pid}.png`);
+	await renderThumbs([{ glb: glbOf(byName.get(kit.cover.item)), out: raw }], { size: 1024, bg, yaw: kit.cover.yaw ?? 35 });
+	// the renderer frames the bounding SPHERE; trim to the diorama and pad it back to a square
+	const sharp = (await load('sharp')).default;
+	const trimmed = await sharp(raw).trim({ background: bg, threshold: 8 }).toBuffer();
+	await sharp(trimmed)
+		.resize(700, 700, { fit: 'contain', background: bg })
+		.extend({ top: 34, bottom: 34, left: 34, right: 34, background: bg })
+		.webp({ quality: 84 })
+		.toFile(path.join(PACK, 'cover.webp'));
+	fs.rmSync(raw, { force: true });
 }
 // the app's model-list (core packs.js: {name, label, screenshot, variants: {'glTF-Binary': file}})
 const list = kit.items.filter((/** @type {any} */ it) => !it.internal).map((/** @type {any} */ it) => ({
@@ -156,5 +173,20 @@ const list = kit.items.filter((/** @type {any} */ it) => !it.internal).map((/** 
 	variants: { 'glTF-Binary': it.file }
 }));
 fs.writeFileSync(path.join(PACK, 'default.json'), JSON.stringify(list, null, 2) + '\n');
+// kit.md's piece table, from the MEASURED sizes (the doc cannot drift from the GLBs)
+const docPath = path.join(PACK, 'kit.md');
+if (fs.existsSync(docPath)) {
+	const rows = kit.items
+		.filter((/** @type {any} */ it) => !it.internal && results[it.name])
+		.map((/** @type {any} */ it) => {
+			const r = results[it.name];
+			const pivot = it.pivotDoc ?? (r.min[1] > 0.001 ? `the wall's bottom centre (piece starts ${r.min[1]} m up)` : 'bottom centre');
+			return `| ${it.label} | ${r.size.map((v) => +v.toFixed(3)).join(' × ')} | ${pivot} | ${it.place ?? ''} |`;
+		});
+	const table = ['| Piece | Size (x × y × z, m) | Pivot | Place it |', '|---|---|---|---|', ...rows].join('\n');
+	const doc = fs.readFileSync(docPath, 'utf8');
+	const next = doc.replace(/(<!-- pieces:[^\n]*-->\n)[\s\S]*?(<!-- \/pieces -->)/, `$1${table}\n$2`);
+	fs.writeFileSync(docPath, next);
+}
 const ordered = Object.fromEntries(kit.items.filter((/** @type {any} */ it) => results[it.name]).map((/** @type {any} */ it) => [it.name, results[it.name]]));
 fs.writeFileSync(reportPath, JSON.stringify(ordered, null, 2) + '\n');

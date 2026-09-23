@@ -1,0 +1,1018 @@
+{
+  "pack": "architecture-kit",
+  "thumbYaw": 35,
+  "items": [
+    {
+      "name": "WallStone",
+      "label": "Wall \u2014 sandstone (2 \u00d7 3 m)",
+      "file": "wall-stone.glb",
+      "src": {
+        "job": "wall-c",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 3000,
+        "dims": {
+          "x": 2,
+          "y": 3,
+          "z": 0.25
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "xy"
+      },
+      "cut": [
+        {
+          "op": "core",
+          "depth": 0.075
+        }
+      ],
+      "place": "on a grid line: x or z on a whole odd metre (1, 3, \u2026), 0\u00b0 or 90\u00b0"
+    },
+    {
+      "name": "WallStoneDoor",
+      "label": "Wall \u2014 sandstone, doorway",
+      "file": "wall-stone-door.glb",
+      "from": "WallStone",
+      "cut": "door",
+      "place": "like a wall; the Door goes at the same spot"
+    },
+    {
+      "name": "WallStoneWindow",
+      "label": "Wall \u2014 sandstone, window",
+      "file": "wall-stone-window.glb",
+      "from": "WallStone",
+      "cut": "window",
+      "place": "like a wall; the Window goes at the same spot"
+    },
+    {
+      "name": "WallStoneHalf",
+      "label": "Wall \u2014 sandstone, half height",
+      "file": "wall-stone-half.glb",
+      "from": "WallStone",
+      "cut": "half",
+      "place": "like a wall (a parapet, a garden wall, a half storey)"
+    },
+    {
+      "name": "WallStoneGable",
+      "label": "Gable \u2014 sandstone (half, 2 \u00d7 1.5 m)",
+      "file": "wall-stone-gable.glb",
+      "from": "WallStone",
+      "cut": "gable",
+      "place": "on a wall top (y = 3, 6, \u2026) under a roof slope; pair it with a 180\u00b0-turned twin"
+    },
+    {
+      "name": "CornerPostStone",
+      "label": "Corner post \u2014 sandstone",
+      "file": "corner-post-stone.glb",
+      "from": "WallStone",
+      "cut": "post",
+      "place": "on a grid point where two walls meet (hides the outer corner)"
+    },
+    {
+      "name": "WallPlaster",
+      "label": "Wall \u2014 whitewashed plaster (2 \u00d7 3 m)",
+      "file": "wall-plaster.glb",
+      "src": {
+        "job": "wall-plaster",
+        "stage": "retexture"
+      },
+      "post": {
+        "targetTris": 3000,
+        "dims": {
+          "x": 2,
+          "y": 3,
+          "z": 0.25
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "xy",
+        "albedo": {
+          "saturation": 1.15,
+          "brightness": 0.93
+        }
+      },
+      "cut": [
+        {
+          "op": "core",
+          "depth": 0.075
+        }
+      ],
+      "place": "like the sandstone wall \u2014 the two families swap one for one"
+    },
+    {
+      "name": "WallPlasterDoor",
+      "label": "Wall \u2014 plaster, doorway",
+      "file": "wall-plaster-door.glb",
+      "from": "WallPlaster",
+      "cut": "door",
+      "place": "like a wall; the Door goes at the same spot"
+    },
+    {
+      "name": "WallPlasterWindow",
+      "label": "Wall \u2014 plaster, window",
+      "file": "wall-plaster-window.glb",
+      "from": "WallPlaster",
+      "cut": "window",
+      "place": "like a wall; the Window goes at the same spot"
+    },
+    {
+      "name": "WallPlasterHalf",
+      "label": "Wall \u2014 plaster, half height",
+      "file": "wall-plaster-half.glb",
+      "from": "WallPlaster",
+      "cut": "half",
+      "place": "like a wall"
+    },
+    {
+      "name": "WallPlasterGable",
+      "label": "Gable \u2014 plaster (half, 2 \u00d7 1.5 m)",
+      "file": "wall-plaster-gable.glb",
+      "from": "WallPlaster",
+      "cut": "gable",
+      "place": "on a wall top under a roof slope; pair it with a 180\u00b0-turned twin"
+    },
+    {
+      "name": "Pillar",
+      "label": "Pillar \u2014 sandstone",
+      "file": "pillar.glb",
+      "src": {
+        "job": "pillar",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 1500,
+        "dims": {
+          "x": 0.5,
+          "y": 3,
+          "z": 0.5
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "y"
+      },
+      "place": "on a grid point; stands proud of the walls (a hall column, a gate pier)"
+    },
+    {
+      "name": "Column",
+      "label": "Column \u2014 sandstone, round",
+      "file": "column.glb",
+      "src": {
+        "job": "column-b",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 2000,
+        "dims": {
+          "x": 0.5,
+          "y": 3,
+          "z": 0.5
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "y"
+      },
+      "place": "on a grid point (a hall colonnade, a portico)"
+    },
+    {
+      "name": "Arch",
+      "label": "Archway \u2014 sandstone",
+      "file": "arch.glb",
+      "src": {
+        "job": "arch",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 3500,
+        "dims": {
+          "x": 2,
+          "y": 3,
+          "z": 0.5
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "xy"
+      },
+      "place": "in place of a wall (it is 0.5 m deep, proud of both wall faces)"
+    },
+    {
+      "name": "FloorStone",
+      "label": "Floor \u2014 flagstones (2 \u00d7 2 m)",
+      "file": "floor-stone.glb",
+      "src": {
+        "job": "floor-stone",
+        "stage": "refine"
+      },
+      "post": {
+        "preRotate": {
+          "x": -90
+        },
+        "targetTris": 1500,
+        "dims": {
+          "x": 2,
+          "y": 0.1,
+          "z": 2
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "xz-y"
+      },
+      "place": "in a 2 \u00d7 2 cell: x and z on odd metres",
+      "cut": [
+        {
+          "op": "core",
+          "axis": "y",
+          "range": [
+            0.001,
+            0.07
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FloorWood",
+      "label": "Floor \u2014 oak boards (2 \u00d7 2 m)",
+      "file": "floor-wood.glb",
+      "src": {
+        "job": "floor-wood",
+        "stage": "retexture"
+      },
+      "post": {
+        "preRotate": {
+          "x": -90
+        },
+        "targetTris": 1500,
+        "dims": {
+          "x": 2,
+          "y": 0.1,
+          "z": 2
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "xz-y"
+      },
+      "place": "in a 2 \u00d7 2 cell: x and z on odd metres",
+      "cut": [
+        {
+          "op": "core",
+          "axis": "y",
+          "range": [
+            0.001,
+            0.07
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FloorSlate",
+      "label": "Floor \u2014 slate slabs (2 \u00d7 2 m)",
+      "file": "floor-slate.glb",
+      "src": {
+        "job": "floor-slate",
+        "stage": "retexture"
+      },
+      "post": {
+        "preRotate": {
+          "x": -90
+        },
+        "targetTris": 1500,
+        "dims": {
+          "x": 2,
+          "y": 0.1,
+          "z": 2
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "xz-y",
+        "albedo": {
+          "saturation": 0.35,
+          "brightness": 0.82
+        }
+      },
+      "place": "in a 2 \u00d7 2 cell: x and z on odd metres",
+      "cut": [
+        {
+          "op": "core",
+          "axis": "y",
+          "range": [
+            0.001,
+            0.07
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stairs",
+      "label": "Stairs \u2014 sandstone (1 storey)",
+      "file": "stairs.glb",
+      "src": {
+        "job": "stairs",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 3000,
+        "dims": {
+          "x": 2,
+          "y": 3,
+          "z": 4
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x-yz"
+      },
+      "place": "in a 2 \u00d7 4 slot, bottom step at +Z; the top step is level with y = 3"
+    },
+    {
+      "name": "StairsWood",
+      "label": "Stairs \u2014 oak (1 storey)",
+      "file": "stairs-wood.glb",
+      "src": {
+        "job": "stairs-wood",
+        "stage": "retexture"
+      },
+      "post": {
+        "targetTris": 3000,
+        "dims": {
+          "x": 2,
+          "y": 3,
+          "z": 4
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x-yz"
+      },
+      "place": "in a 2 \u00d7 4 slot, bottom step at +Z; the top step is level with y = 3"
+    },
+    {
+      "name": "Block",
+      "label": "Block / landing \u2014 sandstone (2 \u00d7 1 \u00d7 2 m)",
+      "file": "block.glb",
+      "src": {
+        "job": "ramp",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 1500,
+        "dims": {
+          "x": 2,
+          "y": 1,
+          "z": 2
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "xz-y"
+      },
+      "place": "in a 2 \u00d7 2 cell; stack three for a 3 m landing, or use as a plinth, a step up, a dais"
+    },
+    {
+      "name": "Ramp",
+      "label": "Ramp \u2014 sandstone (2 \u00d7 2 m, 1 m rise)",
+      "file": "ramp.glb",
+      "from": "Block",
+      "cut": [
+        {
+          "op": "wedge",
+          "min": 0.02
+        }
+      ],
+      "place": "in a 2 \u00d7 2 cell, low edge at +Z; ends level with a Block or a half storey"
+    },
+    {
+      "name": "RoofFlat",
+      "label": "(source) slate panel",
+      "file": "roof-panel.glb",
+      "internal": true,
+      "src": {
+        "job": "slate-panel",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 2000,
+        "dims": {
+          "x": 2,
+          "y": 0.12,
+          "z": 2.5
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "albedo": {
+          "saturation": 0.35,
+          "brightness": 0.8
+        }
+      }
+    },
+    {
+      "name": "RoofSlope",
+      "label": "Roof slope \u2014 slate (2 \u00d7 2 m, 1.5 m rise)",
+      "file": "roof-slope.glb",
+      "from": "RoofFlat",
+      "post": {
+        "preRotate": {
+          "x": 36.87
+        },
+        "dims": {
+          "x": 2,
+          "y": 1.5,
+          "z": 2
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x"
+      },
+      "place": "on the wall tops (y = 3) over a 2 \u00d7 2 cell, eave at +Z; the opposite slope turned 180\u00b0"
+    },
+    {
+      "name": "Battlement",
+      "label": "Battlement \u2014 sandstone",
+      "file": "battlement.glb",
+      "src": {
+        "job": "battlement",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 2500,
+        "dims": {
+          "x": 2,
+          "y": 1.2,
+          "z": 0.25
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x-y"
+      },
+      "place": "on a wall top (y = 3) at the wall's x/z"
+    },
+    {
+      "name": "Tower",
+      "label": "Round tower section (\u00d8 4 m)",
+      "file": "tower.glb",
+      "src": {
+        "job": "tower",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 5000,
+        "dims": {
+          "x": 4,
+          "y": 3,
+          "z": 4
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "y"
+      },
+      "place": "on a 4 \u00d7 4 footprint, x and z on even metres; stack them 3 m apart"
+    },
+    {
+      "name": "Door",
+      "label": "Door + frame (fits the doorway)",
+      "file": "door.glb",
+      "src": {
+        "job": "door",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 2500,
+        "dims": {
+          "x": 1.3,
+          "y": 2.35,
+          "z": 0.33
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "albedo": {
+          "saturation": 0.5,
+          "brightness": 0.62,
+          "hue": -6
+        }
+      },
+      "place": "at the SAME position and rotation as a Wall \u2014 doorway",
+      "cut": [
+        {
+          "op": "core",
+          "axis": "z",
+          "range": [
+            -0.027,
+            -0.024
+          ],
+          "extent": {
+            "x": [
+              -0.55,
+              0.55
+            ],
+            "y": [
+              0.001,
+              2.25
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Window",
+      "label": "Window + shutters (fits the window wall)",
+      "file": "window.glb",
+      "src": {
+        "job": "window",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 2500,
+        "dims": {
+          "x": 1.1,
+          "y": 1.25,
+          "z": 0.5
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "offset": [
+          0,
+          0.975,
+          0
+        ]
+      },
+      "place": "at the SAME position and rotation as a Wall \u2014 window"
+    },
+    {
+      "name": "Gate",
+      "label": "Gate \u2014 oak double doors (2 \u00d7 3 m)",
+      "file": "gate.glb",
+      "src": {
+        "job": "gate",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 3000,
+        "dims": {
+          "x": 2,
+          "y": 3,
+          "z": 0.2
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x-y",
+        "albedo": {
+          "saturation": 0.45,
+          "brightness": 0.52,
+          "hue": -6
+        }
+      },
+      "place": "in a 2 m gap between two pillars or walls",
+      "cut": [
+        {
+          "op": "core",
+          "axis": "z",
+          "range": [
+            -0.0015,
+            0.0015
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fence",
+      "label": "Fence \u2014 oak pickets (2 m)",
+      "file": "fence.glb",
+      "src": {
+        "job": "fence",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 1500,
+        "dims": {
+          "x": 2,
+          "y": 1,
+          "z": 0.15
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x-y",
+        "albedo": {
+          "saturation": 1.35,
+          "brightness": 0.78
+        }
+      },
+      "place": "on a grid line like a wall (posts at the ends)"
+    },
+    {
+      "name": "Railing",
+      "label": "Railing \u2014 oak balusters (2 m)",
+      "file": "railing.glb",
+      "src": {
+        "job": "railing",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 2500,
+        "dims": {
+          "x": 2,
+          "y": 1,
+          "z": 0.15
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x-y"
+      },
+      "place": "on the edge of a floor or landing (y = 3 for an upper floor)"
+    },
+    {
+      "name": "Beam",
+      "label": "Beam / lintel \u2014 oak (2 m)",
+      "file": "beam.glb",
+      "src": {
+        "job": "beam",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 900,
+        "dims": {
+          "x": 2,
+          "y": 0.3,
+          "z": 0.3
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x"
+      },
+      "place": "on a wall top or across a room at y = 3 (a ceiling beam, a lintel)"
+    },
+    {
+      "name": "Trim",
+      "label": "Trim / ledge \u2014 sandstone (2 m)",
+      "file": "trim.glb",
+      "src": {
+        "job": "trim",
+        "stage": "retexture"
+      },
+      "post": {
+        "targetTris": 900,
+        "dims": {
+          "x": 2,
+          "y": 0.2,
+          "z": 0.45
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center",
+        "clamp": "x"
+      },
+      "place": "at a wall's x/z, at storey height (y = 3): a string course proud of both faces"
+    },
+    {
+      "name": "Chimney",
+      "label": "Chimney stack \u2014 sandstone",
+      "file": "chimney.glb",
+      "src": {
+        "job": "pillar",
+        "stage": "refine"
+      },
+      "post": {
+        "targetTris": 1500,
+        "dims": {
+          "x": 0.7,
+          "y": 1.6,
+          "z": 0.7
+        },
+        "fit": "stretch",
+        "pivot": "bottom-center"
+      },
+      "place": "on a roof ridge or a wall top"
+    },
+    {
+      "name": "Cover",
+      "label": "(cover diorama)",
+      "file": "cover-scene.glb",
+      "internal": true,
+      "kitbash": [
+        {
+          "from": "FloorStone",
+          "pos": [
+            1,
+            0,
+            1
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "FloorStone",
+          "pos": [
+            3,
+            0,
+            1
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "FloorStone",
+          "pos": [
+            1,
+            0,
+            3
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "FloorStone",
+          "pos": [
+            3,
+            0,
+            3
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "WallStone",
+          "pos": [
+            1,
+            0,
+            0
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "WallStone",
+          "pos": [
+            3,
+            0,
+            0
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "WallStoneDoor",
+          "pos": [
+            1,
+            0,
+            4
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "Door",
+          "pos": [
+            1,
+            0,
+            4
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "WallStoneWindow",
+          "pos": [
+            3,
+            0,
+            4
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "Window",
+          "pos": [
+            3,
+            0,
+            4
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "WallStone",
+          "pos": [
+            0,
+            0,
+            1
+          ],
+          "rotY": 90
+        },
+        {
+          "from": "WallStone",
+          "pos": [
+            0,
+            0,
+            3
+          ],
+          "rotY": 90
+        },
+        {
+          "from": "WallStoneWindow",
+          "pos": [
+            4,
+            0,
+            1
+          ],
+          "rotY": 90
+        },
+        {
+          "from": "Window",
+          "pos": [
+            4,
+            0,
+            1
+          ],
+          "rotY": 90
+        },
+        {
+          "from": "WallStone",
+          "pos": [
+            4,
+            0,
+            3
+          ],
+          "rotY": 90
+        },
+        {
+          "from": "CornerPostStone",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "CornerPostStone",
+          "pos": [
+            4,
+            0,
+            0
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "CornerPostStone",
+          "pos": [
+            0,
+            0,
+            4
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "CornerPostStone",
+          "pos": [
+            4,
+            0,
+            4
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "RoofSlope",
+          "pos": [
+            1,
+            3,
+            3
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "RoofSlope",
+          "pos": [
+            3,
+            3,
+            3
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "RoofSlope",
+          "pos": [
+            1,
+            3,
+            1
+          ],
+          "rotY": 180
+        },
+        {
+          "from": "RoofSlope",
+          "pos": [
+            3,
+            3,
+            1
+          ],
+          "rotY": 180
+        },
+        {
+          "from": "WallStoneGable",
+          "pos": [
+            0,
+            3,
+            3
+          ],
+          "rotY": 90
+        },
+        {
+          "from": "WallStoneGable",
+          "pos": [
+            0,
+            3,
+            1
+          ],
+          "rotY": -90
+        },
+        {
+          "from": "WallStoneGable",
+          "pos": [
+            4,
+            3,
+            3
+          ],
+          "rotY": 90
+        },
+        {
+          "from": "WallStoneGable",
+          "pos": [
+            4,
+            3,
+            1
+          ],
+          "rotY": -90
+        },
+        {
+          "from": "Tower",
+          "pos": [
+            -3,
+            0,
+            -1.5
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "Tower",
+          "pos": [
+            -3,
+            3,
+            -1.5
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "Stairs",
+          "pos": [
+            6,
+            0,
+            1
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "FloorStone",
+          "pos": [
+            1,
+            0,
+            5
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "FloorStone",
+          "pos": [
+            3,
+            0,
+            5
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "FloorStone",
+          "pos": [
+            5,
+            0,
+            5
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "Arch",
+          "pos": [
+            6,
+            0,
+            6
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "Pillar",
+          "pos": [
+            4.75,
+            0,
+            6
+          ],
+          "rotY": 0
+        },
+        {
+          "from": "Pillar",
+          "pos": [
+            7.25,
+            0,
+            6
+          ],
+          "rotY": 0
+        }
+      ]
+    }
+  ],
+  "cover": {
+    "item": "Cover",
+    "yaw": 28,
+    "bg": "#d8d4cc"
+  }
+}
