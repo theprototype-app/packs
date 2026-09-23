@@ -53,5 +53,15 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/architecture-kit",
     "cover": "architecture-kit/cover.webp"
+    },
+    {
+    "name": "props-kit",
+    "title": "Props & Interiors",
+    "value": "props-kit/default.json",
+    "attribution": "props-kit/attribution.html",
+    "copyright": "(c) theprototype",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/props-kit",
+    "cover": "props-kit/cover.webp"
   }
 ]

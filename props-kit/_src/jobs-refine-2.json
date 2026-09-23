@@ -1,0 +1,10 @@
+[
+ {"id":"barrel2","pack":"props-kit","category":"prop","stage":"refine","targetTris":2500,"dims":{"y":0.9},
+  "texturePrompt":"vertical oak barrel staves with visible grain and dark seams, dark iron hoops, a round oak lid"},
+ {"id":"candles2","pack":"props-kit","category":"prop","stage":"refine","targetTris":2500,"dims":{"y":0.3},
+  "texturePrompt":"creamy ivory wax candles with wax drips, small orange flames at the tips, a dark iron dish"},
+ {"id":"crate-oak","pack":"props-kit","category":"prop","stage":"retexture","sourceTaskId":"01a0cde5-df15-70ad-bd19-176215271293","targetTris":2500,"dims":{"y":0.8},
+  "texturePrompt":"weathered oak planks with visible grain, dark iron corner brackets and nails"},
+ {"id":"crate-scifi","pack":"props-kit","category":"prop","stage":"retexture","sourceTaskId":"01a0cde5-df15-70ad-bd19-176215271293","targetTris":2500,"dims":{"y":0.8},
+  "texturePrompt":"sci-fi cargo crate, gunmetal grey painted metal panels, teal accent stripes, brass bolts, worn painted edges"}
+]
