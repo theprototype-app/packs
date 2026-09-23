@@ -1,0 +1,42 @@
+[
+ {
+  "id": "birch",
+  "pack": "nature-kit",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 10000,
+  "category": "tree",
+  "dims": {
+   "y": 7
+  },
+  "prompt": "a single stylized birch tree, slender straight trunk with a slight lean, light airy oval canopy made of several rounded leaf clumps held on thin branches, standing alone"
+ },
+ {
+  "id": "cliff",
+  "pack": "nature-kit",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 4000,
+  "category": "terrain",
+  "dims": {
+   "x": 4,
+   "y": 4,
+   "z": 1.5
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center-back",
+  "prompt": "a modular rock cliff wall segment, a wide vertical wall of layered stacked sandstone slabs with ledges and cracks, flat back, flat left and right ends, flat bottom, rectangular footprint"
+ },
+ {
+  "id": "flat-rock",
+  "pack": "nature-kit",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 1200,
+  "category": "rock",
+  "dims": {
+   "x": 1.2
+  },
+  "prompt": "a single wide flat slab rock, low and broad stone with rounded weathered edges and a gently uneven top, much wider than tall, flat bottom"
+ }
+]

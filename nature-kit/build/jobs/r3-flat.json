@@ -1,0 +1,14 @@
+[
+ {
+  "id": "flat-rock-l",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 1200,
+  "category": "rock",
+  "dims": {
+   "x": 1.2
+  },
+  "texturePrompt": "weathered grey-beige sandstone slab, darker cracks between the plates, small patches of green moss and pale lichen"
+ }
+]

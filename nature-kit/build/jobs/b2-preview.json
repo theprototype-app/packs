@@ -1,0 +1,22 @@
+[
+ {"id":"bush2","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":3000,"category":"plant","dims":{"y":1.1},
+  "prompt":"a single rounded garden shrub, one solid dome of chunky bulging leaf clumps, compact and dense, slightly wider than tall, sitting on the ground"},
+ {"id":"birch","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":10000,"category":"tree","dims":{"y":7},
+  "prompt":"a single stylized birch tree, slender straight trunk with a slight lean, light airy oval canopy made of several rounded leaf clumps held on thin branches, standing alone"},
+ {"id":"fern","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":3000,"category":"plant","dims":{"y":0.8},
+  "prompt":"a single fern plant, about ten long arching fronds with chunky leaflets radiating out from the centre, low and wide, growing from the ground"},
+ {"id":"grass","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":2000,"category":"plant","dims":{"y":0.6},
+  "prompt":"a clump of tall wild grass, a dense tuft of thick stylized pointed blades bundled at the base and fanning outward"},
+ {"id":"flowers","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":3000,"category":"plant","dims":{"y":0.5},
+  "prompt":"a small clump of wildflowers, five thin upright stems topped with large simple daisy-like blossoms, a tuft of leaves at the base"},
+ {"id":"mushrooms","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":3000,"category":"plant","dims":{"y":0.5},
+  "prompt":"a cluster of three chunky toadstool mushrooms of different heights with round domed caps, growing together from a small mossy mound"},
+ {"id":"cliff","pack":"nature-kit","stage":"preview","model":"t2","targetTris":4000,"category":"terrain","dims":{"x":4,"y":4,"z":1.5},"fit":"stretch","pivot":"bottom-center-back",
+  "prompt":"a modular rock cliff wall segment, a wide vertical wall of layered stacked sandstone slabs with ledges and cracks, flat back, flat left and right ends, flat bottom, rectangular footprint"},
+ {"id":"path-tile","pack":"nature-kit","stage":"preview","model":"t2","targetTris":2000,"category":"terrain","dims":{"x":2,"y":0.15,"z":2},"fit":"stretch","pivot":"bottom-center",
+  "prompt":"a square flat stone path tile, a thin slab of irregular flat flagstones fitted together with narrow gaps, straight square outer edges, seen as a floor piece"},
+ {"id":"bridge","pack":"nature-kit","stage":"preview","model":"t2","targetTris":5000,"category":"prop","dims":{"x":4},
+  "prompt":"a small wooden footbridge with a gentle arch, a deck of wooden planks on two log beams, simple log railings on both sides, short posts at each end"},
+ {"id":"hill","pack":"nature-kit","stage":"preview","model":"t2","targetTris":2000,"category":"terrain","dims":{"x":8,"y":1.5,"z":8},"fit":"stretch","pivot":"bottom-center",
+  "prompt":"a low wide grassy earth mound, a small gentle hill with smooth slopes rising to a broad rounded top, flat circular bottom"}
+]

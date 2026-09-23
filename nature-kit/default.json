@@ -1,0 +1,250 @@
+[
+  {
+    "name": "Oak",
+    "screenshot": "thumb.webp",
+    "label": "Oak Tree",
+    "variants": {
+      "glTF-Binary": "Oak.glb"
+    }
+  },
+  {
+    "name": "OakAutumn",
+    "screenshot": "thumb.webp",
+    "label": "Oak Tree (autumn)",
+    "variants": {
+      "glTF-Binary": "OakAutumn.glb"
+    }
+  },
+  {
+    "name": "Pine",
+    "screenshot": "thumb.webp",
+    "label": "Pine Tree",
+    "variants": {
+      "glTF-Binary": "Pine.glb"
+    }
+  },
+  {
+    "name": "Birch",
+    "screenshot": "thumb.webp",
+    "label": "Birch Tree (young)",
+    "variants": {
+      "glTF-Binary": "Birch.glb"
+    }
+  },
+  {
+    "name": "DeadTree",
+    "screenshot": "thumb.webp",
+    "label": "Dead Tree",
+    "variants": {
+      "glTF-Binary": "DeadTree.glb"
+    }
+  },
+  {
+    "name": "Palm",
+    "screenshot": "thumb.webp",
+    "label": "Palm Tree",
+    "variants": {
+      "glTF-Binary": "Palm.glb"
+    }
+  },
+  {
+    "name": "Bush",
+    "screenshot": "thumb.webp",
+    "label": "Bush",
+    "variants": {
+      "glTF-Binary": "Bush.glb"
+    }
+  },
+  {
+    "name": "BushAutumn",
+    "screenshot": "thumb.webp",
+    "label": "Bush (autumn)",
+    "variants": {
+      "glTF-Binary": "BushAutumn.glb"
+    }
+  },
+  {
+    "name": "Fern",
+    "screenshot": "thumb.webp",
+    "label": "Fern",
+    "variants": {
+      "glTF-Binary": "Fern.glb"
+    }
+  },
+  {
+    "name": "Reeds",
+    "screenshot": "thumb.webp",
+    "label": "Reeds (cattails)",
+    "variants": {
+      "glTF-Binary": "Reeds.glb"
+    }
+  },
+  {
+    "name": "GrassTuft",
+    "screenshot": "thumb.webp",
+    "label": "Grass Tuft",
+    "variants": {
+      "glTF-Binary": "GrassTuft.glb"
+    }
+  },
+  {
+    "name": "GrassTuftDry",
+    "screenshot": "thumb.webp",
+    "label": "Grass Tuft (dry)",
+    "variants": {
+      "glTF-Binary": "GrassTuftDry.glb"
+    }
+  },
+  {
+    "name": "Flowers",
+    "screenshot": "thumb.webp",
+    "label": "Wildflowers (amber)",
+    "variants": {
+      "glTF-Binary": "Flowers.glb"
+    }
+  },
+  {
+    "name": "FlowersViolet",
+    "screenshot": "thumb.webp",
+    "label": "Wildflowers (violet)",
+    "variants": {
+      "glTF-Binary": "FlowersViolet.glb"
+    }
+  },
+  {
+    "name": "FlowerPatch",
+    "screenshot": "thumb.webp",
+    "label": "Flower Patch",
+    "variants": {
+      "glTF-Binary": "FlowerPatch.glb"
+    }
+  },
+  {
+    "name": "Mushrooms",
+    "screenshot": "thumb.webp",
+    "label": "Mushroom Cluster",
+    "variants": {
+      "glTF-Binary": "Mushrooms.glb"
+    }
+  },
+  {
+    "name": "RockSmall",
+    "screenshot": "thumb.webp",
+    "label": "Rock (small)",
+    "variants": {
+      "glTF-Binary": "RockSmall.glb"
+    }
+  },
+  {
+    "name": "RockMedium",
+    "screenshot": "thumb.webp",
+    "label": "Rock (medium)",
+    "variants": {
+      "glTF-Binary": "RockMedium.glb"
+    }
+  },
+  {
+    "name": "RockLarge",
+    "screenshot": "thumb.webp",
+    "label": "Rock (large)",
+    "variants": {
+      "glTF-Binary": "RockLarge.glb"
+    }
+  },
+  {
+    "name": "FlatRock",
+    "screenshot": "thumb.webp",
+    "label": "Flat Rock",
+    "variants": {
+      "glTF-Binary": "FlatRock.glb"
+    }
+  },
+  {
+    "name": "BoulderCluster",
+    "screenshot": "thumb.webp",
+    "label": "Boulder Cluster",
+    "variants": {
+      "glTF-Binary": "BoulderCluster.glb"
+    }
+  },
+  {
+    "name": "SteppingStones",
+    "screenshot": "thumb.webp",
+    "label": "Stepping Stones",
+    "variants": {
+      "glTF-Binary": "SteppingStones.glb"
+    }
+  },
+  {
+    "name": "Cliff",
+    "screenshot": "thumb.webp",
+    "label": "Cliff Wall (modular 4 m)",
+    "variants": {
+      "glTF-Binary": "Cliff.glb"
+    }
+  },
+  {
+    "name": "PathTile",
+    "screenshot": "thumb.webp",
+    "label": "Stone Path Tile (2×2 m)",
+    "variants": {
+      "glTF-Binary": "PathTile.glb"
+    }
+  },
+  {
+    "name": "Log",
+    "screenshot": "thumb.webp",
+    "label": "Fallen Log",
+    "variants": {
+      "glTF-Binary": "Log.glb"
+    }
+  },
+  {
+    "name": "Stump",
+    "screenshot": "thumb.webp",
+    "label": "Tree Stump",
+    "variants": {
+      "glTF-Binary": "Stump.glb"
+    }
+  },
+  {
+    "name": "Bridge",
+    "screenshot": "thumb.webp",
+    "label": "Wooden Footbridge",
+    "variants": {
+      "glTF-Binary": "Bridge.glb"
+    }
+  },
+  {
+    "name": "Hill",
+    "screenshot": "thumb.webp",
+    "label": "Grassy Mound (8×8 m, walkable)",
+    "variants": {
+      "glTF-Binary": "Hill.glb"
+    }
+  },
+  {
+    "name": "FallenLeaves",
+    "screenshot": "thumb.webp",
+    "label": "Fallen Leaves (decal 2×2 m)",
+    "variants": {
+      "glTF-Binary": "FallenLeaves.glb"
+    }
+  },
+  {
+    "name": "PondWater",
+    "screenshot": "thumb.webp",
+    "label": "Pond Water",
+    "variants": {
+      "glTF-Binary": "PondWater.glb"
+    }
+  },
+  {
+    "name": "PondSet",
+    "screenshot": "thumb.webp",
+    "label": "Pond with Rocks & Reeds",
+    "variants": {
+      "glTF-Binary": "PondSet.glb"
+    }
+  }
+]

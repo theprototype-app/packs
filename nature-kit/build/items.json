@@ -1,0 +1,939 @@
+{
+ "note": "every nature-kit item, in Explorer order. kind meshy = the budget tool's staging output (job, stage) through meshy-post (post = its job fields); cutBase = drop the generator's base disc below that fraction of the height; grade = hue rules on the base colour (0-credit colour variants / palette fixes); kitbash = built items merged (instanced); proc = a 0-credit script.",
+ "items": [
+  {
+   "name": "Oak",
+   "label": "Oak Tree",
+   "kind": "meshy",
+   "job": "oak",
+   "post": {
+    "targetTris": 12000,
+    "dims": {
+     "y": 6
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      50,
+      115
+     ],
+     "shift": 22,
+     "sat": 0.68,
+     "val": 0.64
+    }
+   ]
+  },
+  {
+   "name": "OakAutumn",
+   "label": "Oak Tree (autumn)",
+   "kind": "meshy",
+   "job": "oak",
+   "post": {
+    "targetTris": 12000,
+    "dims": {
+     "y": 6
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      50,
+      115
+     ],
+     "shift": -50,
+     "sat": 0.95,
+     "val": 0.8
+    }
+   ]
+  },
+  {
+   "name": "Pine",
+   "label": "Pine Tree",
+   "kind": "meshy",
+   "job": "pine",
+   "post": {
+    "targetTris": 9000,
+    "dims": {
+     "y": 8
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      150,
+      215
+     ],
+     "shift": -45,
+     "sat": 0.85,
+     "val": 0.9
+    },
+    {
+     "hue": [
+      5,
+      40
+     ],
+     "shift": 0,
+     "sat": 0.7,
+     "val": 0.85
+    }
+   ]
+  },
+  {
+   "name": "Birch",
+   "label": "Birch Tree (young)",
+   "kind": "meshy",
+   "job": "birch",
+   "post": {
+    "targetTris": 9000,
+    "dims": {
+     "y": 7
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      0,
+      360
+     ],
+     "feather": false,
+     "minSat": 0,
+     "maxSat": 0.2,
+     "minVal": 0.55,
+     "val": 0.62,
+     "tint": "#7fae3c",
+     "amount": 0.85
+    },
+    {
+     "hue": [
+      10,
+      55
+     ],
+     "feather": false,
+     "minSat": 0.15,
+     "sat": 0.18,
+     "val": 1.55
+    },
+    {
+     "hue": [
+      55,
+      110
+     ],
+     "shift": 12,
+     "sat": 0.8,
+     "val": 0.8
+    }
+   ]
+  },
+  {
+   "name": "DeadTree",
+   "label": "Dead Tree",
+   "kind": "meshy",
+   "job": "dead-tree",
+   "post": {
+    "targetTris": 6000,
+    "dims": {
+     "y": 5
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      0,
+      360
+     ],
+     "feather": false,
+     "minSat": 0,
+     "sat": 1.0,
+     "val": 0.62,
+     "tint": "#8c7a64",
+     "amount": 0.4
+    }
+   ]
+  },
+  {
+   "name": "Palm",
+   "label": "Palm Tree",
+   "kind": "meshy",
+   "job": "palm",
+   "post": {
+    "targetTris": 8000,
+    "dims": {
+     "y": 7
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      55,
+      115
+     ],
+     "shift": 14,
+     "sat": 0.75,
+     "val": 0.78
+    },
+    {
+     "hue": [
+      10,
+      50
+     ],
+     "shift": 0,
+     "sat": 0.75,
+     "val": 0.85
+    }
+   ]
+  },
+  {
+   "name": "Bush",
+   "label": "Bush",
+   "kind": "meshy",
+   "job": "bush2",
+   "cutBase": 0.1,
+   "post": {
+    "targetTris": 3000,
+    "dims": {
+     "y": 1.1
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      50,
+      115
+     ],
+     "shift": 20,
+     "sat": 0.7,
+     "val": 0.66
+    }
+   ]
+  },
+  {
+   "name": "BushAutumn",
+   "label": "Bush (autumn)",
+   "kind": "meshy",
+   "job": "bush2",
+   "cutBase": 0.1,
+   "post": {
+    "targetTris": 3000,
+    "dims": {
+     "y": 1.1
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      50,
+      115
+     ],
+     "shift": -50,
+     "sat": 0.95,
+     "val": 0.8
+    }
+   ]
+  },
+  {
+   "name": "Fern",
+   "label": "Fern",
+   "kind": "meshy",
+   "job": "fern",
+   "post": {
+    "targetTris": 2200,
+    "dims": {
+     "y": 0.8
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      50,
+      115
+     ],
+     "shift": 20,
+     "sat": 0.72,
+     "val": 0.7
+    }
+   ]
+  },
+  {
+   "name": "Reeds",
+   "label": "Reeds (cattails)",
+   "kind": "meshy",
+   "job": "grass",
+   "post": {
+    "targetTris": 1500,
+    "dims": {
+     "y": 1.3
+    }
+   }
+  },
+  {
+   "name": "GrassTuft",
+   "label": "Grass Tuft",
+   "kind": "proc",
+   "script": "grass.mjs",
+   "args": [
+    "--seed",
+    "3"
+   ]
+  },
+  {
+   "name": "GrassTuftDry",
+   "label": "Grass Tuft (dry)",
+   "kind": "proc",
+   "script": "grass.mjs",
+   "args": [
+    "--seed",
+    "11",
+    "--tint",
+    "dry",
+    "--height",
+    "0.38"
+   ]
+  },
+  {
+   "name": "Flowers",
+   "label": "Wildflowers (amber)",
+   "kind": "meshy",
+   "job": "flowers",
+   "post": {
+    "targetTris": 1500,
+    "dims": {
+     "y": 0.5
+    }
+   },
+   "cutBase": 0.07,
+   "grade": [
+    {
+     "hue": [
+      30,
+      62
+     ],
+     "shift": -14,
+     "sat": 1.0,
+     "val": 0.95,
+     "minSat": 0.35
+    }
+   ]
+  },
+  {
+   "name": "FlowersViolet",
+   "label": "Wildflowers (violet)",
+   "kind": "meshy",
+   "job": "flowers",
+   "post": {
+    "targetTris": 1500,
+    "dims": {
+     "y": 0.5
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      30,
+      62
+     ],
+     "shift": 225,
+     "sat": 0.85,
+     "val": 0.9,
+     "minSat": 0.35
+    }
+   ],
+   "cutBase": 0.07
+  },
+  {
+   "name": "FlowerPatch",
+   "label": "Flower Patch",
+   "kind": "kitbash",
+   "parts": [
+    {
+     "item": "Flowers",
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "item": "FlowersViolet",
+     "pos": [
+      0.35,
+      0,
+      0.2
+     ],
+     "rotY": 70,
+     "scale": 0.85
+    },
+    {
+     "item": "Flowers",
+     "pos": [
+      -0.3,
+      0,
+      0.28
+     ],
+     "rotY": 150,
+     "scale": 0.75
+    },
+    {
+     "item": "FlowersViolet",
+     "pos": [
+      -0.15,
+      0,
+      -0.32
+     ],
+     "rotY": 220,
+     "scale": 0.9
+    },
+    {
+     "item": "GrassTuft",
+     "pos": [
+      0.1,
+      0,
+      -0.05
+     ],
+     "rotY": 40,
+     "scale": 0.8
+    }
+   ]
+  },
+  {
+   "name": "Mushrooms",
+   "label": "Mushroom Cluster",
+   "kind": "meshy",
+   "job": "mushrooms",
+   "post": {
+    "targetTris": 2500,
+    "dims": {
+     "y": 0.45
+    }
+   },
+   "cutBase": 0.1
+  },
+  {
+   "name": "RockSmall",
+   "label": "Rock (small)",
+   "kind": "meshy",
+   "job": "rock",
+   "post": {
+    "targetTris": 700,
+    "dims": {
+     "y": 0.45
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      0,
+      360
+     ],
+     "feather": false,
+     "minSat": 0,
+     "sat": 0.55,
+     "val": 0.6,
+     "tint": "#9a8f80",
+     "amount": 0.4
+    }
+   ]
+  },
+  {
+   "name": "RockMedium",
+   "label": "Rock (medium)",
+   "kind": "meshy",
+   "job": "rock",
+   "post": {
+    "targetTris": 1500,
+    "dims": {
+     "y": 1
+    }
+   },
+   "yaw": 120,
+   "grade": [
+    {
+     "hue": [
+      0,
+      360
+     ],
+     "feather": false,
+     "minSat": 0,
+     "sat": 0.55,
+     "val": 0.6,
+     "tint": "#9a8f80",
+     "amount": 0.4
+    }
+   ]
+  },
+  {
+   "name": "RockLarge",
+   "label": "Rock (large)",
+   "kind": "meshy",
+   "job": "rock",
+   "post": {
+    "targetTris": 1500,
+    "dims": {
+     "y": 2.2
+    }
+   },
+   "yaw": 240,
+   "grade": [
+    {
+     "hue": [
+      0,
+      360
+     ],
+     "feather": false,
+     "minSat": 0,
+     "sat": 0.55,
+     "val": 0.6,
+     "tint": "#9a8f80",
+     "amount": 0.4
+    }
+   ]
+  },
+  {
+   "name": "FlatRock",
+   "label": "Flat Rock",
+   "kind": "meshy",
+   "job": "flat-rock-l",
+   "post": {
+    "targetTris": 1200,
+    "dims": {
+     "x": 1.2
+    }
+   }
+  },
+  {
+   "name": "BoulderCluster",
+   "label": "Boulder Cluster",
+   "kind": "kitbash",
+   "parts": [
+    {
+     "item": "RockLarge",
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "item": "RockMedium",
+     "pos": [
+      1.5,
+      0,
+      0.6
+     ],
+     "rotY": 80
+    },
+    {
+     "item": "RockMedium",
+     "pos": [
+      -1.3,
+      0,
+      0.8
+     ],
+     "rotY": 200,
+     "scale": 0.8
+    },
+    {
+     "item": "RockSmall",
+     "pos": [
+      0.6,
+      0,
+      1.5
+     ],
+     "rotY": 30
+    },
+    {
+     "item": "RockSmall",
+     "pos": [
+      -0.4,
+      0,
+      1.7
+     ],
+     "rotY": 300,
+     "scale": 0.7
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      1.1,
+      0,
+      -1.1
+     ],
+     "rotY": 20,
+     "scale": 0.8
+    }
+   ]
+  },
+  {
+   "name": "SteppingStones",
+   "label": "Stepping Stones",
+   "kind": "kitbash",
+   "parts": [
+    {
+     "item": "FlatRock",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 0.5
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      0.75,
+      0,
+      0.25
+     ],
+     "rotY": 60,
+     "scale": 0.45
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      1.45,
+      0,
+      0.35
+     ],
+     "rotY": 130,
+     "scale": 0.5
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      2.2,
+      0,
+      0.2
+     ],
+     "rotY": 210,
+     "scale": 0.45
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      2.9,
+      0,
+      -0.1
+     ],
+     "rotY": 290,
+     "scale": 0.5
+    }
+   ]
+  },
+  {
+   "name": "Cliff",
+   "label": "Cliff Wall (modular 4 m)",
+   "kind": "meshy",
+   "job": "cliff-l",
+   "post": {
+    "targetTris": 4000,
+    "dims": {
+     "x": 4,
+     "y": 4,
+     "z": 1.5
+    },
+    "fit": "stretch",
+    "pivot": "bottom-center-back"
+   },
+   "grade": [
+    {
+     "hue": [
+      55,
+      115
+     ],
+     "shift": 18,
+     "sat": 0.55,
+     "val": 0.6
+    },
+    {
+     "hue": [
+      0,
+      360
+     ],
+     "feather": false,
+     "minSat": 0,
+     "maxSat": 0.5,
+     "sat": 0.75,
+     "val": 0.78,
+     "tint": "#b09a7c",
+     "amount": 0.3
+    }
+   ]
+  },
+  {
+   "name": "PathTile",
+   "label": "Stone Path Tile (2×2 m)",
+   "kind": "meshy",
+   "job": "path-tile",
+   "post": {
+    "targetTris": 2000,
+    "dims": {
+     "x": 2,
+     "y": 0.15,
+     "z": 2
+    },
+    "fit": "stretch",
+    "pivot": "bottom-center"
+   },
+   "grade": [
+    {
+     "hue": [
+      0,
+      360
+     ],
+     "feather": false,
+     "minSat": 0,
+     "maxSat": 0.45,
+     "sat": 0.8,
+     "val": 0.72,
+     "tint": "#a39684",
+     "amount": 0.3
+    }
+   ]
+  },
+  {
+   "name": "Log",
+   "label": "Fallen Log",
+   "kind": "meshy",
+   "job": "log",
+   "post": {
+    "targetTris": 2500,
+    "dims": {
+     "x": 2.5
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      55,
+      110
+     ],
+     "shift": 18,
+     "sat": 0.55,
+     "val": 0.55
+    }
+   ]
+  },
+  {
+   "name": "Stump",
+   "label": "Tree Stump",
+   "kind": "meshy",
+   "job": "stump",
+   "post": {
+    "targetTris": 2500,
+    "dims": {
+     "y": 0.6
+    }
+   },
+   "grade": [
+    {
+     "hue": [
+      55,
+      110
+     ],
+     "shift": 18,
+     "sat": 0.55,
+     "val": 0.6
+    }
+   ]
+  },
+  {
+   "name": "Bridge",
+   "label": "Wooden Footbridge",
+   "kind": "meshy",
+   "job": "bridge",
+   "post": {
+    "targetTris": 5000,
+    "dims": {
+     "x": 4,
+     "y": 2.06,
+     "z": 2
+    },
+    "fit": "stretch"
+   },
+   "grade": [
+    {
+     "hue": [
+      55,
+      115
+     ],
+     "shift": 18,
+     "sat": 0.55,
+     "val": 0.6
+    },
+    {
+     "hue": [
+      10,
+      50
+     ],
+     "sat": 0.78,
+     "val": 0.88
+    }
+   ]
+  },
+  {
+   "name": "Hill",
+   "label": "Grassy Mound (8×8 m, walkable)",
+   "kind": "meshy",
+   "job": "hill-l",
+   "post": {
+    "targetTris": 2000,
+    "dims": {
+     "x": 8,
+     "y": 1.2,
+     "z": 8
+    },
+    "fit": "stretch"
+   },
+   "cutBase": 0.04,
+   "grade": [
+    {
+     "hue": [
+      45,
+      115
+     ],
+     "shift": 22,
+     "sat": 0.62,
+     "val": 0.62
+    }
+   ]
+  },
+  {
+   "name": "FallenLeaves",
+   "label": "Fallen Leaves (decal 2×2 m)",
+   "kind": "proc",
+   "script": "leaves.mjs",
+   "args": [
+    "--count",
+    "110"
+   ]
+  },
+  {
+   "name": "PondWater",
+   "label": "Pond Water",
+   "kind": "proc",
+   "script": "water.mjs"
+  },
+  {
+   "name": "PondSet",
+   "label": "Pond with Rocks & Reeds",
+   "kind": "kitbash",
+   "parts": [
+    {
+     "item": "PondWater",
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      1.75,
+      0,
+      0.1
+     ],
+     "rotY": 10,
+     "scale": 0.7
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      0.9,
+      0,
+      1.3
+     ],
+     "rotY": 80,
+     "scale": 0.6
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      -0.6,
+      0,
+      1.35
+     ],
+     "rotY": 140,
+     "scale": 0.65
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      -1.7,
+      0,
+      0.3
+     ],
+     "rotY": 200,
+     "scale": 0.7
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      -1.1,
+      0,
+      -1.1
+     ],
+     "rotY": 260,
+     "scale": 0.6
+    },
+    {
+     "item": "FlatRock",
+     "pos": [
+      0.6,
+      0,
+      -1.35
+     ],
+     "rotY": 320,
+     "scale": 0.65
+    },
+    {
+     "item": "RockSmall",
+     "pos": [
+      1.5,
+      0,
+      -0.9
+     ],
+     "rotY": 40
+    },
+    {
+     "item": "RockSmall",
+     "pos": [
+      -1.9,
+      0,
+      -0.5
+     ],
+     "rotY": 170,
+     "scale": 0.8
+    },
+    {
+     "item": "Reeds",
+     "pos": [
+      1.3,
+      0,
+      0.9
+     ],
+     "rotY": 30
+    },
+    {
+     "item": "Reeds",
+     "pos": [
+      -1.35,
+      0,
+      1.0
+     ],
+     "rotY": 200,
+     "scale": 0.8
+    },
+    {
+     "item": "GrassTuft",
+     "pos": [
+      0.2,
+      0,
+      1.7
+     ],
+     "rotY": 90
+    }
+   ]
+  }
+ ]
+}
