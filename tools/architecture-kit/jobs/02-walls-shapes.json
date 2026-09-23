@@ -1,0 +1,23 @@
+[
+ {"id":"wall-b","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3000,
+  "prompt":"a tall upright rectangular section of a castle wall in portrait format, two metres wide and three metres tall, a thin flat slab built from medium rectangular sandstone blocks laid in level horizontal staggered courses, straight vertical ends, flat top, flat bottom, modular game level piece",
+  "dims":{"x":2,"y":3,"z":0.25},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"wall-door-b","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3500,
+  "prompt":"a tall upright rectangular sandstone block wall section in portrait format, mostly solid masonry, with one narrow rectangular doorway opening at the bottom centre, the opening is half the wall width and two thirds of the wall height and reaches down to the ground, a stone lintel above the opening, straight vertical ends, flat top, modular game level piece",
+  "dims":{"x":2,"y":3,"z":0.25},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"wall-window-b","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3500,
+  "prompt":"a tall upright rectangular sandstone block wall section in portrait format, mostly solid masonry, with one small square window opening in the middle, the window is one third of the wall width, a stone sill below and a stone lintel above, the opening goes through the wall, straight vertical ends, flat top, modular game level piece",
+  "dims":{"x":2,"y":3,"z":0.25},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"arch","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3500,
+  "prompt":"a freestanding stone archway, two square sandstone piers joined at the top by a round arch of wedge shaped voussoir stones with a keystone, open passage underneath, flat top edge, flat vertical outer sides, modular game level piece",
+  "dims":{"x":2,"y":3,"z":0.5},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"roof-slope","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":2500,
+  "prompt":"a square section of a pitched roof, one straight inclined plane covered with overlapping rows of chunky slate shingles, wedge shaped when seen from the side, low edge at the front and high edge at the back, modular game roof piece",
+  "dims":{"x":2,"y":1.5,"z":2},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"battlement","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":2500,
+  "prompt":"a straight crenellated castle parapet section, a low sandstone block wall topped with two square merlons separated by one open gap, flat vertical ends, flat bottom, modular game level piece",
+  "dims":{"x":2,"y":1.2,"z":0.25},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"tower","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":5000,
+  "prompt":"a short hollow round tower section, a thick cylindrical ring wall of sandstone blocks laid in level courses, open at the top and open at the bottom, flat top rim, stackable, modular castle game level piece",
+  "dims":{"x":4,"y":3,"z":4},"fit":"stretch","pivot":"bottom-center"}
+]

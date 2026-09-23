@@ -1,0 +1,66 @@
+[
+ {
+  "id": "railing",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2500,
+  "prompt": "a straight wooden balcony railing section, a thick top handrail and a bottom rail joined by a row of turned wooden balusters, square newel posts at both ends, modular game level piece",
+  "dims": {
+   "x": 2,
+   "y": 1,
+   "z": 0.15
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center"
+ },
+ {
+  "id": "beam",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 800,
+  "prompt": "a single straight rough hewn oak timber beam with a square cross section and slightly chamfered edges, lying horizontally, modular game level piece",
+  "dims": {
+   "x": 2,
+   "y": 0.3,
+   "z": 0.3
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center"
+ },
+ {
+  "id": "chimney",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2000,
+  "prompt": "a square stone chimney stack of sandstone blocks with a projecting stone cap band near the top and two round clay chimney pots on top, straight vertical sides, flat bottom, modular game level piece",
+  "dims": {
+   "x": 0.8,
+   "y": 2,
+   "z": 0.8
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center"
+ },
+ {
+  "id": "column",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2000,
+  "prompt": "a tall round classical stone column with a smooth cylindrical shaft, a square stepped base and a simple square capital, modular game level piece",
+  "dims": {
+   "x": 0.5,
+   "y": 3,
+   "z": 0.5
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center"
+ }
+]

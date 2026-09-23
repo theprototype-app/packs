@@ -1,0 +1,79 @@
+[
+ {
+  "id": "wall-c",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "warm honey-coloured sandstone blocks with slightly darker recessed mortar joints, chipped block edges, faint moss in the lowest joints"
+ },
+ {
+  "id": "pillar",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "warm honey-coloured sandstone blocks with darker mortar joints, slightly lighter carved base and capital"
+ },
+ {
+  "id": "stairs",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "worn warm honey-coloured sandstone steps, smoother pale tread tops, slightly darker risers and sides"
+ },
+ {
+  "id": "floor-stone",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "large worn warm honey-coloured sandstone flagstones with dark narrow grout lines"
+ },
+ {
+  "id": "arch",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "warm honey-coloured sandstone piers and voussoir stones with darker mortar joints, a slightly lighter keystone"
+ },
+ {
+  "id": "battlement",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "warm honey-coloured sandstone blocks with slightly darker recessed mortar joints, chipped block edges, faint moss in the lowest joints"
+ },
+ {
+  "id": "tower",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "warm honey-coloured sandstone blocks with slightly darker recessed mortar joints, chipped block edges, faint moss in the lowest joints"
+ },
+ {
+  "id": "slate-panel",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "overlapping blue-grey slate roof shingles with subtle purple and green tint variation, thin dark gaps between the rows"
+ },
+ {
+  "id": "door",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "vertical oak planks painted deep oxblood red with worn edges showing bare wood, black iron strap hinges and ring handle, natural warm oak frame"
+ },
+ {
+  "id": "window",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "natural warm oak window frame and mullion, shutters painted deep oxblood red with worn edges, pale sandstone sill, black iron hinges"
+ },
+ {
+  "id": "gate",
+  "pack": "architecture-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "texturePrompt": "heavy dark oak planks with a deep oxblood red painted finish worn at the edges, black iron bands and round iron studs"
+ }
+]
