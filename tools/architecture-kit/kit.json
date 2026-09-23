@@ -422,7 +422,7 @@
         },
         "fit": "stretch",
         "pivot": "bottom-center",
-        "clamp": "x"
+        "clamp": "x-yz"
       },
       "place": "on the wall tops (y = 3) over a 2 \u00d7 2 cell, eave at +Z; the opposite slope turned 180\u00b0"
     },
