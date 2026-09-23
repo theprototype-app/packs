@@ -1,0 +1,43 @@
+[
+ {
+  "id": "wall",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "style": "none",
+  "dims": {
+   "x": 2,
+   "y": 3,
+   "z": 0.25
+  },
+  "texturePrompt": "clean off-white painted metal wall panels with thin dark recessed seams, warm gunmetal grey trim cap and kickplate, one thin teal painted accent stripe along the waist band, both faces the same. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "console",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 4000,
+  "style": "none",
+  "dims": {
+   "y": 1.2
+  },
+  "texturePrompt": "off-white painted metal console body, warm gunmetal grey control panel, dark glossy screen with a faint teal glow, small teal and white buttons. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "crate",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "style": "none",
+  "dims": {
+   "y": 0.7
+  },
+  "texturePrompt": "off-white painted metal cargo crate, warm gunmetal grey corner protectors and handles, a teal painted latch and a teal stripe. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ }
+]

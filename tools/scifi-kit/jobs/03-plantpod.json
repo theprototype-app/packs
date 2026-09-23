@@ -1,0 +1,15 @@
+[
+ {
+  "id": "plant-pod-b",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 4000,
+  "style": "none",
+  "prompt": "a sci-fi planter: a short round white metal planter tub with a ring band, open at the top, with a lush leafy green fern bush growing out of it and spilling over the rim. Stylized realistic sci-fi game asset, clean readable hard-surface shapes, slightly chunky proportions, no text, no logos.",
+  "dims": {
+   "y": 1.1
+  }
+ }
+]
