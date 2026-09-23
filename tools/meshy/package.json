@@ -1,0 +1,26 @@
+{
+  "name": "@theprototype/meshy-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Budgeted Meshy.ai generation pipeline for theprototype packs: meshy-gen, meshy-post, meshy-thumb, meshy-balance",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "bin": {
+    "meshy-gen": "bin/meshy-gen.js",
+    "meshy-post": "bin/meshy-post.js",
+    "meshy-thumb": "bin/meshy-thumb.js",
+    "meshy-balance": "bin/meshy-balance.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "4.5.0",
+    "@gltf-transform/extensions": "4.5.0",
+    "@gltf-transform/functions": "4.5.0",
+    "meshoptimizer": "^1.2.0",
+    "playwright-core": "1.62.1",
+    "sharp": "^0.35.4",
+    "three": "0.185.1"
+  }
+}
