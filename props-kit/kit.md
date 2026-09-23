@@ -105,6 +105,9 @@ flame for "unlit" without touching the prop, and the app's bloom picks it up. Th
   to the triangle budget, bake the scale to metres, set the pivot, 1024² JPEG textures)
   and then colour-graded where Meshy painted off-palette (table, bench and crates
   moved from pale pine to the kit's oak). No raw Meshy output ships.
+- **Every GLB is flat**: its mesh nodes are direct scene children, with one primitive each.
+  Core's scene sync sends nested groups with their world pose, so a nested import lands
+  off by its own offset on other peers. `build.mjs` refuses a GLB that isn't flat.
 - Rebuild: `node _src/build.mjs` (reads the Meshy staging folder), `node _src/cover.mjs`,
   `node _src/kitmd.mjs`. E2E proof: `_src/e2e-props-kit.cjs` (header says how).
 
