@@ -9,7 +9,9 @@
     "meshy-gen": "bin/meshy-gen.js",
     "meshy-post": "bin/meshy-post.js",
     "meshy-thumb": "bin/meshy-thumb.js",
-    "meshy-balance": "bin/meshy-balance.js"
+    "meshy-balance": "bin/meshy-balance.js",
+    "meshy-rigged": "bin/meshy-rigged.js",
+    "meshy-library": "bin/meshy-library.js"
   },
   "scripts": {
     "test": "node --test test/*.test.js"

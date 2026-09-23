@@ -16,7 +16,7 @@ import { priceOf } from './prices.js';
 import { reserve } from './budget.js';
 import { readLedger, append, keyState, jobKey, lastAttempt, latestSucceededTask } from './ledger.js';
 
-export const STAGES = ['preview', 'refine', 'retexture', 'remesh'];
+export const STAGES = ['preview', 'refine', 'retexture', 'remesh', 'rig', 'animate'];
 
 // The orchestrator's locked art direction (_rules-30c.md), folded into every prompt
 // with style "house" so the three packs mix.
@@ -29,8 +29,13 @@ const ENDPOINT = {
 	preview: '/openapi/v2/text-to-3d',
 	refine: '/openapi/v2/text-to-3d',
 	retexture: '/openapi/v1/retexture',
-	remesh: '/openapi/v1/remesh'
+	remesh: '/openapi/v1/remesh',
+	rig: '/openapi/v1/rigging',
+	animate: '/openapi/v1/animations'
 };
+
+/** the library actions of an animate job (`actionIds`, or one `actionId`) @param {any} job */
+export const actionsOf = (job) => (Array.isArray(job.actionIds) ? job.actionIds : job.actionId != null ? [job.actionId] : []);
 
 /** @param {any} job */
 export function validateJob(job) {
@@ -44,6 +49,11 @@ export function validateJob(job) {
 	if (job.targetTris != null && !(job.targetTris >= 100 && job.targetTris <= 300000)) errs.push('targetTris: 100..300000');
 	if (job.style != null && !['house', 'none'].includes(job.style)) errs.push('style: house|none');
 	if (job.dims != null && typeof job.dims !== 'object') errs.push('dims: {x?,y?,z?} metres');
+	if (job.stage === 'rig' && job.heightMeters != null && !(job.heightMeters >= 0.2 && job.heightMeters <= 10)) errs.push('heightMeters: 0.2..10');
+	if (job.stage === 'animate') {
+		const a = actionsOf(job);
+		if (!a.length || a.length > 10 || !a.every((n) => Number.isInteger(n) && n >= 0)) errs.push('actionIds: 1-10 library action ids (integers) — see meshy-library');
+	}
 	return errs;
 }
 
@@ -109,12 +119,44 @@ export function buildPayload(job, { sourceTaskId } = {}) {
 				target_polycount: Math.max(100, Math.min(300000, job.targetTris ?? 4000)),
 				target_formats: ['glb']
 			};
+		case 'rig':
+			// the textured mesh of a refine/retexture; Meshy scales the rig to this height
+			return { input_task_id: sourceTaskId, height_meters: job.heightMeters ?? 1.7 };
+		case 'animate': {
+			const ids = actionsOf(job);
+			return {
+				rig_task_id: sourceTaskId,
+				...(ids.length === 1 ? { action_id: ids[0] } : { action_ids: ids }),
+				...(job.fps ? { post_process: { operation_type: 'change_fps', fps: job.fps } } : {})
+			};
+		}
 	}
 	throw new Error(`unknown stage ${job.stage}`);
 }
 
 /** which earlier stages of the `from` job a stage takes its mesh from */
-const SOURCE_STAGES = { refine: ['preview'], retexture: ['refine', 'retexture', 'preview'], remesh: ['refine', 'retexture', 'preview'] };
+const SOURCE_STAGES = { refine: ['preview'], retexture: ['refine', 'retexture', 'preview'], remesh: ['refine', 'retexture', 'preview'], rig: ['retexture', 'refine'], animate: ['rig'] };
+
+/**
+ * Where a finished task's files are: `raw` becomes raw.glb, `extra` are saved beside it
+ * under their names. Text-to-3D/retexture/remesh answer `model_urls.glb`; rigging answers
+ * `result.rigged_character_glb_url` plus its basic walking/running clips; an animation
+ * task answers `result.animation_glb_url`.
+ * @param {string} stage @param {any} task @returns {{raw?: string, extra: Record<string, string>}}
+ */
+export function resultUrls(stage, task) {
+	const r = task?.result ?? {};
+	if (stage === 'rig') {
+		const b = r.basic_animations ?? {};
+		/** @type {Record<string, string>} */
+		const extra = {};
+		if (b.walking_glb_url) extra['walking.glb'] = b.walking_glb_url;
+		if (b.running_glb_url) extra['running.glb'] = b.running_glb_url;
+		return { raw: r.rigged_character_glb_url, extra };
+	}
+	if (stage === 'animate') return { raw: r.animation_glb_url, extra: {} };
+	return { raw: task?.model_urls?.glb, extra: {} };
+}
 
 const TERMINAL = new Set(['SUCCEEDED', 'FAILED', 'CANCELED', 'EXPIRED']);
 
@@ -132,6 +174,8 @@ export async function findOrphan(api, stage, payload, sinceIso, known) {
 			if (stage === 'preview') return t.prompt === payload.prompt && (!t.type || t.type.endsWith('preview'));
 			if (stage === 'refine') return (!t.type || t.type.endsWith('refine')) && (t.preview_task_id == null || t.preview_task_id === payload.preview_task_id);
 			if (stage === 'retexture') return t.text_style_prompt == null || t.text_style_prompt === payload.text_style_prompt;
+			if (stage === 'rig') return t.input_task_id == null || t.input_task_id === payload.input_task_id;
+			if (stage === 'animate') return t.rig_task_id == null || t.rig_task_id === payload.rig_task_id;
 			return true;
 		})
 		.sort((a, b) => Number(a.created_at) - Number(b.created_at));
@@ -174,7 +218,7 @@ export async function runJob(o) {
 		if (!sourceTaskId) return { status: 'invalid', reason: `${job.stage} needs a SUCCEEDED ${SOURCE_STAGES[job.stage].join('/')} of job "${fromJob}" (by ${requester}) — run that first, or pass sourceTaskId` };
 	}
 	const payload = buildPayload(job, { sourceTaskId });
-	const credits = priceOf({ stage: job.stage, model: job.model, geometryResolution: job.geometryResolution, textureResolution: job.textureResolution });
+	const credits = priceOf({ stage: job.stage, model: job.model, geometryResolution: job.geometryResolution, textureResolution: job.textureResolution, actions: actionsOf(job).length });
 	if (o.dryRun) return { status: 'dry-run', credits, reason: JSON.stringify(payload) };
 
 	let taskId = st.taskId;
@@ -267,9 +311,16 @@ export async function runJob(o) {
 		log(`${task.status}: ${task.task_error?.message ?? ''}`);
 		return { status: task.status, taskId, dir, reason: task.task_error?.message, credits: consumed ?? 0 };
 	}
-	const glbUrl = task.model_urls?.glb;
-	if (!glbUrl) throw new Error(`task ${taskId} SUCCEEDED without a glb url`);
-	fs.writeFileSync(path.join(dir, 'raw.glb'), await api.download(glbUrl));
+	const urls = resultUrls(job.stage, task);
+	if (!urls.raw) throw new Error(`task ${taskId} SUCCEEDED without a glb url`);
+	fs.writeFileSync(path.join(dir, 'raw.glb'), await api.download(urls.raw));
+	for (const [name, url] of Object.entries(urls.extra)) {
+		try {
+			fs.writeFileSync(path.join(dir, name), await api.download(url));
+		} catch (err) {
+			log(`${name} download failed (non-fatal — re-run the job to fetch it again): ${err.message}`);
+		}
+	}
 	if (task.thumbnail_url) {
 		try {
 			fs.writeFileSync(path.join(dir, 'meshy-thumb.png'), await api.download(task.thumbnail_url));

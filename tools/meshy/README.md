@@ -11,6 +11,8 @@ node bin/meshy-gen.js --requester <slug> --job jobs.json [--dry-run] [--post] [-
 node bin/meshy-post.js raw.glb model.glb --job job.json [--thumb thumb.webp]
 node bin/meshy-thumb.js a.glb b.glb … --sheet sheet.png      # LOOK before you refine
 node bin/meshy-balance.js                                    # live balance, spend vs cap, drift
+node bin/meshy-library.js --search walk                      # animation library ids (free GET)
+node bin/meshy-rigged.js rig.glb out.glb --clip walking.glb=walk --clip anim.glb=hit,death --tris 8000
 npm test                                                     # ledger/cap/idempotency/post — no credits
 ```
 
@@ -39,6 +41,15 @@ caps + notes), `ledger.jsonl` (append-only, every line under `flock`), `READY`,
   "rotateY": 0, "hero": false   // hero → 2048² textures
 }
 ```
+
+**Characters (30c-game-assets):** `"stage": "rig"` (5 cr, `heightMeters`, default 1.7) auto-rigs
+the textured refine/retexture of `from` — a HUMANOID with clear limbs, facing +Z — and saves
+`raw.glb` (the rigged character) + `walking.glb` + `running.glb` (Meshy's basic clips, included).
+`"stage": "animate"` (3 cr per action, `actionIds` 1-10 from `meshy-library`, optional `fps`)
+takes the rig of `from` and saves `raw.glb` with those clips. `--post` skips both (meshy-post
+would tear a skin off its skeleton): merge them with `meshy-rigged`, which copies every clip onto
+the base skeleton by node name, names them (`walk`, `hit`, `death`…), welds/simplifies the skinned
+mesh, drops the black emissive and resizes textures to 1024² JPEG.
 
 `refine` finds the SUCCEEDED `preview` of `from` (or its own id) in the ledger;
 `retexture` takes the newest refine/retexture/preview mesh of `from`.
@@ -69,7 +80,7 @@ Meshy's own generator/extras are never stripped (Meshy ToS §2.4).
 
 ## Tests
 
-`npm test` — 21 unit tests (ledger, cap, cross-process flock race, idempotency,
+`npm test` — 28 unit tests (7 for rig/animate/meshy-rigged) (ledger, cap, cross-process flock race, idempotency,
 orphan adoption, refunds, 429/5xx classification, key scrubbing, post-processing
 geometry/texture/pivot math on a synthetic GLB). `test/e2e-app-load.cjs` — a
 post-processed GLB imported as a pack into a running core dev server, placed,

@@ -30,7 +30,9 @@ async function worker() {
 		let r;
 		try {
 			r = await runJob({ requester: args.requester, job, home: HOME, again: !!args.again, dryRun: !!args['dry-run'], out: jobs.length === 1 ? args.out : undefined });
-			if (r.status === 'SUCCEEDED' && args.post) {
+			// a rig/animation is skinned: meshy-post would tear it off its skeleton — merge
+			// those with meshy-rigged instead
+			if (r.status === 'SUCCEEDED' && args.post && job.stage !== 'rig' && job.stage !== 'animate') {
 				const { postProcess } = await import('../lib/post.js');
 				const { renderThumbs } = await import('../lib/thumb.js');
 				const outGlb = path.join(r.dir, 'model.glb');
