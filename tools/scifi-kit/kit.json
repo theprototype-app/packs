@@ -19,13 +19,57 @@
     },
     "fit": "stretch",
     "pivot": "bottom-center",
-    "clamp": "xy"
+    "clamp": "xy",
+    "recolor": {
+     "hue": [
+      150,
+      205
+     ],
+     "sat": 0.12,
+     "val": 0.95
+    },
+    "textureSize": 512
    },
    "cut": [
+    {
+     "op": "mirror"
+    },
     {
      "op": "core",
      "depth": 0.075,
      "open": "x"
+    },
+    {
+     "op": "core",
+     "depth": 0.124,
+     "open": "",
+     "inset": 0,
+     "extent": {
+      "x": [
+       0.8,
+       1
+      ],
+      "y": [
+       0.25,
+       2.75
+      ]
+     }
+    },
+    {
+     "op": "core",
+     "depth": 0.124,
+     "open": "",
+     "inset": 0,
+     "extent": {
+      "x": [
+       -1,
+       -0.8
+      ],
+      "y": [
+       0.25,
+       2.75
+      ]
+     }
     }
    ],
    "place": "on a grid line: x or z on a whole odd metre (1, 3, …), 0° or 90°"
@@ -76,7 +120,8 @@
      "sat": 0.35,
      "val": 0.55,
      "strength": 1.6
-    }
+    },
+    "textureSize": 512
    },
    "place": "at the SAME position and rotation as a Wall — open doorway (closes it)"
   },
@@ -149,7 +194,8 @@
      "sat": 0.35,
      "val": 0.55,
      "strength": 1.6
-    }
+    },
+    "textureSize": 512
    },
    "place": "on a grid point (a hall column, a corner, a gate post)"
   },
@@ -173,7 +219,8 @@
     },
     "fit": "stretch",
     "pivot": "bottom-center",
-    "clamp": "xz-y"
+    "clamp": "xz-y",
+    "textureSize": 512
    },
    "cut": [
     {
@@ -215,14 +262,15 @@
     "targetTris": 4000,
     "dims": {
      "x": 2,
-     "y": 3,
+     "y": 3.455,
      "z": 4
     },
     "fit": "stretch",
     "pivot": "bottom-center",
     "clamp": "-y"
    },
-   "place": "in a 2 × 4 slot, bottom step at +Z; the top step is level with y = 3"
+   "place": "in a 2 × 4 slot, bottom step at +Z; the TOP TREAD is level with y = 3 (its rails stand 0.46 m above that floor)",
+   "pivotDoc": "bottom centre"
   },
   {
    "name": "Ramp",
@@ -311,21 +359,46 @@
     "dims": {
      "y": 0.7
     },
-    "pivot": "bottom-center"
+    "pivot": "bottom-center",
+    "recolor": {
+     "hue": [
+      12,
+      50
+     ],
+     "sat": 0.2,
+     "val": 1.05
+    }
    },
    "place": "free; stacks on another crate"
   },
   {
    "name": "CrateLarge",
-   "label": "Cargo crate, large",
+   "label": "Cargo crate, large (gunmetal)",
    "file": "crate-large.glb",
-   "kitbash": [
-    {
-     "from": "Crate",
-     "scale": 1.6
+   "place": "free",
+   "src": {
+    "job": "crate",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 2500,
+    "dims": {
+     "y": 1.12
+    },
+    "pivot": "bottom-center",
+    "recolor": {
+     "hue": [
+      12,
+      50
+     ],
+     "sat": 0.2,
+     "val": 1.05
+    },
+    "albedo": {
+     "brightness": 0.3,
+     "saturation": 0.8
     }
-   ],
-   "place": "free"
+   }
   },
   {
    "name": "Canister",
@@ -430,7 +503,16 @@
     "dims": {
      "y": 1.0
     },
-    "pivot": "bottom-center"
+    "pivot": "bottom-center",
+    "recolor": {
+     "hue": [
+      55,
+      110
+     ],
+     "sat": 0.75,
+     "val": 0.62,
+     "shift": 28
+    }
    },
    "place": "free"
   },
@@ -458,7 +540,7 @@
      "strength": 1.6
     }
    },
-   "place": "free; Ø 2.4 m fits a 2 × 2 cell's centre"
+   "place": "free; centred on a floor cell (Ø 2.4 m: it overhangs a 2 × 2 cell by 0.2 m)"
   },
   {
    "name": "Drone",
@@ -485,6 +567,198 @@
     }
    },
    "place": "free (lift it to hover)"
+  },
+  {
+   "name": "CoverDiorama",
+   "internal": true,
+   "file": "cover-diorama.glb",
+   "kitbash": [
+    {
+     "from": "FloorPlate",
+     "pos": [
+      1,
+      0,
+      1
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "FloorPlate",
+     "pos": [
+      3,
+      0,
+      1
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "FloorPlate",
+     "pos": [
+      1,
+      0,
+      3
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "FloorGrate",
+     "pos": [
+      3,
+      0,
+      3
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "Wall",
+     "pos": [
+      1,
+      0,
+      0
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "WallWindow",
+     "pos": [
+      3,
+      0,
+      0
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "WallDoorway",
+     "pos": [
+      0,
+      0,
+      1
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "SlidingDoor",
+     "pos": [
+      0,
+      0,
+      1
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "Wall",
+     "pos": [
+      0,
+      0,
+      3
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "CornerPost",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "WallScreen",
+     "pos": [
+      1,
+      0,
+      0
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "Console",
+     "pos": [
+      1.1,
+      0.1,
+      0.75
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "ServerRack",
+     "pos": [
+      0.6,
+      0.1,
+      3.35
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "Crate",
+     "pos": [
+      2.1,
+      0.1,
+      3.4
+     ],
+     "rotY": 15
+    },
+    {
+     "from": "Canister",
+     "pos": [
+      1.35,
+      0.1,
+      3.55
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "PlantPod",
+     "pos": [
+      3.35,
+      0.1,
+      1.2
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "TeleportPad",
+     "pos": [
+      3,
+      0.1,
+      3
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "Drone",
+     "pos": [
+      3,
+      1.5,
+      3
+     ],
+     "rotY": 30
+    },
+    {
+     "from": "Lamp",
+     "pos": [
+      0.45,
+      0.1,
+      0.45
+     ],
+     "rotY": 0
+    },
+    {
+     "from": "Chair",
+     "pos": [
+      1.6,
+      0.1,
+      1.6
+     ],
+     "rotY": 200
+    }
+   ]
   }
- ]
+ ],
+ "cover": {
+  "item": "CoverDiorama",
+  "bg": "#c9d2d6",
+  "yaw": 35
+ }
 }

@@ -43,8 +43,10 @@ function boxUV(geo, tile = TILE_M) {
 	return geo;
 }
 
-/** an axis-aligned box from lo to hi (metres) */
-const B = (lo, hi) => new THREE.BoxGeometry(hi[0] - lo[0], hi[1] - lo[1], hi[2] - lo[2]).translate((lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, (lo[2] + hi[2]) / 2);
+/** an axis-aligned box from lo to hi (metres); `seg` subdivides x and z — a 2 m face as ONE
+ * triangle pair cracked along its diagonal where the camera's near plane clipped it (the
+ * station e2e saw background pixels through the ceiling), so big slabs are tessellated */
+const B = (lo, hi, seg = 1) => new THREE.BoxGeometry(hi[0] - lo[0], hi[1] - lo[1], hi[2] - lo[2], seg, 1, seg).translate((lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, (lo[2] + hi[2]) / 2);
 /** a cylinder along Y, bottom at y */
 const C = (r, h, x = 0, y = 0, z = 0, seg = 16, r2 = r) => new THREE.CylinderGeometry(r2, r, h, seg).translate(x, y + h / 2, z);
 /** euler (deg) + translation */
@@ -133,6 +135,9 @@ export const OPENINGS = {
 	window: { w: 1.4, h: 1.0, sill: 1.0 }
 };
 const WALL_Z = 0.125; // half the wall's depth: its faces are at z = ±0.125
+// slab tessellation (x and z segments of the ceiling and grating slabs); SCIFI_SLAB_SEG=1 rebuilds
+// the cracked original for the station e2e's counterfactual
+const SLAB_SEG = Number(process.env.SCIFI_SLAB_SEG ?? 8);
 
 // ------------------------------------------------------------------ the pieces
 
@@ -144,7 +149,7 @@ function FloorGrate() {
 	// bearing bars along X, cross bars along Z (a hair lower so the tops read as a mesh)
 	for (let z = -1 + f + 0.06; z < 1 - f; z += 0.075) p.add('gunmetal', B([-1 + f, 0.035, z - 0.008], [1 - f, 0.1, z + 0.008]));
 	for (const x of [-0.6, -0.2, 0.2, 0.6]) p.add('gunmetal', B([x - 0.012, 0.03, -1 + f], [x + 0.012, 0.095, 1 - f]));
-	p.add('dark', B([-1, 0, -1], [1, 0.02, 1]));
+	p.add('dark', B([-1, 0, -1], [1, 0.02, 1], SLAB_SEG));
 	// a teal light line along the sub-plate's centre, seen through the bars
 	p.add('glow', B([-0.9, 0.02, -0.02], [0.9, 0.024, 0.02]));
 	return p;
@@ -155,7 +160,7 @@ function FloorGrate() {
  * light strip and its housing hanging 1.5 cm below */
 function CeilingLight() {
 	const p = new Piece('CeilingLight');
-	p.add('whitePanels', B([-1, 0, -1], [1, 0.1, 1]));
+	p.add('whitePanels', B([-1, 0, -1], [1, 0.1, 1], SLAB_SEG));
 	p.add('gunmetal', B([-0.9, -0.01, -0.16], [0.9, 0, 0.16]));
 	p.add('glow', B([-0.85, -0.015, -0.1], [0.85, -0.01, 0.1]));
 	return p;

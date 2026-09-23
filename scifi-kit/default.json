@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Wall",
+    "label": "Wall panel (2 × 3 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall.glb"
+    }
+  },
+  {
+    "name": "WallDoorway",
+    "label": "Wall — open doorway",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-doorway.glb"
+    }
+  },
+  {
+    "name": "SlidingDoor",
+    "label": "Sliding door + frame (fits the doorway)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "sliding-door.glb"
+    }
+  },
+  {
+    "name": "WallDoor",
+    "label": "Wall + sliding door",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-door.glb"
+    }
+  },
+  {
+    "name": "WallWindow",
+    "label": "Wall + window",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-window.glb"
+    }
+  },
+  {
+    "name": "CornerPost",
+    "label": "Corner post",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "corner-post.glb"
+    }
+  },
+  {
+    "name": "Pillar",
+    "label": "Pillar / strut",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "pillar.glb"
+    }
+  },
+  {
+    "name": "FloorPlate",
+    "label": "Floor plate (2 × 2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "floor-plate.glb"
+    }
+  },
+  {
+    "name": "FloorGrate",
+    "label": "Floor grating (2 × 2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "floor-grate.glb"
+    }
+  },
+  {
+    "name": "CeilingLight",
+    "label": "Ceiling panel + light strip",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "ceiling-light.glb"
+    }
+  },
+  {
+    "name": "Stairs",
+    "label": "Stairs (1 storey)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "stairs.glb"
+    }
+  },
+  {
+    "name": "Ramp",
+    "label": "Ramp (2 × 2 m, 1 m rise)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "ramp.glb"
+    }
+  },
+  {
+    "name": "Railing",
+    "label": "Railing (2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "railing.glb"
+    }
+  },
+  {
+    "name": "Console",
+    "label": "Command console",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "console.glb"
+    }
+  },
+  {
+    "name": "WallScreen",
+    "label": "Wall screen",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-screen.glb"
+    }
+  },
+  {
+    "name": "ServerRack",
+    "label": "Server rack",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "server-rack.glb"
+    }
+  },
+  {
+    "name": "Crate",
+    "label": "Cargo crate",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "crate.glb"
+    }
+  },
+  {
+    "name": "CrateLarge",
+    "label": "Cargo crate, large (gunmetal)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "crate-large.glb"
+    }
+  },
+  {
+    "name": "Canister",
+    "label": "Fuel canister",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "canister.glb"
+    }
+  },
+  {
+    "name": "PipeStraight",
+    "label": "Pipe run, straight (2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "pipe-straight.glb"
+    }
+  },
+  {
+    "name": "PipeElbow",
+    "label": "Pipe run, elbow",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "pipe-elbow.glb"
+    }
+  },
+  {
+    "name": "Vent",
+    "label": "Wall vent",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "vent.glb"
+    }
+  },
+  {
+    "name": "Lamp",
+    "label": "Light column",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "lamp.glb"
+    }
+  },
+  {
+    "name": "Chair",
+    "label": "Swivel chair",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "chair.glb"
+    }
+  },
+  {
+    "name": "Desk",
+    "label": "Desk + terminal",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "desk.glb"
+    }
+  },
+  {
+    "name": "PlantPod",
+    "label": "Plant pod",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "plant-pod.glb"
+    }
+  },
+  {
+    "name": "TeleportPad",
+    "label": "Teleport pad",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "teleport-pad.glb"
+    }
+  },
+  {
+    "name": "Drone",
+    "label": "Drone",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "drone.glb"
+    }
+  }
+]

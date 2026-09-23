@@ -34,5 +34,15 @@
     "copyright": "",
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs"
+  },
+  {
+    "name": "scifi-kit",
+    "title": "Sci-fi & Modern Kit",
+    "value": "scifi-kit/default.json",
+    "attribution": "scifi-kit/attribution.html",
+    "copyright": "(c) theprototype",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/scifi-kit",
+    "cover": "scifi-kit/cover.webp"
   }
 ]

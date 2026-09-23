@@ -12,6 +12,9 @@ cube_diorama/                    Blender Studio's Cube Diorama, split per object
 khronos-sample-assets/           metadata only — model bytes are fetched straight from
                                  github.com/KhronosGroup/glTF-Sample-Assets (CC-BY 4.0)
 audio-essentials/                23 CC0 sounds (Kenney + OpenGameArt), installable .zip
+scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
+                                 on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
+tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -54,5 +57,7 @@ reading the ref they were built against.
   only an index.
 - `audio-essentials/` — all CC0; per-file sources in
   [CREDITS.md](audio-essentials/CREDITS.md) (Kenney.nl, OpenGameArt).
+- `scifi-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
+  (see its `attribution.html`).
 
 See [LICENSE](LICENSE) and each pack's `attribution.html`.

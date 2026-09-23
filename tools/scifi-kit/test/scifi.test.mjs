@@ -94,3 +94,21 @@ test('every procedural piece is FLAT for sync: leaf nodes under the scene, one p
 		for (const n of scene.listChildren()) assert.deepEqual(n.getTranslation(), [0, 0, 0], `${name}: node at the pivot`);
 	}
 });
+
+test('big slabs are tessellated (a 2 m face as one triangle pair cracked where the near plane clipped it)', async () => {
+	for (const [name, key] of [['CeilingLight', 'whitePanels'], ['FloorGrate', 'dark']]) {
+		const doc = await PIECES[name]().doc();
+		const prim = doc.getRoot().listNodes().find((n) => n.getName().endsWith('_' + key)).getMesh().listPrimitives()[0];
+		const pos = prim.getAttribute('POSITION');
+		const a = [0, 0, 0];
+		const b = [0, 0, 0];
+		let longest = 0;
+		for (let i = 0; i < pos.getCount(); i += 3)
+			for (let k = 0; k < 3; k++) {
+				pos.getElement(i + k, a);
+				pos.getElement(i + ((k + 1) % 3), b);
+				longest = Math.max(longest, Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]));
+			}
+		assert.ok(longest < 0.4, `${name}: longest edge ${longest.toFixed(2)} m`);
+	}
+});

@@ -1,0 +1,919 @@
+{
+  "Wall": {
+    "name": "Wall",
+    "file": "scifi-kit/Wall/glTF-Binary/wall.glb",
+    "bytes": 192736,
+    "tris": 998,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 330,
+    "stage": "refine-1"
+  },
+  "WallDoorCut": {
+    "name": "WallDoorCut",
+    "file": "tools/scifi-kit/.build/wall-door-cut.glb",
+    "bytes": 208072,
+    "tris": 1346,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "WallDoorway": {
+    "name": "WallDoorway",
+    "file": "scifi-kit/WallDoorway/glTF-Binary/wall-doorway.glb",
+    "bytes": 254604,
+    "tris": 1442,
+    "size": [
+      2,
+      3,
+      0.32
+    ],
+    "min": [
+      -1,
+      0,
+      -0.16
+    ],
+    "max": [
+      1,
+      3,
+      0.16
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "SlidingDoor": {
+    "name": "SlidingDoor",
+    "file": "scifi-kit/SlidingDoor/glTF-Binary/sliding-door.glb",
+    "bytes": 277656,
+    "tris": 3000,
+    "size": [
+      1.5,
+      2.6,
+      0.3
+    ],
+    "min": [
+      -0.75,
+      0,
+      -0.15
+    ],
+    "max": [
+      0.75,
+      2.6,
+      0.15
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "glowing": 0.07,
+    "stage": "refine-1"
+  },
+  "WallDoor": {
+    "name": "WallDoor",
+    "file": "scifi-kit/WallDoor/glTF-Binary/wall-door.glb",
+    "bytes": 485196,
+    "tris": 4346,
+    "size": [
+      2,
+      3,
+      0.3
+    ],
+    "min": [
+      -1,
+      0,
+      -0.15
+    ],
+    "max": [
+      1,
+      3,
+      0.15
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "WallWindowCut": {
+    "name": "WallWindowCut",
+    "file": "tools/scifi-kit/.build/wall-window-cut.glb",
+    "bytes": 207472,
+    "tris": 1406,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "WallWindow": {
+    "name": "WallWindow",
+    "file": "scifi-kit/WallWindow/glTF-Binary/wall-window.glb",
+    "bytes": 252332,
+    "tris": 1490,
+    "size": [
+      2,
+      3,
+      0.31
+    ],
+    "min": [
+      -1,
+      0,
+      -0.155
+    ],
+    "max": [
+      1,
+      3,
+      0.155
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "CornerPost": {
+    "name": "CornerPost",
+    "file": "scifi-kit/CornerPost/glTF-Binary/corner-post.glb",
+    "bytes": 173188,
+    "tris": 630,
+    "size": [
+      0.25,
+      3,
+      0.25
+    ],
+    "min": [
+      -0.125,
+      0,
+      -0.125
+    ],
+    "max": [
+      0.125,
+      3,
+      0.125
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "Pillar": {
+    "name": "Pillar",
+    "file": "scifi-kit/Pillar/glTF-Binary/pillar.glb",
+    "bytes": 232188,
+    "tris": 2386,
+    "size": [
+      0.5,
+      3,
+      0.5
+    ],
+    "min": [
+      -0.25,
+      0,
+      -0.25
+    ],
+    "max": [
+      0.25,
+      3,
+      0.25
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 59,
+    "glowing": 4.94,
+    "stage": "refine-1"
+  },
+  "FloorPlate": {
+    "name": "FloorPlate",
+    "file": "scifi-kit/FloorPlate/glTF-Binary/floor-plate.glb",
+    "bytes": 223004,
+    "tris": 2125,
+    "size": [
+      2,
+      0.1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.1,
+      1
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 971,
+    "stage": "refine-1"
+  },
+  "FloorGrate": {
+    "name": "FloorGrate",
+    "file": "scifi-kit/FloorGrate/glTF-Binary/floor-grate.glb",
+    "bytes": 103820,
+    "tris": 716,
+    "size": [
+      2,
+      0.1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.1,
+      1
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "CeilingLight": {
+    "name": "CeilingLight",
+    "file": "scifi-kit/CeilingLight/glTF-Binary/ceiling-light.glb",
+    "bytes": 83984,
+    "tris": 344,
+    "size": [
+      2,
+      0.115,
+      2
+    ],
+    "min": [
+      -1,
+      -0.015,
+      -1
+    ],
+    "max": [
+      1,
+      0.1,
+      1
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "Stairs": {
+    "name": "Stairs",
+    "file": "scifi-kit/Stairs/glTF-Binary/stairs.glb",
+    "bytes": 612776,
+    "tris": 3711,
+    "size": [
+      2,
+      3.455,
+      4
+    ],
+    "min": [
+      -1,
+      0,
+      -2
+    ],
+    "max": [
+      1,
+      3.455,
+      2
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 110,
+    "stage": "refine-1"
+  },
+  "Ramp": {
+    "name": "Ramp",
+    "file": "scifi-kit/Ramp/glTF-Binary/ramp.glb",
+    "bytes": 94780,
+    "tris": 144,
+    "size": [
+      2,
+      1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      1,
+      1
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "Railing": {
+    "name": "Railing",
+    "file": "scifi-kit/Railing/glTF-Binary/railing.glb",
+    "bytes": 82440,
+    "tris": 160,
+    "size": [
+      2,
+      1.085,
+      0.08
+    ],
+    "min": [
+      -1,
+      0,
+      -0.04
+    ],
+    "max": [
+      1,
+      1.085,
+      0.04
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "Console": {
+    "name": "Console",
+    "file": "scifi-kit/Console/glTF-Binary/console.glb",
+    "bytes": 562888,
+    "tris": 3731,
+    "size": [
+      1.823,
+      1.1,
+      0.578
+    ],
+    "min": [
+      -0.911,
+      0,
+      -0.289
+    ],
+    "max": [
+      0.911,
+      1.1,
+      0.289
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "glowing": 0.96,
+    "stage": "refine-1"
+  },
+  "WallScreen": {
+    "name": "WallScreen",
+    "file": "scifi-kit/WallScreen/glTF-Binary/wall-screen.glb",
+    "bytes": 54616,
+    "tris": 26,
+    "size": [
+      1.4,
+      0.85,
+      0.061
+    ],
+    "min": [
+      -0.7,
+      1.15,
+      0.125
+    ],
+    "max": [
+      0.7,
+      2,
+      0.186
+    ],
+    "textures": [
+      "512x512",
+      "512x256",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "ServerRack": {
+    "name": "ServerRack",
+    "file": "scifi-kit/ServerRack/glTF-Binary/server-rack.glb",
+    "bytes": 453068,
+    "tris": 2082,
+    "size": [
+      0.85,
+      2,
+      0.908
+    ],
+    "min": [
+      -0.425,
+      0,
+      -0.454
+    ],
+    "max": [
+      0.425,
+      2,
+      0.454
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "glowing": 0.13,
+    "stage": "refine-1"
+  },
+  "Crate": {
+    "name": "Crate",
+    "file": "scifi-kit/Crate/glTF-Binary/crate.glb",
+    "bytes": 786356,
+    "tris": 2370,
+    "size": [
+      0.724,
+      0.7,
+      0.724
+    ],
+    "min": [
+      -0.362,
+      0,
+      -0.362
+    ],
+    "max": [
+      0.362,
+      0.7,
+      0.362
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "CrateLarge": {
+    "name": "CrateLarge",
+    "file": "scifi-kit/CrateLarge/glTF-Binary/crate-large.glb",
+    "bytes": 662648,
+    "tris": 2370,
+    "size": [
+      1.158,
+      1.12,
+      1.158
+    ],
+    "min": [
+      -0.579,
+      0,
+      -0.579
+    ],
+    "max": [
+      0.579,
+      1.12,
+      0.579
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Canister": {
+    "name": "Canister",
+    "file": "scifi-kit/Canister/glTF-Binary/canister.glb",
+    "bytes": 577720,
+    "tris": 2499,
+    "size": [
+      0.596,
+      1,
+      0.596
+    ],
+    "min": [
+      -0.298,
+      0,
+      -0.298
+    ],
+    "max": [
+      0.298,
+      1,
+      0.298
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "PipeStraight": {
+    "name": "PipeStraight",
+    "file": "scifi-kit/PipeStraight/glTF-Binary/pipe-straight.glb",
+    "bytes": 105332,
+    "tris": 464,
+    "size": [
+      2,
+      0.33,
+      0.26
+    ],
+    "min": [
+      -1,
+      0,
+      -0.13
+    ],
+    "max": [
+      1,
+      0.33,
+      0.13
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "PipeElbow": {
+    "name": "PipeElbow",
+    "file": "scifi-kit/PipeElbow/glTF-Binary/pipe-elbow.glb",
+    "bytes": 239700,
+    "tris": 1864,
+    "size": [
+      1.13,
+      0.33,
+      1.13
+    ],
+    "min": [
+      -1,
+      0,
+      -0.13
+    ],
+    "max": [
+      0.13,
+      0.33,
+      1
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "Vent": {
+    "name": "Vent",
+    "file": "scifi-kit/Vent/glTF-Binary/vent.glb",
+    "bytes": 69192,
+    "tris": 132,
+    "size": [
+      0.8,
+      0.5,
+      0.06
+    ],
+    "min": [
+      -0.4,
+      0.35,
+      0.125
+    ],
+    "max": [
+      0.4,
+      0.85,
+      0.185
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "Lamp": {
+    "name": "Lamp",
+    "file": "scifi-kit/Lamp/glTF-Binary/lamp.glb",
+    "bytes": 110012,
+    "tris": 484,
+    "size": [
+      0.44,
+      1.78,
+      0.44
+    ],
+    "min": [
+      -0.22,
+      0,
+      -0.22
+    ],
+    "max": [
+      0.22,
+      1.78,
+      0.22
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0
+  },
+  "Chair": {
+    "name": "Chair",
+    "file": "scifi-kit/Chair/glTF-Binary/chair.glb",
+    "bytes": 697224,
+    "tris": 3000,
+    "size": [
+      0.681,
+      1.05,
+      0.648
+    ],
+    "min": [
+      -0.34,
+      0,
+      -0.324
+    ],
+    "max": [
+      0.34,
+      1.05,
+      0.324
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Desk": {
+    "name": "Desk",
+    "file": "scifi-kit/Desk/glTF-Binary/desk.glb",
+    "bytes": 527060,
+    "tris": 3500,
+    "size": [
+      1.999,
+      1.3,
+      1.011
+    ],
+    "min": [
+      -0.999,
+      0,
+      -0.506
+    ],
+    "max": [
+      0.999,
+      1.3,
+      0.506
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "glowing": 0.01,
+    "stage": "refine-1"
+  },
+  "PlantPod": {
+    "name": "PlantPod",
+    "file": "scifi-kit/PlantPod/glTF-Binary/plant-pod.glb",
+    "bytes": 863228,
+    "tris": 3441,
+    "size": [
+      1.233,
+      1,
+      1.306
+    ],
+    "min": [
+      -0.617,
+      0,
+      -0.653
+    ],
+    "max": [
+      0.617,
+      1,
+      0.653
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "TeleportPad": {
+    "name": "TeleportPad",
+    "file": "scifi-kit/TeleportPad/glTF-Binary/teleport-pad.glb",
+    "bytes": 728692,
+    "tris": 2999,
+    "size": [
+      2.4,
+      0.214,
+      2.4
+    ],
+    "min": [
+      -1.2,
+      0,
+      -1.2
+    ],
+    "max": [
+      1.2,
+      0.214,
+      1.2
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "glowing": 6.08,
+    "stage": "refine-1"
+  },
+  "Drone": {
+    "name": "Drone",
+    "file": "scifi-kit/Drone/glTF-Binary/drone.glb",
+    "bytes": 552368,
+    "tris": 3999,
+    "size": [
+      0.6,
+      0.175,
+      0.594
+    ],
+    "min": [
+      -0.3,
+      0,
+      -0.297
+    ],
+    "max": [
+      0.3,
+      0.175,
+      0.297
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "glowing": 0.2,
+    "stage": "refine-1"
+  },
+  "CoverDiorama": {
+    "name": "CoverDiorama",
+    "file": "tools/scifi-kit/.build/cover-diorama.glb",
+    "bytes": 6428784,
+    "tris": 40280,
+    "size": [
+      4.36,
+      3,
+      4.355
+    ],
+    "min": [
+      -0.16,
+      0,
+      -0.155
+    ],
+    "max": [
+      4.2,
+      3,
+      4.2
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x256",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "512x512",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  }
+}

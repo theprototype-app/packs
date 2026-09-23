@@ -13,7 +13,8 @@
 //   job = meshy-post's job + { preRotate?: {x?, y?, z?} degrees, clamp?: "x" | "xz" | "xyz" | "x-y" …,
 //         eps?: metres (default 0.04), offset?: [x, y, z] metres applied last,
 //         albedo?: {saturation, brightness, hue} grade of the base colour, dropEmissive?: false to keep it,
-//         glow?: {hue: [lo, hi], sat, val, strength} — light the albedo's own light strips (see glowMask) }
+//         glow?: {hue: [lo, hi], sat, val, strength} — light the albedo's own light strips (see glowMask),
+//         recolor?: {hue: [lo, hi], sat, val, shift} — scale saturation/value (and shift the hue) of that band only (see recolor) }
 // `clamp` lists axes; a trailing "-y" etc. means "the MIN face of y only" (a floor's bottom).
 import fs from 'node:fs';
 import os from 'node:os';
@@ -138,6 +139,45 @@ export async function glowMask(doc, mat, o) {
 	return +((100 * lit) / (info.width * info.height)).toFixed(2);
 }
 
+/** rgb (0-1) → [h°, s, v] */
+export function hsv(r, g, b) {
+	const max = Math.max(r, g, b);
+	const d = max - Math.min(r, g, b);
+	const h = d === 0 ? 0 : max === r ? (60 * ((g - b) / d) + 360) % 360 : max === g ? 60 * ((b - r) / d) + 120 : 60 * ((r - g) / d) + 240;
+	return [h, max ? d / max : 0, max];
+}
+
+/**
+ * A hue-selective grade of the albedo: pixels whose hue is in [lo, hi]° (and saturation
+ * ≥ 0.12, so greys are left alone) get their saturation × sat, value × val and hue + shift° — e.g. the
+ * wall's all-teal frame → warm gunmetal, keeping its painted shading. Returns % of pixels.
+ * @param {any} mat @param {{hue: number[], sat?: number, val?: number, shift?: number}} o
+ */
+export async function recolor(mat, o) {
+	const tex = mat.getBaseColorTexture();
+	if (!tex) return 0;
+	const { data, info } = await sharp(Buffer.from(tex.getImage())).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+	let n = 0;
+	for (let i = 0; i < data.length; i += 3) {
+		const [h, s, v] = hsv(data[i] / 255, data[i + 1] / 255, data[i + 2] / 255);
+		if (s < 0.12 || h < o.hue[0] || h > o.hue[1]) continue;
+		const s2 = Math.min(1, s * (o.sat ?? 1));
+		const v2 = Math.min(1, v * (o.val ?? 1));
+		// back to rgb: keep the pixel's own channel ratios' hue, re-spread for s2/v2
+		const h2 = (h + (o.shift ?? 0) + 360) % 360;
+		const c = v2 * s2;
+		const x = c * (1 - Math.abs(((h2 / 60) % 2) - 1));
+		const m = v2 - c;
+		const [r, g, b] = h2 < 60 ? [c, x, 0] : h2 < 120 ? [x, c, 0] : h2 < 180 ? [0, c, x] : h2 < 240 ? [0, x, c] : h2 < 300 ? [x, 0, c] : [c, 0, x];
+		data[i] = Math.round((r + m) * 255);
+		data[i + 1] = Math.round((g + m) * 255);
+		data[i + 2] = Math.round((b + m) * 255);
+		n++;
+	}
+	tex.setImage(new Uint8Array(await sharp(data, { raw: { width: info.width, height: info.height, channels: 3 } }).jpeg({ quality: 88 }).toBuffer())).setMimeType('image/jpeg');
+	return +((100 * n) / (info.width * info.height)).toFixed(2);
+}
+
 /**
  * @param {string} input @param {string} output @param {any} job
  */
@@ -182,11 +222,13 @@ export async function kitPost(input, output, job) {
 				graded++;
 			}
 		}
+		let recolored = 0;
+		if (job.recolor) for (const mat of doc.getRoot().listMaterials()) recolored += await recolor(mat, job.recolor);
 		let glowing = 0;
 		if (job.glow) for (const mat of doc.getRoot().listMaterials()) glowing += await glowMask(doc, mat, job.glow);
 		await doc.transform(prune());
 		await io.write(output, doc);
-		return { ...report, output, clamped: moved, graded, glowing, bytesOut: fs.statSync(output).size };
+		return { ...report, output, clamped: moved, graded, recolored, glowing, bytesOut: fs.statSync(output).size };
 	} finally {
 		fs.rmSync(tmp, { recursive: true, force: true });
 	}

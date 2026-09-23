@@ -12,6 +12,7 @@
 //           onto it, so the jamb reads as the stone it was cut through
 //   wedge — a block into a ramp: heights scale from full at -Z down to `min` at +Z
 //   recenter — back to a bottom-centre pivot after a slice moved the bbox off the origin
+//   mirror — keep the -z half and mirror it onto +z (both faces become the good one)
 //   core  — a solid slab |z| <= depth (or axis/range, e.g. a floor's y 0..0.07) inside the whole piece, textured with the piece's own
 //           mortar colour. Meshy builds a masonry wall as separate bricks with OPEN mortar
 //           joints (6 % of the refined wall was see-through); the core seals them and reads
@@ -308,6 +309,24 @@ export async function kitCut(input, output, ops) {
 			for (const [k, r] of Object.entries(op.extent ?? {})) [lo[{ x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (k)]], hi[{ x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (k)]]] = /** @type {number[]} */ (r);
 			const proto = await mortarVertex(prim, original, info, axis);
 			tris = tris.concat(coreBox(lo, hi, proto, info, open));
+		}
+		else if (op.op === 'mirror') {
+			// keep the -z half and mirror it onto +z: a wall whose two faces came out
+			// different (Meshy painted one face all accent colour) gets its good face on both
+			// sides. The z = 0 cut plane is inside the core, so it needs no cap.
+			const half = clip(tris, [[0, 0, 1, 0]], 'keep', nOff);
+			const tOff = info.off.TANGENT;
+			const flip = (/** @type {number[]} */ v) => {
+				const w = v.slice();
+				w[2] = -w[2];
+				if (nOff >= 0) w[nOff + 2] = -w[nOff + 2];
+				if (tOff !== undefined) {
+					w[tOff + 2] = -w[tOff + 2];
+					w[tOff + 3] = -w[tOff + 3];
+				}
+				return w;
+			};
+			tris = half.concat(half.map((t) => [flip(t[0]), flip(t[2]), flip(t[1])]));
 		}
 		else if (op.op === 'cap') tris = tris.concat(capQuad(original, info, op.a, op.b, op.normal, z0, z1, op.from));
 		else if (op.op === 'wedge') {
