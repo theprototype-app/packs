@@ -1,0 +1,162 @@
+[
+ {
+  "id": "oak",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 12000,
+  "category": "tree",
+  "dims": {
+   "y": 6
+  },
+  "texturePrompt": "rough dark brown oak bark with deep grooves, rich green summer leaf clumps with lighter yellow-green sunlit tips"
+ },
+ {
+  "id": "pine",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 10000,
+  "category": "tree",
+  "dims": {
+   "y": 8
+  },
+  "texturePrompt": "reddish-brown flaky pine bark, deep blue-green pine needle tiers with lighter tips"
+ },
+ {
+  "id": "dead-tree",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 6000,
+  "category": "tree",
+  "dims": {
+   "y": 5
+  },
+  "texturePrompt": "weathered silver-grey dead wood, cracked peeling bark, a few patches of pale green lichen"
+ },
+ {
+  "id": "palm",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 8000,
+  "category": "tree",
+  "dims": {
+   "y": 7
+  },
+  "texturePrompt": "tan ringed palm trunk with fibrous segment rings, bright green palm fronds with yellow-green edges, brown coconuts"
+ },
+ {
+  "id": "rock",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 1500,
+  "category": "rock",
+  "dims": {
+   "y": 1
+  },
+  "texturePrompt": "warm sandstone rock, beige and grey with subtle horizontal strata, a little green moss in the cracks"
+ },
+ {
+  "id": "log",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "category": "prop",
+  "dims": {
+   "x": 2.5
+  },
+  "texturePrompt": "brown oak bark with soft green moss patches along the top, pale tan cut ends with concentric tree rings"
+ },
+ {
+  "id": "stump",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 2500,
+  "category": "prop",
+  "dims": {
+   "y": 0.6
+  },
+  "texturePrompt": "brown oak bark, pale tan flat cut top with concentric tree rings, green moss on the roots"
+ },
+ {
+  "id": "bush2",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 3000,
+  "category": "plant",
+  "dims": {
+   "y": 1.1
+  },
+  "texturePrompt": "dense green shrub leaves with lighter yellow-green tips and darker green depths"
+ },
+ {
+  "id": "fern",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 3000,
+  "category": "plant",
+  "dims": {
+   "y": 0.8
+  },
+  "texturePrompt": "fresh green fern fronds with lighter leaflet tips, darker green stems"
+ },
+ {
+  "id": "grass",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 2000,
+  "category": "plant",
+  "dims": {
+   "y": 0.6
+  },
+  "texturePrompt": "olive green reed blades with yellowed tips, brown velvety cattail heads"
+ },
+ {
+  "id": "flowers",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 3000,
+  "category": "plant",
+  "dims": {
+   "y": 0.5
+  },
+  "texturePrompt": "golden amber-orange petals with dark brown centres, green stems and leaves"
+ },
+ {
+  "id": "mushrooms",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 3000,
+  "category": "plant",
+  "dims": {
+   "y": 0.5
+  },
+  "texturePrompt": "amber-orange toadstool caps with cream spots, cream stems, green moss mound"
+ },
+ {
+  "id": "path-tile",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2000,
+  "category": "terrain",
+  "dims": {
+   "x": 2,
+   "y": 0.15,
+   "z": 2
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "texturePrompt": "grey-beige sandstone flagstones, darker earthy gaps with a little moss between the stones"
+ }
+]

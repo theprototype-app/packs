@@ -1,0 +1,8 @@
+[
+ {"id":"cliff-l","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":4000,"category":"terrain","dims":{"x":4,"y":4,"z":1.5},"fit":"stretch","pivot":"bottom-center-back",
+  "prompt":"a wide section of rocky cliff wall made of stacked layered sandstone slabs with ledges and cracks, a rectangular block with a flat back and flat sides"},
+ {"id":"hill-l","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":2500,"category":"terrain","dims":{"x":8,"y":1.5,"z":8},"fit":"stretch","pivot":"bottom-center",
+  "prompt":"a low wide grassy earth mound, a small gentle hill with smooth slopes rising to a broad rounded top, flat circular bottom"},
+ {"id":"flat-rock-l","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":1200,"category":"rock","dims":{"x":1.2},
+  "prompt":"a single wide flat slab rock, low and broad stone with rounded weathered edges and a gently uneven top, much wider than tall, flat bottom"}
+]

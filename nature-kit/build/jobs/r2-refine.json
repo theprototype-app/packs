@@ -1,0 +1,26 @@
+[
+ {
+  "id": "birch",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 10000,
+  "category": "tree",
+  "dims": {
+   "y": 7
+  },
+  "texturePrompt": "white birch bark with dark horizontal markings and black knots, light fresh green leaf clumps"
+ },
+ {
+  "id": "bridge",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 5000,
+  "category": "prop",
+  "dims": {
+   "x": 4
+  },
+  "texturePrompt": "weathered oak planks and round log beams and railings, dark iron nails, a little green moss on the posts"
+ }
+]

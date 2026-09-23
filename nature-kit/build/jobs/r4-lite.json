@@ -1,0 +1,34 @@
+[
+ {
+  "id": "cliff-l",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 4000,
+  "category": "terrain",
+  "dims": {
+   "x": 4,
+   "y": 4,
+   "z": 1.5
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center-back",
+  "texturePrompt": "layered warm sandstone cliff rock, beige and ochre strata with grey weathering, darker cracks, a few tufts of green moss on the ledges"
+ },
+ {
+  "id": "hill-l",
+  "pack": "nature-kit",
+  "stage": "refine",
+  "model": "meshy-6-lite",
+  "targetTris": 2500,
+  "category": "terrain",
+  "dims": {
+   "x": 8,
+   "y": 1.5,
+   "z": 8
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "texturePrompt": "a grassy mound, short green meadow grass with lighter yellow-green patches, a little bare brown earth at the foot"
+ }
+]

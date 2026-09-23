@@ -1,0 +1,18 @@
+[
+ {"id":"oak","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":12000,"category":"tree","dims":{"y":6},
+  "prompt":"a single stylized oak tree, thick gnarled trunk with visible roots flaring at the base, broad rounded canopy built from a few large chunky leaf clumps, full summer foliage, standing alone"},
+ {"id":"pine","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":10000,"category":"tree","dims":{"y":8},
+  "prompt":"a single stylized pine tree, straight tall trunk, conical evergreen crown made of stacked chunky layered needle tiers, standing alone"},
+ {"id":"dead-tree","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":6000,"category":"tree","dims":{"y":5},
+  "prompt":"a single stylized dead tree, bare leafless twisted trunk splitting into a few thick crooked branches, weathered grey wood, standing alone"},
+ {"id":"palm","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":8000,"category":"tree","dims":{"y":7},
+  "prompt":"a single stylized palm tree, gently curved segmented trunk, crown of large broad drooping palm fronds, a few coconuts under the fronds, standing alone"},
+ {"id":"bush","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":3000,"category":"plant","dims":{"y":1.2},
+  "prompt":"a round leafy shrub bush, dense cluster of chunky leaf clumps, wider than tall, sitting on the ground"},
+ {"id":"rock","pack":"nature-kit","stage":"preview","model":"t2","targetTris":1500,"category":"rock","dims":{"y":1},
+  "prompt":"a single chunky natural boulder rock with a few flat faceted planes and cracks, wider than tall, flat bottom"},
+ {"id":"log","pack":"nature-kit","stage":"preview","model":"t2","targetTris":2500,"category":"prop","dims":{"x":2.5},
+  "prompt":"a single fallen tree log lying horizontally on the ground, thick round trunk section with rough bark, both ends cleanly cut showing tree rings, one short broken branch stub"},
+ {"id":"stump","pack":"nature-kit","stage":"preview","model":"meshy-6-lite","targetTris":2500,"category":"prop","dims":{"y":0.6},
+  "prompt":"a single short tree stump with flat cut top showing tree rings, thick bark and a few spreading roots gripping the ground"}
+]
