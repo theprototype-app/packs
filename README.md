@@ -12,6 +12,8 @@ cube_diorama/                    Blender Studio's Cube Diorama, split per object
 khronos-sample-assets/           metadata only — model bytes are fetched straight from
                                  github.com/KhronosGroup/glTF-Sample-Assets (CC-BY 4.0)
 audio-essentials/                23 CC0 sounds (Kenney + OpenGameArt), installable .zip
+nature-kit/                      Nature & Terrain: 31 trees/plants/rocks/cliff/path/pond pieces
+                                 (made with Meshy.ai, CC0) — see nature-kit/kit.md
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -54,5 +56,7 @@ reading the ref they were built against.
   only an index.
 - `audio-essentials/` — all CC0; per-file sources in
   [CREDITS.md](audio-essentials/CREDITS.md) (Kenney.nl, OpenGameArt).
+- `nature-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) and
+  post-processed here (`nature-kit/build/`); grass, leaves decal and pond water are procedural.
 
 See [LICENSE](LICENSE) and each pack's `attribution.html`.

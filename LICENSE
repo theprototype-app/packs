@@ -11,5 +11,8 @@ This repository aggregates content under several licenses. Per-pack:
                       README in https://github.com/KhronosGroup/glTF-Sample-Assets
 - audio-essentials/   CC0 1.0. Sources: Kenney (https://kenney.nl) and OpenGameArt
                       authors listed per file in audio-essentials/CREDITS.md
+- nature-kit/         (c) theprototype, CC0 1.0. Made with Meshy.ai (paid plan: the
+                      output is the plan holder's) and post-processed by theprototype;
+                      grass, leaves decal and pond water are procedural.
 
 Everything else in this repository (index files, scripts, docs): CC0 1.0.
