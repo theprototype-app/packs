@@ -1,0 +1,966 @@
+{
+  "WallStone": {
+    "name": "WallStone",
+    "file": "architecture-kit/WallStone/glTF-Binary/wall-stone.glb",
+    "bytes": 843608,
+    "tris": 3072,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 605,
+    "stage": "refine-1"
+  },
+  "WallStoneDoor": {
+    "name": "WallStoneDoor",
+    "file": "architecture-kit/WallStoneDoor/glTF-Binary/wall-stone-door.glb",
+    "bytes": 821924,
+    "tris": 2616,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "WallStoneWindow": {
+    "name": "WallStoneWindow",
+    "file": "architecture-kit/WallStoneWindow/glTF-Binary/wall-stone-window.glb",
+    "bytes": 866136,
+    "tris": 3701,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "WallStoneHalf": {
+    "name": "WallStoneHalf",
+    "file": "architecture-kit/WallStoneHalf/glTF-Binary/wall-stone-half.glb",
+    "bytes": 779908,
+    "tris": 1634,
+    "size": [
+      2,
+      1.5,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      1.5,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "WallStoneGable": {
+    "name": "WallStoneGable",
+    "file": "architecture-kit/WallStoneGable/glTF-Binary/wall-stone-gable.glb",
+    "bytes": 751804,
+    "tris": 982,
+    "size": [
+      2,
+      1.5,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      1.5,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "CornerPostStone": {
+    "name": "CornerPostStone",
+    "file": "architecture-kit/CornerPostStone/glTF-Binary/corner-post-stone.glb",
+    "bytes": 739544,
+    "tris": 678,
+    "size": [
+      0.25,
+      3,
+      0.25
+    ],
+    "min": [
+      -0.125,
+      0,
+      -0.125
+    ],
+    "max": [
+      0.125,
+      3,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "WallPlaster": {
+    "name": "WallPlaster",
+    "file": "architecture-kit/WallPlaster/glTF-Binary/wall-plaster.glb",
+    "bytes": 559888,
+    "tris": 3072,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 605,
+    "stage": "retexture-1"
+  },
+  "WallPlasterDoor": {
+    "name": "WallPlasterDoor",
+    "file": "architecture-kit/WallPlasterDoor/glTF-Binary/wall-plaster-door.glb",
+    "bytes": 538204,
+    "tris": 2616,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "WallPlasterWindow": {
+    "name": "WallPlasterWindow",
+    "file": "architecture-kit/WallPlasterWindow/glTF-Binary/wall-plaster-window.glb",
+    "bytes": 582416,
+    "tris": 3701,
+    "size": [
+      2,
+      3,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      3,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "WallPlasterHalf": {
+    "name": "WallPlasterHalf",
+    "file": "architecture-kit/WallPlasterHalf/glTF-Binary/wall-plaster-half.glb",
+    "bytes": 496180,
+    "tris": 1634,
+    "size": [
+      2,
+      1.5,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      1.5,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "WallPlasterGable": {
+    "name": "WallPlasterGable",
+    "file": "architecture-kit/WallPlasterGable/glTF-Binary/wall-plaster-gable.glb",
+    "bytes": 468076,
+    "tris": 982,
+    "size": [
+      2,
+      1.5,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      1.5,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "Pillar": {
+    "name": "Pillar",
+    "file": "architecture-kit/Pillar/glTF-Binary/pillar.glb",
+    "bytes": 539776,
+    "tris": 1410,
+    "size": [
+      0.5,
+      3,
+      0.5
+    ],
+    "min": [
+      -0.25,
+      0,
+      -0.25
+    ],
+    "max": [
+      0.25,
+      3,
+      0.25
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Column": {
+    "name": "Column",
+    "file": "architecture-kit/Column/glTF-Binary/column.glb",
+    "bytes": 498320,
+    "tris": 1999,
+    "size": [
+      0.5,
+      3,
+      0.5
+    ],
+    "min": [
+      -0.25,
+      0,
+      -0.25
+    ],
+    "max": [
+      0.25,
+      3,
+      0.25
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Arch": {
+    "name": "Arch",
+    "file": "architecture-kit/Arch/glTF-Binary/arch.glb",
+    "bytes": 407260,
+    "tris": 3499,
+    "size": [
+      2,
+      3,
+      0.5
+    ],
+    "min": [
+      -1,
+      0,
+      -0.25
+    ],
+    "max": [
+      1,
+      3,
+      0.25
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 562,
+    "stage": "refine-1"
+  },
+  "FloorStone": {
+    "name": "FloorStone",
+    "file": "architecture-kit/FloorStone/glTF-Binary/floor-stone.glb",
+    "bytes": 629516,
+    "tris": 1504,
+    "size": [
+      2,
+      0.1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.1,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 1159,
+    "stage": "refine-1"
+  },
+  "FloorWood": {
+    "name": "FloorWood",
+    "file": "architecture-kit/FloorWood/glTF-Binary/floor-wood.glb",
+    "bytes": 495796,
+    "tris": 1504,
+    "size": [
+      2,
+      0.1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.1,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 1159,
+    "stage": "retexture-1"
+  },
+  "FloorSlate": {
+    "name": "FloorSlate",
+    "file": "architecture-kit/FloorSlate/glTF-Binary/floor-slate.glb",
+    "bytes": 535740,
+    "tris": 1504,
+    "size": [
+      2,
+      0.1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.1,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 1159,
+    "stage": "retexture-1"
+  },
+  "Stairs": {
+    "name": "Stairs",
+    "file": "architecture-kit/Stairs/glTF-Binary/stairs.glb",
+    "bytes": 728788,
+    "tris": 2940,
+    "size": [
+      2,
+      3,
+      4
+    ],
+    "min": [
+      -1,
+      0,
+      -2
+    ],
+    "max": [
+      1,
+      3,
+      2
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 356,
+    "stage": "refine-1"
+  },
+  "StairsWood": {
+    "name": "StairsWood",
+    "file": "architecture-kit/StairsWood/glTF-Binary/stairs-wood.glb",
+    "bytes": 418224,
+    "tris": 2940,
+    "size": [
+      2,
+      3,
+      4
+    ],
+    "min": [
+      -1,
+      0,
+      -2
+    ],
+    "max": [
+      1,
+      3,
+      2
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 356,
+    "stage": "retexture-1"
+  },
+  "Block": {
+    "name": "Block",
+    "file": "architecture-kit/Block/glTF-Binary/block.glb",
+    "bytes": 671752,
+    "tris": 1408,
+    "size": [
+      2,
+      1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      1,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 901,
+    "stage": "refine-1"
+  },
+  "Ramp": {
+    "name": "Ramp",
+    "file": "architecture-kit/Ramp/glTF-Binary/ramp.glb",
+    "bytes": 671752,
+    "tris": 1408,
+    "size": [
+      2,
+      1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      1,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  },
+  "RoofFlat": {
+    "name": "RoofFlat",
+    "file": "tools/architecture-kit/.build/roof-panel.glb",
+    "bytes": 392748,
+    "tris": 1623,
+    "size": [
+      2,
+      0.12,
+      2.5
+    ],
+    "min": [
+      -1,
+      0,
+      -1.25
+    ],
+    "max": [
+      1,
+      0.12,
+      1.25
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "RoofSlope": {
+    "name": "RoofSlope",
+    "file": "architecture-kit/RoofSlope/glTF-Binary/roof-slope.glb",
+    "bytes": 394364,
+    "tris": 1623,
+    "size": [
+      2,
+      1.5,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      1.5,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 129
+  },
+  "Battlement": {
+    "name": "Battlement",
+    "file": "architecture-kit/Battlement/glTF-Binary/battlement.glb",
+    "bytes": 692320,
+    "tris": 2468,
+    "size": [
+      2,
+      1.2,
+      0.25
+    ],
+    "min": [
+      -1,
+      0,
+      -0.125
+    ],
+    "max": [
+      1,
+      1.2,
+      0.125
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 238,
+    "stage": "refine-1"
+  },
+  "Tower": {
+    "name": "Tower",
+    "file": "architecture-kit/Tower/glTF-Binary/tower.glb",
+    "bytes": 885548,
+    "tris": 5000,
+    "size": [
+      4,
+      3,
+      4
+    ],
+    "min": [
+      -2,
+      0,
+      -2
+    ],
+    "max": [
+      2,
+      3,
+      2
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 609,
+    "stage": "refine-1"
+  },
+  "Door": {
+    "name": "Door",
+    "file": "architecture-kit/Door/glTF-Binary/door.glb",
+    "bytes": 473552,
+    "tris": 2512,
+    "size": [
+      1.3,
+      2.35,
+      0.33
+    ],
+    "min": [
+      -0.65,
+      0,
+      -0.165
+    ],
+    "max": [
+      0.65,
+      2.35,
+      0.165
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Window": {
+    "name": "Window",
+    "file": "architecture-kit/Window/glTF-Binary/window.glb",
+    "bytes": 571612,
+    "tris": 2500,
+    "size": [
+      1.1,
+      1.25,
+      0.5
+    ],
+    "min": [
+      -0.55,
+      0.975,
+      -0.25
+    ],
+    "max": [
+      0.55,
+      2.225,
+      0.25
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Gate": {
+    "name": "Gate",
+    "file": "architecture-kit/Gate/glTF-Binary/gate.glb",
+    "bytes": 443080,
+    "tris": 2841,
+    "size": [
+      2,
+      3,
+      0.2
+    ],
+    "min": [
+      -1,
+      0,
+      -0.1
+    ],
+    "max": [
+      1,
+      3,
+      0.1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 157,
+    "stage": "refine-1"
+  },
+  "Fence": {
+    "name": "Fence",
+    "file": "architecture-kit/Fence/glTF-Binary/fence.glb",
+    "bytes": 416436,
+    "tris": 1462,
+    "size": [
+      2,
+      1,
+      0.15
+    ],
+    "min": [
+      -1,
+      0,
+      -0.075
+    ],
+    "max": [
+      1,
+      1,
+      0.075
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 70,
+    "stage": "refine-1"
+  },
+  "Railing": {
+    "name": "Railing",
+    "file": "architecture-kit/Railing/glTF-Binary/railing.glb",
+    "bytes": 495304,
+    "tris": 2500,
+    "size": [
+      2,
+      1,
+      0.15
+    ],
+    "min": [
+      -1,
+      0,
+      -0.075
+    ],
+    "max": [
+      1,
+      1,
+      0.075
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 194,
+    "stage": "refine-1"
+  },
+  "Beam": {
+    "name": "Beam",
+    "file": "architecture-kit/Beam/glTF-Binary/beam.glb",
+    "bytes": 323196,
+    "tris": 884,
+    "size": [
+      2,
+      0.3,
+      0.3
+    ],
+    "min": [
+      -1,
+      0,
+      -0.15
+    ],
+    "max": [
+      1,
+      0.3,
+      0.15
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Trim": {
+    "name": "Trim",
+    "file": "architecture-kit/Trim/glTF-Binary/trim.glb",
+    "bytes": 490520,
+    "tris": 884,
+    "size": [
+      2,
+      0.2,
+      0.45
+    ],
+    "min": [
+      -1,
+      0,
+      -0.225
+    ],
+    "max": [
+      1,
+      0.2,
+      0.225
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "retexture-1"
+  },
+  "Chimney": {
+    "name": "Chimney",
+    "file": "architecture-kit/Chimney/glTF-Binary/chimney.glb",
+    "bytes": 539848,
+    "tris": 1410,
+    "size": [
+      0.7,
+      1.6,
+      0.7
+    ],
+    "min": [
+      -0.35,
+      0,
+      -0.35
+    ],
+    "max": [
+      0.35,
+      1.6,
+      0.35
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "stage": "refine-1"
+  },
+  "Cover": {
+    "name": "Cover",
+    "file": "tools/architecture-kit/.build/cover-scene.glb",
+    "bytes": 6732752,
+    "tris": 75809,
+    "size": [
+      12.5,
+      6,
+      9.75
+    ],
+    "min": [
+      -5,
+      0,
+      -3.5
+    ],
+    "max": [
+      7.5,
+      6,
+      6.25
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0
+  }
+}

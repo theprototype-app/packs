@@ -1,0 +1,87 @@
+[
+ {
+  "id": "fence",
+  "stage": "refine",
+  "texturePrompt": "weathered natural oak fence posts, rails and pickets, silvery grey-brown grain, slightly darker post caps",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "wall-plaster",
+  "stage": "retexture",
+  "from": "wall-c",
+  "texturePrompt": "rough whitewashed lime plaster rendered over the wall, warm off-white, with patches where the plaster has flaked off showing honey-coloured sandstone blocks beneath, faint grime near the bottom",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "floor-wood",
+  "stage": "retexture",
+  "from": "floor-stone",
+  "texturePrompt": "worn warm oak floorboards running in one direction, thin dark gaps between the planks, visible wood grain and small iron nail heads",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "stairs-wood",
+  "stage": "retexture",
+  "from": "stairs",
+  "texturePrompt": "solid warm oak stair treads and risers, slightly darker oak sides, pale worn centres on the treads",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "railing",
+  "stage": "refine",
+  "texturePrompt": "warm polished oak handrail, bottom rail, newel posts and turned balusters, visible grain, slightly darker at the joints",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "beam",
+  "stage": "refine",
+  "texturePrompt": "rough hewn dark oak timber beam with visible grain, adze marks and a few cracks",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "trim",
+  "stage": "retexture",
+  "from": "beam",
+  "texturePrompt": "a carved honey-coloured sandstone ledge moulding with a smooth dressed face and slightly chipped edges",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "floor-slate",
+  "stage": "retexture",
+  "from": "floor-stone",
+  "texturePrompt": "dark blue-grey slate floor slabs with thin pale grout lines and subtle green and purple tints",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "post-oak",
+  "stage": "retexture",
+  "from": "pillar",
+  "texturePrompt": "a square dark oak timber post with visible vertical grain, a stone plinth at the bottom and an oak capital at the top",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "column-b",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2000,
+  "prompt": "a tall round stone pillar with a smooth round shaft, a square base block at the bottom and a square cap block at the top, straight and upright, modular game level piece",
+  "dims": {
+   "x": 0.5,
+   "y": 3,
+   "z": 0.5
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ }
+]

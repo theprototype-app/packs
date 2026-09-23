@@ -1,0 +1,25 @@
+[
+ {
+  "id": "column-b",
+  "stage": "refine",
+  "texturePrompt": "smooth pale honey-coloured sandstone column with a carved base and capital, subtle weathering in the flutes",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ },
+ {
+  "id": "ramp",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 1500,
+  "prompt": "a solid wedge shaped stone ramp block, a straight flat sloped top surface paved with sandstone flagstones rising from the ground at the front to full height at the back, flat vertical sides and back, rectangular footprint, modular game level piece",
+  "dims": {
+   "x": 2,
+   "y": 1.5,
+   "z": 4
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "pack": "architecture-kit",
+  "category": "architecture"
+ }
+]

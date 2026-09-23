@@ -1,0 +1,258 @@
+[
+  {
+    "name": "WallStone",
+    "label": "Wall — sandstone (2 × 3 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-stone.glb"
+    }
+  },
+  {
+    "name": "WallStoneDoor",
+    "label": "Wall — sandstone, doorway",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-stone-door.glb"
+    }
+  },
+  {
+    "name": "WallStoneWindow",
+    "label": "Wall — sandstone, window",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-stone-window.glb"
+    }
+  },
+  {
+    "name": "WallStoneHalf",
+    "label": "Wall — sandstone, half height",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-stone-half.glb"
+    }
+  },
+  {
+    "name": "WallStoneGable",
+    "label": "Gable — sandstone (half, 2 × 1.5 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-stone-gable.glb"
+    }
+  },
+  {
+    "name": "CornerPostStone",
+    "label": "Corner post — sandstone",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "corner-post-stone.glb"
+    }
+  },
+  {
+    "name": "WallPlaster",
+    "label": "Wall — whitewashed plaster (2 × 3 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-plaster.glb"
+    }
+  },
+  {
+    "name": "WallPlasterDoor",
+    "label": "Wall — plaster, doorway",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-plaster-door.glb"
+    }
+  },
+  {
+    "name": "WallPlasterWindow",
+    "label": "Wall — plaster, window",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-plaster-window.glb"
+    }
+  },
+  {
+    "name": "WallPlasterHalf",
+    "label": "Wall — plaster, half height",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-plaster-half.glb"
+    }
+  },
+  {
+    "name": "WallPlasterGable",
+    "label": "Gable — plaster (half, 2 × 1.5 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-plaster-gable.glb"
+    }
+  },
+  {
+    "name": "Pillar",
+    "label": "Pillar — sandstone",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "pillar.glb"
+    }
+  },
+  {
+    "name": "Column",
+    "label": "Column — sandstone, round",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "column.glb"
+    }
+  },
+  {
+    "name": "Arch",
+    "label": "Archway — sandstone",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "arch.glb"
+    }
+  },
+  {
+    "name": "FloorStone",
+    "label": "Floor — flagstones (2 × 2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "floor-stone.glb"
+    }
+  },
+  {
+    "name": "FloorWood",
+    "label": "Floor — oak boards (2 × 2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "floor-wood.glb"
+    }
+  },
+  {
+    "name": "FloorSlate",
+    "label": "Floor — slate slabs (2 × 2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "floor-slate.glb"
+    }
+  },
+  {
+    "name": "Stairs",
+    "label": "Stairs — sandstone (1 storey)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "stairs.glb"
+    }
+  },
+  {
+    "name": "StairsWood",
+    "label": "Stairs — oak (1 storey)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "stairs-wood.glb"
+    }
+  },
+  {
+    "name": "Block",
+    "label": "Block / landing — sandstone (2 × 1 × 2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "block.glb"
+    }
+  },
+  {
+    "name": "Ramp",
+    "label": "Ramp — sandstone (2 × 2 m, 1 m rise)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "ramp.glb"
+    }
+  },
+  {
+    "name": "RoofSlope",
+    "label": "Roof slope — slate (2 × 2 m, 1.5 m rise)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "roof-slope.glb"
+    }
+  },
+  {
+    "name": "Battlement",
+    "label": "Battlement — sandstone",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "battlement.glb"
+    }
+  },
+  {
+    "name": "Tower",
+    "label": "Round tower section (Ø 4 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "tower.glb"
+    }
+  },
+  {
+    "name": "Door",
+    "label": "Door + frame (fits the doorway)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "door.glb"
+    }
+  },
+  {
+    "name": "Window",
+    "label": "Window + shutters (fits the window wall)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "window.glb"
+    }
+  },
+  {
+    "name": "Gate",
+    "label": "Gate — oak double doors (2 × 3 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "gate.glb"
+    }
+  },
+  {
+    "name": "Fence",
+    "label": "Fence — oak pickets (2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "fence.glb"
+    }
+  },
+  {
+    "name": "Railing",
+    "label": "Railing — oak balusters (2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "railing.glb"
+    }
+  },
+  {
+    "name": "Beam",
+    "label": "Beam / lintel — oak (2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "beam.glb"
+    }
+  },
+  {
+    "name": "Trim",
+    "label": "Trim / ledge — sandstone (2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "trim.glb"
+    }
+  },
+  {
+    "name": "Chimney",
+    "label": "Chimney stack — sandstone",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "chimney.glb"
+    }
+  }
+]

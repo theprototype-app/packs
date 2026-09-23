@@ -1,0 +1,20 @@
+[
+ {"id":"wall","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3000,
+  "prompt":"a single flat rectangular castle wall panel, a straight thick slab built from large rectangular cut sandstone blocks in neat staggered courses, perfectly flat vertical ends, flat top and flat bottom, a thin slab much wider than it is thick, modular game level piece, front view",
+  "dims":{"x":2,"y":3,"z":0.25},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"wall-door","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3500,
+  "prompt":"a single flat rectangular sandstone block wall panel with an empty rectangular doorway opening cut all the way through its centre, the opening goes down to the floor, heavy stone lintel over the opening, no door, perfectly flat vertical ends, flat top, modular game level piece",
+  "dims":{"x":2,"y":3,"z":0.25},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"wall-window","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3500,
+  "prompt":"a single flat rectangular sandstone block wall panel with one empty square window opening cut all the way through its centre at chest height, stone sill below and lintel above the window, no glass, perfectly flat vertical ends, flat top, modular game level piece",
+  "dims":{"x":2,"y":3,"z":0.25},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"floor-stone","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":1500,
+  "prompt":"a square flat floor tile slab paved with large flat sandstone flagstones, thin square slab with straight edges, top view, modular game floor piece",
+  "dims":{"x":2,"y":0.1,"z":2},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"pillar","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":1500,
+  "prompt":"a tall square stone corner pillar made of stacked cut sandstone blocks with a simple square base and square capital, straight vertical sides, modular game level piece",
+  "dims":{"x":0.5,"y":3,"z":0.5},"fit":"stretch","pivot":"bottom-center"},
+ {"id":"stairs","pack":"architecture-kit","category":"architecture","stage":"preview","model":"t2","targetTris":3000,
+  "prompt":"a straight solid staircase block of sandstone, twelve even steps rising from front to back, solid stone sides filled down to the ground, rectangular footprint, modular game level piece",
+  "dims":{"x":2,"y":3,"z":4},"fit":"stretch","pivot":"bottom-center"}
+]
