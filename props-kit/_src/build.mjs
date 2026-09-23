@@ -22,7 +22,7 @@ const sharp = createRequire(`${TOOLS}/package.json`)('sharp');
 const { renderThumbs } = await import(`${TOOLS}/lib/thumb.js`);
 const { NodeIO } = await import(`${TOOLS}/node_modules/@gltf-transform/core/dist/index.js`);
 const { ALL_EXTENSIONS } = await import(`${TOOLS}/node_modules/@gltf-transform/extensions/dist/index.js`);
-const { mergeDocuments, dedup, prune, getBounds, unpartition } = await import(`${TOOLS}/node_modules/@gltf-transform/functions/dist/index.js`);
+const { mergeDocuments, dedup, prune, getBounds, unpartition, flatten } = await import(`${TOOLS}/node_modules/@gltf-transform/functions/dist/index.js`);
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACK = path.resolve(HERE, '..');
@@ -113,6 +113,35 @@ async function crateStack(out) {
 }
 const KITBASH = { crateStack };
 
+/**
+ * FLAT FOR SYNC: every mesh node a direct child of the scene, one primitive per mesh.
+ * Core's scene sync (commandsHandler sendObject) sends a leaf mesh with its LOCAL pose
+ * but a nested Group / Object3D-with-children with its WORLD pose, which the receiver
+ * then parents under the import root — so on a peer every nested level adds the
+ * object's position again (measured: a placed Rug sat 2× its drop offset away on peer
+ * B). GLTFLoader turns a multi-primitive mesh into a Group, so primitives are split to
+ * one mesh each; flatten() lifts nested nodes to the scene with baked transforms.
+ * @param {any} doc
+ */
+async function flatForSync(doc) {
+	await doc.transform(flatten());
+	const root = doc.getRoot();
+	const scene = root.getDefaultScene() ?? root.listScenes()[0];
+	for (const node of [...scene.listChildren()]) {
+		const mesh = node.getMesh();
+		if (!mesh || mesh.listPrimitives().length < 2) continue;
+		mesh.listPrimitives().forEach((prim, i) => {
+			const name = `${node.getName()}_${prim.getMaterial()?.getName() || i}`;
+			const part = doc.createNode(name).setTranslation(node.getTranslation()).setRotation(node.getRotation()).setScale(node.getScale());
+			part.setMesh(doc.createMesh(name).addPrimitive(prim));
+			scene.addChild(part);
+		});
+		node.dispose();
+		mesh.dispose();
+	}
+	await doc.transform(prune());
+}
+
 const report = {};
 const reportFile = path.join(HERE, 'build-report.json');
 const prev = fs.existsSync(reportFile) ? JSON.parse(fs.readFileSync(reportFile, 'utf8')) : {};
@@ -132,12 +161,21 @@ for (const item of order) {
 		await (await PIECES[item.src.proc]()).write(out);
 		meta = { source: 'procedural.mjs' };
 	} else meta = await KITBASH[item.src.kitbash](out);
+	{
+		const flat = await io.read(out);
+		await flatForSync(flat);
+		await io.write(out, flat);
+	}
 	const doc = await io.read(out);
 	const b = sizeOf(doc);
 	let tris = 0;
 	// per NODE, not per mesh: a kitbash instances one mesh several times
 	for (const n of doc.getRoot().listNodes()) for (const p of n.getMesh()?.listPrimitives() ?? []) tris += (p.getIndices()?.getCount() ?? p.getAttribute('POSITION').getCount()) / 3;
 	const tex = doc.getRoot().listTextures().map((t) => t.getSize()?.join('×'));
+	const sceneOf = doc.getRoot().getDefaultScene() ?? doc.getRoot().listScenes()[0];
+	const nested = doc.getRoot().listNodes().filter((n) => !sceneOf.listChildren().includes(n)).length;
+	const multi = doc.getRoot().listMeshes().filter((m) => m.listPrimitives().length > 1).length;
+	if (nested || multi) throw new Error(`${item.name}: not flat for sync (${nested} nested nodes, ${multi} multi-primitive meshes)`);
 	report[item.name] = {
 		label: item.label,
 		file: path.relative(PACK, out),

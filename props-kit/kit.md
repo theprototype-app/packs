@@ -71,8 +71,8 @@ flame for "unlit" without touching the prop, and the app's bloom picks it up. Th
 | Barrel small | `BarrelSmall` | 0.32 × 0.60 × 0.37 | 2478 | 599 KB | bottom-centre | Meshy (size variant of Barrel) |
 | Treasure chest | `Chest` | 0.77 × 0.60 × 0.69 | 2910 | 787 KB | bottom-centre | Meshy |
 | Grain sacks | `Sacks` | 1.24 × 0.75 × 1.10 | 3590 | 1205 KB | bottom-centre | Meshy |
-| Lantern | `Lantern` | 0.19 × 0.38 × 0.15 | 1876 | 525 KB | bottom-centre | Meshy |
-| Wall torch | `WallTorch` | 0.10 × 0.69 × 0.32 | 652 | 145 KB | bottom-centre-back (wall) | procedural |
+| Lantern | `Lantern` | 0.19 × 0.38 × 0.15 | 1876 | 469 KB | bottom-centre | Meshy |
+| Wall torch | `WallTorch` | 0.10 × 0.69 × 0.32 | 652 | 144 KB | bottom-centre-back (wall) | procedural |
 | Candle cluster | `Candles` | 0.17 × 0.30 × 0.17 | 2500 | 567 KB | bottom-centre | Meshy |
 | Cauldron | `Cauldron` | 0.97 × 0.60 × 0.82 | 3000 | 311 KB | bottom-centre | Meshy |
 | Village well | `Well` | 2.58 × 2.60 × 2.56 | 5999 | 758 KB | bottom-centre | Meshy |

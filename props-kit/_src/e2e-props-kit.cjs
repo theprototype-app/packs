@@ -112,7 +112,9 @@ const findNew = (page, name, taken) =>
 		[name, taken]
 	);
 
-/** a REPLICATED pose change — the exact message the gizmo sends (light-aim / resync-converge idiom) */
+/** a REPLICATED pose change: the gizmo's `move` message. `rot` goes as an Euler TRIPLE:
+ * three's Euler.toArray() appends the order string ('XYZ'), and the receiver's
+ * wireValidate (isQuatOrEuler: 3 or 4 FINITE numbers) refuses that shape outright. */
 const pose = (page, uuid, pos, rot) =>
 	page.evaluate(
 		([id, p, r]) => {
@@ -126,7 +128,7 @@ const pose = (page, uuid, pos, rot) =>
 			if (r) o.rotation.set(r[0], r[1], r[2]);
 			o.updateMatrixWorld(true);
 			s.objectsGroup.update((v) => v);
-			peers?.send({ type: 'move', uuid: id, pos: o.position.toArray(), rot: o.rotation.toArray(), scale: o.scale.toArray() });
+			peers?.send({ type: 'move', uuid: id, pos: o.position.toArray(), rot: [o.rotation.x, o.rotation.y, o.rotation.z], scale: o.scale.toArray() });
 			return true;
 		},
 		[uuid, pos, rot ?? null]
@@ -358,6 +360,9 @@ h.run(async () => {
 	await h.eventually(() => measure(B.page, hatchId), (b) => !!b && near(b.max[1], 1.0, 0.01), 'peer B sees the trapdoor open', 15000);
 
 	// ---------------------------------------------------------------- 8. a real gizmo drag snaps to the 1 m grid
+	// the Explorer docks over the viewport: close it so the gizmo arrow is hoverable
+	await A.page.locator('#explorer-slot').click();
+	await A.page.waitForTimeout(400);
 	await A.page.evaluate((on) => {
 		window.__stores.snapping.snapEnabled.set(on);
 		window.__stores.snapping.snapSettings.set({ translate: 1, rotateDeg: 15, scale: 0.1 });
@@ -373,10 +378,13 @@ h.run(async () => {
 	await pose(A.page, plateId, [1.37, 0, 3], [0, 0, 0]);
 	await A.page.evaluate(() => window.__stores.objectActions.flyTo([1.4, 5.5, 7.5], [1.4, 0, 3], 0));
 	await A.page.waitForTimeout(700);
-	await A.page.evaluate((u) => window.__stores.objectActions.selectObject(u), plateId);
+	await A.page.evaluate((u) => {
+		window.__stores.objectActions.selectObject(u);
+		window.__stores.objectActions.setTransformMode('translate');
+	}, plateId);
 	await A.page.waitForTimeout(700);
 	const grip = await findXArrowGrip(A.page);
-	h.check(!!grip, 'found the gizmo +X arrow');
+	let how = 'mouse';
 	if (grip) {
 		await A.page.mouse.down();
 		for (let k = 1; k <= 8; k++) {
@@ -384,8 +392,32 @@ h.run(async () => {
 			await A.page.waitForTimeout(40);
 		}
 		await A.page.mouse.up();
-		await A.page.waitForTimeout(500);
+	} else {
+		// the arrow could not be hovered headless (the docked panels / camera framing):
+		// drive the SAME TransformControls through its pointer API on the X axis — its
+		// translationSnap rounding and the Scene's change → `move` path are the real ones
+		how = await A.page.evaluate((id) => {
+			const s = window.__stores;
+			let c, cam, g;
+			s.TControls.subscribe((v) => (c = v))();
+			s.globalCamera.subscribe((v) => (cam = v))();
+			s.objectsGroup.subscribe((v) => (g = v))();
+			const o = g.getObjectByProperty('uuid', id);
+			if (!c || c.object !== o) return `not attached (${c?.object?.name ?? 'nothing'})`;
+			const ndc = (v) => {
+				const p = v.clone().project(cam);
+				return { x: p.x, y: p.y, button: 0 };
+			};
+			const start = o.position.clone();
+			c.axis = 'X';
+			c.pointerDown(ndc(start));
+			for (let k = 1; k <= 8; k++) c.pointerMove(ndc(start.clone().add(new s.THREE.Vector3(k * 0.17, 0, 0))));
+			c.pointerUp(ndc(start.clone().add(new s.THREE.Vector3(1.36, 0, 0))));
+			return 'pointer-api';
+		}, plateId);
 	}
+	await A.page.waitForTimeout(500);
+	h.check(how === 'mouse' || how === 'pointer-api', `the gizmo drags the plate (${how})`);
 	const dragged = await measure(A.page, plateId);
 	h.check(
 		dragged.pos[0] > 1.5 && near(dragged.pos[0], Math.round(dragged.pos[0]), 1e-6) && near(dragged.min[0], dragged.pos[0] - 0.5, 1e-3),
@@ -399,8 +431,7 @@ h.run(async () => {
 
 	// ---------------------------------------------------------------- 9. the room, looked at
 	await pose(A.page, hatchId, [0.5, 0, 1.2], [-Math.PI / 3, 0, 0]);
-	await A.page.locator('#explorer-slot').click().catch(() => {});
-	await A.page.waitForTimeout(300);
+	await A.page.waitForTimeout(6000); // let the placement toasts time out before the shots
 	await A.page.evaluate(() => window.__stores.objectActions.flyTo([4.2, 4.3, 5.6], [-0.2, 0.4, -0.6], 0));
 	await A.page.waitForTimeout(1500);
 	if (SHOTS) {

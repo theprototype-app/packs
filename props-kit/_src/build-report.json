@@ -159,7 +159,7 @@
  "Rug": {
   "label": "Rug 2 × 1.3 m",
   "file": "Rug/glTF-Binary/rug.glb",
-  "bytes": 298308,
+  "bytes": 297956,
   "tris": 396,
   "size": [
    2.12,
@@ -172,8 +172,7 @@
    -0.65
   ],
   "textures": [
-   "1024×1024",
-   "64×64"
+   "1024×1024"
   ],
   "tags": [
    "furniture",
@@ -184,7 +183,7 @@
  "Tapestry": {
   "label": "Tapestry (wall)",
   "file": "Tapestry/glTF-Binary/tapestry.glb",
-  "bytes": 415728,
+  "bytes": 415924,
   "tris": 640,
   "size": [
    1.34,
@@ -420,7 +419,7 @@
  "Lantern": {
   "label": "Lantern",
   "file": "Lantern/glTF-Binary/lantern.glb",
-  "bytes": 538012,
+  "bytes": 480112,
   "tris": 1876,
   "size": [
    0.189,
@@ -435,7 +434,6 @@
   "textures": [
    "1024×1024",
    "1024×1024",
-   "1024×1024",
    "1024×1024"
   ],
   "tags": [
@@ -447,7 +445,7 @@
  "WallTorch": {
   "label": "Wall torch",
   "file": "WallTorch/glTF-Binary/wall-torch.glb",
-  "bytes": 148088,
+  "bytes": 147604,
   "tris": 652,
   "size": [
    0.105,
@@ -578,7 +576,7 @@
  "Signpost": {
   "label": "Signpost",
   "file": "Signpost/glTF-Binary/signpost.glb",
-  "bytes": 106412,
+  "bytes": 106532,
   "tris": 104,
   "size": [
    1.35,
@@ -603,7 +601,7 @@
  "Ladder": {
   "label": "Ladder (3 m, one storey)",
   "file": "Ladder/glTF-Binary/ladder.glb",
-  "bytes": 81784,
+  "bytes": 81816,
   "tris": 336,
   "size": [
    0.53,
@@ -628,7 +626,7 @@
  "LeverBase": {
   "label": "Lever base",
   "file": "LeverBase/glTF-Binary/lever-base.glb",
-  "bytes": 66776,
+  "bytes": 66824,
   "tris": 120,
   "size": [
    0.34,
@@ -652,7 +650,7 @@
  "LeverHandle": {
   "label": "Lever handle (hinge pivot)",
   "file": "LeverHandle/glTF-Binary/lever-handle.glb",
-  "bytes": 100016,
+  "bytes": 100132,
   "tris": 304,
   "size": [
    0.14,
@@ -677,7 +675,7 @@
  "WallButton": {
   "label": "Wall button",
   "file": "WallButton/glTF-Binary/wall-button.glb",
-  "bytes": 107008,
+  "bytes": 107128,
   "tris": 300,
   "size": [
    0.2,
@@ -703,7 +701,7 @@
  "PressurePlate": {
   "label": "Pressure plate 1 × 1 m",
   "file": "PressurePlate/glTF-Binary/pressure-plate.glb",
-  "bytes": 89256,
+  "bytes": 89392,
   "tris": 72,
   "size": [
    1,
@@ -728,7 +726,7 @@
  "Hatch": {
   "label": "Trapdoor 1 × 1 m (hinge pivot)",
   "file": "Hatch/glTF-Binary/hatch.glb",
-  "bytes": 87108,
+  "bytes": 87148,
   "tris": 496,
   "size": [
    1,
@@ -752,7 +750,7 @@
  "DoorKey": {
   "label": "Door key",
   "file": "DoorKey/glTF-Binary/door-key.glb",
-  "bytes": 81888,
+  "bytes": 81924,
   "tris": 556,
   "size": [
    0.161,
@@ -830,7 +828,7 @@
  "CrateStack": {
   "label": "Crate stack",
   "file": "CrateStack/glTF-Binary/crate-stack.glb",
-  "bytes": 1333700,
+  "bytes": 1333600,
   "tris": 7500,
   "size": [
    1.664,
