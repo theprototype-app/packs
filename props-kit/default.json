@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Table",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Table",
+    "variants": {
+      "glTF-Binary": "table.glb"
+    }
+  },
+  {
+    "name": "Bench",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Bench",
+    "variants": {
+      "glTF-Binary": "bench.glb"
+    }
+  },
+  {
+    "name": "Chair",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Chair",
+    "variants": {
+      "glTF-Binary": "chair.glb"
+    }
+  },
+  {
+    "name": "Bed",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Bed (single)",
+    "variants": {
+      "glTF-Binary": "bed.glb"
+    }
+  },
+  {
+    "name": "Bookcase",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Bookcase",
+    "variants": {
+      "glTF-Binary": "bookcase.glb"
+    }
+  },
+  {
+    "name": "Workbench",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Workbench",
+    "variants": {
+      "glTF-Binary": "workbench.glb"
+    }
+  },
+  {
+    "name": "Rug",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Rug 2 × 1.3 m",
+    "variants": {
+      "glTF-Binary": "rug.glb"
+    }
+  },
+  {
+    "name": "Tapestry",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Tapestry (wall)",
+    "variants": {
+      "glTF-Binary": "tapestry.glb"
+    }
+  },
+  {
+    "name": "PottedPlant",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Potted plant",
+    "variants": {
+      "glTF-Binary": "potted-plant.glb"
+    }
+  },
+  {
+    "name": "Crate",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Crate (oak)",
+    "variants": {
+      "glTF-Binary": "crate.glb"
+    }
+  },
+  {
+    "name": "CrateLarge",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Crate large",
+    "variants": {
+      "glTF-Binary": "crate-large.glb"
+    }
+  },
+  {
+    "name": "CrateTeal",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Crate (painted teal)",
+    "variants": {
+      "glTF-Binary": "crate-teal.glb"
+    }
+  },
+  {
+    "name": "CrateStack",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Crate stack",
+    "variants": {
+      "glTF-Binary": "crate-stack.glb"
+    }
+  },
+  {
+    "name": "Barrel",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Barrel",
+    "variants": {
+      "glTF-Binary": "barrel.glb"
+    }
+  },
+  {
+    "name": "BarrelSmall",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Barrel small",
+    "variants": {
+      "glTF-Binary": "barrel-small.glb"
+    }
+  },
+  {
+    "name": "Chest",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Treasure chest",
+    "variants": {
+      "glTF-Binary": "chest.glb"
+    }
+  },
+  {
+    "name": "Sacks",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Grain sacks",
+    "variants": {
+      "glTF-Binary": "sacks.glb"
+    }
+  },
+  {
+    "name": "Lantern",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Lantern",
+    "variants": {
+      "glTF-Binary": "lantern.glb"
+    }
+  },
+  {
+    "name": "WallTorch",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Wall torch",
+    "variants": {
+      "glTF-Binary": "wall-torch.glb"
+    }
+  },
+  {
+    "name": "Candles",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Candle cluster",
+    "variants": {
+      "glTF-Binary": "candles.glb"
+    }
+  },
+  {
+    "name": "Cauldron",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Cauldron",
+    "variants": {
+      "glTF-Binary": "cauldron.glb"
+    }
+  },
+  {
+    "name": "Well",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Village well",
+    "variants": {
+      "glTF-Binary": "well.glb"
+    }
+  },
+  {
+    "name": "MarketStall",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Market stall",
+    "variants": {
+      "glTF-Binary": "market-stall.glb"
+    }
+  },
+  {
+    "name": "Signpost",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Signpost",
+    "variants": {
+      "glTF-Binary": "signpost.glb"
+    }
+  },
+  {
+    "name": "Ladder",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Ladder (3 m, one storey)",
+    "variants": {
+      "glTF-Binary": "ladder.glb"
+    }
+  },
+  {
+    "name": "LeverBase",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Lever base",
+    "variants": {
+      "glTF-Binary": "lever-base.glb"
+    }
+  },
+  {
+    "name": "LeverHandle",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Lever handle (hinge pivot)",
+    "variants": {
+      "glTF-Binary": "lever-handle.glb"
+    }
+  },
+  {
+    "name": "WallButton",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Wall button",
+    "variants": {
+      "glTF-Binary": "wall-button.glb"
+    }
+  },
+  {
+    "name": "PressurePlate",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Pressure plate 1 × 1 m",
+    "variants": {
+      "glTF-Binary": "pressure-plate.glb"
+    }
+  },
+  {
+    "name": "Hatch",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Trapdoor 1 × 1 m (hinge pivot)",
+    "variants": {
+      "glTF-Binary": "hatch.glb"
+    }
+  },
+  {
+    "name": "DoorKey",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Door key",
+    "variants": {
+      "glTF-Binary": "door-key.glb"
+    }
+  },
+  {
+    "name": "SciFiConsole",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Sci-fi console",
+    "variants": {
+      "glTF-Binary": "sci-fi-console.glb"
+    }
+  },
+  {
+    "name": "SciFiCrate",
+    "screenshot": "screenshot/screenshot.webp",
+    "label": "Sci-fi crate",
+    "variants": {
+      "glTF-Binary": "sci-fi-crate.glb"
+    }
+  }
+]

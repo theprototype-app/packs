@@ -1,0 +1,38 @@
+[
+ {
+  "id": "barrel2",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2500,
+  "dims": {
+   "y": 0.9
+  },
+  "prompt": "a classic upright wooden barrel, taller than it is wide, cylindrical body bulging slightly at the middle, vertical oak staves, two metal hoops near the top and two near the bottom, a flat round top"
+ },
+ {
+  "id": "torch2",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 1500,
+  "dims": {
+   "y": 0.6
+  },
+  "prompt": "a medieval wall torch: a straight wooden handle held at an angle by a metal ring bracket on a flat rectangular wall plate, the top end of the handle wrapped in thick cloth, no fire"
+ },
+ {
+  "id": "candles2",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 2500,
+  "dims": {
+   "y": 0.3
+  },
+  "prompt": "three thick unlit pillar candles of different heights standing close together on a round shallow iron dish, wax drips running down their sides"
+ }
+]

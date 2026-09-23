@@ -1,0 +1,145 @@
+[
+ {
+  "id": "table",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm oak wood planks with visible grain, darker worn edges and corners",
+  "targetTris": 3000,
+  "dims": {
+   "y": 0.78
+  }
+ },
+ {
+  "id": "chair",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm oak wood with visible grain, darker worn edges",
+  "targetTris": 2500,
+  "dims": {
+   "y": 0.95
+  }
+ },
+ {
+  "id": "bed",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "oak wood frame, cream linen sheet, a teal wool blanket, off-white pillow",
+  "targetTris": 4000,
+  "dims": {
+   "y": 1
+  }
+ },
+ {
+  "id": "bookcase",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "dark oak wood shelves, leather-bound books in deep red, teal, brown and ochre, parchment scrolls, a clay jar",
+  "targetTris": 5000,
+  "dims": {
+   "y": 2
+  }
+ },
+ {
+  "id": "chest",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "dark oak planks, riveted dark iron bands, brass corner caps and a brass lock plate",
+  "targetTris": 3000,
+  "dims": {
+   "y": 0.6
+  }
+ },
+ {
+  "id": "sacks",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "coarse beige burlap cloth with visible weave, brown hemp rope ties",
+  "targetTris": 3500,
+  "dims": {
+   "y": 0.75
+  }
+ },
+ {
+  "id": "lantern",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "blackened iron frame, brass cap and ring handle, clear slightly amber glass panes",
+  "targetTris": 2000,
+  "dims": {
+   "y": 0.38
+  }
+ },
+ {
+  "id": "plant",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "glossy deep green leaves, terracotta clay pot with a teal painted rim band",
+  "targetTris": 5000,
+  "dims": {
+   "y": 1
+  }
+ },
+ {
+  "id": "workbench",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "worn oak work top with scratches and saw marks, darker oak legs, iron vise and fittings",
+  "targetTris": 5000,
+  "dims": {
+   "y": 0.95
+  }
+ },
+ {
+  "id": "cauldron",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "dark cast iron with soot and a slightly rusty rim",
+  "targetTris": 3000,
+  "dims": {
+   "y": 0.75
+  }
+ },
+ {
+  "id": "well",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "sandstone blocks with mortar, oak posts and beams, slate grey roof shingles, hemp rope, oak bucket with iron bands",
+  "targetTris": 6000,
+  "dims": {
+   "y": 2.6
+  }
+ },
+ {
+  "id": "stall",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "oak posts and counter, teal and cream striped canvas awning, red apples in wicker baskets, wooden crates",
+  "targetTris": 6000,
+  "dims": {
+   "y": 2.6
+  }
+ },
+ {
+  "id": "console",
+  "pack": "props-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "painted gunmetal grey metal panels with teal accent trim, dark blank glass screen, brass and teal round buttons",
+  "targetTris": 4000,
+  "dims": {
+   "y": 1.1
+  }
+ }
+]
