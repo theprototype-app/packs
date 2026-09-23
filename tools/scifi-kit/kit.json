@@ -1,0 +1,490 @@
+{
+ "pack": "scifi-kit",
+ "thumbYaw": 35,
+ "items": [
+  {
+   "name": "Wall",
+   "label": "Wall panel (2 × 3 m)",
+   "file": "wall.glb",
+   "src": {
+    "job": "wall",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 3000,
+    "dims": {
+     "x": 2,
+     "y": 3,
+     "z": 0.25
+    },
+    "fit": "stretch",
+    "pivot": "bottom-center",
+    "clamp": "xy"
+   },
+   "cut": [
+    {
+     "op": "core",
+     "depth": 0.075,
+     "open": "x"
+    }
+   ],
+   "place": "on a grid line: x or z on a whole odd metre (1, 3, …), 0° or 90°"
+  },
+  {
+   "name": "WallDoorCut",
+   "internal": true,
+   "file": "wall-door-cut.glb",
+   "from": "Wall",
+   "cut": "door"
+  },
+  {
+   "name": "WallDoorway",
+   "label": "Wall — open doorway",
+   "file": "wall-doorway.glb",
+   "kitbash": [
+    {
+     "from": "WallDoorCut"
+    },
+    {
+     "proc": "DoorLining"
+    }
+   ],
+   "place": "like a wall: an open 1.2 × 2.4 m passage with lit jambs"
+  },
+  {
+   "name": "SlidingDoor",
+   "label": "Sliding door + frame (fits the doorway)",
+   "file": "sliding-door.glb",
+   "src": {
+    "job": "door",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 3000,
+    "dims": {
+     "x": 1.5,
+     "y": 2.6,
+     "z": 0.3
+    },
+    "fit": "stretch",
+    "pivot": "bottom-center",
+    "glow": {
+     "hue": [
+      160,
+      195
+     ],
+     "sat": 0.35,
+     "val": 0.55,
+     "strength": 1.6
+    }
+   },
+   "place": "at the SAME position and rotation as a Wall — open doorway (closes it)"
+  },
+  {
+   "name": "WallDoor",
+   "label": "Wall + sliding door",
+   "file": "wall-door.glb",
+   "kitbash": [
+    {
+     "from": "WallDoorCut"
+    },
+    {
+     "from": "SlidingDoor"
+    }
+   ],
+   "place": "like a wall (the doorway and the door in one piece)"
+  },
+  {
+   "name": "WallWindowCut",
+   "internal": true,
+   "file": "wall-window-cut.glb",
+   "from": "Wall",
+   "cut": "window"
+  },
+  {
+   "name": "WallWindow",
+   "label": "Wall + window",
+   "file": "wall-window.glb",
+   "kitbash": [
+    {
+     "from": "WallWindowCut"
+    },
+    {
+     "proc": "WindowGlass"
+    }
+   ],
+   "place": "like a wall; the glass sits in a 1.4 × 1.0 m opening, sill at 1 m"
+  },
+  {
+   "name": "CornerPost",
+   "label": "Corner post",
+   "file": "corner-post.glb",
+   "from": "Wall",
+   "cut": "post",
+   "place": "on a grid point where two walls meet (fills the outer corner)"
+  },
+  {
+   "name": "Pillar",
+   "label": "Pillar / strut",
+   "file": "pillar.glb",
+   "src": {
+    "job": "pillar",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 2500,
+    "dims": {
+     "x": 0.5,
+     "y": 3,
+     "z": 0.5
+    },
+    "fit": "stretch",
+    "pivot": "bottom-center",
+    "clamp": "-y",
+    "glow": {
+     "hue": [
+      160,
+      195
+     ],
+     "sat": 0.35,
+     "val": 0.55,
+     "strength": 1.6
+    }
+   },
+   "place": "on a grid point (a hall column, a corner, a gate post)"
+  },
+  {
+   "name": "FloorPlate",
+   "label": "Floor plate (2 × 2 m)",
+   "file": "floor-plate.glb",
+   "src": {
+    "job": "floor-plate",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 2500,
+    "preRotate": {
+     "x": -90
+    },
+    "dims": {
+     "x": 2,
+     "y": 0.1,
+     "z": 2
+    },
+    "fit": "stretch",
+    "pivot": "bottom-center",
+    "clamp": "xz-y"
+   },
+   "cut": [
+    {
+     "op": "core",
+     "axis": "y",
+     "range": [
+      0,
+      0.07
+     ],
+     "open": "xz"
+    }
+   ],
+   "place": "in a 2 × 2 cell: x and z on odd metres"
+  },
+  {
+   "name": "FloorGrate",
+   "label": "Floor grating (2 × 2 m)",
+   "file": "floor-grate.glb",
+   "proc": "FloorGrate",
+   "place": "in a 2 × 2 cell, like a floor plate (the same 0.1 m top)"
+  },
+  {
+   "name": "CeilingLight",
+   "label": "Ceiling panel + light strip",
+   "file": "ceiling-light.glb",
+   "proc": "CeilingLight",
+   "place": "in a 2 × 2 cell on the wall tops: y = 3",
+   "pivotDoc": "the slab's bottom centre (the light strip hangs 1.5 cm below it)"
+  },
+  {
+   "name": "Stairs",
+   "label": "Stairs (1 storey)",
+   "file": "stairs.glb",
+   "src": {
+    "job": "stairs",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 4000,
+    "dims": {
+     "x": 2,
+     "y": 3,
+     "z": 4
+    },
+    "fit": "stretch",
+    "pivot": "bottom-center",
+    "clamp": "-y"
+   },
+   "place": "in a 2 × 4 slot, bottom step at +Z; the top step is level with y = 3"
+  },
+  {
+   "name": "Ramp",
+   "label": "Ramp (2 × 2 m, 1 m rise)",
+   "file": "ramp.glb",
+   "proc": "Ramp",
+   "place": "in a 2 × 2 cell, low edge at +Z"
+  },
+  {
+   "name": "Railing",
+   "label": "Railing (2 m)",
+   "file": "railing.glb",
+   "proc": "Railing",
+   "place": "on the edge of a floor or landing, like a wall"
+  },
+  {
+   "name": "Console",
+   "label": "Command console",
+   "file": "console.glb",
+   "src": {
+    "job": "console",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 4000,
+    "dims": {
+     "y": 1.1
+    },
+    "pivot": "bottom-center",
+    "glow": {
+     "hue": [
+      160,
+      195
+     ],
+     "sat": 0.35,
+     "val": 0.55,
+     "strength": 1.6
+    }
+   },
+   "place": "free (front +Z)"
+  },
+  {
+   "name": "WallScreen",
+   "label": "Wall screen",
+   "file": "wall-screen.glb",
+   "proc": "WallScreen",
+   "pivotDoc": "the wall's bottom centre (on its +Z face)",
+   "place": "at the SAME position and rotation as a wall"
+  },
+  {
+   "name": "ServerRack",
+   "label": "Server rack",
+   "file": "server-rack.glb",
+   "src": {
+    "job": "rack",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 3000,
+    "dims": {
+     "y": 2.0
+    },
+    "pivot": "bottom-center",
+    "glow": {
+     "hue": [
+      160,
+      195
+     ],
+     "sat": 0.35,
+     "val": 0.55,
+     "strength": 1.6
+    }
+   },
+   "place": "free, back to a wall"
+  },
+  {
+   "name": "Crate",
+   "label": "Cargo crate",
+   "file": "crate.glb",
+   "src": {
+    "job": "crate",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 2500,
+    "dims": {
+     "y": 0.7
+    },
+    "pivot": "bottom-center"
+   },
+   "place": "free; stacks on another crate"
+  },
+  {
+   "name": "CrateLarge",
+   "label": "Cargo crate, large",
+   "file": "crate-large.glb",
+   "kitbash": [
+    {
+     "from": "Crate",
+     "scale": 1.6
+    }
+   ],
+   "place": "free"
+  },
+  {
+   "name": "Canister",
+   "label": "Fuel canister",
+   "file": "canister.glb",
+   "src": {
+    "job": "canister",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 2500,
+    "dims": {
+     "y": 1.0
+    },
+    "pivot": "bottom-center"
+   },
+   "place": "free"
+  },
+  {
+   "name": "PipeStraight",
+   "label": "Pipe run, straight (2 m)",
+   "file": "pipe-straight.glb",
+   "proc": "PipeStraight",
+   "place": "along a grid line like a wall; flanges meet on whole metres"
+  },
+  {
+   "name": "PipeElbow",
+   "label": "Pipe run, elbow",
+   "file": "pipe-elbow.glb",
+   "proc": "PipeElbow",
+   "pivotDoc": "the corner grid point (legs end 1 m out at −X and +Z)",
+   "place": "on the grid point where two pipe runs turn"
+  },
+  {
+   "name": "Vent",
+   "label": "Wall vent",
+   "file": "vent.glb",
+   "proc": "Vent",
+   "pivotDoc": "the wall's bottom centre (on its +Z face)",
+   "place": "at the SAME position and rotation as a wall"
+  },
+  {
+   "name": "Lamp",
+   "label": "Light column",
+   "file": "lamp.glb",
+   "proc": "Lamp",
+   "place": "free"
+  },
+  {
+   "name": "Chair",
+   "label": "Swivel chair",
+   "file": "chair.glb",
+   "src": {
+    "job": "chair",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 3000,
+    "dims": {
+     "y": 1.05
+    },
+    "pivot": "bottom-center"
+   },
+   "place": "free"
+  },
+  {
+   "name": "Desk",
+   "label": "Desk + terminal",
+   "file": "desk.glb",
+   "src": {
+    "job": "desk",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 3500,
+    "dims": {
+     "y": 1.3
+    },
+    "pivot": "bottom-center",
+    "glow": {
+     "hue": [
+      160,
+      195
+     ],
+     "sat": 0.35,
+     "val": 0.55,
+     "strength": 1.6
+    }
+   },
+   "place": "free (front +Z)"
+  },
+  {
+   "name": "PlantPod",
+   "label": "Plant pod",
+   "file": "plant-pod.glb",
+   "src": {
+    "job": "plant-pod-b",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 4000,
+    "dims": {
+     "y": 1.0
+    },
+    "pivot": "bottom-center"
+   },
+   "place": "free"
+  },
+  {
+   "name": "TeleportPad",
+   "label": "Teleport pad",
+   "file": "teleport-pad.glb",
+   "src": {
+    "job": "pad",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 3000,
+    "dims": {
+     "x": 2.4
+    },
+    "pivot": "bottom-center",
+    "glow": {
+     "hue": [
+      160,
+      195
+     ],
+     "sat": 0.35,
+     "val": 0.55,
+     "strength": 1.6
+    }
+   },
+   "place": "free; Ø 2.4 m fits a 2 × 2 cell's centre"
+  },
+  {
+   "name": "Drone",
+   "label": "Drone",
+   "file": "drone.glb",
+   "src": {
+    "job": "drone",
+    "stage": "refine"
+   },
+   "post": {
+    "targetTris": 4000,
+    "dims": {
+     "x": 0.6
+    },
+    "pivot": "bottom-center",
+    "glow": {
+     "hue": [
+      160,
+      195
+     ],
+     "sat": 0.35,
+     "val": 0.55,
+     "strength": 1.6
+    }
+   },
+   "place": "free (lift it to hover)"
+  }
+ ]
+}

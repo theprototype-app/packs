@@ -1,0 +1,181 @@
+[
+ {
+  "id": "wall",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "style": "none",
+  "dims": {
+   "x": 2,
+   "y": 3,
+   "z": 0.25
+  },
+  "texturePrompt": "clean off-white painted metal wall panels with thin dark recessed seams, warm gunmetal grey trim cap and kickplate, one thin teal painted accent stripe along the waist band, both faces the same. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "floor-plate",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "style": "none",
+  "dims": {
+   "x": 2,
+   "y": 0.1,
+   "z": 2
+  },
+  "texturePrompt": "warm dark gunmetal grey painted steel deck plate, lighter worn paint on the bevelled edges, dark recessed seams, small steel bolts. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "stairs",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 4000,
+  "style": "none",
+  "dims": {
+   "x": 2,
+   "y": 3,
+   "z": 4
+  },
+  "texturePrompt": "warm gunmetal grey painted steel stairs with darker grooved treads, off-white painted side stringers, teal painted handrails. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "door",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "style": "none",
+  "dims": {
+   "x": 1.5,
+   "y": 2.6,
+   "z": 0.35
+  },
+  "texturePrompt": "off-white painted metal sliding door leaves, warm gunmetal grey door frame, a glowing teal light stripe on each leaf. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "pillar",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "style": "none",
+  "dims": {
+   "x": 0.5,
+   "y": 3,
+   "z": 0.5
+  },
+  "texturePrompt": "off-white painted metal pillar with warm gunmetal grey base and capital, a glowing teal light strip up one face. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "console",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 4000,
+  "style": "none",
+  "dims": {
+   "y": 1.2
+  },
+  "texturePrompt": "off-white painted metal console body, warm gunmetal grey control panel, dark glossy screen with a faint teal glow, small teal and white buttons. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "rack",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "style": "none",
+  "dims": {
+   "y": 2.0
+  },
+  "texturePrompt": "warm gunmetal grey painted metal server cabinet, dark server blades with small glowing teal indicator lights, off-white painted side panels. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "crate",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "style": "none",
+  "dims": {
+   "y": 0.7
+  },
+  "texturePrompt": "off-white painted metal cargo crate, warm gunmetal grey corner protectors and handles, a teal painted latch and a teal stripe. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "canister",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "style": "none",
+  "dims": {
+   "y": 1.0
+  },
+  "texturePrompt": "off-white painted metal canister, warm gunmetal grey reinforcing rings and valve cap, a teal painted band around the middle. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "chair",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "style": "none",
+  "dims": {
+   "y": 1.0
+  },
+  "texturePrompt": "off-white moulded plastic shell, dark charcoal grey padded cushions, warm gunmetal grey column and base, teal accent piping. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "desk",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3500,
+  "style": "none",
+  "dims": {
+   "y": 1.3
+  },
+  "texturePrompt": "off-white painted desk top and legs with warm gunmetal grey trim, dark monitor bezel with a softly glowing teal screen, dark grey keyboard. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "pad",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "style": "none",
+  "dims": {
+   "x": 2.4
+  },
+  "texturePrompt": "warm gunmetal grey metal platform, off-white painted outer ring, glowing teal concentric rings and a glowing teal centre circle. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ },
+ {
+  "id": "drone",
+  "pack": "scifi-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 4000,
+  "style": "none",
+  "dims": {
+   "x": 0.6
+  },
+  "texturePrompt": "off-white painted drone body, warm gunmetal grey rotors and arms, a glowing teal camera lens. Hand-painted stylized PBR texture, real roughness variation, flat even lighting, no baked shadows or highlights, no text, no logos, no numbers."
+ }
+]
