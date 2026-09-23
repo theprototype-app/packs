@@ -14,6 +14,8 @@ khronos-sample-assets/           metadata only — model bytes are fetched strai
 audio-essentials/                23 CC0 sounds (Kenney + OpenGameArt), installable .zip
 nature-kit/                      Nature & Terrain: 31 trees/plants/rocks/cliff/path/pond pieces
                                  (made with Meshy.ai, CC0) — see nature-kit/kit.md
+architecture-kit/                Modular Architecture Kit: 32 walls/floors/roof/stairs/tower pieces
+                                 on the 1 m grid (made with Meshy.ai, CC0) — see architecture-kit/kit.md
 props-kit/                       Props & Interiors: 33 furnishing / dressing / game-logic
                                  props (made with Meshy.ai + procedural, CC0), kit.md
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
@@ -59,6 +61,8 @@ reading the ref they were built against.
 - `khronos-sample-assets/` — © The Khronos Group, CC-BY 4.0; bytes stay in the
   [upstream repo](https://github.com/KhronosGroup/glTF-Sample-Assets), this repo holds
   only an index.
+- `architecture-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) and
+  post-processed here (`tools/architecture-kit/`) — see its `attribution.html` and `kit.md`.
 - `props-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) (paid
   plan: the output is ours) plus procedural pieces — see its `attribution.html` and `kit.md`.
 - `audio-essentials/` — all CC0; per-file sources in
