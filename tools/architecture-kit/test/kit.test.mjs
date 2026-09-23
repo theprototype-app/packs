@@ -169,3 +169,19 @@ test('door: an exact 1.0 × 2.2 m opening whose jambs face into it', async () =>
 		assert.ok(faces.every((t) => normalOf(t)[axis] * sign > 0), `every ${label} triangle winds to face into the doorway`);
 	}
 });
+
+test('an OPEN core seals right up to the joint plane (an inset one leaves a slit at the wall end)', async () => {
+	const raw = path.join(tmp, 'bricks3.glb');
+	await writeGlb(BRICKS, raw);
+	// the last half millimetre before the end, along the whole height
+	const endStrip = [0.9993, 0.01, 0.9997, 2.99];
+	const inset = path.join(tmp, 'inset.glb');
+	await kitCut(raw, inset, [{ op: 'core', depth: 0.075 }]);
+	assert.ok(seeThrough(await readTris(inset), 0.0002, endStrip).length > 0, 'counterfactual: the 1 mm inset core leaves the joint open at the end');
+	const open = path.join(tmp, 'open.glb');
+	await kitCut(raw, open, [{ op: 'core', depth: 0.075, open: 'x' }]);
+	const tris = await readTris(open);
+	assert.equal(seeThrough(tris, 0.0002, endStrip).length, 0, 'the open core reaches the end: nothing shows through');
+	const endFaces = tris.filter((t) => [-1, 1].some((x) => t.every((v) => Math.abs(v.p[0] - x) < 1e-6 && Math.abs(v.p[2]) <= 0.075 + 1e-6)));
+	assert.equal(endFaces.length, 0, 'and it has no end face of its own to z-fight the bricks');
+});

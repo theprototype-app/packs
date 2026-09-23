@@ -2,8 +2,8 @@
   "WallStone": {
     "name": "WallStone",
     "file": "architecture-kit/WallStone/glTF-Binary/wall-stone.glb",
-    "bytes": 843888,
-    "tris": 3076,
+    "bytes": 843608,
+    "tris": 3072,
     "size": [
       2,
       3,
@@ -30,8 +30,8 @@
   "WallStoneDoor": {
     "name": "WallStoneDoor",
     "file": "architecture-kit/WallStoneDoor/glTF-Binary/wall-stone-door.glb",
-    "bytes": 822204,
-    "tris": 2620,
+    "bytes": 821924,
+    "tris": 2616,
     "size": [
       2,
       3,
@@ -57,8 +57,8 @@
   "WallStoneWindow": {
     "name": "WallStoneWindow",
     "file": "architecture-kit/WallStoneWindow/glTF-Binary/wall-stone-window.glb",
-    "bytes": 866504,
-    "tris": 3709,
+    "bytes": 866136,
+    "tris": 3701,
     "size": [
       2,
       3,
@@ -84,8 +84,8 @@
   "WallStoneHalf": {
     "name": "WallStoneHalf",
     "file": "architecture-kit/WallStoneHalf/glTF-Binary/wall-stone-half.glb",
-    "bytes": 780260,
-    "tris": 1640,
+    "bytes": 779908,
+    "tris": 1634,
     "size": [
       2,
       1.5,
@@ -111,8 +111,8 @@
   "WallStoneGable": {
     "name": "WallStoneGable",
     "file": "architecture-kit/WallStoneGable/glTF-Binary/wall-stone-gable.glb",
-    "bytes": 751980,
-    "tris": 985,
+    "bytes": 751804,
+    "tris": 982,
     "size": [
       2,
       1.5,
@@ -138,8 +138,8 @@
   "CornerPostStone": {
     "name": "CornerPostStone",
     "file": "architecture-kit/CornerPostStone/glTF-Binary/corner-post-stone.glb",
-    "bytes": 739680,
-    "tris": 680,
+    "bytes": 739544,
+    "tris": 678,
     "size": [
       0.25,
       3,
@@ -165,8 +165,8 @@
   "WallPlaster": {
     "name": "WallPlaster",
     "file": "architecture-kit/WallPlaster/glTF-Binary/wall-plaster.glb",
-    "bytes": 560168,
-    "tris": 3076,
+    "bytes": 559888,
+    "tris": 3072,
     "size": [
       2,
       3,
@@ -193,8 +193,8 @@
   "WallPlasterDoor": {
     "name": "WallPlasterDoor",
     "file": "architecture-kit/WallPlasterDoor/glTF-Binary/wall-plaster-door.glb",
-    "bytes": 538484,
-    "tris": 2620,
+    "bytes": 538204,
+    "tris": 2616,
     "size": [
       2,
       3,
@@ -220,8 +220,8 @@
   "WallPlasterWindow": {
     "name": "WallPlasterWindow",
     "file": "architecture-kit/WallPlasterWindow/glTF-Binary/wall-plaster-window.glb",
-    "bytes": 582784,
-    "tris": 3709,
+    "bytes": 582416,
+    "tris": 3701,
     "size": [
       2,
       3,
@@ -247,8 +247,8 @@
   "WallPlasterHalf": {
     "name": "WallPlasterHalf",
     "file": "architecture-kit/WallPlasterHalf/glTF-Binary/wall-plaster-half.glb",
-    "bytes": 496540,
-    "tris": 1640,
+    "bytes": 496180,
+    "tris": 1634,
     "size": [
       2,
       1.5,
@@ -274,8 +274,8 @@
   "WallPlasterGable": {
     "name": "WallPlasterGable",
     "file": "architecture-kit/WallPlasterGable/glTF-Binary/wall-plaster-gable.glb",
-    "bytes": 468260,
-    "tris": 985,
+    "bytes": 468076,
+    "tris": 982,
     "size": [
       2,
       1.5,
@@ -385,8 +385,8 @@
   "FloorStone": {
     "name": "FloorStone",
     "file": "architecture-kit/FloorStone/glTF-Binary/floor-stone.glb",
-    "bytes": 630076,
-    "tris": 1512,
+    "bytes": 629516,
+    "tris": 1504,
     "size": [
       2,
       0.1,
@@ -413,8 +413,8 @@
   "FloorWood": {
     "name": "FloorWood",
     "file": "architecture-kit/FloorWood/glTF-Binary/floor-wood.glb",
-    "bytes": 496356,
-    "tris": 1512,
+    "bytes": 495796,
+    "tris": 1504,
     "size": [
       2,
       0.1,
@@ -441,8 +441,8 @@
   "FloorSlate": {
     "name": "FloorSlate",
     "file": "architecture-kit/FloorSlate/glTF-Binary/floor-slate.glb",
-    "bytes": 536300,
-    "tris": 1512,
+    "bytes": 535740,
+    "tris": 1504,
     "size": [
       2,
       0.1,
@@ -915,8 +915,8 @@
   "Cover": {
     "name": "Cover",
     "file": "tools/architecture-kit/.build/cover-scene.glb",
-    "bytes": 6736816,
-    "tris": 75925,
+    "bytes": 6732752,
+    "tris": 75809,
     "size": [
       12.5,
       6,

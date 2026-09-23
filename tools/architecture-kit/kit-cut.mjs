@@ -239,7 +239,7 @@ async function mortarVertex(/** @type {any} */ prim, /** @type {number[][][]} */
 }
 
 /** a closed box, every vertex a copy of `proto` with its own position + normal */
-function coreBox(/** @type {number[]} */ lo, /** @type {number[]} */ hi, /** @type {number[]} */ proto, /** @type {any} */ info) {
+function coreBox(/** @type {number[]} */ lo, /** @type {number[]} */ hi, /** @type {number[]} */ proto, /** @type {any} */ info, open = '') {
 	const nOff = info.off.NORMAL;
 	const P = (/** @type {number} */ x, /** @type {number} */ y, /** @type {number} */ z, /** @type {number[]} */ n) => {
 		const v = proto.slice();
@@ -259,6 +259,9 @@ function coreBox(/** @type {number[]} */ lo, /** @type {number[]} */ hi, /** @ty
 	];
 	const out = [];
 	for (const [n, at, [u0, u1], [w0, w1]] of /** @type {any[]} */ (faces)) {
+		// an OPEN axis has no end faces: the core runs right to the joint plane there, where a
+		// face would be coplanar with the bricks' clamped ends (z-fight on a free end)
+		if ((n[0] && open.includes('x')) || (n[1] && open.includes('y')) || (n[2] && open.includes('z'))) continue;
 		const q = [at(u0, w0), at(u1, w0), at(u1, w1), at(u0, w1)].map((c) => P(c[0], c[1], c[2], n));
 		let t1 = [q[0], q[1], q[2]];
 		let t2 = [q[0], q[2], q[3]];
@@ -294,13 +297,17 @@ export async function kitCut(input, output, ops) {
 			// the other two span the piece, 1 mm inside the clamped joint planes (no z-fight)
 			const inset = op.inset ?? 0.001;
 			const axis = { x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (op.axis ?? 'z')];
-			const lo = b0.min.map((v) => v + inset);
-			const hi = b0.max.map((v) => v - inset);
+			// `open` axes (the joint axes: x for a wall, xz for a floor) go right to the joint
+			// planes — a 1 mm inset there left a 1 mm see-through strip down every mortar joint
+			// at a wall's end, 2 mm where two walls meet (the e2e saw it in the corner views)
+			const open = op.open ?? '';
+			const lo = b0.min.map((v, i) => v + ('xyz'[i] && open.includes('xyz'[i]) ? 0 : inset));
+			const hi = b0.max.map((v, i) => v - ('xyz'[i] && open.includes('xyz'[i]) ? 0 : inset));
 			[lo[axis], hi[axis]] = op.range ?? [-op.depth, op.depth];
 			// optionally narrower on the other axes (a door's core only fills its doorway)
 			for (const [k, r] of Object.entries(op.extent ?? {})) [lo[{ x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (k)]], hi[{ x: 0, y: 1, z: 2 }[/** @type {'x'|'y'|'z'} */ (k)]]] = /** @type {number[]} */ (r);
 			const proto = await mortarVertex(prim, original, info, axis);
-			tris = tris.concat(coreBox(lo, hi, proto, info));
+			tris = tris.concat(coreBox(lo, hi, proto, info, open));
 		}
 		else if (op.op === 'cap') tris = tris.concat(capQuad(original, info, op.a, op.b, op.normal, z0, z1, op.from));
 		else if (op.op === 'wedge') {

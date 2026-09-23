@@ -24,7 +24,8 @@
       "cut": [
         {
           "op": "core",
-          "depth": 0.075
+          "depth": 0.075,
+          "open": "x"
         }
       ],
       "place": "on a grid line: x or z on a whole odd metre (1, 3, \u2026), 0\u00b0 or 90\u00b0"
@@ -95,7 +96,8 @@
       "cut": [
         {
           "op": "core",
-          "depth": 0.075
+          "depth": 0.075,
+          "open": "x"
         }
       ],
       "place": "like the sandstone wall \u2014 the two families swap one for one"
@@ -225,7 +227,8 @@
           "range": [
             0.001,
             0.07
-          ]
+          ],
+          "open": "xz"
         }
       ]
     },
@@ -259,7 +262,8 @@
           "range": [
             0.001,
             0.07
-          ]
+          ],
+          "open": "xz"
         }
       ]
     },
@@ -297,7 +301,8 @@
           "range": [
             0.001,
             0.07
-          ]
+          ],
+          "open": "xz"
         }
       ]
     },
