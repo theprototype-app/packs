@@ -10,8 +10,12 @@
 //     WEIGHTS_0 — ride along; only the index buffer changes);
 //   - puts back the PBR maps rigging drops: the rigged mesh keeps the refine's UV atlas (same
 //     base colour image, vertices reordered), so the refine's normal + metal-rough maps fit it
-//     as they are (`pbrFrom`, refused when the base colours differ);
-//   - drops the black emissive map, resizes textures to 1024² JPEG, prunes.
+//     as they are (`pbrFrom`, refused when the base colours differ); with `retexture` the
+//     base colour comes too — a retexture of that refine with its original UVs recolours the
+//     rigged character without paying for a second rig (guarded by the atlas: same triangles,
+//     same mean UV);
+//   - drops the emissive map when it is the base colour (the rig's self-lit wiring) or black,
+//     resizes textures to 1024² JPEG, prunes.
 // Meshy's generator/extras are carried through (ToS §2.4); asset.extras.meshyRigged records ours.
 import fs from 'node:fs';
 import { NodeIO, Logger } from '@gltf-transform/core';
@@ -60,22 +64,51 @@ async function fingerprint(img) {
 	return sharp(Buffer.from(img)).resize(16, 16, { fit: 'fill' }).greyscale().raw().toBuffer();
 }
 
+/** triangles + mean UV of a document's first primitive — a UV ATLAS's fingerprint @param {import('@gltf-transform/core').Document} d */
+function atlasOf(d) {
+	const p = d.getRoot().listMeshes()[0]?.listPrimitives()[0];
+	const uv = p?.getAttribute('TEXCOORD_0');
+	let u = 0;
+	let v = 0;
+	for (let i = 0; i < (uv?.getCount() ?? 0); i++) {
+		const e = uv.getElement(i, []);
+		u += e[0];
+		v += e[1];
+	}
+	const n = uv?.getCount() || 1;
+	return { tris: (p?.getIndices()?.getCount() ?? 0) / 3, u: u / n, v: v / n };
+}
+
 /**
  * Copy `from`'s normal + metallic-roughness maps (and their factors) onto `doc`'s material of
- * the same base colour picture. Returns what was copied.
+ * the same base colour picture. With `baseColor` (a RETEXTURE of the rigged mesh's refine, made
+ * with its original UVs) the base colour comes too — the colours differ by design, so the guard
+ * is the atlas itself: the same triangle count and mean UV. Returns what was copied.
  * @param {import('@gltf-transform/core').Document} doc @param {import('@gltf-transform/core').Document} from
+ * @param {{baseColor?: boolean}} [o]
  */
-export async function copyPbr(doc, from) {
+export async function copyPbr(doc, from, o = {}) {
 	const src = from.getRoot().listMaterials().find((m) => m.getBaseColorTexture());
 	const dst = doc.getRoot().listMaterials().find((m) => m.getBaseColorTexture());
 	if (!src || !dst) throw new Error('pbrFrom: both files need a base colour texture');
-	const a = await fingerprint(/** @type {Uint8Array} */ (src.getBaseColorTexture()?.getImage()));
-	const b = await fingerprint(/** @type {Uint8Array} */ (dst.getBaseColorTexture()?.getImage()));
-	let diff = 0;
-	for (let i = 0; i < a.length; i++) diff += Math.abs(a[i] - b[i]);
-	if (diff / a.length > 6) throw new Error(`pbrFrom: the base colours differ (mean ${(diff / a.length).toFixed(1)}/255) — not the same UV atlas`);
+	if (o.baseColor) {
+		const a = atlasOf(from);
+		const b = atlasOf(doc);
+		if (a.tris !== b.tris || Math.abs(a.u - b.u) > 1e-3 || Math.abs(a.v - b.v) > 1e-3)
+			throw new Error(`retexture: not the rig's UV atlas (${a.tris} vs ${b.tris} tris, mean uv ${a.u.toFixed(4)},${a.v.toFixed(4)} vs ${b.u.toFixed(4)},${b.v.toFixed(4)})`);
+	} else {
+		const a = await fingerprint(/** @type {Uint8Array} */ (src.getBaseColorTexture()?.getImage()));
+		const b = await fingerprint(/** @type {Uint8Array} */ (dst.getBaseColorTexture()?.getImage()));
+		let diff = 0;
+		for (let i = 0; i < a.length; i++) diff += Math.abs(a[i] - b[i]);
+		if (diff / a.length > 6) throw new Error(`pbrFrom: the base colours differ (mean ${(diff / a.length).toFixed(1)}/255) — not the same UV atlas`);
+	}
 	const copied = [];
 	const tex = (/** @type {any} */ t) => doc.createTexture(t.getName()).setImage(t.getImage().slice()).setMimeType(t.getMimeType());
+	if (o.baseColor) {
+		dst.setBaseColorTexture(tex(src.getBaseColorTexture())).setBaseColorFactor(src.getBaseColorFactor());
+		copied.push('baseColor');
+	}
 	const n = src.getNormalTexture();
 	if (n) {
 		dst.setNormalTexture(tex(n)).setNormalScale(src.getNormalScale());
@@ -93,7 +126,7 @@ export async function copyPbr(doc, from) {
 const durationOf = (anim) => Math.max(0, ...anim.listSamplers().map((/** @type {any} */ s) => s.getInput()?.getMax([])[0] ?? 0));
 
 /**
- * @param {{base: string, out: string, clips?: {file: string, name: string | string[]}[], keepBaseAnimations?: boolean, pbrFrom?: string,
+ * @param {{base: string, out: string, clips?: {file: string, name: string | string[]}[], keepBaseAnimations?: boolean, pbrFrom?: string, retexture?: boolean,
  *   targetTris?: number, textureSize?: number, quality?: number, keepEmissive?: boolean}} o
  *   `clips[].name`: one name for the file's first animation, or one per animation in order
  */
@@ -120,7 +153,18 @@ export async function postRigged(o) {
 		});
 	}
 
-	const pbr = o.pbrFrom ? await copyPbr(doc, await io.read(o.pbrFrom)) : [];
+	// Meshy's RIG output wires the base colour texture in as the emissive map too: the character
+	// lights itself (flat, glowing, and a game's hit flash cannot paint it). Drop it BEFORE a
+	// recolour, or the old colours would keep glowing through the new ones.
+	let droppedEmissive = 0;
+	for (const mat of root.listMaterials()) {
+		const em = mat.getEmissiveTexture();
+		const base = mat.getBaseColorTexture();
+		if (!em || o.keepEmissive || !(em === base || (base && base.getImage() === em.getImage()))) continue;
+		mat.setEmissiveTexture(null).setEmissiveFactor([0, 0, 0]);
+		droppedEmissive++;
+	}
+	const pbr = o.pbrFrom ? await copyPbr(doc, await io.read(o.pbrFrom), { baseColor: !!o.retexture }) : [];
 
 	await doc.transform(dedup(), weld());
 	if (o.targetTris && countTris(doc) > o.targetTris) {
@@ -132,9 +176,9 @@ export async function postRigged(o) {
 		}
 	}
 
-	let droppedEmissive = 0;
 	for (const mat of root.listMaterials()) {
-		const img = mat.getEmissiveTexture()?.getImage();
+		const em = mat.getEmissiveTexture();
+		const img = em?.getImage();
 		if (!img || o.keepEmissive) continue;
 		const { channels } = await sharp(Buffer.from(img)).stats();
 		if (Math.max(...channels.slice(0, 3).map((c) => c.max)) < 24) {

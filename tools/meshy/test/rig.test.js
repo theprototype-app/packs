@@ -202,3 +202,67 @@ test('postRigged pbrFrom: the refine\'s normal + metal-rough maps land on the ri
 	assert.equal(m.getRoughnessFactor(), 0.8);
 	await assert.rejects(postRigged({ base: f('rig.glb'), out: f('x.glb'), pbrFrom: f('other.glb') }), /base colours differ/);
 });
+
+test('postRigged retexture: a recolour with the SAME atlas swaps in all three maps; another atlas is refused', async () => {
+	const sharp = (await import('sharp')).default;
+	const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'meshy-retex-'));
+	const f = (n) => path.join(dir, n);
+	const img = (r) => {
+		const px = Buffer.alloc(16 * 16 * 3);
+		for (let i = 0; i < 256; i++) px.set([(r + i) % 256, (i * 5) % 256, 40], i * 3);
+		return sharp(px, { raw: { width: 16, height: 16, channels: 3 } }).png().toBuffer();
+	};
+	const io = new NodeIO();
+	const textured = async (file, base, extra, uvShift = 0) => {
+		await skinned(file);
+		const doc = await io.read(file);
+		const prim = doc.getRoot().listMeshes()[0].listPrimitives()[0];
+		const buf = doc.getRoot().listBuffers()[0];
+		prim.setAttribute('TEXCOORD_0', doc.createAccessor().setType('VEC2').setArray(new Float32Array([0, 0, 1, 0, 0, 1, 1, 1, 0.5, 0.5].map((v) => v + uvShift))).setBuffer(buf));
+		const mat = doc.createMaterial('m').setBaseColorTexture(doc.createTexture('bc').setImage(base).setMimeType('image/png'));
+		if (extra) mat.setNormalTexture(doc.createTexture('n').setImage(extra).setMimeType('image/png')).setMetallicRoughnessTexture(doc.createTexture('mr').setImage(extra).setMimeType('image/png'));
+		prim.setMaterial(mat);
+		await io.write(file, doc);
+	};
+	await textured(f('rig.glb'), await img(10), null);
+	await textured(f('retex.glb'), await img(200), await img(90));
+	await textured(f('other.glb'), await img(200), await img(90), 0.2);
+	const r = await postRigged({ base: f('rig.glb'), out: f('out.glb'), pbrFrom: f('retex.glb'), retexture: true });
+	assert.deepEqual(r.pbr, ['baseColor', 'normal', 'metallicRoughness']);
+	// a rig that lights itself with its OLD base colour: the recolour must not glow it through
+	{
+		const doc = await io.read(f('rig.glb'));
+		const m = doc.getRoot().listMaterials()[0];
+		m.setEmissiveTexture(m.getBaseColorTexture()).setEmissiveFactor([1, 1, 1]);
+		await io.write(f('rig-lit.glb'), doc);
+		const lit = await postRigged({ base: f('rig-lit.glb'), out: f('out-lit.glb'), pbrFrom: f('retex.glb'), retexture: true });
+		const out = (await io.read(f('out-lit.glb'))).getRoot();
+		assert.equal(lit.droppedEmissive, 1);
+		assert.equal(out.listMaterials()[0].getEmissiveTexture(), null);
+		// the new base colour + ONE normal/metal-rough picture (this test's two are the same image: dedup)
+		assert.equal(out.listTextures().length, 2, 'the old base colour is gone with its glow');
+	}
+	await assert.rejects(postRigged({ base: f('rig.glb'), out: f('x.glb'), pbrFrom: f('other.glb'), retexture: true }), /not the rig's UV atlas/);
+	await assert.rejects(postRigged({ base: f('rig.glb'), out: f('y.glb'), pbrFrom: f('retex.glb') }), /base colours differ/);
+});
+
+test('postRigged drops the emissive map Meshy\'s rig wires to the base colour (the character lit itself)', async () => {
+	const sharp = (await import('sharp')).default;
+	const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'meshy-emis-'));
+	const f = (n) => path.join(dir, n);
+	const px = Buffer.alloc(16 * 16 * 3);
+	for (let i = 0; i < 256; i++) px.set([200, i, 60], i * 3);
+	const png = await sharp(px, { raw: { width: 16, height: 16, channels: 3 } }).png().toBuffer();
+	await skinned(f('rig.glb'));
+	const io = new NodeIO();
+	const doc = await io.read(f('rig.glb'));
+	const t = doc.createTexture('texture_0').setImage(png).setMimeType('image/png');
+	doc.getRoot().listMeshes()[0].listPrimitives()[0].setMaterial(doc.createMaterial('m').setBaseColorTexture(t).setEmissiveTexture(t).setEmissiveFactor([1, 1, 1]));
+	await io.write(f('rig.glb'), doc);
+	const r = await postRigged({ base: f('rig.glb'), out: f('out.glb') });
+	const m = (await io.read(f('out.glb'))).getRoot().listMaterials()[0];
+	assert.equal(r.droppedEmissive, 1);
+	assert.equal(m.getEmissiveTexture(), null);
+	assert.deepEqual(m.getEmissiveFactor(), [0, 0, 0]);
+	assert.ok(m.getBaseColorTexture(), 'the base colour stays');
+});
