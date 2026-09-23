@@ -171,3 +171,34 @@ test('postRigged: clips land on the base skeleton BY NAME, named, a stray joint 
 	assert.ok(out.getRoot().listMeshes()[0].listPrimitives()[0].getAttribute('JOINTS_0'), 'skin weights ride along');
 	await assert.rejects(postRigged({ base: f('rig.glb'), out: f('x.glb'), clips: [{ file: f('rig.glb'), name: 'walk' }] }), /no animation/);
 });
+
+test('postRigged pbrFrom: the refine\'s normal + metal-rough maps land on the rig of the same atlas; another atlas is refused', async () => {
+	const sharp = (await import('sharp')).default;
+	const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'meshy-pbr-'));
+	const f = (n) => path.join(dir, n);
+	// a gradient, not a solid colour: prune() folds a solid-colour texture into a factor
+	const png = (r, g, b) => {
+		const px = Buffer.alloc(16 * 16 * 3);
+		for (let i = 0; i < 256; i++) px.set([(r + i) % 256, (g + i * 3) % 256, b], i * 3);
+		return sharp(px, { raw: { width: 16, height: 16, channels: 3 } }).png().toBuffer();
+	};
+	const io = new NodeIO();
+	const textured = async (file, base, extra) => {
+		await skinned(file);
+		const doc = await io.read(file);
+		const mat = doc.createMaterial('m').setBaseColorTexture(doc.createTexture('bc').setImage(base).setMimeType('image/png'));
+		if (extra) mat.setNormalTexture(doc.createTexture('n').setImage(extra).setMimeType('image/png')).setMetallicRoughnessTexture(doc.createTexture('mr').setImage(extra).setMimeType('image/png')).setRoughnessFactor(0.8);
+		doc.getRoot().listMeshes()[0].listPrimitives()[0].setMaterial(mat);
+		await io.write(file, doc);
+	};
+	const orange = await png(230, 120, 30);
+	await textured(f('rig.glb'), orange, null);
+	await textured(f('refine.glb'), orange, await png(128, 128, 255));
+	await textured(f('other.glb'), await png(20, 200, 240), await png(128, 128, 255));
+	const r = await postRigged({ base: f('rig.glb'), out: f('out.glb'), pbrFrom: f('refine.glb') });
+	assert.deepEqual(r.pbr, ['normal', 'metallicRoughness']);
+	const m = (await io.read(f('out.glb'))).getRoot().listMaterials()[0];
+	assert.ok(m.getNormalTexture() && m.getMetallicRoughnessTexture());
+	assert.equal(m.getRoughnessFactor(), 0.8);
+	await assert.rejects(postRigged({ base: f('rig.glb'), out: f('x.glb'), pbrFrom: f('other.glb') }), /base colours differ/);
+});

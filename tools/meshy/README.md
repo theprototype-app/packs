@@ -80,7 +80,7 @@ Meshy's own generator/extras are never stripped (Meshy ToS §2.4).
 
 ## Tests
 
-`npm test` — 27 unit tests (6 for rig/animate/meshy-rigged) (ledger, cap, cross-process flock race, idempotency,
+`npm test` — 28 unit tests (7 for rig/animate/meshy-rigged) (ledger, cap, cross-process flock race, idempotency,
 orphan adoption, refunds, 429/5xx classification, key scrubbing, post-processing
 geometry/texture/pivot math on a synthetic GLB). `test/e2e-app-load.cjs` — a
 post-processed GLB imported as a pack into a running core dev server, placed,

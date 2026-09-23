@@ -1,14 +1,15 @@
 #!/usr/bin/env node
-// meshy-rigged <rigged.glb> <out.glb> [--clip walking.glb=walk] [--clip anim.glb=hit,death] [--tris 8000] [--tex 1024] [--thumb t.webp]
+// meshy-rigged <rigged.glb> <out.glb> [--clip walking.glb=walk] [--clip anim.glb=hit,death] [--tris 8000] [--tex 1024] [--thumb t.webp] [--pbr refine.glb]
 //   Merge a rigged character and its clip files into one skinned GLB (see lib/rigged.js).
-//   A clip's names are one per animation in that file, in order. stdout: the JSON report.
+//   A clip's names are one per animation in that file, in order. --pbr puts back the refine's
+//   normal + metal-rough maps (rigging keeps only the base colour). stdout: the JSON report.
 import { die } from '../lib/cli.js';
 import { postRigged } from '../lib/rigged.js';
 
 const argv = process.argv.slice(2);
 const pos = [];
 const clips = [];
-let targetTris, textureSize, thumb;
+let targetTris, textureSize, thumb, pbrFrom;
 for (let i = 0; i < argv.length; i++) {
 	const a = argv[i];
 	if (a === '--clip') {
@@ -18,10 +19,11 @@ for (let i = 0; i < argv.length; i++) {
 	} else if (a === '--tris') targetTris = Number(argv[++i]);
 	else if (a === '--tex') textureSize = Number(argv[++i]);
 	else if (a === '--thumb') thumb = argv[++i];
+	else if (a === '--pbr') pbrFrom = argv[++i];
 	else pos.push(a);
 }
 if (pos.length !== 2) die('usage: meshy-rigged rigged.glb out.glb [--clip file.glb=name[,name]]… [--tris N] [--tex 1024] [--thumb t.webp]');
-const report = await postRigged({ base: pos[0], out: pos[1], clips, targetTris, textureSize });
+const report = await postRigged({ base: pos[0], out: pos[1], clips, targetTris, textureSize, pbrFrom });
 if (thumb) {
 	const { renderThumbs } = await import('../lib/thumb.js');
 	await renderThumbs([{ glb: pos[1], out: thumb }]);

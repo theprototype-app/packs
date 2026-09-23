@@ -8,6 +8,9 @@
 //     names them (`walk`, `run`, `hit`, `death`, …) so a game can ask for them;
 //   - welds and simplifies the skinned mesh to targetTris (vertex attributes — JOINTS_0 /
 //     WEIGHTS_0 — ride along; only the index buffer changes);
+//   - puts back the PBR maps rigging drops: the rigged mesh keeps the refine's UV atlas (same
+//     base colour image, vertices reordered), so the refine's normal + metal-rough maps fit it
+//     as they are (`pbrFrom`, refused when the base colours differ);
 //   - drops the black emissive map, resizes textures to 1024² JPEG, prunes.
 // Meshy's generator/extras are carried through (ToS §2.4); asset.extras.meshyRigged records ours.
 import fs from 'node:fs';
@@ -52,11 +55,45 @@ export function copyAnimation(doc, anim, name) {
 	return { name, kept, dropped };
 }
 
+/** a tiny grey thumbnail of an image, to tell whether two textures are the same picture @param {Uint8Array} img */
+async function fingerprint(img) {
+	return sharp(Buffer.from(img)).resize(16, 16, { fit: 'fill' }).greyscale().raw().toBuffer();
+}
+
+/**
+ * Copy `from`'s normal + metallic-roughness maps (and their factors) onto `doc`'s material of
+ * the same base colour picture. Returns what was copied.
+ * @param {import('@gltf-transform/core').Document} doc @param {import('@gltf-transform/core').Document} from
+ */
+export async function copyPbr(doc, from) {
+	const src = from.getRoot().listMaterials().find((m) => m.getBaseColorTexture());
+	const dst = doc.getRoot().listMaterials().find((m) => m.getBaseColorTexture());
+	if (!src || !dst) throw new Error('pbrFrom: both files need a base colour texture');
+	const a = await fingerprint(/** @type {Uint8Array} */ (src.getBaseColorTexture()?.getImage()));
+	const b = await fingerprint(/** @type {Uint8Array} */ (dst.getBaseColorTexture()?.getImage()));
+	let diff = 0;
+	for (let i = 0; i < a.length; i++) diff += Math.abs(a[i] - b[i]);
+	if (diff / a.length > 6) throw new Error(`pbrFrom: the base colours differ (mean ${(diff / a.length).toFixed(1)}/255) — not the same UV atlas`);
+	const copied = [];
+	const tex = (/** @type {any} */ t) => doc.createTexture(t.getName()).setImage(t.getImage().slice()).setMimeType(t.getMimeType());
+	const n = src.getNormalTexture();
+	if (n) {
+		dst.setNormalTexture(tex(n)).setNormalScale(src.getNormalScale());
+		copied.push('normal');
+	}
+	const mr = src.getMetallicRoughnessTexture();
+	if (mr) {
+		dst.setMetallicRoughnessTexture(tex(mr)).setMetallicFactor(src.getMetallicFactor()).setRoughnessFactor(src.getRoughnessFactor());
+		copied.push('metallicRoughness');
+	}
+	return copied;
+}
+
 /** seconds a clip lasts @param {any} anim */
 const durationOf = (anim) => Math.max(0, ...anim.listSamplers().map((/** @type {any} */ s) => s.getInput()?.getMax([])[0] ?? 0));
 
 /**
- * @param {{base: string, out: string, clips?: {file: string, name: string | string[]}[], keepBaseAnimations?: boolean,
+ * @param {{base: string, out: string, clips?: {file: string, name: string | string[]}[], keepBaseAnimations?: boolean, pbrFrom?: string,
  *   targetTris?: number, textureSize?: number, quality?: number, keepEmissive?: boolean}} o
  *   `clips[].name`: one name for the file's first animation, or one per animation in order
  */
@@ -82,6 +119,8 @@ export async function postRigged(o) {
 			report.push({ ...copyAnimation(doc, anims[i], name), from: clip.file, source: anims[i].getName(), seconds: +durationOf(anims[i]).toFixed(3) });
 		});
 	}
+
+	const pbr = o.pbrFrom ? await copyPbr(doc, await io.read(o.pbrFrom)) : [];
 
 	await doc.transform(dedup(), weld());
 	if (o.targetTris && countTris(doc) > o.targetTris) {
@@ -123,6 +162,7 @@ export async function postRigged(o) {
 		size: [0, 1, 2].map((i) => +(b.max[i] - b.min[i]).toFixed(4)),
 		animations: out.getRoot().listAnimations().map((a) => ({ name: a.getName(), channels: a.listChannels().length, seconds: +durationOf(a).toFixed(3) })),
 		clips: report,
+		pbr,
 		textures: out.getRoot().listTextures().map((t) => ({ mime: t.getMimeType(), size: t.getSize() })),
 		droppedEmissive
 	};
