@@ -191,11 +191,11 @@ export const RIGS = {
 
 	/** a Meshy oak chest of drawers: the three drawers slide out, staggered, each a real box */
 	async Drawers(/** @type {string} */ out) {
-		const f = meshy('cabinet-b');
+		const f = meshy('cabinet-b-oak');
 		const X = 0.425;
 		const Z = 0.15;
 		const rows = [[0.2, 0.415], [0.46, 0.653], [0.697, 0.905]];
-		let body = (await part(f)).tint(OAK);
+		let body = reskinSides((await part(f)).tint(OAK), 0.44, 0.95);
 		for (const [y0, y1] of rows) body = body.cut([[-1, 0, 0, X], [1, 0, 0, X], [0, -1, 0, -y0], [0, 1, 0, y1], [0, 0, -1, -Z]]);
 		for (const [y0, y1] of rows) await body.box([-X, y0, -0.22], [X, y1, Z], { skip: '+z', inward: true, pct: 0.15 });
 		const parts = [body.at('Frame')];
@@ -363,6 +363,64 @@ function legs(/** @type {[number, number[]][]} */ stops, steps = 6) {
 		for (const [t, v] of ease((u) => a.map((x, k) => x + (b[k] - x) * u), t1 - t0, steps).slice(1)) keys.push([+(t0 + t).toFixed(4), v]);
 	}
 	return keys;
+}
+
+/**
+ * Re-skin a part's flat side panels (|normal·x| > 0.9 beyond |x| > xMin) with its clean TOP:
+ * fit the top's (x, z) → uv affine map by least squares, then sample it at the side's (z, y)
+ * stretched over the top's extent. Meshy's chest of drawers ships a smeared side-panel island.
+ * @param {import('../anim/anim.mjs').Part} p @param {number} xMin @param {number} yTop
+ */
+function reskinSides(p, xMin, yTop) {
+	// FACE normals: Meshy's vertex normals are smoothed round every edge
+	const fn = (/** @type {number[][]} */ [a, b, c]) => {
+		const n = new THREE.Vector3(b[0] - a[0], b[1] - a[1], b[2] - a[2]).cross(new THREE.Vector3(c[0] - a[0], c[1] - a[1], c[2] - a[2]));
+		return n.normalize();
+	};
+	for (const piece of p.pieces) {
+		const top = piece.tris.filter((t) => fn(t).y > 0.9 && t.every((v) => v[1] > yTop));
+		const pts = top.flat();
+		if (pts.length < 3) continue;
+		// least squares for u = a x + b z + c (and v): 3×3 normal equations
+		const fit = (/** @type {number} */ k) => {
+			const A = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+			const B = [0, 0, 0];
+			for (const v of pts) {
+				const r = [v[0], v[2], 1];
+				for (let i = 0; i < 3; i++) {
+					B[i] += r[i] * v[k];
+					for (let j = 0; j < 3; j++) A[i][j] += r[i] * r[j];
+				}
+			}
+			return new THREE.Matrix3().set(...A.flat()).invert().toArray(); // column-major
+		};
+		const solve = (/** @type {number} */ k) => {
+			const inv = fit(k);
+			const B = [0, 0, 0];
+			for (const v of pts) [v[0], v[2], 1].forEach((r, i) => (B[i] += r * v[k]));
+			return [0, 1, 2].map((i) => inv[i] * B[0] + inv[i + 3] * B[1] + inv[i + 6] * B[2]);
+		};
+		const cu = solve(6);
+		const cv = solve(7);
+		const xs = pts.map((v) => v[0]);
+		const zs = pts.map((v) => v[2]);
+		const [x0, x1, z0, z1] = [Math.min(...xs), Math.max(...xs), Math.min(...zs), Math.max(...zs)];
+		const sideTris = piece.tris.filter((t) => Math.abs(fn(t).x) > 0.9 && t.every((v) => Math.abs(v[0]) > xMin));
+		// copy the vertices first: a vertex record is shared with its neighbours across the edge
+		for (const t of sideTris) for (let i = 0; i < 3; i++) t[i] = t[i].slice();
+		const sides = sideTris.flat();
+		if (!sides.length) continue;
+		const sz = sides.map((v) => v[2]);
+		const sy = sides.map((v) => v[1]);
+		const [a0, a1, b0, b1] = [Math.min(...sz), Math.max(...sz), Math.min(...sy), Math.max(...sy)];
+		for (const v of sides) {
+			const x = x0 + ((v[1] - b0) / (b1 - b0 || 1)) * (x1 - x0); // the side's height runs along the top's grain
+			const z = z0 + ((v[2] - a0) / (a1 - a0 || 1)) * (z1 - z0);
+			v[6] = cu[0] * x + cu[1] * z + cu[2];
+			v[7] = cv[0] * x + cv[1] * z + cv[2];
+		}
+	}
+	return p;
 }
 
 /** a heavy oak door frame: two jambs + a lintel round a w×h doorway, `t` thick, `d` deep (procedural, box-UV'd oak) */

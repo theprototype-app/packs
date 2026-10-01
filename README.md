@@ -21,6 +21,12 @@ props-kit/                       Props & Interiors: 33 furnishing / dressing / g
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
                                  on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
 tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
+interactive-kit/                 Interactive Kit: 19 animated, functional pieces — doors WITH frames,
+                                 gates, portcullis, trapdoor, shutters, chest, drawers, lever, plate,
+                                 ambient torch/banner/fan — each with a `behavior` (kit.md)
+tools/anim/                      the embedded rigging tools: split a mesh into frame + hinged parts,
+                                 author open/close clips, render them (look.mjs); 0 credits
+tools/interactive-kit/           the Interactive Kit's recipes (rigs.mjs) and build
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -69,6 +75,9 @@ reading the ref they were built against.
   [CREDITS.md](audio-essentials/CREDITS.md) (Kenney.nl, OpenGameArt).
 - `nature-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) and
   post-processed here (`nature-kit/build/`); grass, leaves decal and pond water are procedural.
+- `interactive-kit/` — © theprototype, CC0; the architecture, props and sci-fi kits' pieces
+  rigged with `tools/anim/`, plus six meshes made with [Meshy.ai](https://www.meshy.ai) — see its
+  `attribution.html` and `kit.md`.
 - `scifi-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
   (see its `attribution.html`).
 

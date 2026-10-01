@@ -9,6 +9,8 @@ eyeballed: its size below is exact to the millimetre, and pieces placed on the g
 **no gaps** — the pack's e2e builds a two-room station and counts background pixels through the
 joints (zero).
 
+> **Animated versions:** the [Interactive Kit](../interactive-kit/kit.md) has the Sliding door and the Wall + sliding door with panels that part when you come near.
+
 ## The grid in one paragraph
 
 **Walls stand ON grid lines, centred on them.** A wall is 2 m long, 3 m tall (one storey) and
