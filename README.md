@@ -21,6 +21,8 @@ props-kit/                       Props & Interiors: 33 furnishing / dressing / g
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
                                  on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
 tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
+tools/lod/                       no z-fighting (defight) + offline LODs: <name>.lod1/.lod2.glb and
+                                 each row's "lods" field — see tools/lod/README.md
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —

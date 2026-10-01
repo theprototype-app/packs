@@ -21,7 +21,17 @@
     "label": "Cat",
     "variants": {
       "glTF-Binary": "cat.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "cat.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "cat.lod2.glb",
+        "ratio": 0.2
+      }
+    ]
   },
   {
     "name": "Desk",
@@ -37,7 +47,17 @@
     "label": "Dresser",
     "variants": {
       "glTF-Binary": "dresser.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "dresser.lod1.glb",
+        "ratio": 0.55
+      },
+      {
+        "file": "dresser.lod2.glb",
+        "ratio": 0.3
+      }
+    ]
   },
   {
     "name": "Floor",
@@ -45,7 +65,17 @@
     "label": "Floor",
     "variants": {
       "glTF-Binary": "floor.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "floor.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "floor.lod2.glb",
+        "ratio": 0.2
+      }
+    ]
   },
   {
     "name": "Plant1",
@@ -53,7 +83,13 @@
     "label": "Plant 1",
     "variants": {
       "glTF-Binary": "plant1.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "plant1.lod1.glb",
+        "ratio": 0.51
+      }
+    ]
   },
   {
     "name": "Plant2",
@@ -61,7 +97,13 @@
     "label": "Plant 2",
     "variants": {
       "glTF-Binary": "plant2.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "plant2.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "Rug",
