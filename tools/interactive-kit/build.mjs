@@ -90,7 +90,7 @@ const list = ITEMS.map((it) => {
 	if (old.lods) row.lods = old.lods;
 	return row;
 });
-fs.writeFileSync(listFile, JSON.stringify(list, null, 1) + '\n');
+fs.writeFileSync(listFile, JSON.stringify(list, null, 2) + '\n'); // 2 spaces: tools/lod rewrites it that way
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 1) + '\n');
 
 // kit.md: the generated items table

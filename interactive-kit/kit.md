@@ -97,4 +97,12 @@ in three.js to check it. Six meshes are new, generated with **Meshy.ai** (reques
 chest of drawers and the ceiling fan. `node tools/interactive-kit/build.mjs` rebuilds the pack.
 `tools/interactive-kit/rigs.mjs` is the whole recipe.
 
+**LODs** (the `lods` rows, contract P1): `tools/lod` (33-pack-fix-lod) runs on the built GLBs:
+`node tools/lod/defight-all.mjs interactive-kit && node tools/lod/lod.mjs interactive-kit`. It
+first settles coplanar layers, then writes `<name>.lod1.glb` / `.lod2.glb`, simplified PER NODE.
+The node names, hierarchy and clips stay the same, so a door at LOD2 still opens. 16 items have
+levels. The Lever, Pressure plate and Wall button are under the tool's 500-triangle floor, so
+they have none. Re-run both steps after any rebuild: build.mjs keeps the `lods` rows, but it
+rewrites the LOD0s.
+
 License: **CC0-1.0**. See `attribution.html`.
