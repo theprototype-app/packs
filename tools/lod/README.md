@@ -21,10 +21,17 @@ skipped item with its reason.
 - **coplanar.mjs** — the static z-fight probe: pairs of triangles in one plane (facing within
   1°, every corner within 1 mm; both facings when the material is double-sided) that overlap
   by more than 1 mm². `node tools/lod/coplanar.mjs a.glb b.glb …`
-- **defight.mjs** — per coplanar cluster, largest triangle first: hidden duplicates are dropped,
-  partial overlaps pushed 2.5 mm per layer toward the piece's middle (clamped into its bounds).
-  Files under 1 cm² of overlap are left byte-identical. The architecture/scifi kit-post runs it
-  last (their seam clamp is what folds relief into coplanar layers).
+- **defight.mjs** — per coplanar cluster: the SURFACE is the triangle drawn last (three's
+  LessEqual tie-break — what the original showed); hidden duplicates are dropped, partial
+  overlaps pushed 2.5 mm per layer BEHIND the surface (into the piece near a bbox face),
+  clamped into the piece's bounds. Files under 1 cm² of overlap are left byte-identical.
+  `defight-all.mjs` LOOKS at every candidate (surface rule, bbox-middle rule, drop-only) against
+  the original render and keeps the one with the least overlap among those within Δ 30; none →
+  the file is left as is. Every file's outcome is in `defight-report.json`. The
+  architecture/scifi kit-post runs it last (their seam clamp is what folds relief into
+  coplanar layers). A kitbashed lining must never sit flush with a cut wall: scifi's
+  `procedural.mjs` insets it 4 mm (`tools/scifi-kit/inset-linings.mjs` for shipped GLBs) —
+  inset BEFORE defight.
 - **lod.mjs** — per item over the floor (500 tris; 2000 for `default` / `cube_diorama`): a copy
   of LOD0 simplified PER PRIMITIVE IN PLACE with meshoptimizer's attribute-aware simplifier
   (positions + normals + UV0). Node names, hierarchy, transforms, skins, morph targets and
@@ -34,8 +41,9 @@ skipped item with its reason.
   (`judge.mjs`): rendered with LOD0's textures at the size core first shows it (180 px / 72 px =
   25 % / 10 % of a 720 p view) from four sides, it must stay within a mean colour change of 30;
   the coarsest passing error cap wins. A level is kept only at <= 80 % of the level before (core's
-  own rule). The row's `ratio` is the MEASURED triangle fraction. Level textures are shrunk (1/4,
-  1/8 per side) — core never draws them.
+  own rule). The row's `ratio` is the MEASURED triangle fraction. A level only DROPS hidden
+  duplicates the collapse made (no pushes; the judge sees the final level). Level textures are
+  shrunk (1/4, 1/8 per side) — core never draws them.
 
 ```jsonc
 // a row in <pack>/default.json after lod.mjs
