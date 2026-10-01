@@ -1131,25 +1131,25 @@
    },
    {
     "name": "FlowerPatch",
-    "tris": 3343,
+    "tris": 3375,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 3224,
-      "ratio": 0.96,
+      "tris": 3263,
+      "ratio": 0.97,
       "cap": 0.02,
-      "mean": 15.6
+      "mean": 15.4
      },
      {
       "level": 2,
-      "tris": 3224,
-      "ratio": 0.96,
+      "tris": 3263,
+      "ratio": 0.97,
       "cap": 0.02,
-      "mean": 12.9
+      "mean": 13.3
      }
     ],
-    "skipped": "no level reaches <= 80 % within the error caps (best 0.96 / 0.96)"
+    "skipped": "no level reaches <= 80 % within the error caps (best 0.97 / 0.97)"
    },
    {
     "name": "Mushrooms",
@@ -2271,12 +2271,12 @@
       "file": "wall-doorway.lod1.glb",
       "tris": 724,
       "ratio": 0.53,
-      "bytes": 64724,
+      "bytes": 65588,
       "pairs": 0,
       "defight": 67,
       "grow": 0,
       "cap": 0.03,
-      "mean": 10.5
+      "mean": 4
      }
     ],
     "droppedLevels": [
@@ -2285,7 +2285,7 @@
       "tris": 661,
       "ratio": 0.48,
       "cap": 0.08,
-      "mean": 8.4
+      "mean": 13.3
      }
     ]
    },
@@ -2358,7 +2358,7 @@
       "defight": 104,
       "grow": 0,
       "cap": 0.02,
-      "mean": 3.9
+      "mean": 3.1
      }
     ],
     "droppedLevels": [
@@ -2673,7 +2673,7 @@
       "defight": 0,
       "grow": 0,
       "cap": 0.01,
-      "mean": 0
+      "mean": 0.1
      },
      {
       "file": "pipe-elbow.lod2.glb",

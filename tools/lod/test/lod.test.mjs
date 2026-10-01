@@ -92,6 +92,44 @@ test('defight: a fully hidden duplicate is dropped, a partial overlap pushed INS
 	assert.ok(Math.abs(maxY - 1) < 1e-6);
 });
 
+test('defight: two primitives SHARING normals/UVs (a piece copied twice) are fixed independently', async () => {
+	// 33-anim-kit's IronGate: two kit Pillars with their OWN positions but ONE shared
+	// NORMAL / TEXCOORD_0 / index accessor. The copies drop different triangles, so the
+	// shared data was compacted twice — the other copy's normals/UVs no longer matched its
+	// vertices (glossy triangular patches; judge mean 72.8 vs 0.8 with the fix)
+	const doc = quadDoc([{ y: 0, size: 0.4, offset: 0.3 }, { y: 0 }]);
+	const prim0 = doc.getRoot().listMeshes()[0].listPrimitives()[0];
+	const pos0 = prim0.getAttribute('POSITION');
+	// copy B: the small quad lifted 1 cm, so B has nothing to drop while A drops it
+	const lifted = pos0.clone();
+	for (let i = 0; i < 4; i++) {
+		const v = lifted.getElement(i, [0, 0, 0]);
+		lifted.setElement(i, [v[0], v[1] + 0.01, v[2]]);
+	}
+	const b = prim0.clone().setAttribute('POSITION', lifted); // NORMAL-less fixture: UV + indices shared
+	const copy = doc.createMesh('copy').addPrimitive(b);
+	doc.getRoot().listScenes()[0].addChild(doc.createNode('copy').setMesh(copy).setTranslation([5, 0, 0]));
+	assert.equal(b.getAttribute('TEXCOORD_0'), prim0.getAttribute('TEXCOORD_0'));
+	await defightDoc(doc);
+	assert.equal(coplanarOverlaps(triangles(doc)).pairs, 0);
+	for (const mesh of doc.getRoot().listMeshes()) {
+		const prim = mesh.listPrimitives()[0];
+		const pos = prim.getAttribute('POSITION');
+		const uv = prim.getAttribute('TEXCOORD_0');
+		assert.equal(uv.getCount(), pos.getCount(), `${mesh.getName()}: one UV per vertex`);
+		// every vertex keeps ITS UV: in this fixture UV = (x - offset, z - offset) / size
+		const p = [0, 0, 0];
+		const t = [0, 0];
+		for (let i = 0; i < pos.getCount(); i++) {
+			pos.getElement(i, p);
+			uv.getElement(i, t);
+			const big = p[1] === 0;
+			const want = big ? [p[0], p[2]] : [(p[0] - 0.3) / 0.4, (p[2] - 0.3) / 0.4];
+			assert.ok(Math.abs(t[0] - want[0]) < 1e-5 && Math.abs(t[1] - want[1]) < 1e-5, `${mesh.getName()}: vertex ${p} kept its UV (${t} ≠ ${want})`);
+		}
+	}
+});
+
 /** every LOD0 GLB the packs ship */
 function shipped() {
 	const out = [];

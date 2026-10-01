@@ -207,6 +207,7 @@ export async function defightDoc(doc, o = {}) {
 
 async function defightPass(doc, o = {}) {
 	await doc.transform(unweld());
+	ownAccessors(doc);
 	const tris = triangles(doc, { keepRefs: true });
 	const plan = planLayers(tris, o);
 	if (!plan.dropped && !plan.pushed) {
@@ -251,8 +252,24 @@ async function defightPass(doc, o = {}) {
 			for (const target of prim.listTargets()) for (const sem of target.listSemantics()) compact(target.getAttribute(sem), keep);
 		}
 	}
-	await doc.transform(weld(), prune());
+	await doc.transform(weld(), prune({ keepAttributes: true, keepLeaves: true, keepExtras: true }));
 	return { clusters: plan.clusters, dropped: plan.dropped, pushed: plan.pushed };
+}
+
+/** Give every primitive its OWN vertex accessors before anything is edited in place. Two
+ * primitives may share one (a kit piece copied twice into a GLB — 33-anim-kit's IronGate,
+ * scifi WallWindow): dropping/pushing vertices for one then scrambles the other's normals
+ * and UVs (glossy triangular patches). */
+export function ownAccessors(doc) {
+	const seen = new Set();
+	for (const mesh of doc.getRoot().listMeshes())
+		for (const prim of mesh.listPrimitives())
+			for (const holder of [prim, ...prim.listTargets()])
+				for (const sem of holder.listSemantics()) {
+					const acc = holder.getAttribute(sem);
+					if (seen.has(acc)) holder.setAttribute(sem, acc.clone());
+					else seen.add(acc);
+				}
 }
 
 /** keep only the listed vertices of a (non-indexed) accessor */
