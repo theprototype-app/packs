@@ -1,0 +1,242 @@
+[
+  {
+    "name": "RoundTable",
+    "screenshot": "thumb.webp",
+    "label": "Round table (tavern)",
+    "variants": {
+      "glTF-Binary": "round-table.glb"
+    }
+  },
+  {
+    "name": "LongTable",
+    "screenshot": "thumb.webp",
+    "label": "Long table (2.2 m)",
+    "variants": {
+      "glTF-Binary": "long-table.glb"
+    }
+  },
+  {
+    "name": "Bench",
+    "screenshot": "thumb.webp",
+    "label": "Trestle bench (1.8 m)",
+    "variants": {
+      "glTF-Binary": "bench.glb"
+    }
+  },
+  {
+    "name": "BarStool",
+    "screenshot": "thumb.webp",
+    "label": "Bar stool",
+    "variants": {
+      "glTF-Binary": "bar-stool.glb"
+    }
+  },
+  {
+    "name": "Stool",
+    "screenshot": "thumb.webp",
+    "label": "Stool (low)",
+    "variants": {
+      "glTF-Binary": "stool.glb"
+    }
+  },
+  {
+    "name": "BarCounter",
+    "screenshot": "thumb.webp",
+    "label": "Bar counter (2 m section)",
+    "variants": {
+      "glTF-Binary": "bar-counter.glb"
+    }
+  },
+  {
+    "name": "BackBar",
+    "screenshot": "thumb.webp",
+    "label": "Back-bar shelves (bottles)",
+    "variants": {
+      "glTF-Binary": "back-bar.glb"
+    }
+  },
+  {
+    "name": "CrateGoods",
+    "screenshot": "thumb.webp",
+    "label": "Crate of fruit",
+    "variants": {
+      "glTF-Binary": "crate-goods.glb"
+    }
+  },
+  {
+    "name": "Armchair",
+    "screenshot": "thumb.webp",
+    "label": "Wingback armchair (teal)",
+    "variants": {
+      "glTF-Binary": "armchair.glb"
+    }
+  },
+  {
+    "name": "Sofa",
+    "screenshot": "thumb.webp",
+    "label": "Sofa, three seats (teal)",
+    "variants": {
+      "glTF-Binary": "sofa.glb"
+    }
+  },
+  {
+    "name": "DoubleBed",
+    "screenshot": "thumb.webp",
+    "label": "Double bed (teal throw)",
+    "variants": {
+      "glTF-Binary": "double-bed.glb"
+    }
+  },
+  {
+    "name": "Wardrobe",
+    "screenshot": "thumb.webp",
+    "label": "Wardrobe (double)",
+    "variants": {
+      "glTF-Binary": "wardrobe.glb"
+    }
+  },
+  {
+    "name": "Plant",
+    "screenshot": "thumb.webp",
+    "label": "Snake plant in a teal pot",
+    "variants": {
+      "glTF-Binary": "plant.glb"
+    }
+  },
+  {
+    "name": "Desk",
+    "screenshot": "thumb.webp",
+    "label": "Writing desk (office)",
+    "variants": {
+      "glTF-Binary": "desk.glb"
+    }
+  },
+  {
+    "name": "KitchenCounter",
+    "screenshot": "thumb.webp",
+    "label": "Kitchen counter (1 m, teal doors)",
+    "variants": {
+      "glTF-Binary": "kitchen-counter.glb"
+    }
+  },
+  {
+    "name": "Stove",
+    "screenshot": "thumb.webp",
+    "label": "Cast-iron range stove",
+    "variants": {
+      "glTF-Binary": "stove.glb"
+    }
+  },
+  {
+    "name": "Fireplace",
+    "screenshot": "thumb.webp",
+    "label": "Stone fireplace",
+    "variants": {
+      "glTF-Binary": "fireplace.glb"
+    }
+  },
+  {
+    "name": "WallSconce",
+    "screenshot": "thumb.webp",
+    "label": "Wall sconce (brass)",
+    "variants": {
+      "glTF-Binary": "wall-sconce.glb"
+    }
+  },
+  {
+    "name": "FloorLamp",
+    "screenshot": "thumb.webp",
+    "label": "Floor lamp (teal shade)",
+    "variants": {
+      "glTF-Binary": "floor-lamp.glb"
+    }
+  },
+  {
+    "name": "Chandelier",
+    "screenshot": "thumb.webp",
+    "label": "Iron chandelier (hangs from y = 3)",
+    "variants": {
+      "glTF-Binary": "chandelier.glb"
+    }
+  },
+  {
+    "name": "RugRound",
+    "screenshot": "thumb.webp",
+    "label": "Round rug Ø 2 m (teal)",
+    "variants": {
+      "glTF-Binary": "rug-round.glb"
+    }
+  },
+  {
+    "name": "Picture",
+    "screenshot": "thumb.webp",
+    "label": "Framed landscape (wall)",
+    "variants": {
+      "glTF-Binary": "picture.glb"
+    }
+  },
+  {
+    "name": "WallShelfBooks",
+    "screenshot": "thumb.webp",
+    "label": "Wall shelf with books",
+    "variants": {
+      "glTF-Binary": "wall-shelf-books.glb"
+    }
+  },
+  {
+    "name": "Skirting",
+    "screenshot": "thumb.webp",
+    "label": "Skirting (2 m, on a wall)",
+    "variants": {
+      "glTF-Binary": "skirting.glb"
+    }
+  },
+  {
+    "name": "SkirtingDoorway",
+    "screenshot": "thumb.webp",
+    "label": "Skirting, doorway (2 m)",
+    "variants": {
+      "glTF-Binary": "skirting-doorway.glb"
+    }
+  },
+  {
+    "name": "Wainscot",
+    "screenshot": "thumb.webp",
+    "label": "Wainscot panelling (2 m, teal)",
+    "variants": {
+      "glTF-Binary": "wainscot.glb"
+    }
+  },
+  {
+    "name": "WainscotDoorway",
+    "screenshot": "thumb.webp",
+    "label": "Wainscot, doorway (2 m, teal)",
+    "variants": {
+      "glTF-Binary": "wainscot-doorway.glb"
+    }
+  },
+  {
+    "name": "Cornice",
+    "screenshot": "thumb.webp",
+    "label": "Cornice (2 m, at the ceiling)",
+    "variants": {
+      "glTF-Binary": "cornice.glb"
+    }
+  },
+  {
+    "name": "TavernTableSet",
+    "screenshot": "thumb.webp",
+    "label": "Tavern table + 4 stools",
+    "variants": {
+      "glTF-Binary": "tavern-table-set.glb"
+    }
+  },
+  {
+    "name": "DiningSet",
+    "screenshot": "thumb.webp",
+    "label": "Long table + 2 benches",
+    "variants": {
+      "glTF-Binary": "dining-set.glb"
+    }
+  }
+]

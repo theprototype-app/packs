@@ -73,5 +73,15 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/scifi-kit",
     "cover": "scifi-kit/cover.webp"
+  },
+  {
+    "name": "interior-kit",
+    "title": "Interiors: Home, Tavern & Office",
+    "value": "interior-kit/default.json",
+    "attribution": "interior-kit/attribution.html",
+    "copyright": "(c) theprototype",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/interior-kit",
+    "cover": "interior-kit/cover.webp"
   }
 ]

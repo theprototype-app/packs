@@ -1,0 +1,6 @@
+[
+ {"id":"plant2","pack":"interior-kit","category":"prop","stage":"preview","model":"meshy-6-lite","targetTris":4000,"dims":{"y":0.95},
+  "prompt":"a tall potted snake plant with a cluster of thick upright sword-shaped leaves growing from a round glazed ceramic pot, chunky solid leaves, standing on the floor"},
+ {"id":"desk","pack":"interior-kit","category":"prop","stage":"preview","model":"t2","targetTris":3500,"dims":{"y":0.76},
+  "prompt":"a wooden office writing desk: a flat rectangular top, a pedestal of three drawers on the right side, a single wide drawer above the knee space, panelled sides on the left, small round knobs, standing alone"}
+]

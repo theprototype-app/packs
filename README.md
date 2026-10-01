@@ -21,6 +21,9 @@ props-kit/                       Props & Interiors: 33 furnishing / dressing / g
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
                                  on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
 tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
+interior-kit/                    Interiors: Home, Tavern & Office: 30 furniture / kitchen / bar / lights /
+                                 decor pieces + wall trims that snap to the architecture kit's walls
+                                 (CC0, made with Meshy.ai + procedural; kit.md, build in interior-kit/_src/)
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -71,5 +74,7 @@ reading the ref they were built against.
   post-processed here (`nature-kit/build/`); grass, leaves decal and pond water are procedural.
 - `scifi-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
   (see its `attribution.html`).
+- `interior-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
+  (paid plan) plus procedural trims, lights and decor — see its `attribution.html` and `kit.md`.
 
 See [LICENSE](LICENSE) and each pack's `attribution.html`.
