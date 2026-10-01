@@ -135,6 +135,9 @@ export const OPENINGS = {
 	window: { w: 1.4, h: 1.0, sill: 1.0 }
 };
 const WALL_Z = 0.125; // half the wall's depth: its faces are at z = ±0.125
+// a lining/frame face FLUSH with a cut Meshy wall z-fights with the wall's relief while the camera
+// moves (roadmap 33 K1): its inner faces stand this far into the opening
+export const LINER_INSET = 0.004;
 // slab tessellation (x and z segments of the ceiling and grating slabs); SCIFI_SLAB_SEG=1 rebuilds
 // the cracked original for the station e2e's counterfactual
 const SLAB_SEG = Number(process.env.SCIFI_SLAB_SEG ?? 8);
@@ -288,9 +291,13 @@ function WindowGlass() {
 	const { w, h, sill } = OPENINGS.window;
 	const d = WALL_Z + 0.02;
 	const f = 0.07;
-	p.add('gunmetal', B([-w / 2 - f, sill - f, -d], [w / 2 + f, sill, d]), B([-w / 2 - f, sill + h, -d], [w / 2 + f, sill + h + f, d]), B([-w / 2 - f, sill, -d], [-w / 2, sill + h, d]), B([w / 2, sill, -d], [w / 2 + f, sill + h, d]));
+	// inner faces LINER_INSET into the opening (x = ±a, y = s0 / s1): never flush with the cut wall
+	const a = w / 2 - LINER_INSET;
+	const s0 = sill + LINER_INSET;
+	const s1 = sill + h - LINER_INSET;
+	p.add('gunmetal', B([-w / 2 - f, sill - f, -d], [w / 2 + f, s0, d]), B([-w / 2 - f, s1, -d], [w / 2 + f, sill + h + f, d]), B([-w / 2 - f, s0, -d], [-a, s1, d]), B([a, s0, -d], [w / 2 + f, s1, d]));
 	p.add('teal', B([-w / 2 - f, sill - f - 0.03, -d - 0.01], [w / 2 + f, sill - f, d + 0.01]));
-	p.add('gunmetal', B([-0.02, sill, -0.03], [0.02, sill + h, 0.03]));
+	p.add('gunmetal', B([-0.02, s0, -0.03], [0.02, s1, 0.03]));
 	p.add('glass', B([-w / 2, sill, -0.008], [w / 2, sill + h, 0.008]));
 	return p;
 }
@@ -301,7 +308,10 @@ function DoorLining() {
 	const { w, h } = OPENINGS.door;
 	const d = WALL_Z + 0.025;
 	const f = 0.1;
-	p.add('gunmetal', B([-w / 2 - f, 0, -d], [-w / 2, h, d]), B([w / 2, 0, -d], [w / 2 + f, h, d]), B([-w / 2 - f, h, -d], [w / 2 + f, h + f, d]));
+	// inner faces LINER_INSET into the opening (jambs x = ±a, lintel y = t): never flush with the cut wall
+	const a = w / 2 - LINER_INSET;
+	const t = h - LINER_INSET;
+	p.add('gunmetal', B([-w / 2 - f, 0, -d], [-a, t, d]), B([a, 0, -d], [w / 2 + f, t, d]), B([-w / 2 - f, t, -d], [w / 2 + f, h + f, d]));
 	for (const s of [-1, 1]) p.add('glow', B([-w / 2 - 0.06, 0.1, s * d - 0.01], [-w / 2 - 0.035, h - 0.05, s * d + 0.01]), B([w / 2 + 0.035, 0.1, s * d - 0.01], [w / 2 + 0.06, h - 0.05, s * d + 0.01]));
 	p.add('stripes', B([-w / 2, 0, -d], [w / 2, 0.012, d]));
 	return p;

@@ -2273,10 +2273,10 @@
       "ratio": 0.53,
       "bytes": 65588,
       "pairs": 0,
-      "defight": 67,
+      "defight": 75,
       "grow": 0,
       "cap": 0.03,
-      "mean": 4
+      "mean": 1.8
      }
     ],
     "droppedLevels": [
@@ -2285,7 +2285,7 @@
       "tris": 661,
       "ratio": 0.48,
       "cap": 0.08,
-      "mean": 13.3
+      "mean": 5.4
      }
     ]
    },
@@ -2358,7 +2358,7 @@
       "defight": 104,
       "grow": 0,
       "cap": 0.02,
-      "mean": 3.1
+      "mean": 1
      }
     ],
     "droppedLevels": [
@@ -2367,7 +2367,7 @@
       "tris": 626,
       "ratio": 0.45,
       "cap": 0.06,
-      "mean": 5.8
+      "mean": 3.9
      }
     ]
    },
@@ -2673,7 +2673,7 @@
       "defight": 0,
       "grow": 0,
       "cap": 0.01,
-      "mean": 0.1
+      "mean": 0
      },
      {
       "file": "pipe-elbow.lod2.glb",
