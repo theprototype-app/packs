@@ -1,0 +1,93 @@
+[
+ {
+  "id": "road-b",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 600,
+  "prompt": "a thick flat square stone paving slab, a simple solid square block two metres by two metres and twenty centimetres thick, perfectly flat top surface, straight vertical edges, modular game floor tile, top view",
+  "dims": {
+   "x": 2,
+   "y": 0.2,
+   "z": 2
+  },
+  "fit": "stretch"
+ },
+ {
+  "id": "bridge-b",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 5000,
+  "prompt": "a small humpback stone footbridge over a stream, a long low bridge with one wide semicircular arch underneath, a gently curved walkway deck on top with low solid stone parapet walls along both long sides, long and narrow, side view",
+  "dims": {
+   "z": 6.0
+  }
+ },
+ {
+  "id": "clocktop-b",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 6000,
+  "prompt": "a square stone clock tower top piece: a square block with a large round clock dial on every side wall, a cornice above, then a square roof shaped like a tall four sided pyramid covered in clay tiles, a small ball finial on the tip, square footprint, straight vertical walls",
+  "dims": {
+   "x": 4.0,
+   "z": 4.0
+  }
+ },
+ {
+  "id": "notice-b",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 3000,
+  "prompt": "a wooden village notice board: two square upright wooden posts set apart, between them a large flat rectangular blank wooden panel with a plank border at chest height, above it a small gabled plank roof spanning both posts",
+  "dims": {
+   "y": 2.2
+  }
+ },
+ {
+  "id": "stall-b",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 5000,
+  "prompt": "an open market stall: a wooden counter on legs at the front, four tall wooden poles at the corners, a large sloping fabric canopy awning with wide vertical stripes stretched over the top, scalloped hanging edge at the front of the awning, crates of vegetables on the counter",
+  "dims": {
+   "x": 2.4
+  }
+ },
+ {
+  "id": "well-b",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 4000,
+  "prompt": "a village water well: a round low wall of stacked grey stones, two upright wooden posts on opposite sides joined by a horizontal wooden crank axle with a rope and a hanging wooden bucket, a small square gabled roof of neat clay roof tiles on top",
+  "dims": {
+   "y": 2.5
+  }
+ },
+ {
+  "id": "haybale-b",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 1500,
+  "prompt": "one tightly packed rectangular hay bale of golden straw, a clean rectangular block with flat ends and slightly fuzzy edges, two thin twine bands wrapped tightly around it",
+  "dims": {
+   "x": 0.9,
+   "y": 0.45,
+   "z": 0.45
+  },
+  "fit": "stretch"
+ }
+]

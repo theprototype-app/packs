@@ -1,0 +1,858 @@
+{
+  "Road": {
+    "name": "Road",
+    "file": "town-kit/Road/glTF-Binary/road.glb",
+    "bytes": 603416,
+    "tris": 320,
+    "size": [
+      2,
+      0.2,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.2,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "RoadCurb": {
+    "name": "RoadCurb",
+    "file": "town-kit/RoadCurb/glTF-Binary/road-curb.glb",
+    "bytes": 633404,
+    "tris": 416,
+    "size": [
+      2,
+      0.35,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.35,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "RoadCorner": {
+    "name": "RoadCorner",
+    "file": "town-kit/RoadCorner/glTF-Binary/road-corner.glb",
+    "bytes": 642636,
+    "tris": 512,
+    "size": [
+      2,
+      0.35,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.35,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "RoadCrossing": {
+    "name": "RoadCrossing",
+    "file": "town-kit/RoadCrossing/glTF-Binary/road-crossing.glb",
+    "bytes": 974912,
+    "tris": 512,
+    "size": [
+      2,
+      0.2,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.2,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "Sidewalk": {
+    "name": "Sidewalk",
+    "file": "town-kit/Sidewalk/glTF-Binary/sidewalk.glb",
+    "bytes": 368540,
+    "tris": 320,
+    "size": [
+      2,
+      0.35,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      0.35,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "StoneStairs": {
+    "name": "StoneStairs",
+    "file": "town-kit/StoneStairs/glTF-Binary/stone-stairs.glb",
+    "bytes": 535792,
+    "tris": 1538,
+    "size": [
+      2,
+      1,
+      2
+    ],
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      1,
+      1
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 504,
+    "hint": "hull",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "Well": {
+    "name": "Well",
+    "file": "town-kit/Well/glTF-Binary/well.glb",
+    "bytes": 726428,
+    "tris": 3864,
+    "size": [
+      2.62,
+      2.5,
+      2.62
+    ],
+    "min": [
+      -1.31,
+      0,
+      -1.31
+    ],
+    "max": [
+      1.31,
+      2.5,
+      1.31
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "cylinder",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "Fountain": {
+    "name": "Fountain",
+    "file": "town-kit/Fountain/glTF-Binary/fountain.glb",
+    "bytes": 772632,
+    "tris": 4999,
+    "size": [
+      3,
+      2.055,
+      3
+    ],
+    "min": [
+      -1.5,
+      0,
+      -1.5
+    ],
+    "max": [
+      1.5,
+      2.055,
+      1.5
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 393,
+    "hint": "cylinder",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "MarketStall": {
+    "name": "MarketStall",
+    "file": "town-kit/MarketStall/glTF-Binary/market-stall.glb",
+    "bytes": 744464,
+    "tris": 4774,
+    "size": [
+      2.4,
+      1.805,
+      2.008
+    ],
+    "min": [
+      -1.2,
+      0,
+      -1.004
+    ],
+    "max": [
+      1.2,
+      1.805,
+      1.004
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "LampPost": {
+    "name": "LampPost",
+    "file": "town-kit/LampPost/glTF-Binary/lamp-post.glb",
+    "bytes": 500928,
+    "tris": 2500,
+    "size": [
+      0.641,
+      3.4,
+      0.648
+    ],
+    "min": [
+      -0.32,
+      0,
+      -0.324
+    ],
+    "max": [
+      0.32,
+      3.4,
+      0.324
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "cylinder",
+    "clips": [],
+    "glowing": 7.19,
+    "stage": "refine-1"
+  },
+  "ParkBench": {
+    "name": "ParkBench",
+    "file": "town-kit/ParkBench/glTF-Binary/park-bench.glb",
+    "bytes": 558980,
+    "tris": 2500,
+    "size": [
+      1.6,
+      0.764,
+      0.696
+    ],
+    "min": [
+      -0.8,
+      0,
+      -0.348
+    ],
+    "max": [
+      0.8,
+      0.764,
+      0.348
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "MarketCart": {
+    "name": "MarketCart",
+    "file": "town-kit/MarketCart/glTF-Binary/market-cart.glb",
+    "bytes": 640428,
+    "tris": 3999,
+    "size": [
+      2.2,
+      0.959,
+      1.359
+    ],
+    "min": [
+      -1.1,
+      0,
+      -0.679
+    ],
+    "max": [
+      1.1,
+      0.959,
+      0.679
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "HayBale": {
+    "name": "HayBale",
+    "file": "town-kit/HayBale/glTF-Binary/hay-bale.glb",
+    "bytes": 907360,
+    "tris": 1287,
+    "size": [
+      0.9,
+      0.45,
+      0.45
+    ],
+    "min": [
+      -0.45,
+      0,
+      -0.225
+    ],
+    "max": [
+      0.45,
+      0.45,
+      0.225
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 703,
+    "hint": "box",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "FlowerBox": {
+    "name": "FlowerBox",
+    "file": "town-kit/FlowerBox/glTF-Binary/flower-box.glb",
+    "bytes": 857112,
+    "tris": 2808,
+    "size": [
+      1,
+      0.5,
+      0.32
+    ],
+    "min": [
+      -0.5,
+      0,
+      -0.16
+    ],
+    "max": [
+      0.5,
+      0.5,
+      0.16
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "NoticeBoard": {
+    "name": "NoticeBoard",
+    "file": "town-kit/NoticeBoard/glTF-Binary/notice-board.glb",
+    "bytes": 804556,
+    "tris": 2996,
+    "size": [
+      2.2,
+      2.2,
+      0.86
+    ],
+    "min": [
+      -1.1,
+      0,
+      -0.43
+    ],
+    "max": [
+      1.1,
+      2.2,
+      0.43
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "ClockTowerTop": {
+    "name": "ClockTowerTop",
+    "file": "town-kit/ClockTowerTop/glTF-Binary/clock-tower-top.glb",
+    "bytes": 777204,
+    "tris": 5367,
+    "size": [
+      4.25,
+      8.528,
+      4.205
+    ],
+    "min": [
+      -2.125,
+      0,
+      -2.102
+    ],
+    "max": [
+      2.125,
+      8.528,
+      2.102
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": [],
+    "stage": "refine-1"
+  },
+  "Fence": {
+    "name": "Fence",
+    "file": "town-kit/Fence/glTF-Binary/fence.glb",
+    "bytes": 64328,
+    "tris": 256,
+    "size": [
+      2,
+      1.05,
+      0.12
+    ],
+    "min": [
+      -1,
+      0,
+      -0.06
+    ],
+    "max": [
+      1,
+      1.05,
+      0.06
+    ],
+    "textures": [
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "FenceGate": {
+    "name": "FenceGate",
+    "file": "town-kit/FenceGate/glTF-Binary/fence-gate.glb",
+    "bytes": 109984,
+    "tris": 368,
+    "size": [
+      2.021,
+      2.1,
+      0.141
+    ],
+    "min": [
+      -1.011,
+      0,
+      -0.071
+    ],
+    "max": [
+      1.011,
+      2.1,
+      0.071
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": null,
+    "clips": [
+      "open",
+      "close"
+    ]
+  },
+  "Bridge": {
+    "name": "Bridge",
+    "file": "town-kit/Bridge/glTF-Binary/bridge.glb",
+    "bytes": 263684,
+    "tris": 2328,
+    "size": [
+      1.9,
+      1.64,
+      4.444
+    ],
+    "min": [
+      -0.95,
+      0,
+      -2.222
+    ],
+    "max": [
+      0.95,
+      1.64,
+      2.222
+    ],
+    "textures": [
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": "hull",
+    "clips": []
+  },
+  "Banner": {
+    "name": "Banner",
+    "file": "town-kit/Banner/glTF-Binary/banner.glb",
+    "bytes": 88912,
+    "tris": 352,
+    "size": [
+      1.07,
+      1.5,
+      0.153
+    ],
+    "min": [
+      -0.535,
+      0.4,
+      0
+    ],
+    "max": [
+      0.535,
+      1.9,
+      0.153
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": null,
+    "clips": []
+  },
+  "BannerPole": {
+    "name": "BannerPole",
+    "file": "town-kit/BannerPole/glTF-Binary/banner-pole.glb",
+    "bytes": 107668,
+    "tris": 316,
+    "size": [
+      1.04,
+      3.735,
+      0.5
+    ],
+    "min": [
+      -0.52,
+      0,
+      -0.25
+    ],
+    "max": [
+      0.52,
+      3.735,
+      0.25
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": "cylinder",
+    "clips": []
+  },
+  "Signpost": {
+    "name": "Signpost",
+    "file": "town-kit/Signpost/glTF-Binary/signpost.glb",
+    "bytes": 63452,
+    "tris": 68,
+    "size": [
+      1.615,
+      2.46,
+      1.235
+    ],
+    "min": [
+      -0.755,
+      0,
+      -0.447
+    ],
+    "max": [
+      0.86,
+      2.46,
+      0.788
+    ],
+    "textures": [
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "HayStack": {
+    "name": "HayStack",
+    "file": "town-kit/HayStack/glTF-Binary/hay-stack.glb",
+    "bytes": 1000100,
+    "tris": 3861,
+    "size": [
+      0.9,
+      0.9,
+      0.92
+    ],
+    "min": [
+      -0.45,
+      0,
+      -0.46
+    ],
+    "max": [
+      0.45,
+      0.9,
+      0.46
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "LoadedCart": {
+    "name": "LoadedCart",
+    "file": "town-kit/LoadedCart/glTF-Binary/loaded-cart.glb",
+    "bytes": 1609308,
+    "tris": 7860,
+    "size": [
+      2.2,
+      1.34,
+      1.359
+    ],
+    "min": [
+      -1.1,
+      0,
+      -0.679
+    ],
+    "max": [
+      1.1,
+      1.34,
+      0.679
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "BarrelCluster": {
+    "name": "BarrelCluster",
+    "file": "town-kit/BarrelCluster/glTF-Binary/barrel-cluster.glb",
+    "bytes": 734120,
+    "tris": 7434,
+    "size": [
+      1.224,
+      0.9,
+      0.911
+    ],
+    "min": [
+      -0.522,
+      0,
+      -0.562
+    ],
+    "max": [
+      0.703,
+      0.9,
+      0.349
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "SacksBarrel": {
+    "name": "SacksBarrel",
+    "file": "town-kit/SacksBarrel/glTF-Binary/sacks-barrel.glb",
+    "bytes": 1847232,
+    "tris": 6068,
+    "size": [
+      1.646,
+      0.75,
+      1.097
+    ],
+    "min": [
+      -0.822,
+      0,
+      -0.549
+    ],
+    "max": [
+      0.824,
+      0.75,
+      0.549
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "FlowerBoxLong": {
+    "name": "FlowerBoxLong",
+    "file": "town-kit/FlowerBoxLong/glTF-Binary/flower-box-long.glb",
+    "bytes": 989732,
+    "tris": 5616,
+    "size": [
+      2,
+      0.5,
+      0.32
+    ],
+    "min": [
+      -1,
+      0,
+      -0.16
+    ],
+    "max": [
+      1,
+      0.5,
+      0.16
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  },
+  "CoverDiorama": {
+    "name": "CoverDiorama",
+    "file": "tools/town-kit/.build/cover-diorama.glb",
+    "bytes": 5194280,
+    "tris": 22866,
+    "size": [
+      6.92,
+      3.75,
+      6.56
+    ],
+    "min": [
+      -3,
+      0,
+      -3.31
+    ],
+    "max": [
+      3.92,
+      3.75,
+      3.25
+    ],
+    "textures": [
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "512x512",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "1024x1024",
+      "512x512",
+      "512x512",
+      "512x512"
+    ],
+    "clamped": 0,
+    "hint": "box",
+    "clips": []
+  }
+}

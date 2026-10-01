@@ -21,6 +21,10 @@ props-kit/                       Props & Interiors: 33 furnishing / dressing / g
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
                                  on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
 tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
+town-kit/                        Town & Market Kit: 26 street tiles (cobble road, curb, corner,
+                                 crossing, sidewalk), square, market and street-furniture pieces, an
+                                 opening garden gate (made with Meshy.ai + procedural, CC0) — kit.md
+tools/town-kit/                  its reproducible build + e2e
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -71,5 +75,7 @@ reading the ref they were built against.
   post-processed here (`nature-kit/build/`); grass, leaves decal and pond water are procedural.
 - `scifi-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
   (see its `attribution.html`).
+- `town-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/) plus
+  procedural pieces (`tools/town-kit/`) — see its `attribution.html` and `kit.md`.
 
 See [LICENSE](LICENSE) and each pack's `attribution.html`.

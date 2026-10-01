@@ -73,5 +73,15 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/scifi-kit",
     "cover": "scifi-kit/cover.webp"
+  },
+  {
+    "name": "town-kit",
+    "title": "Town & Market Kit",
+    "value": "town-kit/default.json",
+    "attribution": "town-kit/attribution.html",
+    "copyright": "(c) theprototype",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/town-kit",
+    "cover": "town-kit/cover.webp"
   }
 ]

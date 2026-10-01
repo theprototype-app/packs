@@ -1,0 +1,141 @@
+[
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 2500,
+  "dims": {
+   "x": 1.6
+  },
+  "id": "bench",
+  "stage": "refine",
+  "texturePrompt": "warm oak wooden slats with visible grain, dark wrought iron curved side frames with slightly worn edges"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 4000,
+  "dims": {
+   "x": 2.2
+  },
+  "id": "cart",
+  "stage": "refine",
+  "texturePrompt": "weathered warm oak planks and boards, darker oak wheels with dark iron rims and iron hub caps, iron nails"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 5000,
+  "dims": {
+   "x": 3.0
+  },
+  "id": "fountain",
+  "stage": "refine",
+  "texturePrompt": "pale warm sandstone blocks with darker mortar joints and slight moss at the base, clear blue-green water surface in the basins"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 2500,
+  "dims": {
+   "y": 3.4
+  },
+  "id": "lamp",
+  "stage": "refine",
+  "texturePrompt": "dark wrought iron pole and bracket with slight rust on the edges, pale sandstone round footing, warm amber yellow glowing glass panes in the lantern"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 2000,
+  "dims": {
+   "x": 2,
+   "y": 1,
+   "z": 2
+  },
+  "fit": "stretch",
+  "id": "stair",
+  "stage": "refine",
+  "texturePrompt": "worn warm grey granite steps with paler tread tops and darker risers, solid dressed stone sides with mortar joints"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "meshy-6-lite",
+  "targetTris": 3000,
+  "dims": {
+   "x": 1.0
+  },
+  "id": "flowerbox",
+  "stage": "refine",
+  "texturePrompt": "warm oak planter box with dark iron corner brackets, dark rich soil, bright terracotta red geranium flowers and fresh green leaves"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 6000,
+  "dims": {
+   "x": 4.0,
+   "z": 4.0
+  },
+  "id": "clocktop-b",
+  "stage": "refine",
+  "texturePrompt": "pale warm sandstone walls and cornice, a cream clock dial with dark iron hands and plain tick marks only, the pyramid roof covered with terracotta red clay roof tiles, a brass ball finial"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 3000,
+  "dims": {
+   "y": 2.2
+  },
+  "id": "notice-b",
+  "stage": "refine",
+  "texturePrompt": "weathered warm oak posts, border planks and roof planks, the board is a plain pale wooden panel, small dark iron nails"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 5000,
+  "dims": {
+   "x": 2.4
+  },
+  "id": "stall",
+  "stage": "refine",
+  "texturePrompt": "warm oak wooden posts and counter, the roof awning is cloth with wide terracotta red and cream vertical stripes, wicker baskets of green and orange vegetables"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "t2",
+  "targetTris": 4000,
+  "dims": {
+   "y": 2.5
+  },
+  "id": "well-b",
+  "stage": "refine",
+  "texturePrompt": "grey fieldstone well wall with darker mortar joints and moss near the ground, weathered oak posts and axle, hemp rope, oak bucket with iron bands, terracotta red clay roof tiles"
+ },
+ {
+  "pack": "town-kit",
+  "category": "prop",
+  "model": "meshy-6-lite",
+  "targetTris": 1500,
+  "dims": {
+   "x": 0.9,
+   "y": 0.45,
+   "z": 0.45
+  },
+  "fit": "stretch",
+  "id": "haybale-b",
+  "stage": "refine",
+  "texturePrompt": "golden dried straw with lighter and darker strands, two thin brown twine bands"
+ }
+]

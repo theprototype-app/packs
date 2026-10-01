@@ -1,0 +1,621 @@
+{
+ "pack": "town-kit",
+ "thumbYaw": 35,
+ "items": [
+  {
+   "name": "Road",
+   "label": "Cobblestone road (2 × 2 m)",
+   "file": "road.glb",
+   "proc": "Road",
+   "place": "the street's middle tiles; the cobbles continue across every joint"
+  },
+  {
+   "name": "RoadCurb",
+   "label": "Road + curb (2 × 2 m)",
+   "file": "road-curb.glb",
+   "proc": "RoadCurb",
+   "place": "the street's edge tile: the curb is on its +Z side, a Sidewalk tile goes beyond it"
+  },
+  {
+   "name": "RoadCorner",
+   "label": "Road corner + curb (2 × 2 m)",
+   "file": "road-corner.glb",
+   "proc": "RoadCorner",
+   "place": "an outer street corner: curbs on +Z and +X"
+  },
+  {
+   "name": "RoadCrossing",
+   "label": "Road crossing (2 × 2 m)",
+   "file": "road-crossing.glb",
+   "proc": "RoadCrossing",
+   "place": "in a street of Road tiles: a pale-slab pedestrian crossing across it"
+  },
+  {
+   "name": "Sidewalk",
+   "label": "Sidewalk flagstones (2 × 2 m)",
+   "file": "sidewalk.glb",
+   "proc": "Sidewalk",
+   "place": "beyond a RoadCurb, 0.35 m top = the curb top; also a plaza / market floor"
+  },
+  {
+   "name": "StoneStairs",
+   "label": "Stone stairs (2 × 2 m, 1 m rise)",
+   "file": "stone-stairs.glb",
+   "src": {
+    "job": "stair",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 2000,
+    "dims": {
+     "x": 2,
+     "y": 1,
+     "z": 2
+    },
+    "fit": "stretch",
+    "clamp": "xz-y"
+   },
+   "hint": "hull",
+   "place": "on the 2 m grid; climbs 1 m towards −Z (rotate to turn it)"
+  },
+  {
+   "name": "Well",
+   "label": "Village well",
+   "file": "well.glb",
+   "src": {
+    "job": "well-b",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 4000,
+    "dims": {
+     "y": 2.5
+    }
+   },
+   "hint": "cylinder",
+   "place": "the centrepiece of a small square"
+  },
+  {
+   "name": "Fountain",
+   "label": "Town fountain",
+   "file": "fountain.glb",
+   "src": {
+    "job": "fountain",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 5000,
+    "dims": {
+     "x": 3.0
+    },
+    "clamp": "-y"
+   },
+   "hint": "cylinder",
+   "place": "in the middle of a 4 × 4 m plaza of Sidewalk tiles"
+  },
+  {
+   "name": "MarketStall",
+   "label": "Market stall (striped awning)",
+   "file": "market-stall.glb",
+   "src": {
+    "job": "stall",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 5000,
+    "dims": {
+     "x": 2.4
+    },
+    "recolor": {
+     "hue": [
+      330,
+      14
+     ],
+     "sat": 0.82,
+     "val": 0.88,
+     "shift": 12,
+     "minSat": 0.35
+    }
+   },
+   "hint": "box",
+   "place": "on Sidewalk tiles, open side to the street"
+  },
+  {
+   "name": "LampPost",
+   "label": "Street lamp post",
+   "file": "lamp-post.glb",
+   "src": {
+    "job": "lamp",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 2500,
+    "dims": {
+     "y": 3.4
+    },
+    "glow": {
+     "hue": [
+      22,
+      58
+     ],
+     "sat": 0.45,
+     "val": 0.6,
+     "strength": 1.6
+    }
+   },
+   "hint": "cylinder",
+   "place": "on the sidewalk 0.5 m from the curb, every 6-8 m"
+  },
+  {
+   "name": "ParkBench",
+   "label": "Park bench",
+   "file": "park-bench.glb",
+   "src": {
+    "job": "bench",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 2500,
+    "dims": {
+     "x": 1.6
+    }
+   },
+   "hint": "box",
+   "place": "on the sidewalk or round the fountain"
+  },
+  {
+   "name": "MarketCart",
+   "label": "Market cart",
+   "file": "market-cart.glb",
+   "src": {
+    "job": "cart",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 4000,
+    "dims": {
+     "x": 2.2
+    }
+   },
+   "hint": "box",
+   "place": "by a stall or at the roadside"
+  },
+  {
+   "name": "HayBale",
+   "label": "Hay bale",
+   "file": "hay-bale.glb",
+   "src": {
+    "job": "haybale-b",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 1500,
+    "dims": {
+     "x": 0.9,
+     "y": 0.45,
+     "z": 0.45
+    },
+    "fit": "stretch",
+    "clamp": "-y"
+   },
+   "hint": "box",
+   "place": "stack them (0.45 m high each)"
+  },
+  {
+   "name": "FlowerBox",
+   "label": "Flower box",
+   "file": "flower-box.glb",
+   "src": {
+    "job": "flowerbox",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 3000,
+    "dims": {
+     "x": 1.0,
+     "y": 0.5,
+     "z": 0.32
+    },
+    "fit": "stretch"
+   },
+   "hint": "box",
+   "place": "on a window sill (architecture-kit WallStoneWindow sill at y 1.0) or along a fence"
+  },
+  {
+   "name": "NoticeBoard",
+   "label": "Notice board (blank)",
+   "file": "notice-board.glb",
+   "src": {
+    "job": "notice-b",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 3000,
+    "dims": {
+     "y": 2.2
+    }
+   },
+   "hint": "box",
+   "place": "by the well or a crossroads; the board is blank for your own decal"
+  },
+  {
+   "name": "ClockTowerTop",
+   "label": "Clock tower top",
+   "file": "clock-tower-top.glb",
+   "src": {
+    "job": "clocktop-b",
+    "stage": "refine"
+   },
+   "post": {
+    "pivot": "bottom-center",
+    "targetTris": 6000,
+    "dims": {
+     "x": 4.25
+    },
+    "clamp": "-y",
+    "recolor": {
+     "hue": [
+      330,
+      14
+     ],
+     "sat": 0.82,
+     "val": 0.88,
+     "shift": 12,
+     "minSat": 0.35
+    }
+   },
+   "hint": "box",
+   "place": "on top of a 4 × 4 m tower of architecture-kit walls (centred, at the wall tops: y = 3 per storey)"
+  },
+  {
+   "name": "Fence",
+   "label": "Picket fence (2 m)",
+   "file": "fence.glb",
+   "proc": "Fence",
+   "place": "runs on the 2 m grid: sections share their end posts (two half posts make one)"
+  },
+  {
+   "name": "FenceGate",
+   "label": "Garden gate + frame (2 m, opens)",
+   "file": "fence-gate.glb",
+   "proc": "FenceGate",
+   "place": "in a fence run like a section; click it in Interact/Play to open/close",
+   "behavior": {
+    "type": "door",
+    "clip": "open",
+    "closeClip": "close",
+    "trigger": "click",
+    "autoplay": false,
+    "collider": "follow",
+    "sound": "gate"
+   }
+  },
+  {
+   "name": "Bridge",
+   "label": "Wooden footbridge (4.4 m)",
+   "file": "bridge.glb",
+   "proc": "Bridge",
+   "place": "over a nature-kit stream or pond edge; runs along Z, ends at 0.24 m"
+  },
+  {
+   "name": "Banner",
+   "label": "Wall banner",
+   "file": "banner.glb",
+   "proc": "Banner",
+   "place": "on a wall: origin on the wall face (back plane z = 0), facing +Z"
+  },
+  {
+   "name": "BannerPole",
+   "label": "Banner pole",
+   "file": "banner-pole.glb",
+   "proc": "BannerPole",
+   "place": "at a square's corners or a bridge end"
+  },
+  {
+   "name": "Signpost",
+   "label": "Signpost (blank)",
+   "file": "signpost.glb",
+   "proc": "Signpost",
+   "place": "at a crossroads; the boards are blank"
+  },
+  {
+   "name": "HayStack",
+   "label": "Hay bale stack",
+   "file": "hay-stack.glb",
+   "kitbash": [
+    {
+     "from": "HayBale",
+     "pos": [
+      0,
+      0,
+      -0.235
+     ]
+    },
+    {
+     "from": "HayBale",
+     "pos": [
+      0,
+      0,
+      0.235
+     ]
+    },
+    {
+     "from": "HayBale",
+     "pos": [
+      0,
+      0.45,
+      0
+     ],
+     "rotY": 90
+    }
+   ],
+   "hint": "box",
+   "place": "by a cart or a barn door"
+  },
+  {
+   "name": "LoadedCart",
+   "label": "Market cart (loaded)",
+   "file": "loaded-cart.glb",
+   "kitbash": [
+    {
+     "from": "MarketCart"
+    },
+    {
+     "from": "HayBale",
+     "pos": [
+      -0.48,
+      0.44,
+      0
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "HayBale",
+     "pos": [
+      -0.01,
+      0.44,
+      0
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "HayBale",
+     "pos": [
+      -0.25,
+      0.89,
+      0
+     ],
+     "rotY": 90
+    }
+   ],
+   "hint": "box",
+   "place": "at the roadside (on the road: y 0.20)"
+  },
+  {
+   "name": "BarrelCluster",
+   "label": "Barrels (cluster)",
+   "file": "barrel-cluster.glb",
+   "kitbash": [
+    {
+     "glb": "props-kit/Barrel/glTF-Binary/barrel.glb",
+     "pos": [
+      -0.28,
+      0,
+      0.05
+     ]
+    },
+    {
+     "glb": "props-kit/Barrel/glTF-Binary/barrel.glb",
+     "pos": [
+      0.3,
+      0,
+      0.12
+     ],
+     "rotY": 70
+    },
+    {
+     "glb": "props-kit/BarrelSmall/glTF-Binary/barrel-small.glb",
+     "pos": [
+      0.55,
+      0,
+      -0.38
+     ],
+     "rotY": 20
+    }
+   ],
+   "hint": "box",
+   "place": "by a stall, a tavern door or the dock (props-kit barrels, re-used)"
+  },
+  {
+   "name": "SacksBarrel",
+   "label": "Grain sacks + barrel",
+   "file": "sacks-barrel.glb",
+   "kitbash": [
+    {
+     "glb": "props-kit/Sacks/glTF-Binary/sacks.glb",
+     "pos": [
+      -0.2,
+      0,
+      0
+     ]
+    },
+    {
+     "glb": "props-kit/BarrelSmall/glTF-Binary/barrel-small.glb",
+     "pos": [
+      0.68,
+      0,
+      0.25
+     ],
+     "rotY": 40
+    }
+   ],
+   "hint": "box",
+   "place": "by a stall or on the cart's tailboard side (props-kit sacks + barrel, re-used)"
+  },
+  {
+   "name": "FlowerBoxLong",
+   "label": "Flower box (2 m)",
+   "file": "flower-box-long.glb",
+   "kitbash": [
+    {
+     "from": "FlowerBox",
+     "pos": [
+      -0.5,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "FlowerBox",
+     "pos": [
+      0.5,
+      0,
+      0
+     ],
+     "rotY": 180
+    }
+   ],
+   "hint": "box",
+   "place": "along a 2 m fence section or under a wide window"
+  },
+  {
+   "name": "CoverDiorama",
+   "internal": true,
+   "file": "cover-diorama.glb",
+   "kitbash": [
+    {
+     "from": "Sidewalk",
+     "pos": [
+      -2,
+      0,
+      -2
+     ]
+    },
+    {
+     "from": "Sidewalk",
+     "pos": [
+      0,
+      0,
+      -2
+     ]
+    },
+    {
+     "from": "Sidewalk",
+     "pos": [
+      2,
+      0,
+      -2
+     ]
+    },
+    {
+     "from": "RoadCurb",
+     "pos": [
+      -2,
+      0,
+      0
+     ],
+     "rotY": 180
+    },
+    {
+     "from": "RoadCurb",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": 180
+    },
+    {
+     "from": "RoadCorner",
+     "pos": [
+      2,
+      0,
+      0
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "Road",
+     "pos": [
+      -2,
+      0,
+      2
+     ]
+    },
+    {
+     "from": "RoadCrossing",
+     "pos": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "from": "RoadCurb",
+     "pos": [
+      2,
+      0,
+      2
+     ],
+     "rotY": 90
+    },
+    {
+     "from": "MarketStall",
+     "pos": [
+      -1.6,
+      0.35,
+      -2.1
+     ]
+    },
+    {
+     "from": "LampPost",
+     "pos": [
+      0.6,
+      0.35,
+      -1.3
+     ]
+    },
+    {
+     "from": "Well",
+     "pos": [
+      2.1,
+      0.35,
+      -2.0
+     ]
+    },
+    {
+     "from": "LoadedCart",
+     "pos": [
+      -1.4,
+      0.2,
+      2.2
+     ],
+     "rotY": 15
+    },
+    {
+     "from": "BannerPole",
+     "pos": [
+      3.4,
+      0,
+      3.0
+     ]
+    }
+   ]
+  }
+ ],
+ "cover": {
+  "item": "CoverDiorama",
+  "bg": "#d8cfc4",
+  "yaw": 35
+ }
+}
