@@ -309,44 +309,54 @@ export const MIN_FIX_AREA = 1e-4;
 export const MAX_LOOK = 30;
 
 /**
- * Defight one file. Without a judge: "behind the surface", then the bbox-middle rule, first
- * that settles. WITH `o.judge` (defight-all), every candidate is also LOOKED at against the
- * original — surface, centre and drop-only (hidden duplicates removed, nothing pushed) — and
- * the one with the least overlap left among those within MAX_LOOK wins. No geometric rule for
- * "behind" is right for every piece (a double-sided scifi CornerPost came out with a dark
- * strip, Δ 54, under both); the render is the arbiter. Nothing within the gate: left as is.
+ * Defight one file. Without a judge: "behind the surface", then the bbox-middle rule, the first
+ * that settles. WITH `o.judge` (defight-all) the RENDER decides: the original and every
+ * candidate (surface rule, bbox-middle rule, drop-only) are scored by FLICKER (judge.flicker —
+ * the probe's metric, offline) and by LOOK (Δ vs the original, must stay <= MAX_LOOK); the
+ * least-flickering wins, and the file is only rewritten when that clearly beats the original.
+ * Static overlap is not the goal: props-kit Bed's 0.24 m² sits where no camera sees it (57 px
+ * in the app), and pushing it ADDED sparkle (90 px); no geometric "behind" rule is right for
+ * every piece (scifi CornerPost: a dark strip, Δ 54).
  */
 export async function defightFile(input, output = input, o = {}) {
 	const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
 	const doc0 = await io.read(input);
 	const before = coplanarOverlaps(triangles(doc0), { doubleSidedOpposite: true });
 	const base = { file: input, before: before.pairs, beforeArea: before.area };
-	const leave = (why) => ({ ...base, after: before.pairs, afterArea: before.area, dropped: 0, pushed: 0, left: why });
+	const leave = (why, extra = {}) => ({ ...base, after: before.pairs, afterArea: before.area, dropped: 0, pushed: 0, left: why, ...extra });
 	if (before.area < (o.minFixArea ?? MIN_FIX_AREA)) return leave('under 1 cm² of overlap');
-	const variants = o.judge
-		? [{ direction: 'surface' }, { direction: 'centre' }, { direction: 'surface', depth: 0, passes: 3, dropOnly: true }]
-		: [{ direction: 'surface' }, { direction: 'centre' }];
-	const bytes0 = o.judge ? fs.readFileSync(input) : null;
+	if (!o.judge) {
+		for (const direction of /** @type {const} */ (['surface', 'centre'])) {
+			const doc = await io.read(input);
+			const r = await defightDoc(doc, { ...o, direction });
+			const after = coplanarOverlaps(triangles(doc), { doubleSidedOpposite: true });
+			if (r.passes >= (o.passes ?? MAX_PASSES) && (r.dropped || r.pushed) && after.pairs) continue;
+			if (r.dropped || r.pushed) await io.write(output, doc);
+			return { ...base, ...r, mode: direction, after: after.pairs, afterArea: after.area };
+		}
+		return leave('did not converge');
+	}
+	const bytes0 = fs.readFileSync(input);
+	const flicker0 = await o.judge.flicker(bytes0);
 	let best = null;
-	for (const v of variants) {
+	for (const v of [{ direction: 'surface' }, { direction: 'centre' }, { direction: 'surface', depth: 0, passes: 3, dropOnly: true }]) {
 		const doc = await io.read(input);
 		const r = await defightDoc(doc, { ...o, ...v });
 		if (!r.dropped && !r.pushed) continue;
-		if (v.dropOnly && !r.dropped) continue; // nothing hidden to remove: a rewrite would be churn
-		const after = coplanarOverlaps(triangles(doc), { doubleSidedOpposite: true });
-		const settled = v.dropOnly || !(r.passes >= (o.passes ?? MAX_PASSES) && after.pairs);
-		if (!settled) continue;
+		if (v.dropOnly && !r.dropped) continue; // nothing hidden to remove
 		const bytes = await io.writeBinary(doc);
-		const look = o.judge ? (await o.judge.compare(bytes0, bytes, 256)).mean : 0;
-		const cand = { ...r, mode: v.dropOnly ? 'drop-only' : v.direction, after: after.pairs, afterArea: after.area, look: +look.toFixed(1), bytes };
-		if (o.judge && look > MAX_LOOK) continue;
-		if (!best || cand.afterArea < best.afterArea - 1e-9 || (Math.abs(cand.afterArea - best.afterArea) <= 1e-9 && cand.look < best.look)) best = cand;
-		if (!o.judge) break; // no judge: the first that settles
+		const look = (await o.judge.compare(bytes0, bytes, 256)).mean;
+		if (look > MAX_LOOK) continue;
+		const flicker = await o.judge.flicker(bytes);
+		const after = coplanarOverlaps(triangles(doc), { doubleSidedOpposite: true });
+		const cand = { ...r, mode: v.dropOnly ? 'drop-only' : v.direction, after: after.pairs, afterArea: after.area, look: +look.toFixed(1), flicker, bytes };
+		if (!best || flicker < best.flicker || (flicker === best.flicker && after.area < best.afterArea)) best = cand;
 	}
-	if (!best) return leave(o.judge ? `no candidate within the look gate (Δ <= ${MAX_LOOK}) and settled` : 'did not converge');
+	// rewrite only for a clear win: below the original by a tenth and 10 px (run-to-run noise)
+	if (!best || best.flicker > flicker0 * 0.9 - 10) return leave(best ? 'no candidate flickers clearly less' : `no candidate within the look gate (Δ <= ${MAX_LOOK})`, { flickerBefore: flicker0, ...(best ? { flickerBest: best.flicker } : {}) });
 	fs.writeFileSync(output, best.bytes);
 	const { bytes, ...rest } = best;
-	return { ...base, ...rest };
+	return { ...base, ...rest, flickerBefore: flicker0 };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

@@ -292,52 +292,52 @@
    },
    {
     "name": "Pillar",
-    "tris": 1408,
+    "tris": 1410,
     "levels": [
      {
       "file": "pillar.lod1.glb",
-      "tris": 843,
-      "ratio": 0.6,
-      "bytes": 86644,
-      "pairs": 0,
-      "defight": 0,
+      "tris": 837,
+      "ratio": 0.59,
+      "bytes": 85772,
+      "pairs": 6,
+      "defight": 16,
       "grow": 0,
       "cap": 0.04,
-      "mean": 29.7
+      "mean": 29.2
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 841,
-      "ratio": 0.6,
+      "tris": 836,
+      "ratio": 0.59,
       "cap": 0.04,
-      "mean": 29.6
+      "mean": 29
      }
     ]
    },
    {
     "name": "Column",
-    "tris": 1995,
+    "tris": 1999,
     "levels": [
      {
       "file": "column.lod1.glb",
       "tris": 995,
       "ratio": 0.5,
-      "bytes": 82368,
-      "pairs": 0,
-      "defight": 1,
+      "bytes": 82336,
+      "pairs": 3,
+      "defight": 6,
       "grow": 0,
       "cap": 0.01,
       "mean": 1.7
      },
      {
       "file": "column.lod2.glb",
-      "tris": 648,
+      "tris": 643,
       "ratio": 0.32,
-      "bytes": 53628,
-      "pairs": 0,
-      "defight": 1,
+      "bytes": 53404,
+      "pairs": 2,
+      "defight": 4,
       "grow": 0,
       "cap": 0.08,
       "mean": 3.2
@@ -372,15 +372,15 @@
    },
    {
     "name": "FloorStone",
-    "tris": 1502,
+    "tris": 1504,
     "levels": [
      {
       "file": "floor-stone.lod1.glb",
-      "tris": 1014,
-      "ratio": 0.68,
-      "bytes": 100636,
+      "tris": 999,
+      "ratio": 0.66,
+      "bytes": 99812,
       "pairs": 0,
-      "defight": 0,
+      "defight": 1,
       "grow": 0,
       "cap": 0.04,
       "mean": 10.2
@@ -389,62 +389,62 @@
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 951,
+      "tris": 940,
       "ratio": 0.63,
       "cap": 0.1,
-      "mean": 17.2
+      "mean": 17
      }
     ]
    },
    {
     "name": "FloorWood",
-    "tris": 1502,
+    "tris": 1504,
     "levels": [
      {
       "file": "floor-wood.lod1.glb",
-      "tris": 1014,
-      "ratio": 0.68,
-      "bytes": 88652,
+      "tris": 999,
+      "ratio": 0.66,
+      "bytes": 87828,
       "pairs": 0,
-      "defight": 0,
+      "defight": 1,
       "grow": 0,
       "cap": 0.04,
-      "mean": 12.7
+      "mean": 12.8
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 951,
+      "tris": 940,
       "ratio": 0.63,
       "cap": 0.1,
-      "mean": 18.2
+      "mean": 17.8
      }
     ]
    },
    {
     "name": "FloorSlate",
-    "tris": 1502,
+    "tris": 1504,
     "levels": [
      {
       "file": "floor-slate.lod1.glb",
-      "tris": 1014,
-      "ratio": 0.68,
-      "bytes": 95572,
+      "tris": 999,
+      "ratio": 0.66,
+      "bytes": 94748,
       "pairs": 0,
-      "defight": 0,
+      "defight": 1,
       "grow": 0,
       "cap": 0.04,
-      "mean": 15.8
+      "mean": 15.9
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 951,
+      "tris": 940,
       "ratio": 0.63,
       "cap": 0.1,
-      "mean": 20.9
+      "mean": 20
      }
     ]
    },
@@ -454,53 +454,53 @@
     "levels": [
      {
       "file": "stairs.lod1.glb",
-      "tris": 1464,
+      "tris": 1462,
       "ratio": 0.5,
-      "bytes": 117132,
-      "pairs": 9,
-      "defight": 19,
+      "bytes": 114652,
+      "pairs": 53,
+      "defight": 112,
       "grow": 0,
       "cap": 0.02,
       "mean": 8
      },
      {
       "file": "stairs.lod2.glb",
-      "tris": 998,
-      "ratio": 0.34,
-      "bytes": 70596,
-      "pairs": 1,
-      "defight": 3,
+      "tris": 1012,
+      "ratio": 0.35,
+      "bytes": 70748,
+      "pairs": 25,
+      "defight": 49,
       "grow": 0,
       "cap": 0.1,
-      "mean": 16.7
+      "mean": 18.5
      }
     ]
    },
    {
     "name": "StairsWood",
-    "tris": 2932,
+    "tris": 2940,
     "levels": [
      {
       "file": "stairs-wood.lod1.glb",
-      "tris": 1464,
+      "tris": 1462,
       "ratio": 0.5,
-      "bytes": 94144,
-      "pairs": 9,
-      "defight": 19,
+      "bytes": 91696,
+      "pairs": 53,
+      "defight": 128,
       "grow": 0,
       "cap": 0.02,
-      "mean": 7.2
+      "mean": 7.3
      },
      {
       "file": "stairs-wood.lod2.glb",
-      "tris": 998,
+      "tris": 1010,
       "ratio": 0.34,
-      "bytes": 65188,
-      "pairs": 1,
-      "defight": 3,
+      "bytes": 65308,
+      "pairs": 21,
+      "defight": 44,
       "grow": 0,
       "cap": 0.1,
-      "mean": 18.9
+      "mean": 20.5
      }
     ]
    },
@@ -543,7 +543,7 @@
       "defight": 3,
       "grow": 0,
       "cap": 0.04,
-      "mean": 3
+      "mean": 2.6
      },
      {
       "file": "ramp.lod2.glb",
@@ -554,31 +554,35 @@
       "defight": 4,
       "grow": 0,
       "cap": 0.1,
-      "mean": 17.3
+      "mean": 16.3
      }
     ]
    },
    {
     "name": "RoofSlope",
-    "tris": 1600,
-    "levels": [],
+    "tris": 1592,
+    "levels": [
+     {
+      "file": "roof-slope.lod1.glb",
+      "tris": 1252,
+      "ratio": 0.79,
+      "bytes": 97356,
+      "pairs": 6,
+      "defight": 9,
+      "grow": 0,
+      "cap": 0.08,
+      "mean": 28.1
+     }
+    ],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 1571,
-      "ratio": 0.98,
-      "cap": 0.03,
-      "mean": 0.7
-     },
-     {
-      "level": 2,
-      "tris": 1569,
-      "ratio": 0.98,
-      "cap": 0.06,
-      "mean": 0.6
+      "tris": 1505,
+      "ratio": 0.95,
+      "cap": 0.04,
+      "mean": 9.9
      }
-    ],
-    "skipped": "no level reaches <= 80 % within the error caps (best 0.98 / 0.98)"
+    ]
    },
    {
     "name": "Battlement",
@@ -608,18 +612,18 @@
    },
    {
     "name": "Tower",
-    "tris": 4998,
+    "tris": 5000,
     "levels": [
      {
       "file": "tower.lod1.glb",
-      "tris": 2498,
+      "tris": 2500,
       "ratio": 0.5,
-      "bytes": 165336,
-      "pairs": 5,
-      "defight": 12,
+      "bytes": 162656,
+      "pairs": 79,
+      "defight": 114,
       "grow": 0,
       "cap": 0.04,
-      "mean": 27.7
+      "mean": 28
      }
     ],
     "droppedLevels": [
@@ -628,7 +632,7 @@
       "tris": 2418,
       "ratio": 0.48,
       "cap": 0.04,
-      "mean": 26.9
+      "mean": 27.2
      }
     ]
    },
@@ -640,18 +644,18 @@
       "file": "door.lod1.glb",
       "tris": 1248,
       "ratio": 0.5,
-      "bytes": 98776,
-      "pairs": 1,
-      "defight": 9,
+      "bytes": 98712,
+      "pairs": 7,
+      "defight": 17,
       "grow": 0,
       "cap": 0.03,
-      "mean": 15.6
+      "mean": 15.5
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 1052,
+      "tris": 1045,
       "ratio": 0.42,
       "cap": 0.06,
       "mean": 29.9
@@ -686,57 +690,57 @@
    },
    {
     "name": "Gate",
-    "tris": 2803,
+    "tris": 2841,
     "levels": [
      {
       "file": "gate.lod1.glb",
-      "tris": 1388,
-      "ratio": 0.5,
-      "bytes": 100860,
-      "pairs": 0,
-      "defight": 48,
+      "tris": 1401,
+      "ratio": 0.49,
+      "bytes": 97676,
+      "pairs": 28,
+      "defight": 144,
       "grow": 0,
       "cap": 0.01,
-      "mean": 0.1
+      "mean": 0.3
      },
      {
       "file": "gate.lod2.glb",
-      "tris": 556,
+      "tris": 561,
       "ratio": 0.2,
-      "bytes": 52012,
-      "pairs": 0,
-      "defight": 10,
+      "bytes": 49292,
+      "pairs": 25,
+      "defight": 100,
       "grow": 0,
       "cap": 0.02,
-      "mean": 0.3
+      "mean": 1
      }
     ]
    },
    {
     "name": "Fence",
-    "tris": 1461,
+    "tris": 1462,
     "levels": [
      {
       "file": "fence.lod1.glb",
       "tris": 729,
       "ratio": 0.5,
-      "bytes": 61184,
-      "pairs": 0,
-      "defight": 0,
+      "bytes": 61120,
+      "pairs": 17,
+      "defight": 22,
       "grow": 0,
       "cap": 0.01,
       "mean": 0.4
      },
      {
       "file": "fence.lod2.glb",
-      "tris": 302,
+      "tris": 301,
       "ratio": 0.21,
-      "bytes": 32632,
-      "pairs": 2,
-      "defight": 8,
+      "bytes": 32560,
+      "pairs": 5,
+      "defight": 14,
       "grow": 0,
       "cap": 0.06,
-      "mean": 29.9
+      "mean": 28.6
      }
     ]
    },
@@ -822,27 +826,27 @@
    },
    {
     "name": "Chimney",
-    "tris": 1408,
+    "tris": 1410,
     "levels": [
      {
       "file": "chimney.lod1.glb",
-      "tris": 1016,
-      "ratio": 0.72,
-      "bytes": 93960,
-      "pairs": 1,
-      "defight": 9,
+      "tris": 1007,
+      "ratio": 0.71,
+      "bytes": 92344,
+      "pairs": 14,
+      "defight": 46,
       "grow": 0,
       "cap": 0.04,
-      "mean": 17
+      "mean": 16.5
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 1016,
-      "ratio": 0.72,
+      "tris": 1008,
+      "ratio": 0.71,
       "cap": 0.04,
-      "mean": 15.9
+      "mean": 15.5
      }
     ]
    }
@@ -905,7 +909,7 @@
    },
    {
     "name": "Pine",
-    "tris": 8996,
+    "tris": 8999,
     "levels": [
      {
       "file": "Pine.lod1.glb",
@@ -913,7 +917,7 @@
       "ratio": 0.7,
       "bytes": 435980,
       "pairs": 0,
-      "defight": 0,
+      "defight": 1,
       "grow": 0,
       "cap": 0.03,
       "mean": 22.3
@@ -922,7 +926,7 @@
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 6317,
+      "tris": 6318,
       "ratio": 0.7,
       "cap": 0.04,
       "mean": 19.4
@@ -931,17 +935,17 @@
    },
    {
     "name": "Birch",
-    "tris": 9187,
+    "tris": 9188,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 9187,
+      "tris": 9188,
       "ratio": 1
      },
      {
       "level": 2,
-      "tris": 9187,
+      "tris": 9188,
       "ratio": 1
      }
     ],
@@ -1005,10 +1009,10 @@
      },
      {
       "level": 2,
-      "tris": 2360,
+      "tris": 2361,
       "ratio": 0.83,
       "cap": 0.04,
-      "mean": 27.6
+      "mean": 27.5
      }
     ],
     "skipped": "no level reaches <= 80 % within the error caps (best 0.86 / 0.83)"
@@ -1027,7 +1031,7 @@
      },
      {
       "level": 2,
-      "tris": 2360,
+      "tris": 2361,
       "ratio": 0.83,
       "cap": 0.04,
       "mean": 26
@@ -1037,19 +1041,19 @@
    },
    {
     "name": "Fern",
-    "tris": 2125,
+    "tris": 2126,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 1921,
+      "tris": 1920,
       "ratio": 0.9,
       "cap": 0.01,
-      "mean": 15.3
+      "mean": 15.8
      },
      {
       "level": 2,
-      "tris": 2125,
+      "tris": 2126,
       "ratio": 1
      }
     ],
@@ -1057,23 +1061,23 @@
    },
    {
     "name": "Reeds",
-    "tris": 1452,
+    "tris": 1453,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 1357,
-      "ratio": 0.93,
+      "tris": 1359,
+      "ratio": 0.94,
       "cap": 0.01,
       "mean": 9.7
      },
      {
       "level": 2,
-      "tris": 1452,
+      "tris": 1453,
       "ratio": 1
      }
     ],
-    "skipped": "no level reaches <= 80 % within the error caps (best 0.93 / 1)"
+    "skipped": "no level reaches <= 80 % within the error caps (best 0.94 / 1)"
    },
    {
     "name": "GrassTuft",
@@ -1087,66 +1091,66 @@
    },
    {
     "name": "Flowers",
-    "tris": 1571,
+    "tris": 1583,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 1540,
+      "tris": 1553,
       "ratio": 0.98,
       "cap": 0.04,
-      "mean": 19.3
+      "mean": 17.8
      },
      {
       "level": 2,
-      "tris": 1540,
+      "tris": 1553,
       "ratio": 0.98,
       "cap": 0.04,
-      "mean": 15.5
+      "mean": 14.4
      }
     ],
     "skipped": "no level reaches <= 80 % within the error caps (best 0.98 / 0.98)"
    },
    {
     "name": "FlowersViolet",
-    "tris": 1571,
+    "tris": 1583,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 1540,
+      "tris": 1553,
       "ratio": 0.98,
       "cap": 0.04,
-      "mean": 19.4
+      "mean": 17.9
      },
      {
       "level": 2,
-      "tris": 1540,
+      "tris": 1553,
       "ratio": 0.98,
       "cap": 0.04,
-      "mean": 15.7
+      "mean": 14.5
      }
     ],
     "skipped": "no level reaches <= 80 % within the error caps (best 0.98 / 0.98)"
    },
    {
     "name": "FlowerPatch",
-    "tris": 3381,
+    "tris": 3406,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 3271,
+      "tris": 3292,
       "ratio": 0.97,
       "cap": 0.02,
-      "mean": 14.7
+      "mean": 15.9
      },
      {
       "level": 2,
-      "tris": 3271,
+      "tris": 3292,
       "ratio": 0.97,
       "cap": 0.02,
-      "mean": 12.7
+      "mean": 13.6
      }
     ],
     "skipped": "no level reaches <= 80 % within the error caps (best 0.97 / 0.97)"
@@ -1503,7 +1507,7 @@
    },
    {
     "name": "PondSet",
-    "tris": 3638,
+    "tris": 3641,
     "levels": [
      {
       "file": "PondSet.lod1.glb",
@@ -1511,7 +1515,7 @@
       "ratio": 0.75,
       "bytes": 272920,
       "pairs": 3,
-      "defight": 35,
+      "defight": 41,
       "grow": 0,
       "cap": 0.04,
       "mean": 14.5
@@ -1520,7 +1524,7 @@
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 2607,
+      "tris": 2610,
       "ratio": 0.72,
       "cap": 0.1,
       "mean": 17.8
@@ -1534,53 +1538,53 @@
   "items": [
    {
     "name": "Table",
-    "tris": 2955,
+    "tris": 2999,
     "levels": [
      {
       "file": "table.lod1.glb",
-      "tris": 1614,
-      "ratio": 0.55,
-      "bytes": 122452,
-      "pairs": 7,
-      "defight": 23,
+      "tris": 1591,
+      "ratio": 0.53,
+      "bytes": 121356,
+      "pairs": 18,
+      "defight": 84,
       "grow": 0,
       "cap": 0.04,
-      "mean": 7.8
+      "mean": 8.1
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 1577,
-      "ratio": 0.53,
+      "tris": 1559,
+      "ratio": 0.52,
       "cap": 0.1,
-      "mean": 9.8
+      "mean": 10.2
      }
     ]
    },
    {
     "name": "Bench",
-    "tris": 2926,
+    "tris": 2999,
     "levels": [
      {
       "file": "bench.lod1.glb",
-      "tris": 1574,
-      "ratio": 0.54,
-      "bytes": 119560,
-      "pairs": 5,
-      "defight": 29,
+      "tris": 1563,
+      "ratio": 0.52,
+      "bytes": 119752,
+      "pairs": 30,
+      "defight": 151,
       "grow": 0,
       "cap": 0.04,
-      "mean": 11.8
+      "mean": 12.5
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 1542,
-      "ratio": 0.53,
+      "tris": 1539,
+      "ratio": 0.51,
       "cap": 0.1,
-      "mean": 14.7
+      "mean": 14.4
      }
     ]
    },
@@ -1612,80 +1616,80 @@
    },
    {
     "name": "Bed",
-    "tris": 3998,
+    "tris": 4000,
     "levels": [
      {
       "file": "bed.lod1.glb",
-      "tris": 1999,
+      "tris": 1998,
       "ratio": 0.5,
-      "bytes": 151852,
-      "pairs": 1,
-      "defight": 3,
+      "bytes": 150628,
+      "pairs": 33,
+      "defight": 70,
       "grow": 0,
       "cap": 0.01,
-      "mean": 4.9
+      "mean": 5.7
      },
      {
       "file": "bed.lod2.glb",
-      "tris": 1509,
-      "ratio": 0.38,
-      "bytes": 110548,
-      "pairs": 1,
-      "defight": 3,
+      "tris": 1473,
+      "ratio": 0.37,
+      "bytes": 107996,
+      "pairs": 31,
+      "defight": 55,
       "grow": 0,
       "cap": 0.02,
-      "mean": 12.1
+      "mean": 15.2
      }
     ]
    },
    {
     "name": "Bookcase",
-    "tris": 4924,
+    "tris": 4928,
     "levels": [
      {
       "file": "bookcase.lod1.glb",
-      "tris": 2461,
+      "tris": 2460,
       "ratio": 0.5,
-      "bytes": 178960,
-      "pairs": 0,
-      "defight": 9,
+      "bytes": 178440,
+      "pairs": 6,
+      "defight": 31,
       "grow": 0,
       "cap": 0.01,
-      "mean": 2.7
+      "mean": 2.6
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 1994,
+      "tris": 1980,
       "ratio": 0.4,
       "cap": 0.08,
-      "mean": 17.2
+      "mean": 16.2
      }
     ]
    },
    {
     "name": "Workbench",
-    "tris": 4914,
+    "tris": 4919,
     "levels": [
      {
       "file": "workbench.lod1.glb",
-      "tris": 2456,
+      "tris": 2455,
       "ratio": 0.5,
-      "bytes": 142052,
-      "pairs": 0,
-      "defight": 1,
+      "bytes": 141884,
+      "pairs": 9,
+      "defight": 25,
       "grow": 0,
       "cap": 0.01,
       "mean": 0.6
      },
      {
       "file": "workbench.lod2.glb",
-      "tris": 1053,
-      "ratio": 0.21,
-      "bytes": 80608,
-      "pairs": 0,
-      "defight": 3,
+      "tris": 1058,
+      "ratio": 0.22,
+      "bytes": 81016,
+      "pairs": 7,
+      "defight": 27,
       "grow": 0,
       "cap": 0.1,
       "mean": 7.6
@@ -1727,17 +1731,17 @@
    },
    {
     "name": "PottedPlant",
-    "tris": 5004,
+    "tris": 5007,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 5004,
+      "tris": 5007,
       "ratio": 1
      },
      {
       "level": 2,
-      "tris": 5004,
+      "tris": 5007,
       "ratio": 1
      }
     ],
@@ -1911,23 +1915,23 @@
       "file": "chest.lod1.glb",
       "tris": 1434,
       "ratio": 0.49,
-      "bytes": 126656,
-      "pairs": 0,
-      "defight": 21,
+      "bytes": 126464,
+      "pairs": 16,
+      "defight": 63,
       "grow": 0,
       "cap": 0.02,
-      "mean": 3.8
+      "mean": 3.7
      },
      {
       "file": "chest.lod2.glb",
-      "tris": 821,
+      "tris": 823,
       "ratio": 0.28,
-      "bytes": 71640,
-      "pairs": 0,
-      "defight": 11,
+      "bytes": 71616,
+      "pairs": 12,
+      "defight": 44,
       "grow": 0,
       "cap": 0.08,
-      "mean": 29.2
+      "mean": 29.8
      }
     ]
    },
@@ -1965,12 +1969,12 @@
       "file": "lantern.lod1.glb",
       "tris": 925,
       "ratio": 0.5,
-      "bytes": 85220,
-      "pairs": 0,
-      "defight": 6,
+      "bytes": 85028,
+      "pairs": 3,
+      "defight": 12,
       "grow": 0,
       "cap": 0.03,
-      "mean": 26.5
+      "mean": 26.3
      }
     ],
     "droppedLevels": [
@@ -1979,7 +1983,7 @@
       "tris": 1041,
       "ratio": 0.56,
       "cap": 0.02,
-      "mean": 18.1
+      "mean": 17.9
      }
     ]
    },
@@ -1991,23 +1995,23 @@
       "file": "wall-torch.lod1.glb",
       "tris": 366,
       "ratio": 0.56,
-      "bytes": 24448,
-      "pairs": 0,
-      "defight": 0,
+      "bytes": 24384,
+      "pairs": 4,
+      "defight": 3,
       "grow": 0,
       "cap": 0.04,
-      "mean": 14.9
+      "mean": 14.8
      },
      {
       "file": "wall-torch.lod2.glb",
       "tris": 269,
       "ratio": 0.41,
-      "bytes": 17060,
-      "pairs": 0,
-      "defight": 0,
+      "bytes": 16996,
+      "pairs": 4,
+      "defight": 3,
       "grow": 0,
       "cap": 0.04,
-      "mean": 14.6
+      "mean": 14.5
      }
     ]
    },
@@ -2017,23 +2021,23 @@
     "levels": [
      {
       "file": "candles.lod1.glb",
-      "tris": 1249,
+      "tris": 1250,
       "ratio": 0.5,
-      "bytes": 120740,
-      "pairs": 3,
-      "defight": 12,
+      "bytes": 120076,
+      "pairs": 6,
+      "defight": 21,
       "grow": 0,
       "cap": 0.02,
-      "mean": 24.2
+      "mean": 25.2
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 1161,
+      "tris": 1152,
       "ratio": 0.46,
       "cap": 0.06,
-      "mean": 28.7
+      "mean": 29.7
      }
     ]
    },
@@ -2078,16 +2082,16 @@
       "defight": 9,
       "grow": 0,
       "cap": 0.03,
-      "mean": 23.5
+      "mean": 23.6
      }
     ],
     "droppedLevels": [
      {
       "level": 2,
-      "tris": 3182,
+      "tris": 3178,
       "ratio": 0.53,
       "cap": 0.02,
-      "mean": 19.1
+      "mean": 19.3
      }
     ]
    },
@@ -2126,7 +2130,7 @@
    },
    {
     "name": "Ladder",
-    "tris": 332,
+    "tris": 336,
     "skipped": "under 500 triangles"
    },
    {
@@ -2285,32 +2289,32 @@
       "tris": 682,
       "ratio": 0.48,
       "cap": 0.08,
-      "mean": 6.8
+      "mean": 6.7
      }
     ]
    },
    {
     "name": "SlidingDoor",
-    "tris": 2998,
+    "tris": 3000,
     "levels": [
      {
       "file": "sliding-door.lod1.glb",
       "tris": 1481,
       "ratio": 0.49,
-      "bytes": 99528,
-      "pairs": 0,
-      "defight": 16,
+      "bytes": 98760,
+      "pairs": 22,
+      "defight": 78,
       "grow": 0,
       "cap": 0.01,
       "mean": 0.2
      },
      {
       "file": "sliding-door.lod2.glb",
-      "tris": 927,
+      "tris": 931,
       "ratio": 0.31,
-      "bytes": 69064,
-      "pairs": 2,
-      "defight": 10,
+      "bytes": 69152,
+      "pairs": 18,
+      "defight": 47,
       "grow": 0,
       "cap": 0.04,
       "mean": 3.1
@@ -2373,18 +2377,18 @@
    },
    {
     "name": "CornerPost",
-    "tris": 623,
+    "tris": 630,
     "levels": [
      {
       "file": "corner-post.lod1.glb",
-      "tris": 311,
+      "tris": 314,
       "ratio": 0.5,
-      "bytes": 30628,
-      "pairs": 107,
-      "defight": 114,
+      "bytes": 30676,
+      "pairs": 112,
+      "defight": 108,
       "grow": 0,
       "cap": 0.03,
-      "mean": 6.1
+      "mean": 3
      }
     ],
     "droppedLevels": [
@@ -2393,7 +2397,7 @@
       "tris": 302,
       "ratio": 0.48,
       "cap": 0.06,
-      "mean": 6.7
+      "mean": 6.5
      }
     ]
    },
@@ -2427,29 +2431,29 @@
    },
    {
     "name": "FloorPlate",
-    "tris": 1754,
+    "tris": 2125,
     "levels": [
      {
       "file": "floor-plate.lod1.glb",
-      "tris": 871,
-      "ratio": 0.5,
-      "bytes": 63432,
-      "pairs": 5,
-      "defight": 44,
+      "tris": 847,
+      "ratio": 0.4,
+      "bytes": 61272,
+      "pairs": 22,
+      "defight": 308,
       "grow": 0,
       "cap": 0.01,
-      "mean": 0.6
+      "mean": 0.7
      },
      {
       "file": "floor-plate.lod2.glb",
-      "tris": 502,
-      "ratio": 0.29,
-      "bytes": 40992,
-      "pairs": 2,
-      "defight": 6,
+      "tris": 440,
+      "ratio": 0.21,
+      "bytes": 37996,
+      "pairs": 19,
+      "defight": 186,
       "grow": 0,
       "cap": 0.1,
-      "mean": 13.5
+      "mean": 4.4
      }
     ]
    },
@@ -2544,7 +2548,7 @@
       "tris": 1933,
       "ratio": 0.52,
       "cap": 0.02,
-      "mean": 12
+      "mean": 11.9
      }
     ]
    },
@@ -2555,25 +2559,25 @@
    },
    {
     "name": "ServerRack",
-    "tris": 2074,
+    "tris": 2082,
     "levels": [],
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 1685,
-      "ratio": 0.81,
+      "tris": 1715,
+      "ratio": 0.82,
       "cap": 0.04,
       "mean": 4.7
      },
      {
       "level": 2,
-      "tris": 1665,
-      "ratio": 0.8,
+      "tris": 1695,
+      "ratio": 0.81,
       "cap": 0.1,
       "mean": 22.4
      }
     ],
-    "skipped": "no level reaches <= 80 % within the error caps (best 0.81 / 0.8)"
+    "skipped": "no level reaches <= 80 % within the error caps (best 0.82 / 0.81)"
    },
    {
     "name": "Crate",
@@ -2690,12 +2694,12 @@
    },
    {
     "name": "Vent",
-    "tris": 124,
+    "tris": 132,
     "skipped": "under 500 triangles"
    },
    {
     "name": "Lamp",
-    "tris": 468,
+    "tris": 484,
     "skipped": "under 500 triangles"
    },
    {
@@ -2706,9 +2710,9 @@
       "file": "chair.lod1.glb",
       "tris": 1493,
       "ratio": 0.5,
-      "bytes": 131216,
-      "pairs": 0,
-      "defight": 6,
+      "bytes": 131152,
+      "pairs": 2,
+      "defight": 12,
       "grow": 0,
       "cap": 0.02,
       "mean": 21.6
@@ -2724,29 +2728,29 @@
    },
    {
     "name": "Desk",
-    "tris": 3488,
+    "tris": 3500,
     "levels": [
      {
       "file": "desk.lod1.glb",
-      "tris": 1743,
+      "tris": 1750,
       "ratio": 0.5,
-      "bytes": 130056,
-      "pairs": 0,
-      "defight": 0,
+      "bytes": 129680,
+      "pairs": 3,
+      "defight": 15,
       "grow": 0,
       "cap": 0.01,
       "mean": 2
      },
      {
       "file": "desk.lod2.glb",
-      "tris": 957,
-      "ratio": 0.27,
-      "bytes": 81088,
-      "pairs": 0,
-      "defight": 3,
+      "tris": 902,
+      "ratio": 0.26,
+      "bytes": 78032,
+      "pairs": 1,
+      "defight": 8,
       "grow": 0,
       "cap": 0.1,
-      "mean": 18.2
+      "mean": 18.7
      }
     ]
    },
@@ -2757,17 +2761,17 @@
     "droppedLevels": [
      {
       "level": 1,
-      "tris": 3089,
+      "tris": 3087,
       "ratio": 0.9,
       "cap": 0.02,
-      "mean": 19
+      "mean": 19.5
      },
      {
       "level": 2,
-      "tris": 3089,
+      "tris": 3087,
       "ratio": 0.9,
       "cap": 0.02,
-      "mean": 17.2
+      "mean": 17.6
      }
     ],
     "skipped": "no level reaches <= 80 % within the error caps (best 0.9 / 0.9)"
@@ -3055,7 +3059,7 @@
    },
    {
     "name": "Window",
-    "tris": 80,
+    "tris": 84,
     "skipped": "under 2000 triangles"
    }
   ]

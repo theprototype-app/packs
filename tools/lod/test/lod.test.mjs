@@ -163,18 +163,20 @@ test('SHIPPED: no pack GLB carries a cm² of coplanar overlap unless recorded + 
 		const r = await probeFile(it.file);
 		if (r.area < 1e-4) continue;
 		const rec = report[`${it.pack}/${it.name}`];
-		// the only accepted residuals: drop-only, or left as is, because every pushing candidate
-		// changed the look past the gate (scifi CornerPost: a dark strip, Δ 54) — the scan measures them
-		const ok =
-			rec &&
-			((rec.mode === 'drop-only' && rec.look <= 30 && Math.abs(rec.after - r.area) < 1e-3) ||
-				(String(rec.left).startsWith('no candidate within the look gate') && Math.abs(rec.after - r.area) < 1e-3));
+		// a residual is only accepted as the RECORDED outcome of defight-all's judged choice: the
+		// least-flickering candidate within the look gate (or the original, left with a reason) —
+		// never a file nobody looked at
+		const ok = rec && Math.abs(rec.after - r.area) < 1e-3 && (String(rec.left).startsWith('no candidate') || (rec.mode && rec.look <= 30));
 		if (!ok) bad.push(`${it.pack}/${it.name} ${r.area.toFixed(4)} m²`);
 	}
 	assert.deepEqual(bad, []);
-	// the worst offenders are fixed outright
-	for (const k of ['architecture-kit/Block', 'architecture-kit/Ramp', 'scifi-kit/FloorPlate', 'scifi-kit/Wall', 'scifi-kit/WallWindow', 'scifi-kit/WallDoorway'])
-		assert.ok(report[k] && report[k].after < 1e-4, `${k}: ${report[k]?.after} m² left`);
+	// the worst FLICKER (judge.flicker, offline; the in-app scan agrees) is fixed outright: rewritten,
+	// and at least 80 % less. (Static area is not the measure: scifi FloorPlate's 18.6 m² sit where
+	// no camera looks — 86 px — and are left as is.)
+	for (const k of ['architecture-kit/Block', 'architecture-kit/Ramp', 'scifi-kit/Console', 'props-kit/Lantern', 'props-kit/SciFiConsole', 'architecture-kit/Railing']) {
+		const f = report[k]?.flicker;
+		assert.ok(report[k]?.mode && f && f[1] <= f[0] * 0.2, `${k}: ${report[k]?.mode} flicker ${f}`);
+	}
 });
 
 test('defightFile leaves a file under 1 cm² of overlap byte-identical', async () => {

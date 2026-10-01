@@ -257,16 +257,33 @@ const flyTo = (page, eye, target) =>
 		{ eye, target }
 	);
 
+async function routePacks(P) {
+	const TYPES = { '.json': 'application/json', '.glb': 'model/gltf-binary', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg' };
+	await P.ctx.route('https://packs.invalid/**', (route) => {
+		const rel = decodeURIComponent(new URL(route.request().url()).pathname).replace(/^\//, '');
+		const file = path.join(REPO, path.normalize(rel));
+		if (!file.startsWith(REPO) || !fs.existsSync(file) || !fs.statSync(file).isFile()) return route.fulfill({ status: 404, body: 'not found' });
+		return route.fulfill({ status: 200, body: fs.readFileSync(file), headers: { 'Content-Type': TYPES[path.extname(rel)] || 'application/octet-stream', 'Access-Control-Allow-Origin': '*' } });
+	});
+	await h.freshReload(P);
+	await P.page.waitForTimeout(2000);
+}
+
 h.run(async () => {
 	const browser = await h.launch();
 	const A = await h.setupPage(browser, 'A');
 	const B = ROOM_ONLY ? null : await h.setupPage(browser, 'B');
+	// PACKS_ROUTE=1: no pack server — the core dev server runs with
+	// VITE_PACKS_BASE=https://packs.invalid and this checkout answers it through a route
+	// (as tests/flicker-probe.e2e.cjs does; one port per lane)
+	if (process.env.PACKS_ROUTE) for (const P of [A, B].filter(Boolean)) await routePacks(P);
 	if (B) await h.connect(B, A);
 
 	// ---------- 0. BEFORE: the same Packs list as origin/main serves it (no kit) ----------
 	if (!ROOM_ONLY) {
 		const mainIndex = require('node:child_process').execFileSync('git', ['-C', REPO, 'show', 'origin/main:index.json']);
 		const C = await h.setupPage(browser, 'C');
+		if (process.env.PACKS_ROUTE) await routePacks(C);
 		await C.ctx.route('**/index.json', (route) => route.fulfill({ body: mainIndex, contentType: 'application/json' }));
 		await h.freshReload(C);
 		await C.page.waitForTimeout(1500);

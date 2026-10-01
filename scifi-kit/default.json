@@ -119,11 +119,11 @@
     "lods": [
       {
         "file": "floor-plate.lod1.glb",
-        "ratio": 0.5
+        "ratio": 0.4
       },
       {
         "file": "floor-plate.lod2.glb",
-        "ratio": 0.29
+        "ratio": 0.21
       }
     ]
   },
@@ -329,7 +329,7 @@
       },
       {
         "file": "desk.lod2.glb",
-        "ratio": 0.27
+        "ratio": 0.26
       }
     ]
   },

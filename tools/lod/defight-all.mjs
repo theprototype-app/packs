@@ -44,8 +44,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
 				const b1 = await bounds(file);
 				const same = [0, 1, 2].every((i) => Math.abs(b0.min[i] - b1.min[i]) < 1e-6 && Math.abs(b0.max[i] - b1.max[i]) < 1e-6);
 				if (!same) bad++;
-				const look = r.look !== undefined ? `, ${r.mode}, look Δ ${r.look}` : '';
-				report[`${pack}/${name}`] = { before: +r.beforeArea.toFixed(4), after: +r.afterArea.toFixed(4), ...(r.mode ? { mode: r.mode, look: r.look } : {}), ...(r.left ? { left: r.left } : {}) };
+				const look = (r.look !== undefined ? `, ${r.mode}, look Δ ${r.look}` : '') + (r.flickerBefore !== undefined ? `, flicker ${r.flickerBefore} → ${r.flicker ?? r.flickerBefore}` : '');
+				report[`${pack}/${name}`] = { before: +r.beforeArea.toFixed(4), after: +r.afterArea.toFixed(4), ...(r.mode ? { mode: r.mode, look: r.look } : {}), ...(r.flickerBefore !== undefined ? { flicker: [r.flickerBefore, r.flicker ?? r.flickerBest ?? r.flickerBefore] } : {}), ...(r.left ? { left: r.left } : {}) };
 				console.log(`${pack}/${name}: ${r.before} → ${r.after} pairs (${r.beforeArea.toFixed(4)} → ${r.afterArea.toFixed(4)} m²), dropped ${r.dropped}, pushed ${r.pushed}${look}${r.left ? `, LEFT AS IS (${r.left})` : ''}${same ? '' : '  BBOX CHANGED'}`);
 			}
 		}

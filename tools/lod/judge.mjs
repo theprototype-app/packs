@@ -111,6 +111,46 @@ window.shotAs = async (lod0, level, size, yaw) => {
 	(url ? ref : window.__override).traverse((o) => { if (o.isMesh) tris += (o.geometry.index ? o.geometry.index.count : o.geometry.attributes.position.count) / 3; });
 	return { png: renderer.domElement.toDataURL('image/png'), tris: Math.round(tris) };
 };
+// the FLICKER metric of tests/flicker-probe.e2e.cjs, offline: at each pose a micro-triplet (the
+// camera orbited ±0.02°); a pixel flickers when the middle frame disagrees with both neighbours
+// while they agree. Same three.js depth test as the app, no app needed.
+window.flicker = async (url, size, poses) => {
+	const obj = (await new GLTFLoader().loadAsync(url)).scene;
+	const sphere = new THREE.Box3().setFromObject(obj).getBoundingSphere(new THREE.Sphere());
+	renderer.setSize(size, size, false);
+	renderer.setPixelRatio(1);
+	const scene = new THREE.Scene();
+	scene.environment = env;
+	scene.background = new THREE.Color(0x202020);
+	const key = new THREE.DirectionalLight(0xffffff, 1.6);
+	key.position.set(3, 6, 4);
+	scene.add(key, new THREE.HemisphereLight(0xffffff, 0x6b5a48, 0.5), obj);
+	const cam = new THREE.PerspectiveCamera(40, 1, 0.05, 5000);
+	const r = Math.max(sphere.radius, 1e-3) * 2.5;
+	const px = new Uint8Array(size * size * 4);
+	const shot = (deg, el) => {
+		const a = THREE.MathUtils.degToRad(deg);
+		cam.position.set(sphere.center.x + Math.sin(a) * r * Math.cos(el), sphere.center.y + r * Math.sin(el), sphere.center.z + Math.cos(a) * r * Math.cos(el));
+		cam.lookAt(sphere.center);
+		renderer.render(scene, cam);
+		gl.readPixels(0, 0, size, size, gl.RGBA, gl.UNSIGNED_BYTE, px);
+		return px.slice();
+	};
+	let total = 0;
+	for (let k = 0; k < poses; k++) {
+		const deg = (360 * k) / poses + 13;
+		const el = k % 2 ? 0.12 : 0.45;
+		const A = shot(deg - 0.02, el), B = shot(deg, el), C = shot(deg + 0.02, el);
+		for (let i = 0; i < B.length; i += 4) {
+			const ac = Math.abs(A[i] - C[i]) + Math.abs(A[i + 1] - C[i + 1]) + Math.abs(A[i + 2] - C[i + 2]);
+			if (ac >= 24) continue;
+			const mid = Math.abs(2 * B[i] - A[i] - C[i]) + Math.abs(2 * B[i + 1] - A[i + 1] - C[i + 1]) + Math.abs(2 * B[i + 2] - A[i + 2] - C[i + 2]);
+			if (mid > 80) total++;
+		}
+	}
+	obj.traverse((o) => { if (o.isMesh) { o.geometry.dispose(); for (const m of [].concat(o.material)) { for (const k in m) if (m[k]?.isTexture) m[k].dispose(); m.dispose(); } } });
+	return total;
+};
 window.ready = true;
 </script></body></html>`;
 
@@ -169,6 +209,16 @@ export class Judge {
 		} finally {
 			this.files.delete(a);
 			this.files.delete(b);
+		}
+	}
+	/** flicker pixels of a GLB on 12 orbit poses (micro-triplets) at `size` px */
+	async flicker(bytes, size = 512, poses = 12) {
+		const a = `/m/${this.n++}.glb`;
+		this.files.set(a, Buffer.from(bytes));
+		try {
+			return await this.page.evaluate(([a, s, p]) => /** @type {any} */ (window).flicker(a, s, p), [a, size, poses]);
+		} finally {
+			this.files.delete(a);
 		}
 	}
 	async close() {
