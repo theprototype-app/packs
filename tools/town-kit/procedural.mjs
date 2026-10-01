@@ -289,7 +289,7 @@ function FenceGate() {
 	// the diagonal brace, from the bottom hinge side up to the latch side
 	const dx = L - 0.12;
 	const dy = 0.42;
-	p.add('oak', at(B([-Math.hypot(dx, dy) / 2, -0.035, -0.05], [Math.hypot(dx, dy) / 2, 0.035, -0.006]), { rz: (Math.atan2(dy, dx) * 180) / Math.PI, t: [L / 2, 0.53, 0] }));
+	p.add('oak', at(B([-Math.hypot(dx, dy) / 2, -0.035, -0.044], [Math.hypot(dx, dy) / 2, 0.035, -0.008]), { rz: (Math.atan2(dy, dx) * 180) / Math.PI, t: [L / 2, 0.53, 0] }));
 	p.add('iron', B([0, 0.27, 0.017], [0.38, 0.33, 0.03]), B([0, 0.77, 0.017], [0.38, 0.83, 0.03]), B([L - 0.12, 0.52, 0.017], [L - 0.04, 0.58, 0.04]));
 	// clips: eased 0 → open (swings toward +Z, the front), and back
 	const ease = [0, 0.15, 0.5, 0.85, 1];

@@ -53,8 +53,7 @@
      "y": 1,
      "z": 2
     },
-    "fit": "stretch",
-    "clamp": "xz-y"
+    "fit": "stretch"
    },
    "hint": "hull",
    "place": "on the 2 m grid; climbs 1 m towards −Z (rotate to turn it)"
@@ -90,8 +89,7 @@
     "targetTris": 5000,
     "dims": {
      "x": 3.0
-    },
-    "clamp": "-y"
+    }
    },
    "hint": "cylinder",
    "place": "in the middle of a 4 × 4 m plaza of Sidewalk tiles"
@@ -203,8 +201,7 @@
      "y": 0.45,
      "z": 0.45
     },
-    "fit": "stretch",
-    "clamp": "-y"
+    "fit": "stretch"
    },
    "hint": "box",
    "place": "stack them (0.45 m high each)"
@@ -262,7 +259,6 @@
     "dims": {
      "x": 4.25
     },
-    "clamp": "-y",
     "recolor": {
      "hue": [
       330,

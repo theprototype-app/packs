@@ -36,6 +36,14 @@ const { mergeDocuments, transformMesh, getBounds, unpartition, dedup, prune } = 
 const { countTris } = await import(pathToFileURL(path.join(TOOLS, 'lib/post.js')).href);
 const { renderThumbs } = await import(pathToFileURL(path.join(TOOLS, 'lib/thumb.js')).href);
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
+// 33-pack-fix-lod's z-fight tools (K1: "flickers only when moving" = coplanar overlapping
+// triangles): tools/lod in this repo once that lane's PR is merged, or LOD_TOOLS=<its worktree's
+// tools/lod> until then. Without them the build still works and report.json says so.
+const LOD_TOOLS = process.env.LOD_TOOLS || path.join(REPO, 'tools/lod');
+const fightTools = fs.existsSync(path.join(LOD_TOOLS, 'defight.mjs'))
+	? { ...(await import(pathToFileURL(path.join(LOD_TOOLS, 'defight.mjs')).href)), ...(await import(pathToFileURL(path.join(LOD_TOOLS, 'coplanar.mjs')).href)) }
+	: null;
+if (!fightTools) console.warn(`(no ${LOD_TOOLS}/defight.mjs: building WITHOUT the z-fight pass)`);
 
 const kit = JSON.parse(fs.readFileSync(path.join(HERE, 'kit.json'), 'utf8'));
 const PACK = path.join(REPO, kit.pack);
@@ -128,27 +136,36 @@ async function buildItem(it) {
 		// so a gate saved to the user's library or dropped as a file still behaves
 		if (it.behavior) sc.setExtras({ ...sc.getExtras(), behavior: it.behavior });
 		await io.write(out, doc);
+		// no two same-facing triangles share a plane AND an area (the moving-camera flicker)
+		let fights = null;
+		if (fightTools && !it.internal) {
+			const r = await fightTools.defightFile(out, out);
+			const probe = await fightTools.probeFile(out);
+			fights = { before: r.before, after: probe.pairs, area: +probe.area.toFixed(5) };
+		}
 		// FLAT for sync (props-kit finding 2): core's sendObject sends a nested node with its
 		// WORLD pose and the peer parents it under the import root again, so every nested
 		// level doubles its offset on peer B; GLTFLoader also turns a multi-primitive mesh
 		// into a Group. Every shipped piece is leaf nodes straight under the scene.
-		const sceneOf = doc.getRoot().listScenes()[0];
-		const nested = doc.getRoot().listNodes().filter((n) => !sceneOf.listChildren().includes(n)).length;
-		const multi = doc.getRoot().listMeshes().filter((m) => m.listPrimitives().length > 1).length;
+		const built = await io.read(out);
+		const sceneOf = built.getRoot().listScenes()[0];
+		const nested = built.getRoot().listNodes().filter((n) => !sceneOf.listChildren().includes(n)).length;
+		const multi = built.getRoot().listMeshes().filter((m) => m.listPrimitives().length > 1).length;
 		if (!it.behavior && (nested || multi)) throw new Error(`${it.name}: not flat for sync (${nested} nested nodes, ${multi} multi-primitive meshes)`);
-		const b = getBounds(doc.getRoot().listScenes()[0]);
+		const b = getBounds(sceneOf);
 		return {
 			name: it.name,
 			file: path.relative(REPO, out),
 			bytes: fs.statSync(out).size,
-			tris: countTris(doc),
+			tris: countTris(built),
 			size: [0, 1, 2].map((i) => +(b.max[i] - b.min[i]).toFixed(3)),
 			min: b.min.map((v) => +v.toFixed(3)),
 			max: b.max.map((v) => +v.toFixed(3)),
-			textures: doc.getRoot().listTextures().map((t) => t.getSize()?.join('x')),
+			textures: built.getRoot().listTextures().map((t) => t.getSize()?.join('x')),
 			clamped: report.clamped ?? 0,
-			hint: doc.getRoot().listScenes()[0].getExtras()?.colliderHint ?? null,
-			clips: doc.getRoot().listAnimations().map((a) => a.getName()),
+			hint: sceneOf.getExtras()?.colliderHint ?? null,
+			clips: built.getRoot().listAnimations().map((a) => a.getName()),
+			...(fights ? { fights } : {}),
 			...(report.glowing ? { glowing: report.glowing } : {}),
 			...(stage ? { stage } : {})
 		};

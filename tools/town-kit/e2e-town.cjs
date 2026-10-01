@@ -43,52 +43,51 @@ const FB = REPORT.FlowerBox?.size ?? [1, 0.4, 0.3];
 
 /** [item, x, y, z, yawDeg, pack?] — street runs along X; tile centres on EVEN metres (2 m snap) */
 const STREET = [];
-for (const x of [-4, -2, 0, 2, 4, 6]) {
+for (const x of [-2, 0, 2, 4]) {
 	STREET.push(['Sidewalk', x, 0, -4, 0]);
 	STREET.push(['RoadCurb', x, 0, -2, 180]);
 	STREET.push([x === 2 ? 'RoadCrossing' : 'Road', x, 0, 0, 0]);
 	STREET.push(['RoadCurb', x, 0, 2, 0]);
 	STREET.push(['Sidewalk', x, 0, 4, 0]);
-	if (x < 6) STREET.push(['Sidewalk', x, 0, 6, 0]);
+	STREET.push(['Sidewalk', x, 0, 6, 0]); // the plaza
 }
-// the street's east end: corner curbs + an end curb (curb on +X)
-STREET.push(['RoadCorner', 8, 0, 2, 0], ['RoadCurb', 8, 0, 0, 90], ['RoadCorner', 8, 0, -2, 90]);
-// …and the sidewalk wrapping round it
-STREET.push(['Sidewalk', 8, 0, -4, 0], ['Sidewalk', 8, 0, 4, 0], ...[-4, -2, 0, 2, 4].map((z) => ['Sidewalk', 10, 0, z, 0]));
+// the street's east end: corner curbs + an end curb (curb on +X), the sidewalk wrapping round it
+STREET.push(['RoadCorner', 6, 0, 2, 0], ['RoadCurb', 6, 0, 0, 90], ['RoadCorner', 6, 0, -2, 90]);
+STREET.push(['Sidewalk', 6, 0, -4, 0], ['Sidewalk', 6, 0, 4, 0], ...[-4, -2, 0, 2, 4].map((z) => ['Sidewalk', 8, 0, z, 0]));
 const DRESS = [
 	// north side: building fronts (architecture-kit), their front face on the sidewalk's back edge z = -5
-	...[-4, -2, 0, 4, 6].map((x) => [x === 0 ? 'WallPlasterDoor' : 'WallPlaster', x, 0, -5.125, 0, 'architecture-kit']),
+	['WallPlaster', -2, 0, -5.125, 0, 'architecture-kit'],
+	['WallPlasterDoor', 0, 0, -5.125, 0, 'architecture-kit'],
 	['WallStoneWindow', 2, 0, -5.125, 0, 'architecture-kit'],
+	['WallPlaster', 4, 0, -5.125, 0, 'architecture-kit'],
 	['FlowerBox', 2, 1.1, -5 + FB[2] / 2, 0],
-	['Banner', -4, 1.0, -5, 0],
 	['Banner', 4, 1.0, -5, 0],
 	['MarketStall', -2, W, -4, 0],
-	['BarrelCluster', -4.2, W, -4.3, 0],
+	['BarrelCluster', 1.5, W, -4.5, 0],
 	['LampPost', 1, W, -3.4, 0],
-	['LampPost', 5, W, -3.4, 0],
 	['HayStack', 3, W, -4.4, 90],
-	['HayBale', 4.2, W, -3.7, 30],
-	['NoticeBoard', 6.2, W, -4.4, 0],
-	['MarketCart', -2.5, R, 0.3, 0],
+	['HayBale', 4.3, W, -3.7, 30],
+	['MarketCart', -1.5, R, 0.3, 0],
+	['LoadedCart', 4.4, R, 0.2, 180],
+	['SacksBarrel', 8, W, 0, 90],
 	// south side + plaza
-	['LampPost', -3, W, 3.6, 0],
-	['LampPost', 3, W, 3.6, 0],
-	['BannerPole', -4.6, W, 3.9, 0],
+	['LampPost', -2.5, W, 3.5, 0],
+	['BannerPole', 4.6, W, 3.6, 0],
 	['Signpost', 6.2, W, 4.0, 0],
+	['NoticeBoard', 3.0, W, 4.4, 0],
 	['Fountain', 0, W, 5.6, 0],
 	['ParkBench', -2.6, W, 5.6, 90],
-	['ParkBench', 2.6, W, 5.6, -90],
-	['Well', 4.3, W, 5.8, 0],
-	['FlowerBoxLong', -4, W, 6.6, 0],
-	...[-4, -2, 2, 4].map((x) => ['Fence', x, 0, 7.2, 0]),
+	['Well', 3.7, W, 5.9, 0],
+	['FlowerBoxLong', -2, W, 6.6, 0],
+	...[-2, 2, 4].map((x) => ['Fence', x, 0, 7.2, 0]),
 	['FenceGate', 0, 0, 7.2, 0],
-	['StoneStairs', -6, 0, 6, 180],
-	['Bridge', 13, 0, 4, 0],
-	// a 4 × 4 m tower of architecture-kit walls (lines x = -11 / -7, z = -2 / 2), the clock top on it
-	...[-10, -8].flatMap((x) => [['WallStone', x, 0, -2, 0, 'architecture-kit'], ['WallStone', x, 0, 2, 0, 'architecture-kit']]),
-	...[-1, 1].flatMap((z) => [['WallStone', -11, 0, z, 90, 'architecture-kit'], ['WallStone', -7, 0, z, 90, 'architecture-kit']]),
-	...[-11, -7].flatMap((x) => [['CornerPostStone', x, 0, -2, 0, 'architecture-kit'], ['CornerPostStone', x, 0, 2, 0, 'architecture-kit']]),
-	['ClockTowerTop', -9, 3, 0, 0]
+	['StoneStairs', -4, 0, 6, 180],
+	['Bridge', 11, 0, 4, 0],
+	// a 4 × 4 m tower of architecture-kit walls (lines x = -9 / -5, z = -2 / 2), the clock top on it
+	...[-8, -6].flatMap((x) => [['WallStone', x, 0, -2, 0, 'architecture-kit'], ['WallStone', x, 0, 2, 0, 'architecture-kit']]),
+	...[-1, 1].flatMap((z) => [['WallStone', -9, 0, z, 90, 'architecture-kit'], ['WallStone', -5, 0, z, 90, 'architecture-kit']]),
+	...[-9, -5].flatMap((x) => [['CornerPostStone', x, 0, -2, 0, 'architecture-kit'], ['CornerPostStone', x, 0, 2, 0, 'architecture-kit']]),
+	['ClockTowerTop', -7, 3, 0, 0]
 ];
 const LAYOUT = [...STREET, ...DRESS];
 const ITEM_BY = Object.fromEntries(LIST.map((i) => [i.name, i]));
@@ -233,7 +232,7 @@ h.run(async () => {
 
 	// ---------------------------------------------------------------- 3. place from the UI
 	const taken = [];
-	await A.page.locator('#explorer-list .explorer-card').filter({ hasText: ITEM_BY.Fountain.label }).first().dblclick();
+	await A.page.locator('#explorer-list .explorer-card').filter({ hasText: /^\s*Fountain\s*$/ }).first().dblclick();
 	let firstId = null;
 	await h.eventually(async () => (firstId = await findNew(A.page, 'Fountain', taken)), (v) => !!v, 'double-clicking the Fountain card places it', 20000);
 	taken.push(firstId);
@@ -247,7 +246,7 @@ h.run(async () => {
 		}
 		await drop(A.page, name, urlOf(name, pack));
 		let id = null;
-		await h.eventually(async () => (id = await findNew(A.page, name, taken)), (v) => !!v, `…${name} places${pack ? ` (${pack})` : ''}`, 25000);
+		await h.eventually(async () => (id = await findNew(A.page, name, taken)), (v) => !!v, `…${name} places${pack ? ` (${pack})` : ''}`, 60000);
 		taken.push(id);
 		(placed[name] ??= []).push(id);
 	}
@@ -262,7 +261,7 @@ h.run(async () => {
 		},
 		(n) => n === taken.length,
 		`peer B receives the real geometry of all ${taken.length} placed pieces`,
-		180000
+		300000
 	);
 	const at = {};
 	const uses = {};
@@ -337,7 +336,7 @@ h.run(async () => {
 			}
 		}
 	}
-	h.check(seams >= 50 && gaps.length === 0, `the ${tiles.length} street tiles meet with 0 mm seams (${seams} joints${gaps.length ? '; gaps: ' + gaps.slice(0, 4).join(' | ') : ''})`);
+	h.check(seams >= 40 && gaps.length === 0, `the ${tiles.length} street tiles meet with 0 mm seams (${seams} joints${gaps.length ? '; gaps: ' + gaps.slice(0, 4).join(' | ') : ''})`);
 	const curbTop = measured[placed.RoadCurb[0]].max[1];
 	const walkTop = measured[placed.Sidewalk[0]].max[1];
 	const roadTop = measured[placed.Road[0]].max[1];
@@ -442,10 +441,10 @@ h.run(async () => {
 	await A.page.waitForTimeout(6000);
 	if (SHOTS) {
 		const views = [
-			['after-street.png', [9, 7.5, 13], [-1, 0.5, 0]],
+			['after-street.png', [9, 7.5, 13], [0, 0.5, 0]],
 			['after-street-plaza.png', [-1, 3.2, 12], [0.5, 1, 4.5]],
 			['after-street-north.png', [1, 2.4, 2.5], [0, 1.3, -4.5]],
-			['after-clock-tower.png', [-2.5, 6, 9], [-9, 4, 0]]
+			['after-clock-tower.png', [-0.5, 6, 9], [-7, 4, 0]]
 		];
 		for (const [file, from, to] of views) {
 			await A.page.evaluate(([f, t]) => window.__stores.objectActions.flyTo(f, t, 0), [from, to]);

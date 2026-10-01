@@ -58,19 +58,38 @@ function triangles(doc, offset = [0, 0, 0]) {
 	return out;
 }
 
-/** point-in-triangle on the triangle's plane (barycentric), strictly inside by `eps` */
-function inside(q, t, eps = 1e-4) {
-	const [a, b, c] = t.p;
-	const v0 = c.map((x, k) => x - a[k]);
-	const v1 = b.map((x, k) => x - a[k]);
-	const v2 = q.map((x, k) => x - a[k]);
-	const dot = (u, w) => u[0] * w[0] + u[1] * w[1] + u[2] * w[2];
-	const d00 = dot(v0, v0), d01 = dot(v0, v1), d11 = dot(v1, v1), d20 = dot(v2, v0), d21 = dot(v2, v1);
-	const den = d00 * d11 - d01 * d01;
-	const v = (d11 * d20 - d01 * d21) / den;
-	const w = (d00 * d21 - d01 * d20) / den;
-	return v > eps && w > eps && v + w < 1 - eps;
+/** the area (m²) two coplanar triangles share: both projected onto the plane's dominant axes,
+ * then Sutherland-Hodgman clipping of one by the other */
+function overlapArea(A, B) {
+	const ax = A.n.map(Math.abs);
+	const drop = ax[0] >= ax[1] && ax[0] >= ax[2] ? 0 : ax[1] >= ax[2] ? 1 : 2;
+	const [u, v] = [0, 1, 2].filter((k) => k !== drop);
+	const ccw = (poly) => (area2(poly) < 0 ? poly.slice().reverse() : poly);
+	const P = ccw(A.p.map((q) => [q[u], q[v]]));
+	const Q = ccw(B.p.map((q) => [q[u], q[v]]));
+	let out = P;
+	for (let i = 0; i < Q.length && out.length; i++) {
+		const a = Q[i];
+		const b = Q[(i + 1) % Q.length];
+		const side = (p) => (b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0]);
+		const inp = out;
+		out = [];
+		for (let k = 0; k < inp.length; k++) {
+			const c = inp[k];
+			const d = inp[(k + 1) % inp.length];
+			const sc = side(c);
+			const sd = side(d);
+			if (sc >= 0) out.push(c);
+			if ((sc >= 0) !== (sd >= 0)) {
+				const t = sc / (sc - sd);
+				out.push([c[0] + t * (d[0] - c[0]), c[1] + t * (d[1] - c[1])]);
+			}
+		}
+	}
+	// back to plane area: the projection shrinks it by |n[drop]|
+	return out.length >= 3 ? Math.abs(area2(out)) / 2 / ax[drop] : 0;
 }
+const area2 = (poly) => poly.reduce((s, p, i) => s + p[0] * poly[(i + 1) % poly.length][1] - poly[(i + 1) % poly.length][0] * p[1], 0);
 
 /** pairs of same-facing coplanar triangles from DIFFERENT parts that overlap (z-fight) */
 function zFights(trisA, trisB = null) {
@@ -90,9 +109,7 @@ function zFights(trisA, trisB = null) {
 		for (let i = 0; i < g.length; i++) {
 			for (let j = i + 1; j < g.length; j++) {
 				if (g[i].s === g[j].s) continue;
-				// sample points of i strictly inside j (or the reverse): a shared AREA, not an edge
-				const samples = (t) => [[1 / 3, 1 / 3], [0.6, 0.2], [0.2, 0.6], [0.2, 0.2]].map(([u, v]) => t.p[0].map((x, k) => x + u * (t.p[1][k] - x) + v * (t.p[2][k] - x)));
-				if (samples(g[i]).some((q) => inside(q, g[j])) || samples(g[j]).some((q) => inside(q, g[i]))) fights++;
+				if (overlapArea(g[i], g[j]) > 1e-6) fights++;
 			}
 		}
 	}
