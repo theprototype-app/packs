@@ -242,6 +242,14 @@ async function kitbash(list, out, maxTris = 7500) {
 		await MeshoptSimplifier.ready;
 		await doc.transform(weld(), simplify({ simplifier: MeshoptSimplifier, ratio: maxTris / before, error: 0.01, lockBorder: false }));
 	}
+	// join keeps the first member's node transform (a stool turned 80°): bake every mesh
+	// node to identity so the GLB's bounds are its real, axis-aligned extent
+	for (const n of sceneOf(doc).listChildren()) {
+		const mesh = n.getMesh();
+		if (!mesh) continue;
+		transformMesh(mesh, n.getMatrix());
+		n.setTranslation([0, 0, 0]).setRotation([0, 0, 0, 1]).setScale([1, 1, 1]);
+	}
 	await doc.transform(unpartition(), prune());
 	await io.write(out, doc);
 	return { source: `kitbash: ${list.map((l) => l[0]).join(' + ')}`, trisIn: before };

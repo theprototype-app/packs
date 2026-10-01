@@ -1072,7 +1072,7 @@
  "TavernTableSet": {
   "label": "Tavern table + 4 stools",
   "file": "TavernTableSet/glTF-Binary/tavern-table-set.glb",
-  "bytes": 1003716,
+  "bytes": 1003636,
   "tris": 7498,
   "meshes": 2,
   "size": [
