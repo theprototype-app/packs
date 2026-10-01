@@ -160,7 +160,7 @@ const setSuspects = (page, sw) =>
  */
 const walk = (page, path, opts = {}) =>
 	page.evaluate(
-		async ({ path, hi, lo, heat }) => {
+		async ({ path, hi, lo, heat, isolate }) => {
 			const s = window.__stores;
 			let renderer;
 			let cam;
@@ -168,6 +168,24 @@ const walk = (page, path, opts = {}) =>
 			s.globalRenderer.subscribe((x) => (renderer = x))();
 			s.globalCamera.subscribe((x) => (cam = x))();
 			s.orbitControls.subscribe((x) => (oc = x))();
+			// PACK PIXELS ONLY: editor chrome drawn in the canvas (the grid's thin aliased lines,
+			// the gizmo, the selection box) is not a pack object and shimmers on its own —
+			// hide everything outside objectsGroup for the walk (as the kit's seam test does)
+			let scene;
+			let g;
+			s.globalScene.subscribe((x) => (scene = x))();
+			s.objectsGroup.subscribe((x) => (g = x))();
+			const hidden = [];
+			if (isolate)
+				scene.traverse((n) => {
+					if (!n.visible || !(n.isMesh || n.isLine || n.isLineSegments || n.isPoints || n.isSprite)) return;
+					let inside = false;
+					for (let q = n; q; q = q.parent) if (q === g) inside = true;
+					if (!inside) {
+						n.visible = false;
+						hidden.push(n);
+					}
+				});
 			const src = renderer.domElement;
 			const W = src.width;
 			const H = src.height;
@@ -238,11 +256,12 @@ const walk = (page, path, opts = {}) =>
 				ctx.putImageData(img, 0, 0);
 				png = c2.toDataURL('image/png');
 			}
+			for (const n of hidden) n.visible = true;
 			let pixels = 0;
 			for (let p = 0; p < W * H; p++) if (mask[p]) pixels++;
 			return { counts, total: counts.reduce((x, y) => x + y, 0), pixels, quality, lodLevels, png, size: [W, H] };
 		},
-		{ path, hi: opts.hi ?? 40, lo: opts.lo ?? 24, heat: !!opts.heat }
+		{ path, hi: opts.hi ?? 40, lo: opts.lo ?? 24, heat: !!opts.heat, isolate: opts.isolate ?? process.env.ISOLATE !== '0' }
 	);
 
 /** the micro-step: 0.02° of orbit ≈ a third of a pixel at 1280×720, fov 40 */
