@@ -79,7 +79,7 @@
     "lods": [
       {
         "file": "corner-post-stone.lod1.glb",
-        "ratio": 0.57
+        "ratio": 0.58
       }
     ]
   },
@@ -108,10 +108,6 @@
       {
         "file": "wall-plaster-door.lod1.glb",
         "ratio": 0.5
-      },
-      {
-        "file": "wall-plaster-door.lod2.glb",
-        "ratio": 0.4
       }
     ]
   },
@@ -171,7 +167,7 @@
     "lods": [
       {
         "file": "pillar.lod1.glb",
-        "ratio": 0.63
+        "ratio": 0.6
       }
     ]
   },
@@ -189,7 +185,7 @@
       },
       {
         "file": "column.lod2.glb",
-        "ratio": 0.33
+        "ratio": 0.32
       }
     ]
   },
@@ -295,7 +291,7 @@
     "lods": [
       {
         "file": "block.lod1.glb",
-        "ratio": 0.67
+        "ratio": 0.65
       }
     ]
   },
@@ -309,7 +305,11 @@
     "lods": [
       {
         "file": "ramp.lod1.glb",
-        "ratio": 0.62
+        "ratio": 0.8
+      },
+      {
+        "file": "ramp.lod2.glb",
+        "ratio": 0.61
       }
     ]
   },
@@ -387,7 +387,7 @@
     "lods": [
       {
         "file": "gate.lod1.glb",
-        "ratio": 0.49
+        "ratio": 0.5
       },
       {
         "file": "gate.lod2.glb",
@@ -427,7 +427,7 @@
       },
       {
         "file": "railing.lod2.glb",
-        "ratio": 0.26
+        "ratio": 0.25
       }
     ]
   },

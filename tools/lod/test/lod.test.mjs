@@ -72,9 +72,10 @@ test('a hemisphere test on x alone would split (2e-9, -1, 0) from (0, 1, 0): the
 });
 
 test('defight: a fully hidden duplicate is dropped, a partial overlap pushed INSIDE, the bbox kept', async () => {
-	// a closed box would be better, but a slab shows the rule: the big quad is the surface,
-	// the small one under it is hidden (dropped); one sticking out past it is pushed down
-	const doc = quadDoc([{ y: 1 }, { y: 1, size: 0.5, offset: 0.25 }, { y: 1, size: 0.6, offset: 0.7 }, { y: 0, flip: true, size: 1.3 }]);
+	// a slab shows the rule: the quad drawn LAST is the surface (it won the LessEqual tie, so
+	// it is what the original showed); the small one under it is hidden (dropped); one sticking
+	// out past it is pushed down
+	const doc = quadDoc([{ y: 0, flip: true, size: 1.3 }, { y: 1, size: 0.5, offset: 0.25 }, { y: 1, size: 0.6, offset: 0.7 }, { y: 1 }]);
 	const b0 = getBounds(doc.getRoot().listScenes()[0]);
 	const before = coplanarOverlaps(triangles(doc)).pairs;
 	const r = await defightDoc(doc);
@@ -90,6 +91,19 @@ test('defight: a fully hidden duplicate is dropped, a partial overlap pushed INS
 	let maxY = -Infinity;
 	for (const t of triangles(doc)) for (const p of [t.a, t.b, t.c]) maxY = Math.max(maxY, p[1]);
 	assert.ok(Math.abs(maxY - 1) < 1e-6);
+});
+
+test('defight: on a CONCAVE piece the hidden layer goes BEHIND the surface, not toward the bbox middle', async () => {
+	// a doorway jamb: the surface faces into the opening, and the piece's middle IS the
+	// opening — "toward the middle" pushed the jamb's hidden layer out in front of it
+	// (scifi WallDoorway's black jamb). Surface y = 0 facing +y; the bbox reaches y = 10.
+	const doc = quadDoc([{ y: 0 }, { y: 0, size: 0.6, offset: 0.7 }, { y: -0.5, flip: true, size: 1.4 }, { y: 10, size: 0.1, offset: 3 }]);
+	const r = await defightDoc(doc);
+	assert.ok(r.pushed >= 1, `the partial layer was pushed (${r.pushed})`);
+	let above = 0;
+	for (const t of triangles(doc)) for (const p of [t.a, t.b, t.c]) if (p[1] > 1e-6 && p[1] < 9) above++; // (the back face at y = -0.5 gives the piece depth)
+	assert.equal(above, 0, 'nothing pushed in front of the surface (y > 0)');
+	assert.equal(coplanarOverlaps(triangles(doc)).pairs, 0);
 });
 
 test('defight: two primitives SHARING normals/UVs (a piece copied twice) are fixed independently', async () => {
@@ -142,13 +156,25 @@ function shipped() {
 	return out;
 }
 
-test('SHIPPED: no pack GLB carries a cm² of coplanar overlap (the Block had 8.5 m²)', async () => {
+test('SHIPPED: no pack GLB carries a cm² of coplanar overlap unless recorded + look-gated (the Block had 8.5 m²)', async () => {
+	const report = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools/lod/defight-report.json'), 'utf8'));
 	const bad = [];
 	for (const it of shipped()) {
 		const r = await probeFile(it.file);
-		if (r.area >= 1e-4) bad.push(`${it.pack}/${it.name} ${r.area.toFixed(4)} m²`);
+		if (r.area < 1e-4) continue;
+		const rec = report[`${it.pack}/${it.name}`];
+		// the only accepted residuals: drop-only, or left as is, because every pushing candidate
+		// changed the look past the gate (scifi CornerPost: a dark strip, Δ 54) — the scan measures them
+		const ok =
+			rec &&
+			((rec.mode === 'drop-only' && rec.look <= 30 && Math.abs(rec.after - r.area) < 1e-3) ||
+				(String(rec.left).startsWith('no candidate within the look gate') && Math.abs(rec.after - r.area) < 1e-3));
+		if (!ok) bad.push(`${it.pack}/${it.name} ${r.area.toFixed(4)} m²`);
 	}
 	assert.deepEqual(bad, []);
+	// the worst offenders are fixed outright
+	for (const k of ['architecture-kit/Block', 'architecture-kit/Ramp', 'scifi-kit/FloorPlate', 'scifi-kit/Wall', 'scifi-kit/WallWindow', 'scifi-kit/WallDoorway'])
+		assert.ok(report[k] && report[k].after < 1e-4, `${k}: ${report[k]?.after} m² left`);
 });
 
 test('defightFile leaves a file under 1 cm² of overlap byte-identical', async () => {

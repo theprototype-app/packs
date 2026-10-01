@@ -186,6 +186,13 @@ export async function buildLevels(lod0, o = {}) {
 			await simplifyDoc(d, { ...L, error: cap });
 			const t = trisOf(d);
 			if (t >= tris) continue; // this cap took nothing more away
+			// the judge sees the FINAL geometry: a collapse can fold two triangles into one plane,
+			// and settling that afterwards changed a judged level (scifi WallDoorway's black jamb)
+			// drop-only: a collapse can leave a hidden duplicate in a plane — remove it, but never
+			// PUSH a layer in a level (pushes are judged per file on LOD0 by defight-all; on a
+			// level they brought scifi WallDoor's dark jamb strip back, under the mean gate)
+			const fight = await defightDoc(d, { depth: 0, passes: 3 });
+			d.__fight = fight;
 			const verdict = o.judge ? await o.judge.compare(bytes0, await reader.writeBinary(d), L.seenAt) : { mean: 0 };
 			if (verdict.mean > MAX_MEAN) break;
 			doc = d;
@@ -198,7 +205,7 @@ export async function buildLevels(lod0, o = {}) {
 			continue;
 		}
 		prev = tris;
-		const fight = await defightDoc(doc);
+		const fight = doc.__fight;
 		if (!process.env.LOD_FULL_TEXTURES) await shrinkTextures(doc, L.tex);
 		await doc.transform(prune({ keepLeaves: true, keepAttributes: true }));
 		const kept = JSON.stringify(skeletonOf(doc));

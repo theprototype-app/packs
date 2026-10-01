@@ -9,7 +9,7 @@
     "lods": [
       {
         "file": "wall.lod1.glb",
-        "ratio": 0.5
+        "ratio": 0.51
       }
     ]
   },
@@ -55,7 +55,7 @@
     "lods": [
       {
         "file": "wall-door.lod1.glb",
-        "ratio": 0.49
+        "ratio": 0.5
       },
       {
         "file": "wall-door.lod2.glb",
@@ -73,7 +73,7 @@
     "lods": [
       {
         "file": "wall-window.lod1.glb",
-        "ratio": 0.52
+        "ratio": 0.53
       }
     ]
   },
@@ -119,11 +119,11 @@
     "lods": [
       {
         "file": "floor-plate.lod1.glb",
-        "ratio": 0.48
+        "ratio": 0.5
       },
       {
         "file": "floor-plate.lod2.glb",
-        "ratio": 0.31
+        "ratio": 0.29
       }
     ]
   },
@@ -163,7 +163,7 @@
       },
       {
         "file": "stairs.lod2.glb",
-        "ratio": 0.35
+        "ratio": 0.36
       }
     ]
   },
@@ -329,7 +329,7 @@
       },
       {
         "file": "desk.lod2.glb",
-        "ratio": 0.3
+        "ratio": 0.27
       }
     ]
   },

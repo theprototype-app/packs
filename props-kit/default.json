@@ -9,7 +9,7 @@
     "lods": [
       {
         "file": "table.lod1.glb",
-        "ratio": 0.54
+        "ratio": 0.55
       }
     ]
   },
@@ -23,7 +23,7 @@
     "lods": [
       {
         "file": "bench.lod1.glb",
-        "ratio": 0.55
+        "ratio": 0.54
       }
     ]
   },

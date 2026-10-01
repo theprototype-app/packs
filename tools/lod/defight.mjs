@@ -19,6 +19,7 @@
 // hierarchy, materials and animations are untouched (the edit is per primitive, in place).
 //
 //   node tools/lod/defight.mjs in.glb [out.glb]   (out defaults to in: rewrite in place)
+import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { pathToFileURL } from 'node:url';
@@ -67,7 +68,7 @@ export function planLayers(tris, o = {}) {
 		const flip = t.double ? flipNormal(n) : false;
 		return flip ? { n: n.map((x) => -x), d: -t.d, s: -1 } : { n, d: t.d, s: 1 };
 	};
-	// the middle of everything: "inside" for a solid piece
+	// the piece's bounds: a push may never leave them (see layerCluster)
 	const lo = [Infinity, Infinity, Infinity];
 	const hi = [-Infinity, -Infinity, -Infinity];
 	for (const t of tris)
@@ -76,7 +77,8 @@ export function planLayers(tris, o = {}) {
 				lo[k] = Math.min(lo[k], p[k]);
 				hi[k] = Math.max(hi[k], p[k]);
 			}
-	const centre = o.centre ?? [0, 1, 2].map((k) => (lo[k] + hi[k]) / 2);
+	const box = { lo, hi };
+	tris.forEach((t, i) => (t._order = i)); // triangles() lists them in draw order
 	const buckets = new Map();
 	for (const t of tris) {
 		const c = canon(t);
@@ -98,7 +100,7 @@ export function planLayers(tris, o = {}) {
 			start = i;
 			if (run.length < 2) continue;
 			const groups = groupRun(run, tol);
-			for (const g of groups) if (g.length > 1 && layerCluster(g, { depth, covered, minArea, drop, push, centre })) clusters++;
+			for (const g of groups) if (g.length > 1 && layerCluster(g, { depth, covered, minArea, drop, push, box, direction: o.direction ?? 'surface' })) clusters++;
 		}
 	}
 	return { drop, push, clusters, dropped: drop.size, pushed: push.size };
@@ -126,7 +128,7 @@ function groupRun(run, tol) {
 	return [...groups.values()];
 }
 
-function layerCluster(group, { depth, covered, minArea, drop, push, centre }) {
+function layerCluster(group, { depth, covered, minArea, drop, push, box, direction }) {
 	const n = group[0]._c.n;
 	const ax = Math.abs(n[0]) < 0.9 ? [1, 0, 0] : [0, 1, 0];
 	const u = norm(cross(n, ax));
@@ -144,11 +146,37 @@ function layerCluster(group, { depth, covered, minArea, drop, push, centre }) {
 				break;
 			}
 	if (!any) return false;
-	// the surface's outward side is AWAY from the piece's middle: a deeper layer moves
-	// toward the inside, so it can never poke past the bbox a modular joint relies on
-	const d0 = group[0]._c.d;
-	const outward = dot(n, centre) <= d0 ? n : n.map((x) => -x);
-	const sorted = group.slice().sort((a, b) => b.area - a.area);
+	// The SURFACE is what the original showed. With three's LessEqual depth test the triangle
+	// drawn LAST wins a tie, so draw order (primitive, then index order) is the priority — not
+	// area: scifi CornerPost's largest triangles are a dark inner layer, and "largest first"
+	// dropped the lit face over it (a black strip; judge Δ 54).
+	const sorted = group.slice().sort((a, b) => b._order - a._order);
+	// the surface's outward side is the way the SURFACE triangle (the largest) faces: a deeper
+	// layer moves behind it, into the solid. ("Toward the piece's middle" was wrong for a
+	// concave piece — a doorway's middle is the empty opening, so the jamb's hidden layer came
+	// out IN FRONT: scifi WallDoorway's black jamb.) The bounds clamp keeps the bbox exact.
+	// Which way is "behind"? Must be the SAME every pass, or a file never settles (scifi
+	// WallDoorway's back: a 6 mm band of near-parallel Meshy layers, its largest triangle
+	// alternating between a front face and a fold, flipped the push each pass).
+	// - a cluster ON / within 1 cm of a face of the piece's bbox: behind = into the piece;
+	// - anywhere else (a doorway jamb, an arch soffit — concave, where "toward the middle"
+	//   is the empty opening): behind = against the surface triangle's own facing.
+	const c = [0, 1, 2].map((k) => (sorted[0].a[k] + sorted[0].b[k] + sorted[0].c[k]) / 3);
+	let outward = sorted[0].n;
+	if (direction === 'centre') {
+		// the fallback rule: away from the bbox middle (settles the scifi walls' back band;
+		// wrong on a concave face, which is why it is only the fallback)
+		const mid = [0, 1, 2].map((k) => (box.lo[k] + box.hi[k]) / 2);
+		outward = dot(n, mid) <= group[0]._c.d ? n : n.map((x) => -x);
+	} else {
+		for (let k = 0; k < 3; k++) {
+			if (Math.abs(n[k]) < 0.9) continue;
+			const axis = [0, 0, 0];
+			if (box.hi[k] - c[k] < 0.01) axis[k] = 1;
+			else if (c[k] - box.lo[k] < 0.01) axis[k] = -1;
+			if (axis[k]) outward = axis;
+		}
+	}
 	/** @type {any[][]} */
 	const layers = [[]];
 	for (const t of sorted) {
@@ -186,16 +214,8 @@ export const MAX_PASSES = 12;
 export async function defightDoc(doc, o = {}) {
 	// a pushed layer can land in another plane's band; a second pass settles it
 	const total = { clusters: 0, dropped: 0, pushed: 0, passes: 0 };
-	let centre = null;
 	for (let pass = 0; pass < (o.passes ?? MAX_PASSES); pass++) {
-		if (!centre) {
-			const t0 = triangles(doc);
-			const lo = [Infinity, Infinity, Infinity];
-			const hi = [-Infinity, -Infinity, -Infinity];
-			for (const t of t0) for (const p of [t.a, t.b, t.c]) for (let k = 0; k < 3; k++) (lo[k] = Math.min(lo[k], p[k])), (hi[k] = Math.max(hi[k], p[k]));
-			centre = [0, 1, 2].map((k) => (lo[k] + hi[k]) / 2);
-		}
-		const r = await defightPass(doc, { ...o, centre });
+		const r = await defightPass(doc, o);
 		total.passes++;
 		total.clusters += r.clusters;
 		total.dropped += r.dropped;
@@ -285,18 +305,48 @@ function compact(acc, keep) {
  * and on fine, thin meshes (a cat's ears) a 2.5 mm push lands on the next surface */
 export const MIN_FIX_AREA = 1e-4;
 
+/** the look gate (= lod.mjs MAX_MEAN): mean |ΔRGBA| per object pixel vs the original, 256 px */
+export const MAX_LOOK = 30;
+
+/**
+ * Defight one file. Without a judge: "behind the surface", then the bbox-middle rule, first
+ * that settles. WITH `o.judge` (defight-all), every candidate is also LOOKED at against the
+ * original — surface, centre and drop-only (hidden duplicates removed, nothing pushed) — and
+ * the one with the least overlap left among those within MAX_LOOK wins. No geometric rule for
+ * "behind" is right for every piece (a double-sided scifi CornerPost came out with a dark
+ * strip, Δ 54, under both); the render is the arbiter. Nothing within the gate: left as is.
+ */
 export async function defightFile(input, output = input, o = {}) {
 	const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
-	const doc = await io.read(input);
-	const before = coplanarOverlaps(triangles(doc), { doubleSidedOpposite: true });
+	const doc0 = await io.read(input);
+	const before = coplanarOverlaps(triangles(doc0), { doubleSidedOpposite: true });
 	const base = { file: input, before: before.pairs, beforeArea: before.area };
-	if (before.area < (o.minFixArea ?? MIN_FIX_AREA)) return { ...base, after: before.pairs, afterArea: before.area, dropped: 0, pushed: 0, left: 'under 1 cm² of overlap' };
-	const r = await defightDoc(doc, o);
-	const after = coplanarOverlaps(triangles(doc), { doubleSidedOpposite: true });
-	// a file that did not settle is not written: the edit would be churn, not a fix
-	if (r.passes >= (o.passes ?? MAX_PASSES) && (r.dropped || r.pushed) && after.pairs) return { ...base, after: before.pairs, afterArea: before.area, dropped: 0, pushed: 0, left: 'did not converge' };
-	if (r.dropped || r.pushed) await io.write(output, doc);
-	return { ...base, ...r, after: after.pairs, afterArea: after.area };
+	const leave = (why) => ({ ...base, after: before.pairs, afterArea: before.area, dropped: 0, pushed: 0, left: why });
+	if (before.area < (o.minFixArea ?? MIN_FIX_AREA)) return leave('under 1 cm² of overlap');
+	const variants = o.judge
+		? [{ direction: 'surface' }, { direction: 'centre' }, { direction: 'surface', depth: 0, passes: 3, dropOnly: true }]
+		: [{ direction: 'surface' }, { direction: 'centre' }];
+	const bytes0 = o.judge ? fs.readFileSync(input) : null;
+	let best = null;
+	for (const v of variants) {
+		const doc = await io.read(input);
+		const r = await defightDoc(doc, { ...o, ...v });
+		if (!r.dropped && !r.pushed) continue;
+		if (v.dropOnly && !r.dropped) continue; // nothing hidden to remove: a rewrite would be churn
+		const after = coplanarOverlaps(triangles(doc), { doubleSidedOpposite: true });
+		const settled = v.dropOnly || !(r.passes >= (o.passes ?? MAX_PASSES) && after.pairs);
+		if (!settled) continue;
+		const bytes = await io.writeBinary(doc);
+		const look = o.judge ? (await o.judge.compare(bytes0, bytes, 256)).mean : 0;
+		const cand = { ...r, mode: v.dropOnly ? 'drop-only' : v.direction, after: after.pairs, afterArea: after.area, look: +look.toFixed(1), bytes };
+		if (o.judge && look > MAX_LOOK) continue;
+		if (!best || cand.afterArea < best.afterArea - 1e-9 || (Math.abs(cand.afterArea - best.afterArea) <= 1e-9 && cand.look < best.look)) best = cand;
+		if (!o.judge) break; // no judge: the first that settles
+	}
+	if (!best) return leave(o.judge ? `no candidate within the look gate (Δ <= ${MAX_LOOK}) and settled` : 'did not converge');
+	fs.writeFileSync(output, best.bytes);
+	const { bytes, ...rest } = best;
+	return { ...base, ...rest };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
