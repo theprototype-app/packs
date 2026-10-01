@@ -45,7 +45,7 @@
       },
       {
         "file": "door-studded.lod2.glb",
-        "ratio": 0.27
+        "ratio": 0.22
       }
     ]
   },
@@ -72,7 +72,7 @@
       },
       {
         "file": "door-double.lod2.glb",
-        "ratio": 0.29
+        "ratio": 0.28
       }
     ]
   },
@@ -176,7 +176,7 @@
       },
       {
         "file": "wall-sliding-door.lod2.glb",
-        "ratio": 0.35
+        "ratio": 0.36
       }
     ]
   },
