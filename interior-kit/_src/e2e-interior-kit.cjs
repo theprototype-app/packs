@@ -217,10 +217,22 @@ h.run(async () => {
 	let deskId = null;
 	await h.eventually(async () => (deskId = await findNew(A.page, 'Desk', taken)), (v) => !!v, 'double-clicking the Desk card places it', 25000);
 	taken.push(deskId);
+	await A.page.evaluate(() => window.__stores.objectActions.deselectObject()); // no lingering selection outline in the shots
 
 	// ---------------------------------------------------------------- 3. the room
 	const placed = []; // {id, name, arch, pos, yaw}
-	for (const [full, x, y, z, yaw] of LAYOUT) {
+	// + a bare inner corner for the trims' close-up (the room's corners are furnished):
+	// two plaster walls meeting at (10, 0, 0), a floor tile, skirting + wainscot + cornice on both
+	const CORNER = [
+		['arch:FloorWood', 11, 0, 1, 0],
+		['arch:WallPlaster', 11, 0, 0, 0],
+		['arch:WallPlaster', 10, 0, 1, 90],
+		['Wainscot', 11, 0, 0, 0],
+		['Skirting', 10, 0, 1, 90],
+		['Cornice', 11, 0, 0, 0],
+		['Cornice', 10, 0, 1, 90]
+	];
+	for (const [full, x, y, z, yaw] of [...LAYOUT, ...CORNER]) {
 		const arch = full.startsWith('arch:');
 		const name = arch ? full.slice(5) : full;
 		const url = arch ? archUrl(name) : byName[name].glbUrl;
@@ -407,8 +419,8 @@ h.run(async () => {
 		['after-room-A.png', [8.6, 5.2, 8.4], [2.6, 0.8, 1.4]],
 		['after-room-hearth-A.png', [4.3, 1.7, 4.6], [4.4, 1.0, 0.0]],
 		['after-room-kitchen-A.png', [1.7, 1.6, 3.6], [1.3, 0.8, 0.0]],
-		['after-trim-corner-A.png', [1.6, 1.0, 1.8], [0.05, 0.6, 0.05]],
-		['after-trim-cornice-A.png', [1.8, 2.2, 1.9], [0.0, 2.9, 0.0]]
+		['after-trim-corner-A.png', [11.3, 0.9, 1.4], [10.05, 0.35, 0.05]],
+		['after-trim-cornice-A.png', [11.6, 2.0, 1.7], [10.0, 2.9, 0.0]]
 	];
 	for (const [file, eye, target] of views) {
 		await A.page.evaluate(([e, t]) => window.__stores.objectActions.flyTo(e, t, 0), [eye, target]);
