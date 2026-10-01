@@ -74,9 +74,8 @@ for (const item of ITEMS) {
 	});
 }
 
-const PROCEDURAL = ITEMS.filter((i) => i.src.proc).map((i) => i.name);
-test('no procedural piece fights itself (same-facing coplanar overlap)', async () => {
-	for (const name of PROCEDURAL) {
+test('no piece fights itself (coplanar overlap; both facings for double-sided materials)', async () => {
+	for (const name of ITEMS.map((i) => i.name)) {
 		const r = overlaps(await trianglesOf(glb(name)));
 		assert.equal(r.pairs, 0, `${name}: ${r.pairs} coplanar pairs ${JSON.stringify(r.worst[0])}`);
 	}

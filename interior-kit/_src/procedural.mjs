@@ -503,7 +503,10 @@ async function chandelier() {
 	const iron = [
 		boxUV(new THREE.TorusGeometry(R, 0.018, 8, 40).rotateX(Math.PI / 2).translate(0, ringY, 0), 0),
 		boxUV(new THREE.TorusGeometry(R * 0.55, 0.012, 6, 28).rotateX(Math.PI / 2).translate(0, ringY - 0.06, 0), 0),
-		cyl(0.09, 0.03, 0, -0.03, 0, 20, 0.06), // ceiling rose (top at y = 0)
+		// ceiling rose: its top (y = 0) is OPEN — it meets the ceiling, and a ceiling tile's
+		// double-sided material would fight a closed top there; a disc closes the underside
+		boxUV(new THREE.CylinderGeometry(0.09, 0.06, 0.03, 20, 1, true).translate(0, -0.015, 0), 1),
+		boxUV(new THREE.CircleGeometry(0.06, 20).rotateX(Math.PI / 2).translate(0, -0.03, 0), 1),
 		cyl(0.035, 0.12, 0, ringY - 0.1, 0, 12, 0.02) // the boss under the ring
 	];
 	const wax = [];

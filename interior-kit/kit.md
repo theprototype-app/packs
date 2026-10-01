@@ -76,20 +76,20 @@ trims; `cylinder` for round tables, stools, the plant, the lamp, the rug and the
 | Bar stool | `BarStool` | 0.39 × 0.75 × 0.39 | 1799 | 342 KB | bottom-centre | cylinder | Meshy |
 | Stool (low) | `Stool` | 0.38 × 0.46 × 0.38 | 1500 | 331 KB | bottom-centre | cylinder | Meshy (variant of BarStool) |
 | Bar counter (2 m section) | `BarCounter` | 2.00 × 1.10 × 0.70 | 3999 | 494 KB | bottom-centre | box | Meshy (retextured) |
-| Back-bar shelves (bottles) | `BackBar` | 2.00 × 2.00 × 0.50 | 4999 | 573 KB | wall-line | box | Meshy |
+| Back-bar shelves (bottles) | `BackBar` | 2.00 × 2.00 × 0.50 | 4990 | 572 KB | wall-line | box | Meshy |
 | Crate of fruit | `CrateGoods` | 0.46 × 0.50 × 0.45 | 3065 | 650 KB | bottom-centre | box | Meshy |
 | Wingback armchair (teal) | `Armchair` | 0.90 × 1.05 × 1.00 | 3897 | 535 KB | bottom-centre | hull | Meshy |
-| Sofa, three seats (teal) | `Sofa` | 2.10 × 0.85 × 0.90 | 4744 | 444 KB | bottom-centre | hull | Meshy |
-| Double bed (teal throw) | `DoubleBed` | 1.60 × 1.15 × 2.10 | 5000 | 457 KB | wall-line | box | Meshy |
-| Wardrobe (double) | `Wardrobe` | 1.20 × 2.00 × 0.60 | 3999 | 529 KB | wall-line | box | Meshy |
+| Sofa, three seats (teal) | `Sofa` | 2.10 × 0.85 × 0.90 | 4743 | 444 KB | bottom-centre | hull | Meshy |
+| Double bed (teal throw) | `DoubleBed` | 1.60 × 1.15 × 2.10 | 4934 | 458 KB | wall-line | box | Meshy |
+| Wardrobe (double) | `Wardrobe` | 1.20 × 2.00 × 0.60 | 3961 | 545 KB | wall-line | box | Meshy |
 | Snake plant in a teal pot | `Plant` | 0.35 × 0.95 × 0.34 | 3989 | 872 KB | bottom-centre | cylinder | Meshy |
-| Writing desk (office) | `Desk` | 1.40 × 0.76 × 0.70 | 3215 | 467 KB | bottom-centre | box | Meshy |
+| Writing desk (office) | `Desk` | 1.40 × 0.76 × 0.70 | 3188 | 447 KB | bottom-centre | box | Meshy |
 | Kitchen counter (1 m, teal doors) | `KitchenCounter` | 1.00 × 0.92 × 0.62 | 3000 | 418 KB | wall-line | box | Meshy |
-| Cast-iron range stove | `Stove` | 0.90 × 0.95 × 0.65 | 3877 | 609 KB | wall-line | box | Meshy |
-| Stone fireplace | `Fireplace` | 1.80 × 1.60 × 0.60 | 5000 | 629 KB | wall-line | box | Meshy |
+| Cast-iron range stove | `Stove` | 0.90 × 0.95 × 0.65 | 3873 | 608 KB | wall-line | box | Meshy |
+| Stone fireplace | `Fireplace` | 1.80 × 1.60 × 0.60 | 4971 | 628 KB | wall-line | box | Meshy |
 | Wall sconce (brass) | `WallSconce` | 0.12 × 0.44 × 0.20 | 400 | 55 KB | wall-line | box | procedural |
 | Floor lamp (teal shade) | `FloorLamp` | 0.47 × 1.66 × 0.47 | 1200 | 136 KB | bottom-centre | cylinder | procedural |
-| Iron chandelier (hangs from y = 3) | `Chandelier` | 0.92 × 0.92 × 0.88 | 4464 | 226 KB | top-centre | cylinder | procedural |
+| Iron chandelier (hangs from y = 3) | `Chandelier` | 0.92 × 0.92 × 0.88 | 4444 | 224 KB | top-centre | cylinder | procedural |
 | Round rug Ø 2 m (teal) | `RugRound` | 2.00 × 0.01 × 2.00 | 256 | 442 KB | bottom-centre | cylinder | procedural |
 | Framed landscape (wall) | `Picture` | 0.92 × 0.68 × 0.04 | 130 | 151 KB | wall-line | box | procedural |
 | Wall shelf with books | `WallShelfBooks` | 1.20 × 0.83 × 0.24 | 860 | 192 KB | wall-line | box | procedural |
@@ -98,8 +98,8 @@ trims; `cylinder` for round tables, stools, the plant, the lamp, the rug and the
 | Wainscot panelling (2 m, teal) | `Wainscot` | 2.00 × 0.93 × 0.06 | 166 | 49 KB | wall-line | box | procedural |
 | Wainscot, doorway (2 m, teal) | `WainscotDoorway` | 2.00 × 0.93 × 0.06 | 136 | 49 KB | wall-line | box | procedural |
 | Cornice (2 m, at the ceiling) | `Cornice` | 2.00 × 0.21 × 0.18 | 100 | 37 KB | wall-line | box | procedural |
-| Tavern table + 4 stools | `TavernTableSet` | 1.80 × 0.76 × 1.80 | 9000 | 798 KB | bottom-centre | cylinder | set: RoundTable + Stool + Stool + Stool + Stool |
-| Long table + 2 benches | `DiningSet` | 2.20 × 0.78 × 1.80 | 7000 | 819 KB | bottom-centre | box | set: LongTable + Bench + Bench |
+| Tavern table + 4 stools | `TavernTableSet` | 1.80 × 0.76 × 1.80 | 7498 | 980 KB | bottom-centre | cylinder | set: RoundTable + Stool + Stool + Stool + Stool |
+| Long table + 2 benches | `DiningSet` | 2.20 × 0.78 × 1.80 | 7000 | 909 KB | bottom-centre | box | set: LongTable + Bench + Bench |
 <!-- items:end -->
 
 ## Recipes
@@ -136,7 +136,18 @@ rug in the corner, skirting and cornice on the walls.
   painted landscape — no text), the book shelf (one atlas material for all the books).
 - **Every GLB is flat** (mesh nodes are direct scene children, one primitive each — core's
   scene sync sends nested groups with a world pose) and ≤ 4 meshes (draw calls).
-- Rebuild: `node interior-kit/_src/build.mjs` (reads the Meshy staging folder), `node
+- **No flicker, no pop:** `build.mjs` runs 33-pack-fix-lod's `defight` on every Meshy mesh (Meshy
+  materials are double-sided, so even opposite-facing coplanar layers fight; 7 pieces had them —
+  back-bar, fireplace, desk, bed, wardrobe, stove, sofa — all settled to 0).
+- **LODs (contract P1):** `node tools/lod/lod.mjs interior-kit` writes `<name>.lod1.glb` (~50 %)
+  and, where it passes the visual gate, `.lod2.glb`, plus the `lods` rows in `default.json`: 19
+  items have levels (10 with two). No level: the plant, the chandelier and the book shelf (no
+  simplification passes the tool's visual gate — thin leaves, chain links, many small books), and
+  the trims, sconce, picture and rug (under the 500-triangle floor — core's auto-LOD covers them).
+  **Order matters:** `build.mjs` rewrites `default.json` without `lods` rows — always re-run
+  `lod.mjs` after a build (it rebuilds every level from the new LOD0).
+- Rebuild: `node interior-kit/_src/build.mjs` (reads the Meshy staging folder), `node tools/lod/lod.mjs
+  interior-kit`, `node
   interior-kit/_src/cover.mjs`, `node interior-kit/_src/kitmd.mjs`; tests: `node --test
   interior-kit/_src/test/*.test.mjs`; in-app proof: `interior-kit/_src/e2e-interior-kit.cjs`.
 

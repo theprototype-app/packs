@@ -5,7 +5,17 @@
     "label": "Round table (tavern)",
     "variants": {
       "glTF-Binary": "round-table.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "round-table.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "round-table.lod2.glb",
+        "ratio": 0.28
+      }
+    ]
   },
   {
     "name": "LongTable",
@@ -13,7 +23,13 @@
     "label": "Long table (2.2 m)",
     "variants": {
       "glTF-Binary": "long-table.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "long-table.lod1.glb",
+        "ratio": 0.52
+      }
+    ]
   },
   {
     "name": "Bench",
@@ -21,7 +37,13 @@
     "label": "Trestle bench (1.8 m)",
     "variants": {
       "glTF-Binary": "bench.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "bench.lod1.glb",
+        "ratio": 0.76
+      }
+    ]
   },
   {
     "name": "BarStool",
@@ -29,7 +51,13 @@
     "label": "Bar stool",
     "variants": {
       "glTF-Binary": "bar-stool.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "bar-stool.lod1.glb",
+        "ratio": 0.51
+      }
+    ]
   },
   {
     "name": "Stool",
@@ -37,7 +65,13 @@
     "label": "Stool (low)",
     "variants": {
       "glTF-Binary": "stool.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "stool.lod1.glb",
+        "ratio": 0.63
+      }
+    ]
   },
   {
     "name": "BarCounter",
@@ -45,7 +79,13 @@
     "label": "Bar counter (2 m section)",
     "variants": {
       "glTF-Binary": "bar-counter.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "bar-counter.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "BackBar",
@@ -53,7 +93,17 @@
     "label": "Back-bar shelves (bottles)",
     "variants": {
       "glTF-Binary": "back-bar.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "back-bar.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "back-bar.lod2.glb",
+        "ratio": 0.37
+      }
+    ]
   },
   {
     "name": "CrateGoods",
@@ -61,7 +111,13 @@
     "label": "Crate of fruit",
     "variants": {
       "glTF-Binary": "crate-goods.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "crate-goods.lod1.glb",
+        "ratio": 0.58
+      }
+    ]
   },
   {
     "name": "Armchair",
@@ -69,7 +125,13 @@
     "label": "Wingback armchair (teal)",
     "variants": {
       "glTF-Binary": "armchair.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "armchair.lod1.glb",
+        "ratio": 0.52
+      }
+    ]
   },
   {
     "name": "Sofa",
@@ -77,7 +139,13 @@
     "label": "Sofa, three seats (teal)",
     "variants": {
       "glTF-Binary": "sofa.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "sofa.lod1.glb",
+        "ratio": 0.51
+      }
+    ]
   },
   {
     "name": "DoubleBed",
@@ -85,7 +153,17 @@
     "label": "Double bed (teal throw)",
     "variants": {
       "glTF-Binary": "double-bed.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "double-bed.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "double-bed.lod2.glb",
+        "ratio": 0.2
+      }
+    ]
   },
   {
     "name": "Wardrobe",
@@ -93,7 +171,17 @@
     "label": "Wardrobe (double)",
     "variants": {
       "glTF-Binary": "wardrobe.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wardrobe.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "wardrobe.lod2.glb",
+        "ratio": 0.33
+      }
+    ]
   },
   {
     "name": "Plant",
@@ -109,7 +197,17 @@
     "label": "Writing desk (office)",
     "variants": {
       "glTF-Binary": "desk.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "desk.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "desk.lod2.glb",
+        "ratio": 0.32
+      }
+    ]
   },
   {
     "name": "KitchenCounter",
@@ -117,7 +215,17 @@
     "label": "Kitchen counter (1 m, teal doors)",
     "variants": {
       "glTF-Binary": "kitchen-counter.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "kitchen-counter.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "kitchen-counter.lod2.glb",
+        "ratio": 0.36
+      }
+    ]
   },
   {
     "name": "Stove",
@@ -125,7 +233,17 @@
     "label": "Cast-iron range stove",
     "variants": {
       "glTF-Binary": "stove.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "stove.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "stove.lod2.glb",
+        "ratio": 0.22
+      }
+    ]
   },
   {
     "name": "Fireplace",
@@ -133,7 +251,17 @@
     "label": "Stone fireplace",
     "variants": {
       "glTF-Binary": "fireplace.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "fireplace.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "fireplace.lod2.glb",
+        "ratio": 0.2
+      }
+    ]
   },
   {
     "name": "WallSconce",
@@ -149,7 +277,13 @@
     "label": "Floor lamp (teal shade)",
     "variants": {
       "glTF-Binary": "floor-lamp.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "floor-lamp.lod1.glb",
+        "ratio": 0.52
+      }
+    ]
   },
   {
     "name": "Chandelier",
@@ -229,7 +363,13 @@
     "label": "Tavern table + 4 stools",
     "variants": {
       "glTF-Binary": "tavern-table-set.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "tavern-table-set.lod1.glb",
+        "ratio": 0.63
+      }
+    ]
   },
   {
     "name": "DiningSet",
@@ -237,6 +377,12 @@
     "label": "Long table + 2 benches",
     "variants": {
       "glTF-Binary": "dining-set.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "dining-set.lod1.glb",
+        "ratio": 0.65
+      }
+    ]
   }
 ]

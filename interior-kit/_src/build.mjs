@@ -30,6 +30,13 @@ const { ALL_EXTENSIONS } = await import(`${TOOLS}/node_modules/@gltf-transform/e
 const { mergeDocuments, dedup, prune, getBounds, unpartition, flatten, transformMesh, join, simplify, weld } = await import(`${TOOLS}/node_modules/@gltf-transform/functions/dist/index.js`);
 const { MeshoptSimplifier } = await import(`${TOOLS}/node_modules/meshoptimizer/index.js`);
 
+// 33-pack-fix-lod's defight (tools/lod, its own PR): settles coplanar layers in Meshy meshes —
+// their materials are double-sided, so even OPPOSITE-facing coplanar layers flicker. Optional
+// until that PR is on main: without it the build warns and ships the meshes unsettled.
+const DEFIGHT = new URL('../../tools/lod/defight.mjs', import.meta.url).pathname;
+const { defightFile } = fs.existsSync(DEFIGHT) ? await import(DEFIGHT) : { defightFile: null };
+if (!defightFile) console.warn('WARNING: tools/lod/defight.mjs missing (33-pack-fix-lod) — Meshy meshes are NOT defighted');
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACK = path.resolve(HERE, '..');
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
@@ -207,7 +214,8 @@ async function buildMeshy(item, raw, out) {
 		if (wallLine) for (const mesh of doc.getRoot().listMeshes()) transformMesh(mesh, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, WALL_FACE, 1]);
 		await io.write(out, doc);
 	}
-	return { source: path.relative(STAGING, raw), trisIn: report.trisIn, ...(item.grade ? { grade: item.grade.mul } : {}), ...(inpainted ? { inpainted } : {}), ...(normals.zero || normals.flipped ? { normalsRepaired: normals } : {}) };
+	const fight = defightFile ? await defightFile(out) : null;
+	return { source: path.relative(STAGING, raw), trisIn: report.trisIn, ...(fight && fight.before ? { defight: { pairs: fight.before, dropped: fight.dropped, pushed: fight.pushed } } : {}), ...(item.grade ? { grade: item.grade.mul } : {}), ...(inpainted ? { inpainted } : {}), ...(normals.zero || normals.flipped ? { normalsRepaired: normals } : {}) };
 }
 
 /** Kitbash: finished item GLBs placed at [x, z] with a yaw, merged into one document */

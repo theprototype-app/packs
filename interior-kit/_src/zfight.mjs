@@ -1,8 +1,8 @@
 // zfight: the static flicker probe for interior-kit. Finds pairs of triangles that lie in
 // the same plane, FACE THE SAME WAY and overlap in area — what the depth buffer cannot
 // order, so they shimmer as the camera moves (the user's "flickers only while moving").
-// Opposite-facing coplanar faces are not counted: with single-sided materials one of the
-// two is always back-face culled. It probes a piece on its own AND assemblies of placed
+// Opposite-facing coplanar faces count only when a material is double-sided (Meshy's are):
+// with single-sided materials one of the two is always back-face culled. It probes a piece on its own AND assemblies of placed
 // pieces (a straight run, an inner corner, a trim against the architecture kit's wall).
 //
 //   node zfight.mjs a.glb b.glb …           → one line per file
@@ -93,7 +93,14 @@ function clip(subject, poly) {
  */
 export function overlaps(tris, { tol = 0.0008, minArea = 2e-6, across = false, keep = () => true } = {}) {
 	const buckets = new Map();
+	// a DOUBLE-SIDED material (every Meshy material) draws both faces: its triangles also
+	// count facing the other way, so opposite-facing coplanar layers are caught too
+	const all = [];
 	for (const t of tris) {
+		all.push(t);
+		if (t.double) all.push({ ...t, n: t.n.map((x) => -x), d: -t.d, flip: true });
+	}
+	for (const t of all) {
 		const k = t.n.map((x) => Math.round(x * 20)).join(',');
 		if (!buckets.has(k)) buckets.set(k, []);
 		buckets.get(k).push(t);
@@ -108,9 +115,11 @@ export function overlaps(tris, { tol = 0.0008, minArea = 2e-6, across = false, k
 			for (let j = i + 1; j < list.length && list[j].d - A.d < tol; j++) {
 				const B = list[j];
 				if (across && A.tag === B.tag) continue;
+				if (A.flip && B.flip) continue; // the same pair, counted once unflipped
 				if (!keep(A.tag, B.tag)) continue;
 				if (dot(A.n, B.n) < Math.cos(Math.PI / 180)) continue;
-				if (Math.abs(dot(A.n, B.a) - A.d) > tol) continue;
+				// every corner of B in A's plane (a slightly tilted triangle crossing it is an intersection, not a layer)
+				if ([B.a, B.b, B.c].some((q) => Math.abs(dot(A.n, q) - A.d) > tol)) continue;
 				const ov = clip(ccw(project(A, A.n)), ccw(project(B, A.n)));
 				const ar = ov.length >= 3 ? Math.abs(area2(ov)) : 0;
 				if (ar > minArea) {

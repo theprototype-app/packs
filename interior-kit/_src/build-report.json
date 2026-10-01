@@ -257,8 +257,8 @@
  "BackBar": {
   "label": "Back-bar shelves (bottles)",
   "file": "BackBar/glTF-Binary/back-bar.glb",
-  "bytes": 586340,
-  "tris": 4999,
+  "bytes": 585740,
+  "tris": 4990,
   "meshes": 1,
   "size": [
    2,
@@ -289,6 +289,11 @@
   ],
   "source": "33-pack-interior/back-bar/refine-1/raw.glb",
   "trisIn": 5305,
+  "defight": {
+   "pairs": 13,
+   "dropped": 9,
+   "pushed": 4
+  },
   "normalsRepaired": {
    "zero": 6,
    "flipped": 19
@@ -379,8 +384,8 @@
  "Sofa": {
   "label": "Sofa, three seats (teal)",
   "file": "Sofa/glTF-Binary/sofa.glb",
-  "bytes": 454284,
-  "tris": 4744,
+  "bytes": 454252,
+  "tris": 4743,
   "meshes": 1,
   "size": [
    2.1,
@@ -410,6 +415,11 @@
   ],
   "source": "33-pack-interior/sofa/refine-1/raw.glb",
   "trisIn": 4744,
+  "defight": {
+   "pairs": 1,
+   "dropped": 1,
+   "pushed": 0
+  },
   "grade": [
    0.5,
    0.56,
@@ -419,8 +429,8 @@
  "DoubleBed": {
   "label": "Double bed (teal throw)",
   "file": "DoubleBed/glTF-Binary/double-bed.glb",
-  "bytes": 468112,
-  "tris": 5000,
+  "bytes": 468736,
+  "tris": 4934,
   "meshes": 1,
   "size": [
    1.6,
@@ -452,6 +462,11 @@
   ],
   "source": "33-pack-interior/double-bed/refine-1/raw.glb",
   "trisIn": 5302,
+  "defight": {
+   "pairs": 77,
+   "dropped": 66,
+   "pushed": 151
+  },
   "inpainted": 21030,
   "normalsRepaired": {
    "zero": 8,
@@ -461,8 +476,8 @@
  "Wardrobe": {
   "label": "Wardrobe (double)",
   "file": "Wardrobe/glTF-Binary/wardrobe.glb",
-  "bytes": 541264,
-  "tris": 3999,
+  "bytes": 557832,
+  "tris": 3961,
   "meshes": 1,
   "size": [
    1.2,
@@ -494,6 +509,11 @@
   ],
   "source": "33-pack-interior/wardrobe2/refine-1/raw.glb",
   "trisIn": 4274,
+  "defight": {
+   "pairs": 25,
+   "dropped": 38,
+   "pushed": 888
+  },
   "grade": [
    0.72,
    0.6,
@@ -542,8 +562,8 @@
  "Desk": {
   "label": "Writing desk (office)",
   "file": "Desk/glTF-Binary/desk.glb",
-  "bytes": 478576,
-  "tris": 3215,
+  "bytes": 457272,
+  "tris": 3188,
   "meshes": 1,
   "size": [
    1.4,
@@ -573,6 +593,11 @@
   ],
   "source": "33-pack-interior/desk/refine-1/raw.glb",
   "trisIn": 3215,
+  "defight": {
+   "pairs": 30,
+   "dropped": 27,
+   "pushed": 14
+  },
   "grade": [
    0.7,
    0.56,
@@ -631,8 +656,8 @@
  "Stove": {
   "label": "Cast-iron range stove",
   "file": "Stove/glTF-Binary/stove.glb",
-  "bytes": 623252,
-  "tris": 3877,
+  "bytes": 622844,
+  "tris": 3873,
   "meshes": 1,
   "size": [
    0.9,
@@ -663,6 +688,11 @@
   ],
   "source": "33-pack-interior/stove/refine-1/raw.glb",
   "trisIn": 3877,
+  "defight": {
+   "pairs": 6,
+   "dropped": 4,
+   "pushed": 0
+  },
   "normalsRepaired": {
    "zero": 0,
    "flipped": 18
@@ -671,8 +701,8 @@
  "Fireplace": {
   "label": "Stone fireplace",
   "file": "Fireplace/glTF-Binary/fireplace.glb",
-  "bytes": 644044,
-  "tris": 5000,
+  "bytes": 642844,
+  "tris": 4971,
   "meshes": 1,
   "size": [
    1.8,
@@ -703,6 +733,11 @@
   ],
   "source": "33-pack-interior/fireplace/refine-1/raw.glb",
   "trisIn": 5110,
+  "defight": {
+   "pairs": 8,
+   "dropped": 29,
+   "pushed": 21
+  },
   "normalsRepaired": {
    "zero": 6,
    "flipped": 11
@@ -776,8 +811,8 @@
  "Chandelier": {
   "label": "Iron chandelier (hangs from y = 3)",
   "file": "Chandelier/glTF-Binary/chandelier.glb",
-  "bytes": 231332,
-  "tris": 4464,
+  "bytes": 229172,
+  "tris": 4444,
   "meshes": 3,
   "size": [
    0.92,
