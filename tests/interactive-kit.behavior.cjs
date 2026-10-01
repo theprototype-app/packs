@@ -33,8 +33,13 @@ module.exports = async function behaviorSection(ctx) {
 	console.log('\n=== 4. Interact: the kit items on the behavior runtime ===');
 	const door = byName('DoorWood');
 	const d0 = await dbg(A.page);
-	h.check(d0.items.length === placed.length, `4.0 every placed kit item is a functional item (${d0.items.length} / ${placed.length})`);
-	h.check(d0.items.every((i) => i.state === null), '4.0 no item has a state before anything triggers it');
+	// (the section-3 counterfactual door is functional too, through scene.extras: count by uuid)
+	const mine = d0.items.filter((i) => placed.some((p) => p.uuid === i.uuid));
+	h.check(mine.length === placed.length, `4.0 every placed kit item is a functional item (${mine.length} / ${placed.length})`);
+	h.check(mine.every((i) => i.state === null), '4.0 no item has a state before anything triggers it');
+
+	const badges = await A.page.evaluate(() => [...document.querySelectorAll('#explorer-list .explorer-card')].map((c) => c.querySelector('.explorer-animated')?.getAttribute('data-behavior') ?? null));
+	h.check(badges.length === placed.length && badges.every(Boolean), `4.0 every kit card in the Explorer wears the "animated" badge (${badges.filter(Boolean).length} / ${badges.length})`);
 
 	await A.page.evaluate(() => window.__stores.objectActions.setEditorMode('interact'));
 	await A.page.evaluate(() => window.__stores.objectActions.deselectObject?.());
@@ -49,8 +54,23 @@ module.exports = async function behaviorSection(ctx) {
 	await A.page.screenshot({ path: path.join(SHOTS, 'interact-door-open.png') });
 
 	// 4.2 the capsule: from 1.4 m in front, straight through the doorway (the leaf swings to -Z, hinge at x-0.5)
+	// a sim needs one dynamic body; functional items are never the fallback one (anim-core ea7d312)
+	await A.page.evaluate(async () => {
+		const s = window.__stores;
+		s.commandsHandler.sceneCommand('/create Box 1 1 1');
+		await new Promise((r) => setTimeout(r, 800));
+		let g = null;
+		s.objectsGroup.subscribe((v) => (g = v))();
+		const box = [...g.children].reverse().find((c) => c.isMesh && !c.userData.behavior);
+		box.position.set(12, 3, 12);
+		box.updateMatrixWorld(true);
+		s.physics.setPhysicsFor(box.uuid, { mode: 'dynamic', mass: 1 });
+		s.objectActions.deselectObject();
+	});
 	await A.page.evaluate(() => window.__stores.physics.toggleSimulation());
 	await h.eventually(() => A.page.evaluate(() => !!window.__stores.physics.physicsRuntime()), (v) => v, '4.2 a simulation runs', 15000);
+	const fixedDoor = await A.page.evaluate((uuid) => !window.__stores.physics.physicsDebug().some((b) => b.uuid === uuid), door.uuid);
+	h.check(fixedDoor, '4.2 DoorWood is never a dynamic body (its frame is fixed slabs)');
 	await A.page.waitForTimeout(400);
 	const walk = () =>
 		A.page.evaluate((pos) => {
@@ -65,8 +85,11 @@ module.exports = async function behaviorSection(ctx) {
 			}
 			return { z: p.z, source };
 		}, door.pos);
+	// charController loads physics lazily: walks resolve on the plane tier until Rapier is in,
+	// so prime until a walk reports 'rapier' (300 ms was not always enough on this machine)
+	await h.eventually(() => walk(), (r) => r.source === 'rapier', '4.2 the walker resolves on Rapier', 15000);
 	let w = await walk();
-	h.check(w.z < door.pos[2] - 1.5, `4.2 OPEN: the capsule walks through DoorWood's doorway (z ${w.z.toFixed(2)}, door at ${door.pos[2]}, ${w.source})`);
+	h.check(w.source === 'rapier' && w.z < door.pos[2] - 1.5, `4.2 OPEN: the capsule walks through DoorWood's doorway (z ${w.z.toFixed(2)}, door at ${door.pos[2]}, ${w.source})`);
 	await A.page.evaluate((uuid) => window.__stores.packBehavior.triggerBehavior(uuid), door.uuid);
 	await h.eventually(() => nodeQ(A.page, door.uuid, 'Leaf'), (n) => n && Math.abs(n.q[1]) < 0.01, '4.2 the second trigger swung it shut');
 	await A.page.waitForTimeout(300);
