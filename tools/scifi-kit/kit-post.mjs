@@ -21,6 +21,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { pathToFileURL } from 'node:url';
+import { defightFile } from '../lod/defight.mjs';
 
 export const TOOLS = process.env.MESHY_TOOLS || '/home/deck/.code/theprototype-app/packs-lane-30c-tools/tools/meshy';
 const req = createRequire(path.join(TOOLS, 'package.json'));
@@ -228,7 +229,10 @@ export async function kitPost(input, output, job) {
 		if (job.glow) for (const mat of doc.getRoot().listMaterials()) glowing += await glowMask(doc, mat, job.glow);
 		await doc.transform(prune());
 		await io.write(output, doc);
-		return { ...report, output, clamped: moved, graded, recolored, glowing, bytesOut: fs.statSync(output).size };
+		// the seam clamp folds relief within eps of a face INTO it: coplanar layers that
+		// z-fight while the camera moves (roadmap 33 K1, the Block). Settle them last.
+		const fight = await defightFile(output, output);
+		return { ...report, output, clamped: moved, defight: { pairs: fight.before, dropped: fight.dropped, pushed: fight.pushed }, graded, recolored, glowing, bytesOut: fs.statSync(output).size };
 	} finally {
 		fs.rmSync(tmp, { recursive: true, force: true });
 	}
