@@ -171,7 +171,7 @@
   "StoneStairs": {
     "name": "StoneStairs",
     "file": "town-kit/StoneStairs/glTF-Binary/stone-stairs.glb",
-    "bytes": 544240,
+    "bytes": 543120,
     "tris": 1538,
     "size": [
       2,
@@ -199,14 +199,16 @@
     "fights": {
       "before": 215,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 3.7
     },
     "stage": "refine-1"
   },
   "Well": {
     "name": "Well",
     "file": "town-kit/Well/glTF-Binary/well.glb",
-    "bytes": 726748,
+    "bytes": 726972,
     "tris": 3864,
     "size": [
       2.62,
@@ -234,7 +236,9 @@
     "fights": {
       "before": 6,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 0
     },
     "stage": "refine-1"
   },
@@ -269,15 +273,17 @@
     "fights": {
       "before": 3,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 0
     },
     "stage": "refine-1"
   },
   "MarketStall": {
     "name": "MarketStall",
     "file": "town-kit/MarketStall/glTF-Binary/market-stall.glb",
-    "bytes": 743168,
-    "tris": 4755,
+    "bytes": 744016,
+    "tris": 4764,
     "size": [
       2.4,
       1.805,
@@ -304,7 +310,9 @@
     "fights": {
       "before": 32,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 0.5
     },
     "stage": "refine-1"
   },
@@ -340,7 +348,9 @@
     "fights": {
       "before": 4,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 0
     },
     "glowing": 7.19,
     "stage": "refine-1"
@@ -411,7 +421,9 @@
     "fights": {
       "before": 4,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 0.1
     },
     "stage": "refine-1"
   },
@@ -446,15 +458,17 @@
     "fights": {
       "before": 3,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 0.2
     },
     "stage": "refine-1"
   },
   "FlowerBox": {
     "name": "FlowerBox",
     "file": "town-kit/FlowerBox/glTF-Binary/flower-box.glb",
-    "bytes": 857192,
-    "tris": 2805,
+    "bytes": 857232,
+    "tris": 2806,
     "size": [
       1,
       0.5,
@@ -481,7 +495,9 @@
     "fights": {
       "before": 8,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "surface",
+      "look": 0.2
     },
     "stage": "refine-1"
   },
@@ -523,8 +539,8 @@
   "ClockTowerTop": {
     "name": "ClockTowerTop",
     "file": "town-kit/ClockTowerTop/glTF-Binary/clock-tower-top.glb",
-    "bytes": 777924,
-    "tris": 5359,
+    "bytes": 777932,
+    "tris": 5365,
     "size": [
       4.25,
       8.528,
@@ -551,7 +567,9 @@
     "fights": {
       "before": 26,
       "after": 0,
-      "area": 0
+      "area": 0,
+      "mode": "centre",
+      "look": 0.1
     },
     "stage": "refine-1"
   },
@@ -907,8 +925,8 @@
   "FlowerBoxLong": {
     "name": "FlowerBoxLong",
     "file": "town-kit/FlowerBoxLong/glTF-Binary/flower-box-long.glb",
-    "bytes": 989884,
-    "tris": 5610,
+    "bytes": 989948,
+    "tris": 5612,
     "size": [
       2,
       0.5,
@@ -941,8 +959,8 @@
   "CoverDiorama": {
     "name": "CoverDiorama",
     "file": "tools/town-kit/.build/cover-diorama.glb",
-    "bytes": 5193248,
-    "tris": 22843,
+    "bytes": 5194320,
+    "tris": 22852,
     "size": [
       6.92,
       3.75,

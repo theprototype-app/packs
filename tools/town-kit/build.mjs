@@ -44,6 +44,13 @@ const fightTools = fs.existsSync(path.join(LOD_TOOLS, 'defight.mjs'))
 	? { ...(await import(pathToFileURL(path.join(LOD_TOOLS, 'defight.mjs')).href)), ...(await import(pathToFileURL(path.join(LOD_TOOLS, 'coplanar.mjs')).href)) }
 	: null;
 if (!fightTools) console.warn(`(no ${LOD_TOOLS}/defight.mjs: building WITHOUT the z-fight pass)`);
+// …and its JUDGE (069e732+): every defight candidate is rendered against the file before it and
+// the least-overlap variant within the look limit wins — a blind push can put a hidden layer IN
+// FRONT on a concave piece (the stall, the clock top, the stairs)
+const judge =
+	fightTools && fs.existsSync(path.join(LOD_TOOLS, 'judge.mjs')) && !process.env.DEFIGHT_NO_JUDGE
+		? await new (await import(pathToFileURL(path.join(LOD_TOOLS, 'judge.mjs')).href)).Judge().open()
+		: null;
 
 const kit = JSON.parse(fs.readFileSync(path.join(HERE, 'kit.json'), 'utf8'));
 const PACK = path.join(REPO, kit.pack);
@@ -139,9 +146,9 @@ async function buildItem(it) {
 		// no two same-facing triangles share a plane AND an area (the moving-camera flicker)
 		let fights = null;
 		if (fightTools && !it.internal) {
-			const r = await fightTools.defightFile(out, out);
+			const r = await fightTools.defightFile(out, out, judge ? { judge } : {});
 			const probe = await fightTools.probeFile(out);
-			fights = { before: r.before, after: probe.pairs, area: +probe.area.toFixed(5) };
+			fights = { before: r.before, after: probe.pairs, area: +probe.area.toFixed(5), ...(r.mode ? { mode: r.mode, look: r.look } : {}) };
 		}
 		// FLAT for sync (props-kit finding 2): core's sendObject sends a nested node with its
 		// WORLD pose and the peer parents it under the import root again, so every nested
@@ -185,6 +192,7 @@ for (const it of kit.items) {
 	console.log(JSON.stringify(r));
 	if (!it.internal && r.bytes > 5 * 1024 * 1024) throw new Error(`${it.name}: ${r.bytes} bytes is over the 5 MB share cap`);
 }
+await judge?.close();
 if (!args.includes('--no-thumbs')) {
 	const todo = kit.items.filter((/** @type {any} */ it) => !it.internal && (!only || only.has(it.name)));
 	await renderThumbs(
