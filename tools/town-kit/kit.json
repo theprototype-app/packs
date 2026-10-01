@@ -308,7 +308,8 @@
    "label": "Wall banner",
    "file": "banner.glb",
    "proc": "Banner",
-   "place": "on a wall: origin on the wall face (back plane z = 0), facing +Z"
+   "place": "on a wall: origin on the wall face (back plane z = 0), facing +Z",
+   "pivotDoc": "bottom centre of its back plane (z = 0 is the wall face; the cloth starts 0.4 m up)"
   },
   {
    "name": "BannerPole",

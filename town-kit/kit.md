@@ -66,6 +66,20 @@ benches, carts and boards; `cylinder` for the well, fountain, lamp posts and ban
 the stone stairs and the footbridge (so you can walk up them). The gate's colliders come from its
 behavior (`collider: "follow"`: the leaf's box follows the swing). The wall banner has none.
 
+## Levels of detail and flicker
+
+14 pieces ship `<name>.lod1.glb` (and most a `.lod2.glb`) next to LOD0, listed in their
+`default.json` row as `"lods": [{"file", "ratio"}]` (contract P1; ratio = measured triangle
+fraction). They were made by `tools/lod` (33-pack-fix-lod): meshopt-simplified per primitive in
+place (node names, materials and normals kept, so no lighting pop), each level visually gated
+against LOD0 at the size the app first shows it. Pieces under 500 triangles (the street tiles,
+fence, gate, banners, signpost) and the ones no level could simplify without a visible change
+(hay, flower boxes, stone stairs) have no `lods` row; the app's runtime auto-LOD covers them.
+
+No piece has two same-facing triangles on one plane over the same area (the z-fight that
+shimmers only while the camera moves): every GLB went through `tools/lod/defight.mjs`, and
+`report.json` records the probe's before/after pair count per piece.
+
 ## Mixing with the other packs
 
 - Building fronts: architecture-kit walls with their front face on the sidewalk's back edge;
@@ -97,7 +111,7 @@ behavior (`collider: "follow"`: the leaf's box follows the swing). The wall bann
 | Picket fence (2 m) | 2 × 1.05 × 0.12 | bottom centre | runs on the 2 m grid: sections share their end posts (two half posts make one) |
 | Garden gate + frame (2 m, opens) | 2.021 × 2.1 × 0.141 | bottom centre | in a fence run like a section; click it in Interact/Play to open/close |
 | Wooden footbridge (4.4 m) | 1.9 × 1.64 × 4.444 | bottom centre | over a nature-kit stream or pond edge; runs along Z, ends at 0.24 m |
-| Wall banner | 1.07 × 1.5 × 0.153 | the wall's bottom centre (piece starts 0.4 m up) | on a wall: origin on the wall face (back plane z = 0), facing +Z |
+| Wall banner | 1.07 × 1.5 × 0.153 | bottom centre of its back plane (z = 0 is the wall face; the cloth starts 0.4 m up) | on a wall: origin on the wall face (back plane z = 0), facing +Z |
 | Banner pole | 1.04 × 3.735 × 0.5 | bottom centre | at a square's corners or a bridge end |
 | Signpost (blank) | 1.615 × 2.46 × 1.235 | bottom centre | at a crossroads; the boards are blank |
 | Hay bale stack | 0.9 × 0.9 × 0.92 | bottom centre | by a cart or a barn door |

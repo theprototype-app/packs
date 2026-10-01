@@ -21,7 +21,7 @@ props-kit/                       Props & Interiors: 33 furnishing / dressing / g
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
                                  on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
 tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
-town-kit/                        Town & Market Kit: 26 street tiles (cobble road, curb, corner,
+town-kit/                        Town & Market Kit: 27 pieces — street tiles (cobble road, curb, corner,
                                  crossing, sidewalk), square, market and street-furniture pieces, an
                                  opening garden gate (made with Meshy.ai + procedural, CC0) — kit.md
 tools/town-kit/                  its reproducible build + e2e
