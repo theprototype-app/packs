@@ -1,0 +1,102 @@
+[
+ {
+  "id": "door-studded-a",
+  "pack": "interactive-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "prompt": "a single heavy medieval door leaf on its own, a flat rectangular slab of thick vertical oak planks with rows of round iron studs, two black iron strap hinges across it and an iron ring pull handle, no frame, no wall, front view, game prop",
+  "dims": {
+   "x": 0.98,
+   "y": 2.18,
+   "z": 0.1
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "texturePrompt": "dark weathered oak planks with deep grain, black forged iron strap hinges, rows of round black iron studs, black iron ring handle"
+ },
+ {
+  "id": "iron-gate-a",
+  "pack": "interactive-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "prompt": "a pair of wrought iron garden gates closed side by side, two flat rectangular gate leaves of vertical black iron bars with spear tips on top and decorative scrollwork in the middle, no posts, no wall, front view, game asset",
+  "dims": {
+   "x": 1.7,
+   "y": 2.6,
+   "z": 0.08
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "texturePrompt": "black wrought iron with subtle rust in the crevices and worn bright edges"
+ },
+ {
+  "id": "portcullis-b",
+  "pack": "interactive-kit",
+  "category": "architecture",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "prompt": "an iron portcullis gate, a flat square grid of thick dark iron bars riveted together, the vertical bars end in pointed spikes at the bottom edge, front view, castle game prop",
+  "dims": {
+   "x": 1.8,
+   "y": 2.7,
+   "z": 0.12
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "texturePrompt": "dark forged iron bars with rust patches and round rivets"
+ },
+ {
+  "id": "ceiling-fan-a",
+  "pack": "interactive-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 2500,
+  "prompt": "a rustic ceiling fan, four long flat carved oak blades evenly spaced around a round brass motor housing, a short brass downrod with a round ceiling mount on top, game prop",
+  "dims": {
+   "x": 1.3
+  },
+  "fit": "contain",
+  "pivot": "bottom-center",
+  "texturePrompt": "carved warm oak wooden blades with visible grain, aged polished brass motor housing, downrod and ceiling canopy"
+ },
+ {
+  "id": "cabinet-a",
+  "pack": "interactive-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "prompt": "a rustic oak kitchen cupboard, a tall box cabinet with two flat panel doors side by side on the front, closed, small brass knobs, a plinth at the bottom and a moulded top, game prop",
+  "dims": {
+   "x": 1.0,
+   "y": 1.5,
+   "z": 0.5
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "texturePrompt": "warm honey oak wood with visible grain, raised door panels, small polished brass knobs, slightly darker oak trim and plinth"
+ },
+ {
+  "id": "cabinet-b",
+  "pack": "interactive-kit",
+  "category": "prop",
+  "stage": "refine",
+  "model": "t2",
+  "targetTris": 3000,
+  "prompt": "a farmhouse oak chest of drawers, a box cabinet with three wide flat drawers stacked on the front, each with two brass pull handles, short legs, flat top, game prop",
+  "dims": {
+   "x": 1.0,
+   "y": 1.0,
+   "z": 0.5
+  },
+  "fit": "stretch",
+  "pivot": "bottom-center",
+  "texturePrompt": "warm honey oak wood with visible grain, drawer fronts slightly darker, polished brass pull handles"
+ }
+]

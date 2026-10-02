@@ -7,6 +7,8 @@ shutters, the gate). Every piece is measured, not eyeballed: its size below is e
 millimetre, and pieces placed on the grid meet with **no gaps** — the pack's e2e builds a sealed
 room and counts background pixels through the joints (zero).
 
+> **Animated versions:** the [Interactive Kit](../interactive-kit/kit.md) has this kit's Door, Window and Gate (and a wider doorway, a portcullis wall and a pillar gate) as pieces that OPEN in Interact/Play — same sizes, same placement.
+
 ## The grid in one paragraph
 
 **Walls stand ON grid lines, centred on them.** A wall is 2 m long, 3 m tall (one storey) and

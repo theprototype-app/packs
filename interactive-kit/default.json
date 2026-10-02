@@ -1,0 +1,454 @@
+[
+  {
+    "name": "DoorWood",
+    "label": "Door + frame, opens (fits the kit doorway)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "door-wood.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "door",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "door-wood.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "DoorStudded",
+    "label": "Studded oak door + frame, opens",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "door-studded.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "door",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "door-studded.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "door-studded.lod2.glb",
+        "ratio": 0.22
+      }
+    ]
+  },
+  {
+    "name": "DoorDouble",
+    "label": "Double door in a sandstone wall (2 × 3 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "door-double.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "door",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "door-double.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "door-double.lod2.glb",
+        "ratio": 0.28
+      }
+    ]
+  },
+  {
+    "name": "IronGate",
+    "label": "Iron gate between two pillars",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "iron-gate.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "gate",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "iron-gate.lod1.glb",
+        "ratio": 0.55
+      },
+      {
+        "file": "iron-gate.lod2.glb",
+        "ratio": 0.42
+      }
+    ]
+  },
+  {
+    "name": "Portcullis",
+    "label": "Portcullis in a gate wall (2 × 4.5 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "portcullis.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "gate",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "portcullis.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "SlidingDoor",
+    "label": "Sci-fi sliding door + frame, opens (fits the doorway)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "sliding-door.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "proximity",
+      "autoplay": false,
+      "sound": "slide",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "sliding-door.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "sliding-door.lod2.glb",
+        "ratio": 0.33
+      }
+    ]
+  },
+  {
+    "name": "WallSlidingDoor",
+    "label": "Sci-fi wall + sliding door, opens",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-sliding-door.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "proximity",
+      "autoplay": false,
+      "sound": "slide",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "wall-sliding-door.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "wall-sliding-door.lod2.glb",
+        "ratio": 0.36
+      }
+    ]
+  },
+  {
+    "name": "Trapdoor",
+    "label": "Trapdoor + floor frame (1.2 m)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "trapdoor.glb"
+    },
+    "behavior": {
+      "type": "toggle",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "door",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "trapdoor.lod1.glb",
+        "ratio": 0.6
+      },
+      {
+        "file": "trapdoor.lod2.glb",
+        "ratio": 0.36
+      }
+    ]
+  },
+  {
+    "name": "Shutters",
+    "label": "Window + shutters that close (fits the window wall)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "shutters.glb"
+    },
+    "behavior": {
+      "type": "toggle",
+      "clip": "close",
+      "closeClip": "open",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "door",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "shutters.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Chest",
+    "label": "Treasure chest, lid opens",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "chest.glb"
+    },
+    "behavior": {
+      "type": "toggle",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "lid",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "chest.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "chest.lod2.glb",
+        "ratio": 0.3
+      }
+    ]
+  },
+  {
+    "name": "Crate",
+    "label": "Crate, lid opens",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "crate.glb"
+    },
+    "behavior": {
+      "type": "toggle",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "lid",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "crate.lod1.glb",
+        "ratio": 0.74
+      }
+    ]
+  },
+  {
+    "name": "Cabinet",
+    "label": "Oak wardrobe, doors open",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "cabinet.glb"
+    },
+    "behavior": {
+      "type": "toggle",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "door",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "cabinet.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "cabinet.lod2.glb",
+        "ratio": 0.29
+      }
+    ]
+  },
+  {
+    "name": "Drawers",
+    "label": "Chest of drawers, drawers slide out",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "drawers.glb"
+    },
+    "behavior": {
+      "type": "toggle",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "lid",
+      "collider": "follow"
+    },
+    "lods": [
+      {
+        "file": "drawers.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "drawers.lod2.glb",
+        "ratio": 0.3
+      }
+    ]
+  },
+  {
+    "name": "Lever",
+    "label": "Lever (pull: one-shot)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "lever.glb"
+    },
+    "behavior": {
+      "type": "oneshot",
+      "clip": "pull",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "lever"
+    }
+  },
+  {
+    "name": "PressurePlate",
+    "label": "Pressure plate 1 × 1 m (steps sink it)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "pressure-plate.glb"
+    },
+    "behavior": {
+      "type": "oneshot",
+      "clip": "press",
+      "trigger": "proximity",
+      "autoplay": false,
+      "sound": "click"
+    }
+  },
+  {
+    "name": "WallButton",
+    "label": "Wall button (press: one-shot)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "wall-button.glb"
+    },
+    "behavior": {
+      "type": "oneshot",
+      "clip": "press",
+      "trigger": "click",
+      "autoplay": false,
+      "sound": "click"
+    }
+  },
+  {
+    "name": "Torch",
+    "label": "Wall torch, flickering flame (ambient)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "torch.glb"
+    },
+    "behavior": {
+      "type": "loop",
+      "clip": "loop",
+      "trigger": "click",
+      "autoplay": true
+    },
+    "lods": [
+      {
+        "file": "torch.lod1.glb",
+        "ratio": 0.56
+      },
+      {
+        "file": "torch.lod2.glb",
+        "ratio": 0.41
+      }
+    ]
+  },
+  {
+    "name": "Banner",
+    "label": "Banner stirring in a draught (ambient)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "banner.glb"
+    },
+    "behavior": {
+      "type": "loop",
+      "clip": "loop",
+      "trigger": "click",
+      "autoplay": true
+    },
+    "lods": [
+      {
+        "file": "banner.lod1.glb",
+        "ratio": 0.55
+      },
+      {
+        "file": "banner.lod2.glb",
+        "ratio": 0.28
+      }
+    ]
+  },
+  {
+    "name": "CeilingFan",
+    "label": "Ceiling fan, turning (ambient)",
+    "screenshot": "screenshot/screenshot.webp",
+    "variants": {
+      "glTF-Binary": "ceiling-fan.glb"
+    },
+    "behavior": {
+      "type": "loop",
+      "clip": "loop",
+      "trigger": "click",
+      "autoplay": true
+    },
+    "lods": [
+      {
+        "file": "ceiling-fan.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "ceiling-fan.lod2.glb",
+        "ratio": 0.38
+      }
+    ]
+  }
+]

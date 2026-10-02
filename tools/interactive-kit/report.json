@@ -1,0 +1,618 @@
+{
+ "DoorWood": {
+  "file": "door-wood.glb",
+  "bytes": 493984,
+  "tris": 2870,
+  "nodes": [
+   "Frame",
+   "Leaf"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.65,
+   0,
+   -0.164
+  ],
+  "max": [
+   0.65,
+   2.35,
+   0.165
+  ],
+  "behavior": {
+   "type": "door",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "door",
+   "collider": "follow"
+  }
+ },
+ "DoorStudded": {
+  "file": "door-studded.glb",
+  "bytes": 677172,
+  "tris": 2558,
+  "nodes": [
+   "Frame",
+   "Leaf"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.68,
+   0,
+   -0.175
+  ],
+  "max": [
+   0.68,
+   2.35,
+   0.175
+  ],
+  "behavior": {
+   "type": "door",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "door",
+   "collider": "follow"
+  }
+ },
+ "DoorDouble": {
+  "file": "door-double.glb",
+  "bytes": 1239728,
+  "tris": 4775,
+  "nodes": [
+   "Frame",
+   "LeafL",
+   "LeafR"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -1,
+   0,
+   -0.125
+  ],
+  "max": [
+   1,
+   3,
+   0.125
+  ],
+  "behavior": {
+   "type": "door",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "door",
+   "collider": "follow"
+  }
+ },
+ "IronGate": {
+  "file": "iron-gate.glb",
+  "bytes": 994152,
+  "tris": 5866,
+  "nodes": [
+   "Frame",
+   "FrameR",
+   "LeafL",
+   "LeafR"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -1.25,
+   0,
+   -0.25
+  ],
+  "max": [
+   1.25,
+   3,
+   0.25
+  ],
+  "behavior": {
+   "type": "door",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "gate",
+   "collider": "follow"
+  }
+ },
+ "Portcullis": {
+  "file": "portcullis.glb",
+  "bytes": 1417956,
+  "tris": 6307,
+  "nodes": [
+   "Frame",
+   "FrameTop",
+   "Grid"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -1,
+   0,
+   -0.125
+  ],
+  "max": [
+   1,
+   4.5,
+   0.125
+  ],
+  "behavior": {
+   "type": "door",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "gate",
+   "collider": "follow"
+  }
+ },
+ "SlidingDoor": {
+  "file": "sliding-door.glb",
+  "bytes": 297940,
+  "tris": 3294,
+  "nodes": [
+   "Frame",
+   "PanelL",
+   "PanelR"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.75,
+   0,
+   -0.15
+  ],
+  "max": [
+   0.75,
+   2.6,
+   0.15
+  ],
+  "behavior": {
+   "type": "door",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "proximity",
+   "autoplay": false,
+   "sound": "slide",
+   "collider": "follow"
+  }
+ },
+ "WallSlidingDoor": {
+  "file": "wall-sliding-door.glb",
+  "bytes": 505456,
+  "tris": 4640,
+  "nodes": [
+   "Frame",
+   "PanelL",
+   "PanelR"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -1,
+   0,
+   -0.15
+  ],
+  "max": [
+   1,
+   3,
+   0.15
+  ],
+  "behavior": {
+   "type": "door",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "proximity",
+   "autoplay": false,
+   "sound": "slide",
+   "collider": "follow"
+  }
+ },
+ "Trapdoor": {
+  "file": "trapdoor.glb",
+  "bytes": 89536,
+  "tris": 546,
+  "nodes": [
+   "Frame",
+   "Leaf"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.62,
+   0,
+   -0.62
+  ],
+  "max": [
+   0.62,
+   0.1,
+   0.62
+  ],
+  "behavior": {
+   "type": "toggle",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "door",
+   "collider": "follow"
+  }
+ },
+ "Shutters": {
+  "file": "shutters.glb",
+  "bytes": 579808,
+  "tris": 2564,
+  "nodes": [
+   "Frame",
+   "ShutterL",
+   "ShutterR"
+  ],
+  "clips": [
+   "idle",
+   "close",
+   "open"
+  ],
+  "min": [
+   -0.773,
+   0.975,
+   -0.25
+  ],
+  "max": [
+   0.776,
+   2.225,
+   0.232
+  ],
+  "behavior": {
+   "type": "toggle",
+   "clip": "close",
+   "closeClip": "open",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "door",
+   "collider": "follow"
+  }
+ },
+ "Chest": {
+  "file": "chest.glb",
+  "bytes": 819896,
+  "tris": 3120,
+  "nodes": [
+   "Frame",
+   "Lid"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.384,
+   0,
+   -0.343
+  ],
+  "max": [
+   0.384,
+   0.6,
+   0.343
+  ],
+  "behavior": {
+   "type": "toggle",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "lid",
+   "collider": "follow"
+  }
+ },
+ "Crate": {
+  "file": "crate.glb",
+  "bytes": 720016,
+  "tris": 2752,
+  "nodes": [
+   "Frame",
+   "Lid"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.403,
+   0,
+   -0.273
+  ],
+  "max": [
+   0.403,
+   0.55,
+   0.273
+  ],
+  "behavior": {
+   "type": "toggle",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "lid",
+   "collider": "follow"
+  }
+ },
+ "Cabinet": {
+  "file": "cabinet.glb",
+  "bytes": 390700,
+  "tris": 3847,
+  "nodes": [
+   "Frame",
+   "DoorL",
+   "DoorR"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.5,
+   0,
+   -0.25
+  ],
+  "max": [
+   0.5,
+   1.5,
+   0.25
+  ],
+  "behavior": {
+   "type": "toggle",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "door",
+   "collider": "follow"
+  }
+ },
+ "Lever": {
+  "file": "lever.glb",
+  "bytes": 135128,
+  "tris": 424,
+  "nodes": [
+   "Frame",
+   "Handle"
+  ],
+  "clips": [
+   "idle",
+   "pull"
+  ],
+  "min": [
+   -0.17,
+   0,
+   -0.307
+  ],
+  "max": [
+   0.17,
+   0.582,
+   0.12
+  ],
+  "behavior": {
+   "type": "oneshot",
+   "clip": "pull",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "lever"
+  }
+ },
+ "PressurePlate": {
+  "file": "pressure-plate.glb",
+  "bytes": 89628,
+  "tris": 72,
+  "nodes": [
+   "Frame",
+   "Plate"
+  ],
+  "clips": [
+   "idle",
+   "press"
+  ],
+  "min": [
+   -0.5,
+   0,
+   -0.5
+  ],
+  "max": [
+   0.5,
+   0.052,
+   0.5
+  ],
+  "behavior": {
+   "type": "oneshot",
+   "clip": "press",
+   "trigger": "proximity",
+   "autoplay": false,
+   "sound": "click"
+  }
+ },
+ "WallButton": {
+  "file": "wall-button.glb",
+  "bytes": 101712,
+  "tris": 300,
+  "nodes": [
+   "Frame",
+   "Cap"
+  ],
+  "clips": [
+   "idle",
+   "press"
+  ],
+  "min": [
+   -0.1,
+   0,
+   0
+  ],
+  "max": [
+   0.1,
+   0.2,
+   0.095
+  ],
+  "behavior": {
+   "type": "oneshot",
+   "clip": "press",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "click"
+  }
+ },
+ "Torch": {
+  "file": "torch.glb",
+  "bytes": 142616,
+  "tris": 652,
+  "nodes": [
+   "Frame",
+   "Flame"
+  ],
+  "clips": [
+   "idle",
+   "loop"
+  ],
+  "min": [
+   -0.052,
+   0,
+   0
+  ],
+  "max": [
+   0.052,
+   0.685,
+   0.324
+  ],
+  "behavior": {
+   "type": "loop",
+   "clip": "loop",
+   "trigger": "click",
+   "autoplay": true
+  }
+ },
+ "Banner": {
+  "file": "banner.glb",
+  "bytes": 445732,
+  "tris": 640,
+  "nodes": [
+   "Frame",
+   "Banner"
+  ],
+  "clips": [
+   "idle",
+   "loop"
+  ],
+  "min": [
+   -0.67,
+   0,
+   0
+  ],
+  "max": [
+   0.67,
+   1.66,
+   0.09
+  ],
+  "behavior": {
+   "type": "loop",
+   "clip": "loop",
+   "trigger": "click",
+   "autoplay": true
+  }
+ },
+ "CeilingFan": {
+  "file": "ceiling-fan.glb",
+  "bytes": 706876,
+  "tris": 2540,
+  "nodes": [
+   "Frame",
+   "Rotor"
+  ],
+  "clips": [
+   "idle",
+   "loop"
+  ],
+  "min": [
+   -0.65,
+   -0.993,
+   -0.65
+  ],
+  "max": [
+   0.65,
+   0,
+   0.65
+  ],
+  "behavior": {
+   "type": "loop",
+   "clip": "loop",
+   "trigger": "click",
+   "autoplay": true
+  }
+ },
+ "Drawers": {
+  "file": "drawers.glb",
+  "bytes": 550980,
+  "tris": 4244,
+  "nodes": [
+   "Frame",
+   "Drawer1",
+   "Drawer2",
+   "Drawer3"
+  ],
+  "clips": [
+   "idle",
+   "open",
+   "close"
+  ],
+  "min": [
+   -0.5,
+   0,
+   -0.25
+  ],
+  "max": [
+   0.5,
+   1,
+   0.25
+  ],
+  "behavior": {
+   "type": "toggle",
+   "clip": "open",
+   "closeClip": "close",
+   "trigger": "click",
+   "autoplay": false,
+   "sound": "lid",
+   "collider": "follow"
+  }
+ }
+}

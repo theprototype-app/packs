@@ -8,6 +8,8 @@ hinge pivots**, and a small sci-fi pair. Built to sit in the same rooms as the
 sandstone / slate / iron / brass), and **one accent colour: teal** (the painted crate,
 the bed blanket, the tapestry, the button caps, the market awning).
 
+> **Animated versions:** the [Interactive Kit](../interactive-kit/kit.md) has the Chest and Crate with lids that lift, the Hatch in a frame, the Lever, Pressure plate and Wall button as working one-shots, the Wall torch with a flickering flame and the Tapestry as a stirring banner.
+
 ## Scale, pivots and the grid
 
 - **1 unit = 1 metre**, real-world sizes: a table top is 0.78 m high, a chair seat

@@ -1,0 +1,5 @@
+[
+ {"id":"cabinet-b-oak","pack":"interactive-kit","category":"prop","stage":"retexture","from":"cabinet-b",
+  "texturePrompt":"evenly coloured warm honey oak wood with straight visible grain on every side, clean side panels, drawer fronts slightly darker oak, polished brass pull handles",
+  "dims":{"x":1.0,"y":1.0,"z":0.5},"fit":"stretch","pivot":"bottom-center"}
+]
