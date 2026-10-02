@@ -3,7 +3,7 @@
     "name": "Wall",
     "file": "scifi-kit/Wall/glTF-Binary/wall.glb",
     "bytes": 192736,
-    "tris": 998,
+    "tris": 996,
     "size": [
       2,
       3,
@@ -58,7 +58,7 @@
     "name": "WallDoorway",
     "file": "scifi-kit/WallDoorway/glTF-Binary/wall-doorway.glb",
     "bytes": 254604,
-    "tris": 1442,
+    "tris": 1426,
     "size": [
       2,
       3,
@@ -117,7 +117,7 @@
     "name": "WallDoor",
     "file": "scifi-kit/WallDoor/glTF-Binary/wall-door.glb",
     "bytes": 485196,
-    "tris": 4346,
+    "tris": 4325,
     "size": [
       2,
       3,
@@ -175,7 +175,7 @@
     "name": "WallWindow",
     "file": "scifi-kit/WallWindow/glTF-Binary/wall-window.glb",
     "bytes": 252332,
-    "tris": 1490,
+    "tris": 1458,
     "size": [
       2,
       3,
@@ -343,7 +343,7 @@
     "name": "Stairs",
     "file": "scifi-kit/Stairs/glTF-Binary/stairs.glb",
     "bytes": 612776,
-    "tris": 3711,
+    "tris": 3699,
     "size": [
       2,
       3.455,
@@ -426,7 +426,7 @@
     "name": "Console",
     "file": "scifi-kit/Console/glTF-Binary/console.glb",
     "bytes": 562888,
-    "tris": 3731,
+    "tris": 3729,
     "size": [
       1.823,
       1.1,
@@ -513,7 +513,7 @@
     "name": "Crate",
     "file": "scifi-kit/Crate/glTF-Binary/crate.glb",
     "bytes": 786356,
-    "tris": 2370,
+    "tris": 2367,
     "size": [
       0.724,
       0.7,
@@ -541,7 +541,7 @@
     "name": "CrateLarge",
     "file": "scifi-kit/CrateLarge/glTF-Binary/crate-large.glb",
     "bytes": 662648,
-    "tris": 2370,
+    "tris": 2368,
     "size": [
       1.158,
       1.12,

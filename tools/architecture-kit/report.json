@@ -3,7 +3,7 @@
     "name": "WallStone",
     "file": "architecture-kit/WallStone/glTF-Binary/wall-stone.glb",
     "bytes": 843608,
-    "tris": 3072,
+    "tris": 3067,
     "size": [
       2,
       3,
@@ -31,7 +31,7 @@
     "name": "WallStoneDoor",
     "file": "architecture-kit/WallStoneDoor/glTF-Binary/wall-stone-door.glb",
     "bytes": 821924,
-    "tris": 2616,
+    "tris": 2606,
     "size": [
       2,
       3,
@@ -58,7 +58,7 @@
     "name": "WallStoneWindow",
     "file": "architecture-kit/WallStoneWindow/glTF-Binary/wall-stone-window.glb",
     "bytes": 866136,
-    "tris": 3701,
+    "tris": 3694,
     "size": [
       2,
       3,
@@ -85,7 +85,7 @@
     "name": "WallStoneHalf",
     "file": "architecture-kit/WallStoneHalf/glTF-Binary/wall-stone-half.glb",
     "bytes": 779908,
-    "tris": 1634,
+    "tris": 1629,
     "size": [
       2,
       1.5,
@@ -139,7 +139,7 @@
     "name": "CornerPostStone",
     "file": "architecture-kit/CornerPostStone/glTF-Binary/corner-post-stone.glb",
     "bytes": 739544,
-    "tris": 678,
+    "tris": 676,
     "size": [
       0.25,
       3,
@@ -166,7 +166,7 @@
     "name": "WallPlaster",
     "file": "architecture-kit/WallPlaster/glTF-Binary/wall-plaster.glb",
     "bytes": 559888,
-    "tris": 3072,
+    "tris": 3067,
     "size": [
       2,
       3,
@@ -194,7 +194,7 @@
     "name": "WallPlasterDoor",
     "file": "architecture-kit/WallPlasterDoor/glTF-Binary/wall-plaster-door.glb",
     "bytes": 538204,
-    "tris": 2616,
+    "tris": 2606,
     "size": [
       2,
       3,
@@ -221,7 +221,7 @@
     "name": "WallPlasterWindow",
     "file": "architecture-kit/WallPlasterWindow/glTF-Binary/wall-plaster-window.glb",
     "bytes": 582416,
-    "tris": 3701,
+    "tris": 3694,
     "size": [
       2,
       3,
@@ -248,7 +248,7 @@
     "name": "WallPlasterHalf",
     "file": "architecture-kit/WallPlasterHalf/glTF-Binary/wall-plaster-half.glb",
     "bytes": 496180,
-    "tris": 1634,
+    "tris": 1629,
     "size": [
       2,
       1.5,
@@ -358,7 +358,7 @@
     "name": "Arch",
     "file": "architecture-kit/Arch/glTF-Binary/arch.glb",
     "bytes": 407260,
-    "tris": 3499,
+    "tris": 3492,
     "size": [
       2,
       3,
@@ -470,7 +470,7 @@
     "name": "Stairs",
     "file": "architecture-kit/Stairs/glTF-Binary/stairs.glb",
     "bytes": 728788,
-    "tris": 2940,
+    "tris": 2932,
     "size": [
       2,
       3,
@@ -526,7 +526,7 @@
     "name": "Block",
     "file": "architecture-kit/Block/glTF-Binary/block.glb",
     "bytes": 671752,
-    "tris": 1408,
+    "tris": 1404,
     "size": [
       2,
       1,
@@ -554,7 +554,7 @@
     "name": "Ramp",
     "file": "architecture-kit/Ramp/glTF-Binary/ramp.glb",
     "bytes": 671752,
-    "tris": 1408,
+    "tris": 1399,
     "size": [
       2,
       1,
@@ -609,7 +609,7 @@
     "name": "RoofSlope",
     "file": "architecture-kit/RoofSlope/glTF-Binary/roof-slope.glb",
     "bytes": 394364,
-    "tris": 1623,
+    "tris": 1592,
     "size": [
       2,
       1.5,
@@ -636,7 +636,7 @@
     "name": "Battlement",
     "file": "architecture-kit/Battlement/glTF-Binary/battlement.glb",
     "bytes": 692320,
-    "tris": 2468,
+    "tris": 2466,
     "size": [
       2,
       1.2,
