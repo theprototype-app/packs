@@ -21,6 +21,16 @@
     "label": "Duck",
     "variants": {
       "glTF-Binary": "Duck.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Duck.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "Duck.lod2.glb",
+        "ratio": 0.2
+      }
+    ]
   }
 ]

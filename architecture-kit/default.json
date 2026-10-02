@@ -5,7 +5,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-stone.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-stone.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "WallStoneDoor",
@@ -13,7 +19,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-stone-door.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-stone-door.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "WallStoneWindow",
@@ -21,7 +33,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-stone-window.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-stone-window.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "WallStoneHalf",
@@ -29,7 +47,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-stone-half.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-stone-half.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "WallStoneGable",
@@ -37,7 +61,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-stone-gable.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-stone-gable.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "CornerPostStone",
@@ -45,7 +75,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "corner-post-stone.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "corner-post-stone.lod1.glb",
+        "ratio": 0.58
+      }
+    ]
   },
   {
     "name": "WallPlaster",
@@ -53,7 +89,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-plaster.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-plaster.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "WallPlasterDoor",
@@ -61,7 +103,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-plaster-door.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-plaster-door.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "WallPlasterWindow",
@@ -69,7 +117,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-plaster-window.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-plaster-window.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "wall-plaster-window.lod2.glb",
+        "ratio": 0.36
+      }
+    ]
   },
   {
     "name": "WallPlasterHalf",
@@ -77,7 +135,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-plaster-half.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-plaster-half.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "WallPlasterGable",
@@ -85,7 +149,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "wall-plaster-gable.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "wall-plaster-gable.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "Pillar",
@@ -93,7 +163,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "pillar.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "pillar.lod1.glb",
+        "ratio": 0.59
+      }
+    ]
   },
   {
     "name": "Column",
@@ -101,7 +177,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "column.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "column.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "column.lod2.glb",
+        "ratio": 0.32
+      }
+    ]
   },
   {
     "name": "Arch",
@@ -109,7 +195,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "arch.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "arch.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "FloorStone",
@@ -117,7 +209,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "floor-stone.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "floor-stone.lod1.glb",
+        "ratio": 0.66
+      }
+    ]
   },
   {
     "name": "FloorWood",
@@ -125,7 +223,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "floor-wood.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "floor-wood.lod1.glb",
+        "ratio": 0.66
+      }
+    ]
   },
   {
     "name": "FloorSlate",
@@ -133,7 +237,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "floor-slate.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "floor-slate.lod1.glb",
+        "ratio": 0.66
+      }
+    ]
   },
   {
     "name": "Stairs",
@@ -141,7 +251,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "stairs.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "stairs.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "stairs.lod2.glb",
+        "ratio": 0.35
+      }
+    ]
   },
   {
     "name": "StairsWood",
@@ -149,7 +269,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "stairs-wood.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "stairs-wood.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "stairs-wood.lod2.glb",
+        "ratio": 0.34
+      }
+    ]
   },
   {
     "name": "Block",
@@ -157,7 +287,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "block.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "block.lod1.glb",
+        "ratio": 0.65
+      }
+    ]
   },
   {
     "name": "Ramp",
@@ -165,7 +301,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "ramp.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "ramp.lod1.glb",
+        "ratio": 0.8
+      },
+      {
+        "file": "ramp.lod2.glb",
+        "ratio": 0.61
+      }
+    ]
   },
   {
     "name": "RoofSlope",
@@ -173,7 +319,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "roof-slope.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "roof-slope.lod1.glb",
+        "ratio": 0.79
+      }
+    ]
   },
   {
     "name": "Battlement",
@@ -181,7 +333,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "battlement.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "battlement.lod1.glb",
+        "ratio": 0.64
+      }
+    ]
   },
   {
     "name": "Tower",
@@ -189,7 +347,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "tower.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "tower.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "Door",
@@ -197,7 +361,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "door.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "door.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "Window",
@@ -205,7 +375,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "window.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "window.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "Gate",
@@ -213,7 +389,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "gate.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "gate.lod1.glb",
+        "ratio": 0.49
+      },
+      {
+        "file": "gate.lod2.glb",
+        "ratio": 0.2
+      }
+    ]
   },
   {
     "name": "Fence",
@@ -221,7 +407,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "fence.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "fence.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "fence.lod2.glb",
+        "ratio": 0.21
+      }
+    ]
   },
   {
     "name": "Railing",
@@ -229,7 +425,17 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "railing.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "railing.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "railing.lod2.glb",
+        "ratio": 0.25
+      }
+    ]
   },
   {
     "name": "Beam",
@@ -237,7 +443,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "beam.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "beam.lod1.glb",
+        "ratio": 0.55
+      }
+    ]
   },
   {
     "name": "Trim",
@@ -245,7 +457,13 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "trim.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "trim.lod1.glb",
+        "ratio": 0.58
+      }
+    ]
   },
   {
     "name": "Chimney",
@@ -253,6 +471,12 @@
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "chimney.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "chimney.lod1.glb",
+        "ratio": 0.71
+      }
+    ]
   }
 ]

@@ -5,7 +5,13 @@
     "label": "Oak Tree",
     "variants": {
       "glTF-Binary": "Oak.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Oak.lod1.glb",
+        "ratio": 0.74
+      }
+    ]
   },
   {
     "name": "OakAutumn",
@@ -13,7 +19,13 @@
     "label": "Oak Tree (autumn)",
     "variants": {
       "glTF-Binary": "OakAutumn.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "OakAutumn.lod1.glb",
+        "ratio": 0.74
+      }
+    ]
   },
   {
     "name": "Pine",
@@ -21,7 +33,13 @@
     "label": "Pine Tree",
     "variants": {
       "glTF-Binary": "Pine.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Pine.lod1.glb",
+        "ratio": 0.7
+      }
+    ]
   },
   {
     "name": "Birch",
@@ -37,7 +55,13 @@
     "label": "Dead Tree",
     "variants": {
       "glTF-Binary": "DeadTree.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "DeadTree.lod1.glb",
+        "ratio": 0.71
+      }
+    ]
   },
   {
     "name": "Palm",
@@ -125,7 +149,13 @@
     "label": "Mushroom Cluster",
     "variants": {
       "glTF-Binary": "Mushrooms.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Mushrooms.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "RockSmall",
@@ -133,7 +163,13 @@
     "label": "Rock (small)",
     "variants": {
       "glTF-Binary": "RockSmall.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "RockSmall.lod1.glb",
+        "ratio": 0.6
+      }
+    ]
   },
   {
     "name": "RockMedium",
@@ -141,7 +177,13 @@
     "label": "Rock (medium)",
     "variants": {
       "glTF-Binary": "RockMedium.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "RockMedium.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "RockLarge",
@@ -149,7 +191,13 @@
     "label": "Rock (large)",
     "variants": {
       "glTF-Binary": "RockLarge.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "RockLarge.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "FlatRock",
@@ -157,7 +205,13 @@
     "label": "Flat Rock",
     "variants": {
       "glTF-Binary": "FlatRock.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "FlatRock.lod1.glb",
+        "ratio": 0.78
+      }
+    ]
   },
   {
     "name": "BoulderCluster",
@@ -165,7 +219,17 @@
     "label": "Boulder Cluster",
     "variants": {
       "glTF-Binary": "BoulderCluster.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "BoulderCluster.lod1.glb",
+        "ratio": 0.58
+      },
+      {
+        "file": "BoulderCluster.lod2.glb",
+        "ratio": 0.45
+      }
+    ]
   },
   {
     "name": "SteppingStones",
@@ -173,7 +237,13 @@
     "label": "Stepping Stones",
     "variants": {
       "glTF-Binary": "SteppingStones.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "SteppingStones.lod1.glb",
+        "ratio": 0.78
+      }
+    ]
   },
   {
     "name": "Cliff",
@@ -181,7 +251,13 @@
     "label": "Cliff Wall (modular 4 m)",
     "variants": {
       "glTF-Binary": "Cliff.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Cliff.lod1.glb",
+        "ratio": 0.8
+      }
+    ]
   },
   {
     "name": "PathTile",
@@ -189,7 +265,13 @@
     "label": "Stone Path Tile (2×2 m)",
     "variants": {
       "glTF-Binary": "PathTile.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "PathTile.lod1.glb",
+        "ratio": 0.51
+      }
+    ]
   },
   {
     "name": "Log",
@@ -197,7 +279,13 @@
     "label": "Fallen Log",
     "variants": {
       "glTF-Binary": "Log.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Log.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
   },
   {
     "name": "Stump",
@@ -205,7 +293,13 @@
     "label": "Tree Stump",
     "variants": {
       "glTF-Binary": "Stump.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Stump.lod1.glb",
+        "ratio": 0.52
+      }
+    ]
   },
   {
     "name": "Bridge",
@@ -213,7 +307,17 @@
     "label": "Wooden Footbridge",
     "variants": {
       "glTF-Binary": "Bridge.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Bridge.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "Bridge.lod2.glb",
+        "ratio": 0.34
+      }
+    ]
   },
   {
     "name": "Hill",
@@ -221,7 +325,17 @@
     "label": "Grassy Mound (8×8 m, walkable)",
     "variants": {
       "glTF-Binary": "Hill.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "Hill.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "Hill.lod2.glb",
+        "ratio": 0.34
+      }
+    ]
   },
   {
     "name": "FallenLeaves",
@@ -245,6 +359,12 @@
     "label": "Pond with Rocks & Reeds",
     "variants": {
       "glTF-Binary": "PondSet.glb"
-    }
+    },
+    "lods": [
+      {
+        "file": "PondSet.lod1.glb",
+        "ratio": 0.75
+      }
+    ]
   }
 ]
