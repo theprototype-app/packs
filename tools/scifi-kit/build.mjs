@@ -19,6 +19,7 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { TOOLS, kitPost } from './kit-post.mjs';
+import { defightFile } from '../lod/defight.mjs';
 import { kitCut, DERIVE } from './kit-cut.mjs';
 import { writePiece, OPENINGS } from './procedural.mjs';
 
@@ -122,6 +123,10 @@ async function buildItem(it) {
 			report = { ...report, cut: await kitCut(cur, next, typeof it.cut === 'string' ? DERIVE[it.cut](it.cutOpts ?? OPENINGS[it.cut]) : it.cut) };
 			cur = next;
 		}
+		// a cut (mirror, opening) or a kitbash (a wall + its lining or glass) makes surfaces meet in
+		// one plane AFTER the post step's defight ran: settle them last (34-pack-ci — without this a
+		// rebuild ships 300-3000 cm² of coplanar overlap on every wall that the shipped files do not have)
+		if (it.cut || it.kitbash) await defightFile(cur, cur);
 		fs.copyFileSync(cur, out);
 		const doc = await io.read(out);
 		// FLAT for sync (props-kit finding 2): core's sendObject sends a nested node with its

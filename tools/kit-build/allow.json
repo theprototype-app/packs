@@ -1,0 +1,102 @@
+{
+	"note": "Known, accepted failures of `kit-build check` — each with the reason it is accepted. {pack, item ('*' = every item), check, file? (one file only), reason}. An entry that matches nothing is reported, so remove it once the item is fixed.",
+	"allow": [
+		{
+			"pack": "nature-kit",
+			"item": "Birch",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: no level reaches <= 80 % within the error caps (best 1 / 1) — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "nature-kit",
+			"item": "Palm",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: no level reaches <= 80 % within the error caps (best 1 / 1) — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "nature-kit",
+			"item": "Bush",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.86 / 0.83 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "nature-kit",
+			"item": "BushAutumn",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.86 / 0.83 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "nature-kit",
+			"item": "Fern",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.9 / 1 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "nature-kit",
+			"item": "FlowerPatch",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.97 / 0.97 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "props-kit",
+			"item": "PottedPlant",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 1 / 1 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "scifi-kit",
+			"item": "ServerRack",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.82 / 0.81 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "scifi-kit",
+			"item": "PlantPod",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.9 / 0.9 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "interior-kit",
+			"item": "Plant",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 1 / 1 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "interior-kit",
+			"item": "Chandelier",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 1 / 1 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "town-kit",
+			"item": "FlowerBox",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.82 / 0.82 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "town-kit",
+			"item": "FlowerBoxLong",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.82 / 0.82 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "town-kit",
+			"item": "HayStack",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.85 / 0.84 of LOD0 — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "default",
+			"item": "SvelteRune",
+			"check": "lods",
+			"reason": "tools/lod (33-pack-fix-lod) builds no level: best 0.88 / 0.82 of LOD0 (the starter model, 2000-tri floor) — the visual gate refuses every candidate (foliage / straw / fine detail needs impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "nature-kit",
+			"item": "PondSet",
+			"check": "flicker",
+			"file": "nature-kit/PondSet/glTF-Binary/PondSet.glb",
+			"reason": "render probe 404 px (> the 400 px recording limit) — the same 404 px 33-pack-fix-lod measured; none of defight's candidates flickers clearly less (best 403 px), and the roadmap-33 in-app scan passed it under the patch limit. The kitbash's reeds and pond edge, not a fixable coplanar layer; re-judge if the pond is rebuilt"
+		}
+	]
+}
