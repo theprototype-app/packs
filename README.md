@@ -21,6 +21,8 @@ props-kit/                       Props & Interiors: 33 furnishing / dressing / g
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
                                  on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
 tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
+arcane-kit/                      Arcane Study Kit: 7 wizard's-study hero props with LODs (crystal ball,
+                                 alchemist's table, lectern, telescope, armillary, potions, rune rug; CC0, Meshy.ai)
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -70,6 +72,8 @@ reading the ref they were built against.
 - `nature-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) and
   post-processed here (`nature-kit/build/`); grass, leaves decal and pond water are procedural.
 - `scifi-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
+  (see its `attribution.html`).
+- `arcane-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
   (see its `attribution.html`).
 
 See [LICENSE](LICENSE) and each pack's `attribution.html`.
