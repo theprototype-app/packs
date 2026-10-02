@@ -28,7 +28,7 @@ skipped item with its reason.
   `defight-all.mjs` LOOKS at every candidate (surface rule, bbox-middle rule, drop-only) against
   the original render and keeps the one with the least overlap among those within Δ 30; none →
   the file is left as is. Every file's outcome is in `defight-report.json`. The
-  architecture/scifi kit-post runs it last (their seam clamp is what folds relief into
+  architecture/scifi post step (tools/kit-build/lib/post.mjs) runs it last (their seam clamp is what folds relief into
   coplanar layers). A kitbashed lining must never sit flush with a cut wall: scifi's
   `procedural.mjs` insets it 4 mm (`tools/scifi-kit/inset-linings.mjs` for shipped GLBs) —
   inset BEFORE defight.
