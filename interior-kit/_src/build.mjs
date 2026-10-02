@@ -15,27 +15,25 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createRequire } from 'node:module';
 import { ITEMS, pivotOf } from './items.mjs';
 import { PIECES, WALL_FACE } from './procedural.mjs';
 
-const TOOLS = process.env.MESHY_TOOLS ?? new URL('../../tools/meshy', import.meta.url).pathname;
+// the shared pack tooling (roadmap 34 E2: tools/kit-build instead of a fork per kit) — gltf-transform
+// comes through its loader, so the Documents here and its helpers are ONE module instance
+const { TOOLS, load, tool } = await import('../../tools/kit-build/lib/deps.mjs');
+const { gradeLinear: grade, inpaintBlack, repairNormals, flatForSync } = await import('../../tools/kit-build/lib/post.mjs');
 const STAGING = process.env.MESHY_STAGING ?? path.join(os.homedir(), '.code/lanes-30/meshy/staging');
 const REQUESTER = '33-pack-interior';
-const { postProcess } = await import(`${TOOLS}/lib/post.js`);
-const sharp = createRequire(`${TOOLS}/package.json`)('sharp');
-const { renderThumbs } = await import(`${TOOLS}/lib/thumb.js`);
-const { NodeIO } = await import(`${TOOLS}/node_modules/@gltf-transform/core/dist/index.js`);
-const { ALL_EXTENSIONS } = await import(`${TOOLS}/node_modules/@gltf-transform/extensions/dist/index.js`);
-const { mergeDocuments, dedup, prune, getBounds, unpartition, flatten, transformMesh, join, simplify, weld } = await import(`${TOOLS}/node_modules/@gltf-transform/functions/dist/index.js`);
-const { MeshoptSimplifier } = await import(`${TOOLS}/node_modules/meshoptimizer/index.js`);
+const { postProcess } = await tool('lib/post.js');
+const { renderThumbs } = await tool('lib/thumb.js');
+const { NodeIO } = await load('@gltf-transform/core');
+const { ALL_EXTENSIONS } = await load('@gltf-transform/extensions');
+const { mergeDocuments, dedup, prune, getBounds, unpartition, flatten, transformMesh, join, simplify, weld } = await load('@gltf-transform/functions');
+const { MeshoptSimplifier } = await load('meshoptimizer');
 
-// 33-pack-fix-lod's defight (tools/lod, its own PR): settles coplanar layers in Meshy meshes —
-// their materials are double-sided, so even OPPOSITE-facing coplanar layers flicker. Optional
-// until that PR is on main: without it the build warns and ships the meshes unsettled.
-const DEFIGHT = new URL('../../tools/lod/defight.mjs', import.meta.url).pathname;
-const { defightFile } = fs.existsSync(DEFIGHT) ? await import(DEFIGHT) : { defightFile: null };
-if (!defightFile) console.warn('WARNING: tools/lod/defight.mjs missing (33-pack-fix-lod) — Meshy meshes are NOT defighted');
+// 33-pack-fix-lod's defight (tools/lod): settles coplanar layers in Meshy meshes — their materials
+// are double-sided, so even OPPOSITE-facing coplanar layers flicker.
+const { defightFile } = await import('../../tools/lod/defight.mjs');
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACK = path.resolve(HERE, '..');
@@ -62,144 +60,6 @@ function sizeOf(doc) {
 	return { min: b.min, max: b.max, size: [0, 1, 2].map((i) => b.max[i] - b.min[i]) };
 }
 
-/** Colour-grade every base-colour texture: per-channel multiply (+ offset) */
-async function grade(doc, { mul, add = [0, 0, 0], only }) {
-	for (const mat of doc.getRoot().listMaterials()) {
-		const tex = mat.getBaseColorTexture();
-		const img = tex?.getImage();
-		if (!img) continue;
-		if (only === 'teal') {
-			// SELECTIVE: only teal-ish texels (green and blue well above red) — a painted cupboard
-			// darkens to the pack's deep teal while its marble top and brass stay as they are
-			const { data, info } = await sharp(Buffer.from(img)).removeAlpha().raw().toBuffer({ resolveWithObject: true });
-			for (let i = 0; i < data.length; i += 3) {
-				const [r, g, b] = [data[i], data[i + 1], data[i + 2]];
-				const k = Math.min(1, Math.max(0, (Math.min(g, b) - r - 12) / 30)); // soft mask
-				if (k <= 0) continue;
-				for (let c = 0; c < 3; c++) data[i + c] = Math.round(data[i + c] * (1 - k + k * mul[c]));
-			}
-			tex.setImage(await sharp(data, { raw: info }).jpeg({ quality: 86 }).toBuffer()).setMimeType('image/jpeg');
-			continue;
-		}
-		tex.setImage(await sharp(Buffer.from(img)).linear(mul, add).jpeg({ quality: 86 }).toBuffer()).setMimeType('image/jpeg');
-	}
-}
-
-/** Repair texels Meshy left unpainted (pure black holes in the atlas — the bed's headboard
- * showed one): diffuse the surrounding colour into every near-black texel. 0 credits. */
-async function inpaintBlack(doc, { max = 30 } = {}) {
-	let fixed = 0;
-	for (const mat of doc.getRoot().listMaterials()) {
-		const tex = mat.getBaseColorTexture();
-		const img = tex?.getImage();
-		if (!img) continue;
-		const { data, info } = await sharp(Buffer.from(img)).removeAlpha().raw().toBuffer({ resolveWithObject: true });
-		const { width: w, height: h } = info;
-		const hole = new Uint8Array(w * h);
-		let n = 0;
-		for (let i = 0; i < w * h; i++) if (Math.max(data[i * 3], data[i * 3 + 1], data[i * 3 + 2]) < max) (hole[i] = 1), n++;
-		if (!n) continue;
-		// onion-peel: fill hole texels that touch known texels with their neighbours' mean, repeat
-		for (let pass = 0; pass < 2048 && n; pass++) {
-			const next = [];
-			for (let y = 0; y < h; y++)
-				for (let x = 0; x < w; x++) {
-					const i = y * w + x;
-					if (!hole[i]) continue;
-					const acc = [0, 0, 0];
-					let k = 0;
-					for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, -1], [1, -1], [-1, 1]]) {
-						const xx = x + dx;
-						const yy = y + dy;
-						if (xx < 0 || yy < 0 || xx >= w || yy >= h) continue;
-						const j = yy * w + xx;
-						if (hole[j]) continue;
-						for (let c = 0; c < 3; c++) acc[c] += data[j * 3 + c];
-						k++;
-					}
-					if (k >= 2) next.push([i, acc.map((v) => Math.round(v / k))]);
-				}
-			if (!next.length) break;
-			for (const [i, col] of next) {
-				for (let c = 0; c < 3; c++) data[i * 3 + c] = col[c];
-				hole[i] = 0;
-				n--;
-				fixed++;
-			}
-		}
-		tex.setImage(await sharp(data, { raw: { width: w, height: h, channels: 3 } }).jpeg({ quality: 86 }).toBuffer()).setMimeType('image/jpeg');
-	}
-	return fixed;
-}
-
-/** Repair Meshy's broken vertex normals (every Meshy piece; the bed's headboard rendered a
- * black triangle): (1) a ZERO / NaN normal (Meshy ships a few) shades black — it takes the
- * area-weighted mean of its triangles' face normals; (2) a triangle whose vertex normals
- * point AGAINST its winding renders dark under the double-sided material — it gets its own
- * vertices carrying its face normal. Returns { zero, flipped }. */
-function repairNormals(doc) {
-	let fixed = 0;
-	let zero = 0;
-	for (const mesh of doc.getRoot().listMeshes())
-		for (const prim of mesh.listPrimitives()) {
-			const names = prim.listSemantics();
-			const attrs = names.map((s) => prim.getAttribute(s));
-			const P = prim.getAttribute('POSITION');
-			const N = prim.getAttribute('NORMAL');
-			const I = prim.getIndices();
-			if (!N || !I) continue;
-			{
-				const acc = new Float64Array(N.getCount() * 3);
-				const ix = I.getArray();
-				for (let t = 0; t < ix.length; t += 3) {
-					const [a, b, c] = [ix[t], ix[t + 1], ix[t + 2]].map((i) => P.getElement(i, []));
-					const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]];
-					const w = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
-					const n = [u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]];
-					for (let k = 0; k < 3; k++) for (let j = 0; j < 3; j++) acc[ix[t + k] * 3 + j] += n[j];
-				}
-				for (let i = 0; i < N.getCount(); i++) {
-					const n = N.getElement(i, []);
-					if (Math.hypot(...n) > 0.5) continue;
-					const m = [acc[i * 3], acc[i * 3 + 1], acc[i * 3 + 2]];
-					const l = Math.hypot(...m) || 1;
-					N.setElement(i, l > 1e-12 ? m.map((x) => x / l) : [0, 1, 0]);
-					zero++;
-				}
-			}
-			const arrays = attrs.map((a) => Array.from(a.getArray()));
-			const idx = Array.from(I.getArray());
-			for (let t = 0; t < idx.length; t += 3) {
-				const [a, b, c] = [idx[t], idx[t + 1], idx[t + 2]].map((i) => P.getElement(i, []));
-				const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]];
-				const w = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
-				const n = [u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]];
-				const len = Math.hypot(...n);
-				if (len < 1e-12) continue;
-				let neg = 0;
-				for (let k = 0; k < 3; k++) {
-					const vn = N.getElement(idx[t + k], []);
-					if (vn[0] * n[0] + vn[1] * n[1] + vn[2] * n[2] < 0) neg++;
-				}
-				if (neg < 2) continue;
-				for (let k = 0; k < 3; k++) {
-					const src = idx[t + k];
-					attrs.forEach((attr, j) => {
-						const size = attr.getElementSize();
-						const el = names[j] === 'NORMAL' ? n.map((x) => x / len) : attr.getElement(src, []);
-						arrays[j].push(...el.slice(0, size));
-					});
-					idx[t + k] = arrays[names.indexOf('POSITION')].length / 3 - 1;
-				}
-				fixed++;
-			}
-			if (!fixed) continue;
-			attrs.forEach((attr, j) => attr.setArray(new (attr.getArray().constructor)(arrays[j])));
-			I.setArray(new Uint32Array(idx));
-		}
-	return { zero, flipped: fixed };
-}
-
 async function buildMeshy(item, raw, out) {
 	const { wallLine, ...post } = item.post;
 	const report = await postProcess(raw, out, { ...post, pivot: post.pivot ?? 'bottom-center' });
@@ -214,7 +74,7 @@ async function buildMeshy(item, raw, out) {
 		if (wallLine) for (const mesh of doc.getRoot().listMeshes()) transformMesh(mesh, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, WALL_FACE, 1]);
 		await io.write(out, doc);
 	}
-	const fight = defightFile ? await defightFile(out) : null;
+	const fight = await defightFile(out);
 	return { source: path.relative(STAGING, raw), trisIn: report.trisIn, ...(fight && fight.before ? { defight: { pairs: fight.before, dropped: fight.dropped, pushed: fight.pushed } } : {}), ...(item.grade ? { grade: item.grade.mul } : {}), ...(inpainted ? { inpainted } : {}), ...(normals.zero || normals.flipped ? { normalsRepaired: normals } : {}) };
 }
 
@@ -261,29 +121,6 @@ async function kitbash(list, out, maxTris = 7500) {
 	await doc.transform(unpartition(), prune());
 	await io.write(out, doc);
 	return { source: `kitbash: ${list.map((l) => l[0]).join(' + ')}`, trisIn: before };
-}
-
-/**
- * FLAT FOR SYNC (props-kit): every mesh node a direct child of the scene, one primitive per
- * mesh. Core's scene sync sends a nested Group with its WORLD pose and the receiver parents
- * it under the import root, so a nested import lands off by its own offset on peers.
- */
-async function flatForSync(doc) {
-	await doc.transform(flatten());
-	const scene = sceneOf(doc);
-	for (const node of [...scene.listChildren()]) {
-		const mesh = node.getMesh();
-		if (!mesh || mesh.listPrimitives().length < 2) continue;
-		mesh.listPrimitives().forEach((prim, i) => {
-			const name = `${node.getName()}_${prim.getMaterial()?.getName() || i}`;
-			const part = doc.createNode(name).setTranslation(node.getTranslation()).setRotation(node.getRotation()).setScale(node.getScale());
-			part.setMesh(doc.createMesh(name).addPrimitive(prim));
-			scene.addChild(part);
-		});
-		node.dispose();
-		mesh.dispose();
-	}
-	await doc.transform(prune());
 }
 
 const tag = (doc, item) => {

@@ -3,7 +3,7 @@
 // of its upward-facing triangles (0° = flat). `node slope.mjs Hill/glTF-Binary/Hill.glb`
 import path from 'node:path';
 import { createRequire } from 'node:module';
-const TOOL = process.env.MESHY_TOOL || '/home/deck/.code/theprototype-app/packs-lane-30c-tools/tools/meshy';
+const TOOL = process.env.MESHY_TOOL || path.resolve(path.dirname(new URL(import.meta.url).pathname), '../../tools/meshy');
 const require = createRequire(path.join(TOOL, 'package.json'));
 const { NodeIO } = require('@gltf-transform/core');
 const doc = await new NodeIO().read(process.argv[2]);

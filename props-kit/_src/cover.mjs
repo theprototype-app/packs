@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 
-const TOOLS = process.env.MESHY_TOOLS ?? '/home/deck/.code/theprototype-app/packs-lane-30c-tools/tools/meshy';
+const TOOLS = process.env.MESHY_TOOLS ?? new URL('../../tools/meshy', import.meta.url).pathname;
 const { NodeIO } = await import(`${TOOLS}/node_modules/@gltf-transform/core/dist/index.js`);
 const { ALL_EXTENSIONS } = await import(`${TOOLS}/node_modules/@gltf-transform/extensions/dist/index.js`);
 const { mergeDocuments, dedup, prune, unpartition } = await import(`${TOOLS}/node_modules/@gltf-transform/functions/dist/index.js`);

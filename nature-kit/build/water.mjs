@@ -8,7 +8,7 @@
 import path from 'node:path';
 import { createRequire } from 'node:module';
 
-const TOOL = process.env.MESHY_TOOL || '/home/deck/.code/theprototype-app/packs-lane-30c-tools/tools/meshy';
+const TOOL = process.env.MESHY_TOOL || path.resolve(path.dirname(new URL(import.meta.url).pathname), '../../tools/meshy');
 const require = createRequire(path.join(TOOL, 'package.json'));
 const sharp = require('sharp');
 const { Document, NodeIO } = require('@gltf-transform/core');

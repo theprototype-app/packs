@@ -11,18 +11,19 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ITEMS } from './items.mjs';
-import { createRequire } from 'node:module';
 import { PIECES, appendFlames } from './procedural.mjs';
 
-const TOOLS = process.env.MESHY_TOOLS ?? '/home/deck/.code/theprototype-app/packs-lane-30c-tools/tools/meshy';
+// the shared pack tooling (roadmap 34 E2: tools/kit-build instead of a fork per kit) — gltf-transform
+// comes through its loader, so the Documents here and its helpers are ONE module instance
+const { TOOLS, load, tool } = await import('../../tools/kit-build/lib/deps.mjs');
+const { gradeLinear: grade, albedoGlow, flatForSync } = await import('../../tools/kit-build/lib/post.mjs');
 const STAGING = process.env.MESHY_STAGING ?? path.join(os.homedir(), '.code/lanes-30/meshy/staging');
 const REQUESTER = '30c-pack-props';
-const { postProcess } = await import(`${TOOLS}/lib/post.js`);
-const sharp = createRequire(`${TOOLS}/package.json`)('sharp');
-const { renderThumbs } = await import(`${TOOLS}/lib/thumb.js`);
-const { NodeIO } = await import(`${TOOLS}/node_modules/@gltf-transform/core/dist/index.js`);
-const { ALL_EXTENSIONS } = await import(`${TOOLS}/node_modules/@gltf-transform/extensions/dist/index.js`);
-const { mergeDocuments, dedup, prune, getBounds, unpartition, flatten } = await import(`${TOOLS}/node_modules/@gltf-transform/functions/dist/index.js`);
+const { postProcess } = await tool('lib/post.js');
+const { renderThumbs } = await tool('lib/thumb.js');
+const { NodeIO } = await load('@gltf-transform/core');
+const { ALL_EXTENSIONS } = await load('@gltf-transform/extensions');
+const { mergeDocuments, dedup, prune, getBounds, unpartition } = await load('@gltf-transform/functions');
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACK = path.resolve(HERE, '..');
@@ -57,25 +58,13 @@ function autoFlames(kind, b) {
 	return [];
 }
 
-/** Colour-grade every base-colour texture: per-channel multiply (+ offset), so a piece
- * Meshy painted off-palette (a pale pine table) matches the kit's oak without a paid retexture. */
-async function grade(doc, { mul, add = [0, 0, 0] }) {
-	for (const mat of doc.getRoot().listMaterials()) {
-		const tex = mat.getBaseColorTexture();
-		const img = tex?.getImage();
-		if (!img) continue;
-		tex.setImage(await sharp(Buffer.from(img)).linear(mul, add).jpeg({ quality: 86 }).toBuffer()).setMimeType('image/jpeg');
-	}
-}
-
 async function buildMeshy(item, raw, out) {
 	const report = await postProcess(raw, out, { ...item.post, pivot: item.post.pivot ?? 'bottom-center' });
 	if (item.flames || item.grade || item.glow) {
 		const doc = await io.read(out);
 		if (item.grade) await grade(doc, item.grade);
-		// glow: the albedo doubles as the emissive map, so bright panes (a lantern's amber
-		// glass) light up while dark metal stays dark — a lit look with no extra texture
-		if (item.glow) for (const mat of doc.getRoot().listMaterials()) mat.setEmissiveTexture(mat.getBaseColorTexture()).setEmissiveFactor([item.glow, item.glow * 0.8, item.glow * 0.55]);
+		// glow: the albedo doubles as the emissive map (kit-build's albedoGlow)
+		if (item.glow) albedoGlow(doc, item.glow);
 		if (item.flames) appendFlames(doc, Array.isArray(item.flames) ? item.flames : autoFlames(item.flames, sizeOf(doc)));
 		await io.write(out, doc);
 	}
@@ -112,35 +101,6 @@ async function crateStack(out) {
 	return { source: 'kitbash: Crate × 2 + CrateTeal' };
 }
 const KITBASH = { crateStack };
-
-/**
- * FLAT FOR SYNC: every mesh node a direct child of the scene, one primitive per mesh.
- * Core's scene sync (commandsHandler sendObject) sends a leaf mesh with its LOCAL pose
- * but a nested Group / Object3D-with-children with its WORLD pose, which the receiver
- * then parents under the import root — so on a peer every nested level adds the
- * object's position again (measured: a placed Rug sat 2× its drop offset away on peer
- * B). GLTFLoader turns a multi-primitive mesh into a Group, so primitives are split to
- * one mesh each; flatten() lifts nested nodes to the scene with baked transforms.
- * @param {any} doc
- */
-async function flatForSync(doc) {
-	await doc.transform(flatten());
-	const root = doc.getRoot();
-	const scene = root.getDefaultScene() ?? root.listScenes()[0];
-	for (const node of [...scene.listChildren()]) {
-		const mesh = node.getMesh();
-		if (!mesh || mesh.listPrimitives().length < 2) continue;
-		mesh.listPrimitives().forEach((prim, i) => {
-			const name = `${node.getName()}_${prim.getMaterial()?.getName() || i}`;
-			const part = doc.createNode(name).setTranslation(node.getTranslation()).setRotation(node.getRotation()).setScale(node.getScale());
-			part.setMesh(doc.createMesh(name).addPrimitive(prim));
-			scene.addChild(part);
-		});
-		node.dispose();
-		mesh.dispose();
-	}
-	await doc.transform(prune());
-}
 
 const report = {};
 const reportFile = path.join(HERE, 'build-report.json');
