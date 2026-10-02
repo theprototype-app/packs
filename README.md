@@ -36,6 +36,8 @@ town-kit/                        Town & Market Kit: 27 pieces — street tiles (
                                  crossing, sidewalk), square, market and street-furniture pieces, an
                                  opening garden gate (made with Meshy.ai + procedural, CC0) — kit.md
 tools/town-kit/                  its reproducible build + e2e
+arcane-kit/                      Arcane Study Kit: 7 wizard's-study hero props with LODs (crystal ball,
+                                 alchemist's table, lectern, telescope, armillary, potions, rune rug; CC0, Meshy.ai)
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -93,5 +95,7 @@ reading the ref they were built against.
   (paid plan) plus procedural trims, lights and decor — see its `attribution.html` and `kit.md`.
 - `town-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/) plus
   procedural pieces (`tools/town-kit/`) — see its `attribution.html` and `kit.md`.
+- `arcane-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
+  (see its `attribution.html`).
 
 See [LICENSE](LICENSE) and each pack's `attribution.html`.

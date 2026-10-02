@@ -103,5 +103,15 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/town-kit",
     "cover": "town-kit/cover.webp"
+  },
+  {
+    "name": "arcane-kit",
+    "title": "Arcane Study Kit (wizard's props)",
+    "value": "arcane-kit/default.json",
+    "attribution": "arcane-kit/attribution.html",
+    "copyright": "(c) theprototype",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/arcane-kit",
+    "cover": "arcane-kit/cover.webp"
   }
 ]

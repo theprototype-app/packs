@@ -1,0 +1,112 @@
+[
+  {
+    "name": "CrystalBall",
+    "screenshot": "thumb.webp",
+    "label": "Crystal ball on a claw-foot stand",
+    "variants": {
+      "glTF-Binary": "crystal-ball.glb"
+    },
+    "lods": [
+      {
+        "file": "crystal-ball.lod1.glb",
+        "ratio": 0.67
+      },
+      {
+        "file": "crystal-ball.lod2.glb",
+        "ratio": 0.53
+      }
+    ]
+  },
+  {
+    "name": "AlchemyTable",
+    "screenshot": "thumb.webp",
+    "label": "Alchemist's table (potions, burner, mortar)",
+    "variants": {
+      "glTF-Binary": "alchemy-table.glb"
+    },
+    "lods": [
+      {
+        "file": "alchemy-table.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "alchemy-table.lod2.glb",
+        "ratio": 0.32
+      }
+    ]
+  },
+  {
+    "name": "Lectern",
+    "screenshot": "thumb.webp",
+    "label": "Lectern with an open spellbook",
+    "variants": {
+      "glTF-Binary": "lectern.glb"
+    },
+    "lods": [
+      {
+        "file": "lectern.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Telescope",
+    "screenshot": "thumb.webp",
+    "label": "Brass telescope on a tripod",
+    "variants": {
+      "glTF-Binary": "telescope.glb"
+    },
+    "lods": [
+      {
+        "file": "telescope.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Armillary",
+    "screenshot": "thumb.webp",
+    "label": "Armillary sphere",
+    "variants": {
+      "glTF-Binary": "armillary.glb"
+    },
+    "lods": [
+      {
+        "file": "armillary.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "PotionShelf",
+    "screenshot": "thumb.webp",
+    "label": "Shelf of potions and books",
+    "variants": {
+      "glTF-Binary": "potion-shelf.glb"
+    },
+    "lods": [
+      {
+        "file": "potion-shelf.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "potion-shelf.lod2.glb",
+        "ratio": 0.21
+      }
+    ]
+  },
+  {
+    "name": "RuneRug",
+    "screenshot": "thumb.webp",
+    "label": "Round rune rug (2.4 m)",
+    "variants": {
+      "glTF-Binary": "rune-rug.glb"
+    },
+    "lods": [
+      {
+        "file": "rune-rug.lod1.glb",
+        "ratio": 0.72
+      }
+    ]
+  }
+]
