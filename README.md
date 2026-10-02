@@ -29,6 +29,9 @@ interactive-kit/                 Interactive Kit: 19 animated, functional pieces
 tools/anim/                      the embedded rigging tools: split a mesh into frame + hinged parts,
                                  author open/close clips, render them (look.mjs); 0 credits
 tools/interactive-kit/           the Interactive Kit's recipes (rigs.mjs) and build
+interior-kit/                    Interiors: Home, Tavern & Office: 30 furniture / kitchen / bar / lights /
+                                 decor pieces + wall trims that snap to the architecture kit's walls
+                                 (CC0, made with Meshy.ai + procedural; kit.md, build in interior-kit/_src/)
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
@@ -82,5 +85,7 @@ reading the ref they were built against.
   `attribution.html` and `kit.md`.
 - `scifi-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
   (see its `attribution.html`).
+- `interior-kit/` — © theprototype, CC0 1.0; made with [Meshy.ai](https://www.meshy.ai/)
+  (paid plan) plus procedural trims, lights and decor — see its `attribution.html` and `kit.md`.
 
 See [LICENSE](LICENSE) and each pack's `attribution.html`.

@@ -1,0 +1,4 @@
+[
+ {"id":"plant2","pack":"interior-kit","category":"prop","stage":"refine","texturePrompt":"dark green leaves with lighter yellow-green edges and bands, a glossy deep teal glazed ceramic pot","targetTris":4000,"dims":{"y":0.95}},
+ {"id":"desk","pack":"interior-kit","category":"prop","stage":"refine","texturePrompt":"warm oak wood with visible grain, darker worn edges, small brass knobs, a dark green leather inlay on the desktop","targetTris":3500,"dims":{"y":0.76}}
+]

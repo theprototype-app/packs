@@ -17,5 +17,8 @@ This repository aggregates content under several licenses. Per-pack:
 
 - scifi-kit/         (c) theprototype, CC0 1.0 (public domain dedication).
                       Made with Meshy.ai (paid plan; outputs belong to the customer).
+- interior-kit/      (c) theprototype, CC0 1.0 (public domain dedication).
+                      Made with Meshy.ai (paid plan; outputs belong to the customer);
+                      wall trims, lights, rug, picture and book shelf are procedural.
 
 Everything else in this repository (index files, scripts, docs): CC0 1.0.

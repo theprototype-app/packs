@@ -1,0 +1,6 @@
+[
+ {"id":"bar-counter2","pack":"interior-kit","category":"prop","stage":"preview","model":"t2","targetTris":4000,"dims":{"y":1.1},
+  "prompt":"a long straight rectangular wooden pub bar counter, front view: a flat thick wooden countertop overhanging the front, a row of tall recessed wooden panels along the front face, a round brass foot rail running along the bottom, square ends, perfectly straight box shape"},
+ {"id":"wardrobe2","pack":"interior-kit","category":"prop","stage":"preview","model":"t2","targetTris":4000,"dims":{"y":2.0},
+  "prompt":"a wide wooden double wardrobe, almost square from the front: two broad closed panelled doors side by side with small round knobs, a moulded crown cornice on top, two drawers along the bottom, short bun feet, a solid boxy cabinet"}
+]

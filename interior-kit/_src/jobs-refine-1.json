@@ -1,0 +1,145 @@
+[
+ {
+  "id": "round-table",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm oak wood with visible grain, darker worn edges, a slightly polished tabletop",
+  "targetTris": 3000,
+  "dims": {
+   "y": 0.76
+  }
+ },
+ {
+  "id": "long-table",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm oak planks with visible grain, darker worn edges and corners, dark iron bolts",
+  "targetTris": 3000,
+  "dims": {
+   "y": 0.78
+  }
+ },
+ {
+  "id": "armchair",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "deep teal velvet upholstery with soft folds and subtle sheen, dark walnut wooden legs",
+  "targetTris": 4000,
+  "dims": {
+   "y": 1.05
+  }
+ },
+ {
+  "id": "bar-stool",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm oak wood with visible grain, a worn polished seat, darker edges",
+  "targetTris": 2000,
+  "dims": {
+   "y": 0.75
+  }
+ },
+ {
+  "id": "sofa",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "deep teal velvet upholstery with soft folds and subtle sheen, dark walnut wooden feet",
+  "targetTris": 5000,
+  "dims": {
+   "y": 0.85
+  }
+ },
+ {
+  "id": "double-bed",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm oak wood frame and headboard, cream linen sheets and pillows, a deep teal quilted blanket",
+  "targetTris": 5000,
+  "dims": {
+   "y": 1.15
+  }
+ },
+ {
+  "id": "wardrobe2",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm oak wood with visible grain, darker worn edges, small brass knobs",
+  "targetTris": 4000,
+  "dims": {
+   "y": 2.0
+  }
+ },
+ {
+  "id": "kitchen-counter",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "cupboard doors and drawer painted deep teal with worn edges, a grey slate stone worktop, brass handles, dark oak plinth",
+  "targetTris": 3000,
+  "dims": {
+   "y": 0.92
+  }
+ },
+ {
+  "id": "stove",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "black cast iron with soft worn highlights, brass rail and knobs, dark iron hot plates",
+  "targetTris": 4000,
+  "dims": {
+   "y": 0.9
+  }
+ },
+ {
+  "id": "fireplace",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "warm sandstone blocks with mortar joints, soot-darkened firebox inside, a dark oak mantel shelf, split birch logs",
+  "targetTris": 5000,
+  "dims": {
+   "y": 1.6
+  }
+ },
+ {
+  "id": "bar-counter2",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "dark polished oak wood with visible grain, worn edges, a brass foot rail",
+  "targetTris": 4000,
+  "dims": {
+   "y": 1.1
+  }
+ },
+ {
+  "id": "back-bar",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "dark oak wood shelves, green and amber glass bottles, brown clay jugs, pewter tankards",
+  "targetTris": 5000,
+  "dims": {
+   "y": 1.8
+  }
+ },
+ {
+  "id": "crate-goods",
+  "pack": "interior-kit",
+  "category": "prop",
+  "stage": "refine",
+  "texturePrompt": "light oak slatted crate with dark nail heads, shiny red apples and yellow pears",
+  "targetTris": 3000,
+  "dims": {
+   "y": 0.5
+  }
+ }
+]

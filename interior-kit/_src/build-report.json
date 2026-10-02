@@ -1,0 +1,1182 @@
+{
+ "RoundTable": {
+  "label": "Round table (tavern)",
+  "file": "RoundTable/glTF-Binary/round-table.glb",
+  "bytes": 478852,
+  "tris": 3000,
+  "meshes": 1,
+  "size": [
+   0.95,
+   0.76,
+   0.95
+  ],
+  "min": [
+   -0.475,
+   0,
+   -0.475
+  ],
+  "max": [
+   0.475,
+   0.76,
+   0.475
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "cylinder",
+  "tags": [
+   "furniture",
+   "tavern"
+  ],
+  "source": "33-pack-interior/round-table/refine-1/raw.glb",
+  "trisIn": 3146,
+  "grade": [
+   0.7,
+   0.56,
+   0.47
+  ],
+  "normalsRepaired": {
+   "zero": 0,
+   "flipped": 16
+  }
+ },
+ "LongTable": {
+  "label": "Long table (2.2 m)",
+  "file": "LongTable/glTF-Binary/long-table.glb",
+  "bytes": 703752,
+  "tris": 3000,
+  "meshes": 1,
+  "size": [
+   2.2,
+   0.78,
+   0.9
+  ],
+  "min": [
+   -1.1,
+   0,
+   -0.45
+  ],
+  "max": [
+   1.1,
+   0.78,
+   0.45
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "dining"
+  ],
+  "source": "33-pack-interior/long-table/refine-1/raw.glb",
+  "trisIn": 3014,
+  "grade": [
+   0.7,
+   0.56,
+   0.47
+  ],
+  "normalsRepaired": {
+   "zero": 0,
+   "flipped": 5
+  }
+ },
+ "Bench": {
+  "label": "Trestle bench (1.8 m)",
+  "file": "Bench/glTF-Binary/bench.glb",
+  "bytes": 666504,
+  "tris": 2000,
+  "meshes": 1,
+  "size": [
+   1.8,
+   0.46,
+   0.36
+  ],
+  "min": [
+   -0.9,
+   0,
+   -0.18
+  ],
+  "max": [
+   0.9,
+   0.46,
+   0.18
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "dining"
+  ],
+  "source": "33-pack-interior/long-table/refine-1/raw.glb",
+  "trisIn": 3014,
+  "grade": [
+   0.7,
+   0.56,
+   0.47
+  ],
+  "normalsRepaired": {
+   "zero": 0,
+   "flipped": 1
+  }
+ },
+ "BarStool": {
+  "label": "Bar stool",
+  "file": "BarStool/glTF-Binary/bar-stool.glb",
+  "bytes": 350180,
+  "tris": 1799,
+  "meshes": 1,
+  "size": [
+   0.388,
+   0.75,
+   0.39
+  ],
+  "min": [
+   -0.194,
+   0,
+   -0.195
+  ],
+  "max": [
+   0.194,
+   0.75,
+   0.195
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "cylinder",
+  "tags": [
+   "furniture",
+   "tavern"
+  ],
+  "source": "33-pack-interior/bar-stool/refine-1/raw.glb",
+  "trisIn": 1824,
+  "grade": [
+   0.7,
+   0.56,
+   0.47
+  ],
+  "normalsRepaired": {
+   "zero": 0,
+   "flipped": 1
+  }
+ },
+ "Stool": {
+  "label": "Stool (low)",
+  "file": "Stool/glTF-Binary/stool.glb",
+  "bytes": 338848,
+  "tris": 1500,
+  "meshes": 1,
+  "size": [
+   0.38,
+   0.46,
+   0.38
+  ],
+  "min": [
+   -0.19,
+   0,
+   -0.19
+  ],
+  "max": [
+   0.19,
+   0.46,
+   0.19
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "cylinder",
+  "tags": [
+   "furniture",
+   "tavern"
+  ],
+  "source": "33-pack-interior/bar-stool/refine-1/raw.glb",
+  "trisIn": 1824,
+  "grade": [
+   0.7,
+   0.56,
+   0.47
+  ],
+  "normalsRepaired": {
+   "zero": 0,
+   "flipped": 4
+  }
+ },
+ "BarCounter": {
+  "label": "Bar counter (2 m section)",
+  "file": "BarCounter/glTF-Binary/bar-counter.glb",
+  "bytes": 505548,
+  "tris": 3999,
+  "meshes": 1,
+  "size": [
+   2,
+   1.1,
+   0.7
+  ],
+  "min": [
+   -1,
+   0,
+   -0.35
+  ],
+  "max": [
+   1,
+   1.1,
+   0.35
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "tavern"
+  ],
+  "source": "33-pack-interior/bar-counter-oak/retexture-1/raw.glb",
+  "trisIn": 4179
+ },
+ "BackBar": {
+  "label": "Back-bar shelves (bottles)",
+  "file": "BackBar/glTF-Binary/back-bar.glb",
+  "bytes": 585740,
+  "tris": 4990,
+  "meshes": 1,
+  "size": [
+   2,
+   2,
+   0.5
+  ],
+  "min": [
+   -1,
+   0,
+   0.125
+  ],
+  "max": [
+   1,
+   2,
+   0.625
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "tavern",
+   "wall"
+  ],
+  "source": "33-pack-interior/back-bar/refine-1/raw.glb",
+  "trisIn": 5305,
+  "defight": {
+   "pairs": 13,
+   "dropped": 9,
+   "pushed": 4
+  },
+  "normalsRepaired": {
+   "zero": 6,
+   "flipped": 19
+  }
+ },
+ "CrateGoods": {
+  "label": "Crate of fruit",
+  "file": "CrateGoods/glTF-Binary/crate-goods.glb",
+  "bytes": 665508,
+  "tris": 3065,
+  "meshes": 1,
+  "size": [
+   0.456,
+   0.5,
+   0.447
+  ],
+  "min": [
+   -0.228,
+   0,
+   -0.223
+  ],
+  "max": [
+   0.228,
+   0.5,
+   0.223
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "box",
+  "tags": [
+   "storage",
+   "tavern",
+   "kitchen"
+  ],
+  "source": "33-pack-interior/crate-goods/refine-1/raw.glb",
+  "trisIn": 3065,
+  "grade": [
+   0.72,
+   0.6,
+   0.52
+  ]
+ },
+ "Armchair": {
+  "label": "Wingback armchair (teal)",
+  "file": "Armchair/glTF-Binary/armchair.glb",
+  "bytes": 547604,
+  "tris": 3897,
+  "meshes": 1,
+  "size": [
+   0.897,
+   1.05,
+   1.003
+  ],
+  "min": [
+   -0.448,
+   0,
+   -0.501
+  ],
+  "max": [
+   0.448,
+   1.05,
+   0.501
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "hull",
+  "tags": [
+   "furniture",
+   "home"
+  ],
+  "source": "33-pack-interior/armchair/refine-1/raw.glb",
+  "trisIn": 3897,
+  "grade": [
+   0.5,
+   0.56,
+   0.58
+  ]
+ },
+ "Sofa": {
+  "label": "Sofa, three seats (teal)",
+  "file": "Sofa/glTF-Binary/sofa.glb",
+  "bytes": 454252,
+  "tris": 4743,
+  "meshes": 1,
+  "size": [
+   2.1,
+   0.85,
+   0.9
+  ],
+  "min": [
+   -1.05,
+   0,
+   -0.45
+  ],
+  "max": [
+   1.05,
+   0.85,
+   0.45
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "hull",
+  "tags": [
+   "furniture",
+   "home"
+  ],
+  "source": "33-pack-interior/sofa/refine-1/raw.glb",
+  "trisIn": 4744,
+  "defight": {
+   "pairs": 1,
+   "dropped": 1,
+   "pushed": 0
+  },
+  "grade": [
+   0.5,
+   0.56,
+   0.58
+  ]
+ },
+ "DoubleBed": {
+  "label": "Double bed (teal throw)",
+  "file": "DoubleBed/glTF-Binary/double-bed.glb",
+  "bytes": 468736,
+  "tris": 4934,
+  "meshes": 1,
+  "size": [
+   1.6,
+   1.15,
+   2.1
+  ],
+  "min": [
+   -0.8,
+   0,
+   0.125
+  ],
+  "max": [
+   0.8,
+   1.15,
+   2.225
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "home",
+   "wall"
+  ],
+  "source": "33-pack-interior/double-bed/refine-1/raw.glb",
+  "trisIn": 5302,
+  "defight": {
+   "pairs": 77,
+   "dropped": 66,
+   "pushed": 151
+  },
+  "inpainted": 21030,
+  "normalsRepaired": {
+   "zero": 8,
+   "flipped": 24
+  }
+ },
+ "Wardrobe": {
+  "label": "Wardrobe (double)",
+  "file": "Wardrobe/glTF-Binary/wardrobe.glb",
+  "bytes": 557832,
+  "tris": 3961,
+  "meshes": 1,
+  "size": [
+   1.2,
+   2,
+   0.6
+  ],
+  "min": [
+   -0.6,
+   0,
+   0.125
+  ],
+  "max": [
+   0.6,
+   2,
+   0.725
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "home",
+   "wall"
+  ],
+  "source": "33-pack-interior/wardrobe2/refine-1/raw.glb",
+  "trisIn": 4274,
+  "defight": {
+   "pairs": 25,
+   "dropped": 38,
+   "pushed": 888
+  },
+  "grade": [
+   0.72,
+   0.6,
+   0.52
+  ],
+  "normalsRepaired": {
+   "zero": 6,
+   "flipped": 35
+  }
+ },
+ "Plant": {
+  "label": "Snake plant in a teal pot",
+  "file": "Plant/glTF-Binary/plant.glb",
+  "bytes": 893364,
+  "tris": 3989,
+  "meshes": 1,
+  "size": [
+   0.351,
+   0.95,
+   0.343
+  ],
+  "min": [
+   -0.175,
+   0,
+   -0.172
+  ],
+  "max": [
+   0.175,
+   0.95,
+   0.172
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "cylinder",
+  "tags": [
+   "decor"
+  ],
+  "source": "33-pack-interior/plant2/refine-1/raw.glb",
+  "trisIn": 3989
+ },
+ "Desk": {
+  "label": "Writing desk (office)",
+  "file": "Desk/glTF-Binary/desk.glb",
+  "bytes": 457272,
+  "tris": 3188,
+  "meshes": 1,
+  "size": [
+   1.4,
+   0.76,
+   0.7
+  ],
+  "min": [
+   -0.7,
+   0,
+   -0.35
+  ],
+  "max": [
+   0.7,
+   0.76,
+   0.35
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "office"
+  ],
+  "source": "33-pack-interior/desk/refine-1/raw.glb",
+  "trisIn": 3215,
+  "defight": {
+   "pairs": 30,
+   "dropped": 27,
+   "pushed": 14
+  },
+  "grade": [
+   0.7,
+   0.56,
+   0.47
+  ],
+  "normalsRepaired": {
+   "zero": 1,
+   "flipped": 74
+  }
+ },
+ "KitchenCounter": {
+  "label": "Kitchen counter (1 m, teal doors)",
+  "file": "KitchenCounter/glTF-Binary/kitchen-counter.glb",
+  "bytes": 428152,
+  "tris": 3000,
+  "meshes": 1,
+  "size": [
+   1,
+   0.92,
+   0.62
+  ],
+  "min": [
+   -0.5,
+   0,
+   0.125
+  ],
+  "max": [
+   0.5,
+   0.92,
+   0.745
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "kitchen",
+   "wall"
+  ],
+  "source": "33-pack-interior/kitchen-counter/refine-1/raw.glb",
+  "trisIn": 3204,
+  "grade": [
+   0.55,
+   0.62,
+   0.64
+  ],
+  "normalsRepaired": {
+   "zero": 0,
+   "flipped": 28
+  }
+ },
+ "Stove": {
+  "label": "Cast-iron range stove",
+  "file": "Stove/glTF-Binary/stove.glb",
+  "bytes": 622844,
+  "tris": 3873,
+  "meshes": 1,
+  "size": [
+   0.9,
+   0.95,
+   0.65
+  ],
+  "min": [
+   -0.45,
+   0,
+   0.125
+  ],
+  "max": [
+   0.45,
+   0.95,
+   0.775
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "kitchen",
+   "wall"
+  ],
+  "source": "33-pack-interior/stove/refine-1/raw.glb",
+  "trisIn": 3877,
+  "defight": {
+   "pairs": 6,
+   "dropped": 4,
+   "pushed": 0
+  },
+  "normalsRepaired": {
+   "zero": 0,
+   "flipped": 18
+  }
+ },
+ "Fireplace": {
+  "label": "Stone fireplace",
+  "file": "Fireplace/glTF-Binary/fireplace.glb",
+  "bytes": 642844,
+  "tris": 4971,
+  "meshes": 1,
+  "size": [
+   1.8,
+   1.6,
+   0.6
+  ],
+  "min": [
+   -0.9,
+   0,
+   0.125
+  ],
+  "max": [
+   0.9,
+   1.6,
+   0.725
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "home",
+   "tavern",
+   "wall"
+  ],
+  "source": "33-pack-interior/fireplace/refine-1/raw.glb",
+  "trisIn": 5110,
+  "defight": {
+   "pairs": 8,
+   "dropped": 29,
+   "pushed": 21
+  },
+  "normalsRepaired": {
+   "zero": 6,
+   "flipped": 11
+  }
+ },
+ "WallSconce": {
+  "label": "Wall sconce (brass)",
+  "file": "WallSconce/glTF-Binary/wall-sconce.glb",
+  "bytes": 56292,
+  "tris": 400,
+  "meshes": 2,
+  "size": [
+   0.124,
+   0.44,
+   0.204
+  ],
+  "min": [
+   -0.062,
+   0,
+   0.125
+  ],
+  "max": [
+   0.062,
+   0.44,
+   0.329
+  ],
+  "textures": [
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "light",
+   "wall"
+  ],
+  "source": "procedural.mjs"
+ },
+ "FloorLamp": {
+  "label": "Floor lamp (teal shade)",
+  "file": "FloorLamp/glTF-Binary/floor-lamp.glb",
+  "bytes": 139504,
+  "tris": 1200,
+  "meshes": 3,
+  "size": [
+   0.474,
+   1.655,
+   0.474
+  ],
+  "min": [
+   -0.237,
+   0,
+   -0.237
+  ],
+  "max": [
+   0.237,
+   1.655,
+   0.237
+  ],
+  "textures": [
+   "512×512",
+   "512×512"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "cylinder",
+  "tags": [
+   "light",
+   "home"
+  ],
+  "source": "procedural.mjs"
+ },
+ "Chandelier": {
+  "label": "Iron chandelier (hangs from y = 3)",
+  "file": "Chandelier/glTF-Binary/chandelier.glb",
+  "bytes": 229172,
+  "tris": 4444,
+  "meshes": 3,
+  "size": [
+   0.92,
+   0.92,
+   0.876
+  ],
+  "min": [
+   -0.46,
+   -0.92,
+   -0.438
+  ],
+  "max": [
+   0.46,
+   0,
+   0.438
+  ],
+  "textures": [
+   "512×512",
+   "512×512"
+  ],
+  "pivot": "top-centre",
+  "collider": "cylinder",
+  "tags": [
+   "light",
+   "tavern"
+  ],
+  "source": "procedural.mjs"
+ },
+ "RugRound": {
+  "label": "Round rug Ø 2 m (teal)",
+  "file": "RugRound/glTF-Binary/rug-round.glb",
+  "bytes": 452588,
+  "tris": 256,
+  "meshes": 1,
+  "size": [
+   2,
+   0.012,
+   2
+  ],
+  "min": [
+   -1,
+   0,
+   -1
+  ],
+  "max": [
+   1,
+   0.012,
+   1
+  ],
+  "textures": [
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "cylinder",
+  "tags": [
+   "decor"
+  ],
+  "source": "procedural.mjs"
+ },
+ "Picture": {
+  "label": "Framed landscape (wall)",
+  "file": "Picture/glTF-Binary/picture.glb",
+  "bytes": 154572,
+  "tris": 130,
+  "meshes": 3,
+  "size": [
+   0.924,
+   0.684,
+   0.045
+  ],
+  "min": [
+   -0.462,
+   0,
+   0.121
+  ],
+  "max": [
+   0.462,
+   0.684,
+   0.166
+  ],
+  "textures": [
+   "1024×768",
+   "512×512",
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "decor",
+   "wall"
+  ],
+  "source": "procedural.mjs"
+ },
+ "WallShelfBooks": {
+  "label": "Wall shelf with books",
+  "file": "WallShelfBooks/glTF-Binary/wall-shelf-books.glb",
+  "bytes": 196536,
+  "tris": 860,
+  "meshes": 4,
+  "size": [
+   1.2,
+   0.833,
+   0.24
+  ],
+  "min": [
+   -0.6,
+   0,
+   0.125
+  ],
+  "max": [
+   0.6,
+   0.833,
+   0.365
+  ],
+  "textures": [
+   "512×768",
+   "512×512",
+   "512×512",
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "decor",
+   "wall",
+   "office"
+  ],
+  "source": "procedural.mjs"
+ },
+ "Skirting": {
+  "label": "Skirting (2 m, on a wall)",
+  "file": "Skirting/glTF-Binary/skirting.glb",
+  "bytes": 30292,
+  "tris": 64,
+  "meshes": 1,
+  "size": [
+   2,
+   0.252,
+   0.042
+  ],
+  "min": [
+   -1,
+   0,
+   0.105
+  ],
+  "max": [
+   1,
+   0.252,
+   0.147
+  ],
+  "textures": [
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "trim",
+   "wall"
+  ],
+  "source": "procedural.mjs"
+ },
+ "SkirtingDoorway": {
+  "label": "Skirting, doorway (2 m)",
+  "file": "SkirtingDoorway/glTF-Binary/skirting-doorway.glb",
+  "bytes": 30620,
+  "tris": 56,
+  "meshes": 1,
+  "size": [
+   2,
+   0.252,
+   0.042
+  ],
+  "min": [
+   -1,
+   0,
+   0.105
+  ],
+  "max": [
+   1,
+   0.252,
+   0.147
+  ],
+  "textures": [
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "trim",
+   "wall"
+  ],
+  "source": "procedural.mjs"
+ },
+ "Wainscot": {
+  "label": "Wainscot panelling (2 m, teal)",
+  "file": "Wainscot/glTF-Binary/wainscot.glb",
+  "bytes": 50248,
+  "tris": 166,
+  "meshes": 2,
+  "size": [
+   2,
+   0.93,
+   0.057
+  ],
+  "min": [
+   -1,
+   0,
+   0.105
+  ],
+  "max": [
+   1,
+   0.93,
+   0.162
+  ],
+  "textures": [
+   "512×512",
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "trim",
+   "wall"
+  ],
+  "source": "procedural.mjs"
+ },
+ "WainscotDoorway": {
+  "label": "Wainscot, doorway (2 m, teal)",
+  "file": "WainscotDoorway/glTF-Binary/wainscot-doorway.glb",
+  "bytes": 49664,
+  "tris": 136,
+  "meshes": 2,
+  "size": [
+   2,
+   0.93,
+   0.057
+  ],
+  "min": [
+   -1,
+   0,
+   0.105
+  ],
+  "max": [
+   1,
+   0.93,
+   0.162
+  ],
+  "textures": [
+   "512×512",
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "trim",
+   "wall"
+  ],
+  "source": "procedural.mjs"
+ },
+ "Cornice": {
+  "label": "Cornice (2 m, at the ceiling)",
+  "file": "Cornice/glTF-Binary/cornice.glb",
+  "bytes": 37936,
+  "tris": 100,
+  "meshes": 1,
+  "size": [
+   2,
+   0.21,
+   0.18
+  ],
+  "min": [
+   -1,
+   2.79,
+   0.105
+  ],
+  "max": [
+   1,
+   3,
+   0.285
+  ],
+  "textures": [
+   "512×512"
+  ],
+  "pivot": "wall-line",
+  "collider": "box",
+  "tags": [
+   "trim",
+   "wall"
+  ],
+  "source": "procedural.mjs"
+ },
+ "TavernTableSet": {
+  "label": "Tavern table + 4 stools",
+  "file": "TavernTableSet/glTF-Binary/tavern-table-set.glb",
+  "bytes": 1003636,
+  "tris": 7498,
+  "meshes": 2,
+  "size": [
+   1.8,
+   0.76,
+   1.799
+  ],
+  "min": [
+   -0.9,
+   0,
+   -0.9
+  ],
+  "max": [
+   0.9,
+   0.76,
+   0.9
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024",
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "cylinder",
+  "tags": [
+   "furniture",
+   "tavern",
+   "set"
+  ],
+  "source": "kitbash: RoundTable + Stool + Stool + Stool + Stool",
+  "trisIn": 9000
+ },
+ "DiningSet": {
+  "label": "Long table + 2 benches",
+  "file": "DiningSet/glTF-Binary/dining-set.glb",
+  "bytes": 930688,
+  "tris": 7000,
+  "meshes": 1,
+  "size": [
+   2.2,
+   0.78,
+   1.8
+  ],
+  "min": [
+   -1.1,
+   0,
+   -0.9
+  ],
+  "max": [
+   1.1,
+   0.78,
+   0.9
+  ],
+  "textures": [
+   "1024×1024",
+   "1024×1024",
+   "1024×1024"
+  ],
+  "pivot": "bottom-centre",
+  "collider": "box",
+  "tags": [
+   "furniture",
+   "dining",
+   "set"
+  ],
+  "source": "kitbash: LongTable + Bench + Bench",
+  "trisIn": 7000
+ }
+}
