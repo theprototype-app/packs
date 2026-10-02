@@ -10,7 +10,7 @@
       "type": "door",
       "clip": "open",
       "closeClip": "close",
-      "trigger": "click",
+      "trigger": "clik",
       "autoplay": false,
       "sound": "door",
       "collider": "follow"
@@ -51,7 +51,7 @@
   },
   {
     "name": "DoorDouble",
-    "label": "Double door in a sandstone wall (2 × 3 m)",
+    "label": "Double door in a sandstone wall (2 \u00d7 3 m)",
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "door-double.glb"
@@ -105,7 +105,7 @@
   },
   {
     "name": "Portcullis",
-    "label": "Portcullis in a gate wall (2 × 4.5 m)",
+    "label": "Portcullis in a gate wall (2 \u00d7 4.5 m)",
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "portcullis.glb"
@@ -351,7 +351,7 @@
   },
   {
     "name": "PressurePlate",
-    "label": "Pressure plate 1 × 1 m (steps sink it)",
+    "label": "Pressure plate 1 \u00d7 1 m (steps sink it)",
     "screenshot": "screenshot/screenshot.webp",
     "variants": {
       "glTF-Binary": "pressure-plate.glb"

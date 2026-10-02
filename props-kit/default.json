@@ -9,7 +9,7 @@
     "lods": [
       {
         "file": "table.lod1.glb",
-        "ratio": 0.53
+        "ratio": 0.9
       }
     ]
   },
@@ -94,7 +94,7 @@
   {
     "name": "Rug",
     "screenshot": "screenshot/screenshot.webp",
-    "label": "Rug 2 × 1.3 m",
+    "label": "Rug 2 \u00d7 1.3 m",
     "variants": {
       "glTF-Binary": "rug.glb"
     }
@@ -388,7 +388,7 @@
   {
     "name": "PressurePlate",
     "screenshot": "screenshot/screenshot.webp",
-    "label": "Pressure plate 1 × 1 m",
+    "label": "Pressure plate 1 \u00d7 1 m",
     "variants": {
       "glTF-Binary": "pressure-plate.glb"
     }
@@ -396,7 +396,7 @@
   {
     "name": "Hatch",
     "screenshot": "screenshot/screenshot.webp",
-    "label": "Trapdoor 1 × 1 m (hinge pivot)",
+    "label": "Trapdoor 1 \u00d7 1 m (hinge pivot)",
     "variants": {
       "glTF-Binary": "hatch.glb"
     }
