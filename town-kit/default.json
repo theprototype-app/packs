@@ -1,0 +1,351 @@
+[
+  {
+    "name": "Road",
+    "label": "Cobblestone road (2 × 2 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "road.glb"
+    }
+  },
+  {
+    "name": "RoadCurb",
+    "label": "Road + curb (2 × 2 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "road-curb.glb"
+    }
+  },
+  {
+    "name": "RoadCorner",
+    "label": "Road corner + curb (2 × 2 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "road-corner.glb"
+    },
+    "lods": [
+      {
+        "file": "road-corner.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "road-corner.lod2.glb",
+        "ratio": 0.27
+      }
+    ]
+  },
+  {
+    "name": "RoadCrossing",
+    "label": "Road crossing (2 × 2 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "road-crossing.glb"
+    },
+    "lods": [
+      {
+        "file": "road-crossing.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "road-crossing.lod2.glb",
+        "ratio": 0.27
+      }
+    ]
+  },
+  {
+    "name": "Sidewalk",
+    "label": "Sidewalk flagstones (2 × 2 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "sidewalk.glb"
+    }
+  },
+  {
+    "name": "StoneStairs",
+    "label": "Stone stairs (2 × 2 m, 1 m rise)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "stone-stairs.glb"
+    }
+  },
+  {
+    "name": "Well",
+    "label": "Village well",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "well.glb"
+    },
+    "lods": [
+      {
+        "file": "well.lod1.glb",
+        "ratio": 0.7
+      }
+    ]
+  },
+  {
+    "name": "Fountain",
+    "label": "Town fountain",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "fountain.glb"
+    },
+    "lods": [
+      {
+        "file": "fountain.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "fountain.lod2.glb",
+        "ratio": 0.38
+      }
+    ]
+  },
+  {
+    "name": "MarketStall",
+    "label": "Market stall (striped awning)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "market-stall.glb"
+    },
+    "lods": [
+      {
+        "file": "market-stall.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "market-stall.lod2.glb",
+        "ratio": 0.23
+      }
+    ]
+  },
+  {
+    "name": "LampPost",
+    "label": "Street lamp post",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "lamp-post.glb"
+    },
+    "lods": [
+      {
+        "file": "lamp-post.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "ParkBench",
+    "label": "Park bench",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "park-bench.glb"
+    },
+    "lods": [
+      {
+        "file": "park-bench.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "park-bench.lod2.glb",
+        "ratio": 0.3
+      }
+    ]
+  },
+  {
+    "name": "MarketCart",
+    "label": "Market cart",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "market-cart.glb"
+    },
+    "lods": [
+      {
+        "file": "market-cart.lod1.glb",
+        "ratio": 0.5
+      }
+    ]
+  },
+  {
+    "name": "HayBale",
+    "label": "Hay bale",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "hay-bale.glb"
+    }
+  },
+  {
+    "name": "FlowerBox",
+    "label": "Flower box",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "flower-box.glb"
+    }
+  },
+  {
+    "name": "NoticeBoard",
+    "label": "Notice board (blank)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "notice-board.glb"
+    },
+    "lods": [
+      {
+        "file": "notice-board.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "notice-board.lod2.glb",
+        "ratio": 0.28
+      }
+    ]
+  },
+  {
+    "name": "ClockTowerTop",
+    "label": "Clock tower top",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "clock-tower-top.glb"
+    },
+    "lods": [
+      {
+        "file": "clock-tower-top.lod1.glb",
+        "ratio": 0.49
+      },
+      {
+        "file": "clock-tower-top.lod2.glb",
+        "ratio": 0.28
+      }
+    ]
+  },
+  {
+    "name": "Fence",
+    "label": "Picket fence (2 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "fence.glb"
+    }
+  },
+  {
+    "name": "FenceGate",
+    "label": "Garden gate + frame (2 m, opens)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "fence-gate.glb"
+    },
+    "behavior": {
+      "type": "door",
+      "clip": "open",
+      "closeClip": "close",
+      "trigger": "click",
+      "autoplay": false,
+      "collider": "follow",
+      "sound": "gate"
+    }
+  },
+  {
+    "name": "Bridge",
+    "label": "Wooden footbridge (4.4 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "bridge.glb"
+    },
+    "lods": [
+      {
+        "file": "bridge.lod1.glb",
+        "ratio": 0.56
+      },
+      {
+        "file": "bridge.lod2.glb",
+        "ratio": 0.29
+      }
+    ]
+  },
+  {
+    "name": "Banner",
+    "label": "Wall banner",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "banner.glb"
+    }
+  },
+  {
+    "name": "BannerPole",
+    "label": "Banner pole",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "banner-pole.glb"
+    }
+  },
+  {
+    "name": "Signpost",
+    "label": "Signpost (blank)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "signpost.glb"
+    }
+  },
+  {
+    "name": "HayStack",
+    "label": "Hay bale stack",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "hay-stack.glb"
+    }
+  },
+  {
+    "name": "LoadedCart",
+    "label": "Market cart (loaded)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "loaded-cart.glb"
+    },
+    "lods": [
+      {
+        "file": "loaded-cart.lod1.glb",
+        "ratio": 0.67
+      }
+    ]
+  },
+  {
+    "name": "BarrelCluster",
+    "label": "Barrels (cluster)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "barrel-cluster.glb"
+    },
+    "lods": [
+      {
+        "file": "barrel-cluster.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "barrel-cluster.lod2.glb",
+        "ratio": 0.26
+      }
+    ]
+  },
+  {
+    "name": "SacksBarrel",
+    "label": "Grain sacks + barrel",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "sacks-barrel.glb"
+    },
+    "lods": [
+      {
+        "file": "sacks-barrel.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "sacks-barrel.lod2.glb",
+        "ratio": 0.38
+      }
+    ]
+  },
+  {
+    "name": "FlowerBoxLong",
+    "label": "Flower box (2 m)",
+    "screenshot": "thumb.webp",
+    "variants": {
+      "glTF-Binary": "flower-box-long.glb"
+    }
+  }
+]

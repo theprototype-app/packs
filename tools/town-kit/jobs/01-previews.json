@@ -1,0 +1,168 @@
+[
+ {
+  "id": "road",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2500,
+  "prompt": "a square flat modular street paving tile, a thick square slab two metres by two metres paved with rounded grey cobblestones laid in tight even rows, straight clean edges on all four sides, flat top surface, top view, modular game level piece",
+  "dims": {
+   "x": 2,
+   "y": 0.2,
+   "z": 2
+  },
+  "fit": "stretch"
+ },
+ {
+  "id": "well",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 4000,
+  "prompt": "an old village stone well: a round low wall of stacked fieldstones, two sturdy wooden posts holding a small pitched roof of curved clay roof tiles, a wooden crank winch with rope and a wooden bucket",
+  "dims": {
+   "y": 2.5
+  }
+ },
+ {
+  "id": "stall",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 5000,
+  "prompt": "a medieval market stall: a sturdy wooden counter table on four posts with a slanted striped cloth awning on top, a few wicker baskets and crates of produce on the counter, open front",
+  "dims": {
+   "x": 2.4
+  }
+ },
+ {
+  "id": "lamp",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2500,
+  "prompt": "a tall old town street lamp post: a slim dark wrought iron pole on a round stone footing, a curved ornamental bracket at the top holding a four sided glass lantern with a small pointed cap",
+  "dims": {
+   "y": 3.4
+  }
+ },
+ {
+  "id": "bench",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2500,
+  "prompt": "a town park bench: wooden slat seat and slatted backrest on two curved cast iron side frames with armrests, long and sturdy",
+  "dims": {
+   "x": 1.6
+  }
+ },
+ {
+  "id": "fountain",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 5000,
+  "prompt": "a round town square fountain: a wide low circular stone basin with a thick carved rim, a central stone pedestal holding a smaller round bowl, a short stone spout on top, water in the basin",
+  "dims": {
+   "x": 3.0
+  }
+ },
+ {
+  "id": "cart",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 4000,
+  "prompt": "a wooden two wheeled hand cart: an open plank wagon bed with low side boards, two large spoked wooden wheels with iron rims on one axle, two long pull handles at the front, resting level",
+  "dims": {
+   "x": 2.2
+  }
+ },
+ {
+  "id": "haybale",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 1500,
+  "prompt": "a single rectangular straw hay bale, a compact block of golden dried straw tied with two twine strings around it, slightly rounded edges",
+  "dims": {
+   "x": 0.9,
+   "y": 0.45,
+   "z": 0.45
+  },
+  "fit": "stretch"
+ },
+ {
+  "id": "bridge",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 5000,
+  "prompt": "a small stone footbridge: a single round arch of cut stone blocks spanning a gap, a flat walkway on top with low stone parapet walls along both sides, solid stone abutments at both ends, seen from the side",
+  "dims": {
+   "z": 6.0
+  }
+ },
+ {
+  "id": "stair",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 2000,
+  "prompt": "a short wide straight outdoor stone staircase block, five even stone steps rising from front to back, solid stone filled down to the ground, flat vertical sides, rectangular footprint, modular game level piece",
+  "dims": {
+   "x": 2,
+   "y": 1,
+   "z": 2
+  },
+  "fit": "stretch"
+ },
+ {
+  "id": "flowerbox",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "meshy-6-lite",
+  "targetTris": 3000,
+  "prompt": "a long wooden window flower box planter filled with dark soil and blooming red geranium flowers with green leaves spilling over the front",
+  "dims": {
+   "x": 1.0
+  }
+ },
+ {
+  "id": "notice",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 3000,
+  "prompt": "a village notice board: a rectangular plain wooden board framed with planks, held between two square wooden posts, with a small pitched plank roof on top, the board face is plain and empty",
+  "dims": {
+   "y": 2.2
+  }
+ },
+ {
+  "id": "clocktop",
+  "pack": "town-kit",
+  "category": "prop",
+  "stage": "preview",
+  "model": "t2",
+  "targetTris": 6000,
+  "prompt": "the top section of a square town clock tower: a square stone block belfry with a big round plain clock face on each of the four sides, an open arched bell storey above it, crowned by a steep square pyramid roof of clay tiles with a small finial",
+  "dims": {
+   "x": 4.0,
+   "z": 4.0
+  }
+ }
+]
