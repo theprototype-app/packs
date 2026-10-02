@@ -1,0 +1,1040 @@
+{
+ "architecture-kit/WallStone": {
+  "before": 0.3126,
+  "after": 0,
+  "mode": "surface",
+  "look": 4.4,
+  "flicker": [
+   152,
+   89
+  ]
+ },
+ "architecture-kit/WallStoneDoor": {
+  "before": 0.3126,
+  "after": 0,
+  "mode": "surface",
+  "look": 5.7,
+  "flicker": [
+   145,
+   85
+  ]
+ },
+ "architecture-kit/WallStoneWindow": {
+  "before": 0.3126,
+  "after": 0,
+  "mode": "surface",
+  "look": 4.7,
+  "flicker": [
+   148,
+   86
+  ]
+ },
+ "architecture-kit/WallStoneHalf": {
+  "before": 0.3001,
+  "after": 0,
+  "mode": "surface",
+  "look": 10.7,
+  "flicker": [
+   100,
+   67
+  ]
+ },
+ "architecture-kit/WallStoneGable": {
+  "before": 0.0124,
+  "after": 0,
+  "mode": "surface",
+  "look": 0.1,
+  "flicker": [
+   68,
+   42
+  ]
+ },
+ "architecture-kit/CornerPostStone": {
+  "before": 0.0585,
+  "after": 0,
+  "mode": "surface",
+  "look": 2.8,
+  "flicker": [
+   575,
+   21
+  ]
+ },
+ "architecture-kit/WallPlaster": {
+  "before": 0.3126,
+  "after": 0,
+  "mode": "surface",
+  "look": 1.8,
+  "flicker": [
+   107,
+   59
+  ]
+ },
+ "architecture-kit/WallPlasterDoor": {
+  "before": 0.3126,
+  "after": 0,
+  "mode": "surface",
+  "look": 2.3,
+  "flicker": [
+   108,
+   60
+  ]
+ },
+ "architecture-kit/WallPlasterWindow": {
+  "before": 0.3126,
+  "after": 0,
+  "mode": "surface",
+  "look": 1.9,
+  "flicker": [
+   109,
+   61
+  ]
+ },
+ "architecture-kit/WallPlasterHalf": {
+  "before": 0.3001,
+  "after": 0,
+  "mode": "surface",
+  "look": 4.2,
+  "flicker": [
+   65,
+   38
+  ]
+ },
+ "architecture-kit/WallPlasterGable": {
+  "before": 0.0124,
+  "after": 0,
+  "mode": "surface",
+  "look": 0,
+  "flicker": [
+   51,
+   14
+  ]
+ },
+ "architecture-kit/Pillar": {
+  "before": 0.0552,
+  "after": 0.0552,
+  "flicker": [
+   14,
+   13
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Column": {
+  "before": 0.0064,
+  "after": 0.0064,
+  "flicker": [
+   3,
+   3
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Arch": {
+  "before": 0.0932,
+  "after": 0,
+  "mode": "surface",
+  "look": 0.2,
+  "flicker": [
+   292,
+   26
+  ]
+ },
+ "architecture-kit/FloorStone": {
+  "before": 0.0578,
+  "after": 0.0578,
+  "flicker": [
+   48,
+   48
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/FloorWood": {
+  "before": 0.0578,
+  "after": 0.0578,
+  "flicker": [
+   45,
+   45
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/FloorSlate": {
+  "before": 0.0578,
+  "after": 0.0578,
+  "flicker": [
+   87,
+   87
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Stairs": {
+  "before": 0.0456,
+  "after": 0.0383,
+  "mode": "drop-only",
+  "look": 0,
+  "flicker": [
+   119,
+   96
+  ]
+ },
+ "architecture-kit/StairsWood": {
+  "before": 0.0456,
+  "after": 0.0456,
+  "flicker": [
+   95,
+   79
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Block": {
+  "before": 8.5154,
+  "after": 0,
+  "mode": "surface",
+  "look": 28.7,
+  "flicker": [
+   100872,
+   239
+  ]
+ },
+ "architecture-kit/Ramp": {
+  "before": 5.4237,
+  "after": 0,
+  "mode": "centre",
+  "look": 15.1,
+  "flicker": [
+   47075,
+   181
+  ]
+ },
+ "architecture-kit/RoofSlope": {
+  "before": 0.1339,
+  "after": 0.104,
+  "mode": "surface",
+  "look": 23.7,
+  "flicker": [
+   398,
+   296
+  ]
+ },
+ "architecture-kit/Battlement": {
+  "before": 0.0992,
+  "after": 0,
+  "mode": "centre",
+  "look": 3,
+  "flicker": [
+   438,
+   84
+  ]
+ },
+ "architecture-kit/Tower": {
+  "before": 0.133,
+  "after": 0.133,
+  "flicker": [
+   78,
+   77
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Door": {
+  "before": 0.0018,
+  "after": 0.0018,
+  "flicker": [
+   16,
+   16
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Window": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "architecture-kit/Gate": {
+  "before": 0.0146,
+  "after": 0.0146,
+  "flicker": [
+   37,
+   35
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Fence": {
+  "before": 0.0015,
+  "after": 0.0015,
+  "flicker": [
+   200,
+   200
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "architecture-kit/Railing": {
+  "before": 0.0582,
+  "after": 0,
+  "mode": "surface",
+  "look": 4,
+  "flicker": [
+   738,
+   65
+  ]
+ },
+ "architecture-kit/Beam": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "architecture-kit/Trim": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "architecture-kit/Chimney": {
+  "before": 0.1024,
+  "after": 0.1024,
+  "flicker": [
+   23,
+   23
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/Oak": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/OakAutumn": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Pine": {
+  "before": 0.0018,
+  "after": 0.0018,
+  "flicker": [
+   31,
+   31
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/Birch": {
+  "before": 0.0004,
+  "after": 0.0004,
+  "flicker": [
+   25,
+   25
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/DeadTree": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Palm": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Bush": {
+  "before": 0.0041,
+  "after": 0.0041,
+  "flicker": [
+   41,
+   40
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/BushAutumn": {
+  "before": 0.0041,
+  "after": 0.0041,
+  "flicker": [
+   39,
+   38
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/Fern": {
+  "before": 0.0136,
+  "after": 0.0136,
+  "flicker": [
+   67,
+   66
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/Reeds": {
+  "before": 0.0135,
+  "after": 0.0135,
+  "flicker": [
+   62,
+   47
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/GrassTuft": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/GrassTuftDry": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Flowers": {
+  "before": 0.003,
+  "after": 0.003,
+  "flicker": [
+   18,
+   18
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/FlowersViolet": {
+  "before": 0.003,
+  "after": 0.003,
+  "flicker": [
+   21,
+   20
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/FlowerPatch": {
+  "before": 0.0079,
+  "after": 0.0079,
+  "flicker": [
+   238,
+   238
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "nature-kit/Mushrooms": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/RockSmall": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/RockMedium": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/RockLarge": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/FlatRock": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/BoulderCluster": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/SteppingStones": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Cliff": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/PathTile": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Log": {
+  "before": 0.0036,
+  "after": 0,
+  "mode": "surface",
+  "look": 0.2,
+  "flicker": [
+   89,
+   39
+  ]
+ },
+ "nature-kit/Stump": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Bridge": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/Hill": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/FallenLeaves": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/PondWater": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "nature-kit/PondSet": {
+  "before": 0.0209,
+  "after": 0.0209,
+  "flicker": [
+   404,
+   403
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Table": {
+  "before": 0.0249,
+  "after": 0.0249,
+  "flicker": [
+   77,
+   66
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Bench": {
+  "before": 0.0298,
+  "after": 0.0298,
+  "flicker": [
+   113,
+   105
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Chair": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Bed": {
+  "before": 0.2437,
+  "after": 0.2437,
+  "flicker": [
+   48,
+   48
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Bookcase": {
+  "before": 0.4441,
+  "after": 0.4441,
+  "flicker": [
+   29,
+   29
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Workbench": {
+  "before": 0.0056,
+  "after": 0.0056,
+  "flicker": [
+   69,
+   69
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Rug": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Tapestry": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/PottedPlant": {
+  "before": 0.0054,
+  "after": 0.0054,
+  "flicker": [
+   28,
+   23
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Crate": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/CrateLarge": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/CrateTeal": {
+  "before": 0.0001,
+  "after": 0.0001,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/CrateStack": {
+  "before": 0.0001,
+  "after": 0.0001,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Barrel": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/BarrelSmall": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Chest": {
+  "before": 0.021,
+  "after": 0.021,
+  "flicker": [
+   57,
+   46
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Sacks": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Lantern": {
+  "before": 0.0204,
+  "after": 0.0003,
+  "mode": "drop-only",
+  "look": 4.7,
+  "flicker": [
+   4078,
+   33
+  ]
+ },
+ "props-kit/WallTorch": {
+  "before": 0.0004,
+  "after": 0.0004,
+  "flicker": [
+   8,
+   5
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Candles": {
+  "before": 0.0006,
+  "after": 0.0006,
+  "flicker": [
+   13,
+   14
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/Cauldron": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Well": {
+  "before": 0.0122,
+  "after": 0.0122,
+  "flicker": [
+   45,
+   45
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/MarketStall": {
+  "before": 0.6899,
+  "after": 0,
+  "mode": "surface",
+  "look": 0.6,
+  "flicker": [
+   198,
+   56
+  ]
+ },
+ "props-kit/Signpost": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Ladder": {
+  "before": 0.007,
+  "after": 0.007,
+  "flicker": [
+   2,
+   2
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/LeverBase": {
+  "before": 0.0101,
+  "after": 0,
+  "mode": "surface",
+  "look": 1.7,
+  "flicker": [
+   267,
+   10
+  ]
+ },
+ "props-kit/LeverHandle": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/WallButton": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/PressurePlate": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/Hatch": {
+  "before": 0.0033,
+  "after": 0.0033,
+  "flicker": [
+   22,
+   24
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "props-kit/DoorKey": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "props-kit/SciFiConsole": {
+  "before": 0.1074,
+  "after": 0,
+  "mode": "surface",
+  "look": 0,
+  "flicker": [
+   978,
+   7
+  ]
+ },
+ "props-kit/SciFiCrate": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/Wall": {
+  "before": 5.4941,
+  "after": 0,
+  "mode": "surface",
+  "look": 5.4,
+  "flicker": [
+   122,
+   32
+  ]
+ },
+ "scifi-kit/WallDoorway": {
+  "before": 2.9787,
+  "after": 0,
+  "mode": "centre",
+  "look": 8.4,
+  "flicker": [
+   94,
+   38
+  ]
+ },
+ "scifi-kit/SlidingDoor": {
+  "before": 0.0047,
+  "after": 0.0047,
+  "flicker": [
+   61,
+   58
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/WallDoor": {
+  "before": 3.0047,
+  "after": 0,
+  "mode": "centre",
+  "look": 5.2,
+  "flicker": [
+   149,
+   63
+  ]
+ },
+ "scifi-kit/WallWindow": {
+  "before": 4.1135,
+  "after": 0,
+  "mode": "centre",
+  "look": 5.1,
+  "flicker": [
+   83,
+   30
+  ]
+ },
+ "scifi-kit/CornerPost": {
+  "before": 0.589,
+  "after": 0.589,
+  "flicker": [
+   7,
+   7
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/Pillar": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/FloorPlate": {
+  "before": 18.6403,
+  "after": 18.6403,
+  "flicker": [
+   86,
+   79
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/FloorGrate": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/CeilingLight": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/Stairs": {
+  "before": 0.9871,
+  "after": 0,
+  "mode": "centre",
+  "look": 0.2,
+  "flicker": [
+   338,
+   173
+  ]
+ },
+ "scifi-kit/Ramp": {
+  "before": 0.0176,
+  "after": 0.0176,
+  "flicker": [
+   25,
+   24
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/Railing": {
+  "before": 0.0002,
+  "after": 0.0002,
+  "flicker": [
+   13,
+   14
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/Console": {
+  "before": 0.2851,
+  "after": 0,
+  "mode": "surface",
+  "look": 4.6,
+  "flicker": [
+   6042,
+   34
+  ]
+ },
+ "scifi-kit/WallScreen": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/ServerRack": {
+  "before": 0.7561,
+  "after": 0.7561,
+  "flicker": [
+   35,
+   28
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/Crate": {
+  "before": 0.0342,
+  "after": 0,
+  "mode": "centre",
+  "look": 0.6,
+  "flicker": [
+   169,
+   81
+  ]
+ },
+ "scifi-kit/CrateLarge": {
+  "before": 0.0654,
+  "after": 0,
+  "mode": "surface",
+  "look": 0.1,
+  "flicker": [
+   252,
+   85
+  ]
+ },
+ "scifi-kit/Canister": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/PipeStraight": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/PipeElbow": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/Vent": {
+  "before": 0.0578,
+  "after": 0.0578,
+  "flicker": [
+   21,
+   21
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/Lamp": {
+  "before": 0.0028,
+  "after": 0.0028,
+  "flicker": [
+   3,
+   3
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/Chair": {
+  "before": 0.0075,
+  "after": 0.0075,
+  "flicker": [
+   25,
+   25
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/Desk": {
+  "before": 0.008,
+  "after": 0.008,
+  "flicker": [
+   71,
+   68
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/PlantPod": {
+  "before": 0.0113,
+  "after": 0.0113,
+  "flicker": [
+   95,
+   92
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "scifi-kit/TeleportPad": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "scifi-kit/Drone": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "default/ThePrototypeLogo": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "default/SvelteRune": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "default/Duck": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/PictureFrame": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Shelf": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Cat": {
+  "before": 0.0001,
+  "after": 0.0001,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Desk": {
+  "before": 0.0026,
+  "after": 0.0026,
+  "flicker": [
+   4,
+   5
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "cube_diorama/Dresser": {
+  "before": 0.5009,
+  "after": 0.5009,
+  "flicker": [
+   7,
+   8
+  ],
+  "left": "no candidate flickers clearly less"
+ },
+ "cube_diorama/Floor": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Plant1": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Plant2": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Rug": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Wall1": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Wall2": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "cube_diorama/Window": {
+  "before": 0.0136,
+  "after": 0.0136,
+  "flicker": [
+   15,
+   15
+  ],
+  "left": "no candidate flickers clearly less"
+ }
+}
