@@ -21,6 +21,9 @@ props-kit/                       Props & Interiors: 33 furnishing / dressing / g
 scifi-kit/                       Sci-fi & Modern Kit: 28 snap-together station pieces + dressing
                                  on the 1 m grid (CC0, made with Meshy.ai; kit.md = how to build)
 tools/scifi-kit/                 its reproducible build (Meshy jobs, post-processing, procedural pieces)
+tools/kit-build/                 THE pack build tool (post step, texture cap, emissive policy, decimate
+                                 to budget, LODs, thumbnails, budget report) and the pack CI checks —
+                                 see tools/kit-build/README.md
 tools/lod/                       no z-fighting (defight) + offline LODs: <name>.lod1/.lod2.glb and
                                  each row's "lods" field — see tools/lod/README.md
 interactive-kit/                 Interactive Kit: 19 animated, functional pieces — doors WITH frames,
@@ -44,6 +47,14 @@ Each `index.json` row: `{name, title, value | zip, attribution, copyright, licen
 `value` points at a model-list JSON (relative to this repo), `zip` at a self-describing
 installable pack. The formats are documented in the app repo's
 [PACKS.md](https://github.com/theprototype-app/core/blob/main/PACKS.md).
+
+## Checks
+
+Every PR to `main` runs `.github/workflows/pack-checks.yml`: the pack tools' unit tests and
+`node tools/kit-build/kit-build.mjs check` over every pack (manifest schema incl. `lods` /
+`behavior`, GLB ≤ 5 MiB, triangle budgets, texture caps, emissive policy, scale, pivot, LOD
+files, the static z-fight probe, thumbnails). Run it locally before pushing
+(`cd tools/meshy && npm ci` once). A new pack needs its policy row in `tools/kit-build/packs.json`.
 
 ## Versioning
 

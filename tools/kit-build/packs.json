@@ -1,0 +1,390 @@
+{
+	"note": "kit-build's per-pack policy (roadmap 34 E2). categories: triangle budget of LOD0 (drawn, per node) and the largest bbox extent in metres. packs: textureCap (largest texture side), emissive ('none' = nothing in the pack may glow, 'allowed'), the default category and pivot, and per-item overrides. Pivots: bottom-center | bottom-center-back | top-center | wall-pivot (shares the wall's bottom-centre origin, starts above the floor) | wall-face (origin on the wall line, piece on the wall's face) | foot (stands on its origin, which is under the piece but not its middle: a signpost's post, a pipe's open end) | hinge (origin within 5 cm of the piece: a moving part) | any (legacy packs that keep their source scene's coordinates).",
+	"limits": {
+		"glbFailBytes": 5242880,
+		"glbWarnBytes": 2097152,
+		"lodRequiredOver": 2000,
+		"minExtent": 0.05,
+		"flickerCm2": 1,
+		"thumbMinPx": 64
+	},
+	"categories": {
+		"tile": {
+			"tris": 2500,
+			"maxExtent": 8.5,
+			"about": "floor / road / path tiles, rugs, flat terrain"
+		},
+		"prop": {
+			"tris": 6000,
+			"maxExtent": 4,
+			"about": "furniture, dressing, small structures"
+		},
+		"modular": {
+			"tris": 6500,
+			"maxExtent": 10,
+			"about": "snap-together building pieces: walls, posts, stairs, towers"
+		},
+		"functional": {
+			"tris": 7000,
+			"maxExtent": 5,
+			"about": "animated items with a behavior (doors, gates, lids)"
+		},
+		"hero": {
+			"tris": 8000,
+			"maxExtent": 3,
+			"about": "showcase props, few per scene"
+		},
+		"set": {
+			"tris": 12000,
+			"maxExtent": 6,
+			"about": "kitbashed groups (a crate stack, a pond set)"
+		},
+		"tree": {
+			"tris": 15000,
+			"maxExtent": 12,
+			"about": "trees"
+		},
+		"legacy": {
+			"tris": 25000,
+			"maxExtent": 10,
+			"about": "the starter packs from before the kits (default, cube_diorama)"
+		}
+	},
+	"packs": {
+		"default": {
+			"textureCap": 1024,
+			"emissive": "allowed",
+			"category": "legacy",
+			"pivot": "any"
+		},
+		"cube_diorama": {
+			"textureCap": 2048,
+			"emissive": "none",
+			"category": "legacy",
+			"pivot": "any"
+		},
+		"nature-kit": {
+			"textureCap": 1024,
+			"emissive": "none",
+			"category": "prop",
+			"pivot": "bottom-center",
+			"items": {
+				"Oak": {
+					"category": "tree"
+				},
+				"OakAutumn": {
+					"category": "tree"
+				},
+				"Pine": {
+					"category": "tree"
+				},
+				"Birch": {
+					"category": "tree"
+				},
+				"DeadTree": {
+					"category": "tree"
+				},
+				"Palm": {
+					"category": "tree"
+				},
+				"PondSet": {
+					"category": "set"
+				},
+				"BoulderCluster": {
+					"category": "set"
+				},
+				"FlowerPatch": {
+					"category": "set"
+				},
+				"PathTile": {
+					"category": "tile"
+				},
+				"FallenLeaves": {
+					"category": "tile"
+				},
+				"PondWater": {
+					"category": "tile"
+				},
+				"Hill": {
+					"category": "tile"
+				},
+				"SteppingStones": {
+					"category": "set"
+				},
+				"Cliff": {
+					"category": "modular",
+					"pivot": "bottom-center-back"
+				},
+				"Bridge": {
+					"category": "modular"
+				}
+			}
+		},
+		"architecture-kit": {
+			"textureCap": 1024,
+			"emissive": "none",
+			"category": "modular",
+			"pivot": "bottom-center",
+			"items": {
+				"FloorStone": {
+					"category": "tile"
+				},
+				"FloorWood": {
+					"category": "tile"
+				},
+				"FloorSlate": {
+					"category": "tile"
+				},
+				"Window": {
+					"pivot": "wall-pivot"
+				}
+			}
+		},
+		"props-kit": {
+			"textureCap": 1024,
+			"emissive": "allowed",
+			"category": "prop",
+			"pivot": "bottom-center",
+			"items": {
+				"CrateStack": {
+					"category": "set"
+				},
+				"Rug": {
+					"category": "tile"
+				},
+				"Hatch": {
+					"pivot": "bottom-center-back"
+				},
+				"Tapestry": {
+					"pivot": "bottom-center-back"
+				},
+				"WallButton": {
+					"pivot": "bottom-center-back"
+				},
+				"WallTorch": {
+					"pivot": "bottom-center-back"
+				},
+				"LeverHandle": {
+					"pivot": "hinge"
+				},
+				"Signpost": {
+					"pivot": "foot"
+				}
+			}
+		},
+		"scifi-kit": {
+			"textureCap": 1024,
+			"emissive": "allowed",
+			"category": "modular",
+			"pivot": "bottom-center",
+			"items": {
+				"FloorPlate": {
+					"category": "tile"
+				},
+				"FloorGrate": {
+					"category": "tile"
+				},
+				"CeilingLight": {
+					"category": "tile"
+				},
+				"Console": {
+					"category": "prop"
+				},
+				"ServerRack": {
+					"category": "prop"
+				},
+				"Crate": {
+					"category": "prop"
+				},
+				"CrateLarge": {
+					"category": "prop"
+				},
+				"Canister": {
+					"category": "prop"
+				},
+				"Chair": {
+					"category": "prop"
+				},
+				"Desk": {
+					"category": "prop"
+				},
+				"PlantPod": {
+					"category": "prop"
+				},
+				"TeleportPad": {
+					"category": "prop"
+				},
+				"Drone": {
+					"category": "prop"
+				},
+				"Lamp": {
+					"category": "prop"
+				},
+				"PipeElbow": {
+					"pivot": "foot"
+				},
+				"Vent": {
+					"pivot": "wall-face"
+				},
+				"WallScreen": {
+					"pivot": "wall-face"
+				}
+			}
+		},
+		"interactive-kit": {
+			"textureCap": 1024,
+			"emissive": "allowed",
+			"category": "functional",
+			"pivot": "bottom-center",
+			"items": {
+				"Shutters": {
+					"pivot": "wall-pivot"
+				},
+				"Banner": {
+					"pivot": "bottom-center-back"
+				},
+				"Torch": {
+					"pivot": "bottom-center-back"
+				},
+				"WallButton": {
+					"pivot": "bottom-center-back"
+				},
+				"CeilingFan": {
+					"pivot": "top-center"
+				},
+				"Lever": {
+					"pivot": "hinge"
+				}
+			}
+		},
+		"interior-kit": {
+			"textureCap": 1024,
+			"emissive": "allowed",
+			"category": "prop",
+			"pivot": "bottom-center",
+			"items": {
+				"TavernTableSet": {
+					"category": "set"
+				},
+				"DiningSet": {
+					"category": "set"
+				},
+				"RugRound": {
+					"category": "tile"
+				},
+				"BackBar": {
+					"pivot": "wall-face"
+				},
+				"Cornice": {
+					"pivot": "wall-face"
+				},
+				"DoubleBed": {
+					"pivot": "wall-face"
+				},
+				"Fireplace": {
+					"pivot": "wall-face"
+				},
+				"KitchenCounter": {
+					"pivot": "wall-face"
+				},
+				"Picture": {
+					"pivot": "wall-face"
+				},
+				"Skirting": {
+					"pivot": "wall-face"
+				},
+				"SkirtingDoorway": {
+					"pivot": "wall-face"
+				},
+				"Stove": {
+					"pivot": "wall-face"
+				},
+				"Wainscot": {
+					"pivot": "wall-face"
+				},
+				"WainscotDoorway": {
+					"pivot": "wall-face"
+				},
+				"WallSconce": {
+					"pivot": "wall-face"
+				},
+				"WallShelfBooks": {
+					"pivot": "wall-face"
+				},
+				"Wardrobe": {
+					"pivot": "wall-face"
+				},
+				"Chandelier": {
+					"pivot": "top-center"
+				}
+			}
+		},
+		"town-kit": {
+			"textureCap": 1024,
+			"emissive": "allowed",
+			"category": "prop",
+			"pivot": "bottom-center",
+			"items": {
+				"Road": {
+					"category": "tile"
+				},
+				"RoadCurb": {
+					"category": "tile"
+				},
+				"RoadCorner": {
+					"category": "tile"
+				},
+				"RoadCrossing": {
+					"category": "tile"
+				},
+				"Sidewalk": {
+					"category": "tile"
+				},
+				"StoneStairs": {
+					"category": "modular"
+				},
+				"ClockTowerTop": {
+					"category": "modular"
+				},
+				"Bridge": {
+					"category": "modular"
+				},
+				"Fence": {
+					"category": "modular"
+				},
+				"FenceGate": {
+					"category": "functional"
+				},
+				"LoadedCart": {
+					"category": "set"
+				},
+				"BarrelCluster": {
+					"category": "set",
+					"pivot": "foot"
+				},
+				"SacksBarrel": {
+					"category": "set"
+				},
+				"Banner": {
+					"pivot": "wall-face"
+				},
+				"Signpost": {
+					"pivot": "foot"
+				}
+			}
+		},
+		"arcane-kit": {
+			"textureCap": 1024,
+			"emissive": "allowed",
+			"category": "hero",
+			"pivot": "bottom-center"
+		},
+		"khronos-sample-assets": {
+			"textureCap": 4096,
+			"emissive": "allowed",
+			"category": "legacy",
+			"pivot": "any",
+			"about": "upstream-fetch: every row is an absolute URL into KhronosGroup/glTF-Sample-Assets, no bytes here"
+		}
+	}
+}

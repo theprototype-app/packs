@@ -17,6 +17,7 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { TOOLS, kitPost } from './kit-post.mjs';
+import { defightFile } from '../lod/defight.mjs';
 import { kitCut, DERIVE } from './kit-cut.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -111,6 +112,10 @@ async function buildItem(it) {
 			const next = path.join(tmp, 'cut.glb');
 			report = { ...report, cut: await kitCut(cur, next, typeof it.cut === 'string' ? DERIVE[it.cut](it.cutOpts) : it.cut) };
 			cur = next;
+			// the cut's mortar core / lining meets the post step's surfaces in their planes: settle
+			// z-fights AFTER it (defight in the post step ran before the cut existed) — a rebuild then
+			// reproduces the shipped, settled walls (34-pack-ci: WallStone/WallPlaster byte-identical)
+			await defightFile(cur, cur);
 		}
 		fs.copyFileSync(cur, out);
 		const doc = await io.read(out);

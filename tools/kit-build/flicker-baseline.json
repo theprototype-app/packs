@@ -1,0 +1,714 @@
+{
+ "note": "The static z-fight probe's accepted files (kit-build check: a file over 1 cm² of coplanar overlap passes only at or under its recorded area). Each was RENDERED (tools/lod/judge.mjs flicker: 512², 12 orbit poses) and flickers at most 400 px; px = that measurement. Written by: node tools/kit-build/kit-build.mjs flicker <pack> --record",
+ "limitPx": 400,
+ "files": {
+  "arcane-kit/AlchemyTable/glTF-Binary/alchemy-table.glb": {
+   "cm2": 103.09,
+   "pairs": 5,
+   "px": 50,
+   "why": "not in defight-report.json (built before tools/lod or outside it)"
+  },
+  "arcane-kit/AlchemyTable/glTF-Binary/alchemy-table.lod1.glb": {
+   "cm2": 101.3,
+   "pairs": 4,
+   "px": 29,
+   "why": "a level of AlchemyTable: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "arcane-kit/AlchemyTable/glTF-Binary/alchemy-table.lod2.glb": {
+   "cm2": 101.3,
+   "pairs": 4,
+   "px": 35,
+   "why": "a level of AlchemyTable: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "arcane-kit/PotionShelf/glTF-Binary/potion-shelf.glb": {
+   "cm2": 9.99,
+   "pairs": 6,
+   "px": 13,
+   "why": "not in defight-report.json (built before tools/lod or outside it)"
+  },
+  "arcane-kit/PotionShelf/glTF-Binary/potion-shelf.lod1.glb": {
+   "cm2": 9.99,
+   "pairs": 6,
+   "px": 20,
+   "why": "a level of PotionShelf: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "arcane-kit/RuneRug/glTF-Binary/rune-rug.glb": {
+   "cm2": 2.31,
+   "pairs": 6,
+   "px": 25,
+   "why": "not in defight-report.json (built before tools/lod or outside it)"
+  },
+  "arcane-kit/RuneRug/glTF-Binary/rune-rug.lod1.glb": {
+   "cm2": 1.99,
+   "pairs": 4,
+   "px": 30,
+   "why": "a level of RuneRug: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "arcane-kit/Telescope/glTF-Binary/telescope.lod1.glb": {
+   "cm2": 3.39,
+   "pairs": 6,
+   "px": 68,
+   "why": "a level of Telescope: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Arch/glTF-Binary/arch.lod1.glb": {
+   "cm2": 7.9,
+   "pairs": 5,
+   "px": 20,
+   "why": "a level of Arch: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Block/glTF-Binary/block.lod1.glb": {
+   "cm2": 11.57,
+   "pairs": 7,
+   "px": 276,
+   "why": "a level of Block: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Chimney/glTF-Binary/chimney.glb": {
+   "cm2": 1023.53,
+   "pairs": 24,
+   "px": 23,
+   "why": "defight left it: no candidate flickers clearly less (render 23 → 23 px)"
+  },
+  "architecture-kit/Chimney/glTF-Binary/chimney.lod1.glb": {
+   "cm2": 483.67,
+   "pairs": 14,
+   "px": 19,
+   "why": "a level of Chimney: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Column/glTF-Binary/column.glb": {
+   "cm2": 63.84,
+   "pairs": 15,
+   "px": 3,
+   "why": "defight left it: no candidate flickers clearly less (render 3 → 3 px)"
+  },
+  "architecture-kit/Column/glTF-Binary/column.lod1.glb": {
+   "cm2": 18.23,
+   "pairs": 3,
+   "px": 4,
+   "why": "a level of Column: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Column/glTF-Binary/column.lod2.glb": {
+   "cm2": 1.72,
+   "pairs": 2,
+   "px": 6,
+   "why": "a level of Column: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Door/glTF-Binary/door.glb": {
+   "cm2": 18.21,
+   "pairs": 7,
+   "px": 16,
+   "why": "defight left it: no candidate flickers clearly less (render 16 → 16 px)"
+  },
+  "architecture-kit/Door/glTF-Binary/door.lod1.glb": {
+   "cm2": 13.92,
+   "pairs": 7,
+   "px": 19,
+   "why": "a level of Door: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Fence/glTF-Binary/fence.glb": {
+   "cm2": 15.32,
+   "pairs": 19,
+   "px": 200,
+   "why": "defight left it: no candidate flickers clearly less (render 200 → 200 px)"
+  },
+  "architecture-kit/Fence/glTF-Binary/fence.lod1.glb": {
+   "cm2": 15.2,
+   "pairs": 17,
+   "px": 207,
+   "why": "a level of Fence: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Fence/glTF-Binary/fence.lod2.glb": {
+   "cm2": 2.43,
+   "pairs": 5,
+   "px": 42,
+   "why": "a level of Fence: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/FloorSlate/glTF-Binary/floor-slate.glb": {
+   "cm2": 577.97,
+   "pairs": 16,
+   "px": 87,
+   "why": "defight left it: no candidate flickers clearly less (render 87 → 87 px)"
+  },
+  "architecture-kit/FloorStone/glTF-Binary/floor-stone.glb": {
+   "cm2": 577.97,
+   "pairs": 16,
+   "px": 48,
+   "why": "defight left it: no candidate flickers clearly less (render 48 → 48 px)"
+  },
+  "architecture-kit/FloorWood/glTF-Binary/floor-wood.glb": {
+   "cm2": 577.97,
+   "pairs": 16,
+   "px": 45,
+   "why": "defight left it: no candidate flickers clearly less (render 45 → 45 px)"
+  },
+  "architecture-kit/Gate/glTF-Binary/gate.glb": {
+   "cm2": 146.21,
+   "pairs": 34,
+   "px": 37,
+   "why": "defight left it: no candidate flickers clearly less (render 37 → 35 px)"
+  },
+  "architecture-kit/Gate/glTF-Binary/gate.lod1.glb": {
+   "cm2": 144.73,
+   "pairs": 28,
+   "px": 37,
+   "why": "a level of Gate: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Gate/glTF-Binary/gate.lod2.glb": {
+   "cm2": 139.82,
+   "pairs": 25,
+   "px": 33,
+   "why": "a level of Gate: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Pillar/glTF-Binary/pillar.glb": {
+   "cm2": 551.59,
+   "pairs": 24,
+   "px": 14,
+   "why": "defight left it: no candidate flickers clearly less (render 14 → 13 px)"
+  },
+  "architecture-kit/Pillar/glTF-Binary/pillar.lod1.glb": {
+   "cm2": 131.66,
+   "pairs": 6,
+   "px": 13,
+   "why": "a level of Pillar: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Ramp/glTF-Binary/ramp.lod1.glb": {
+   "cm2": 1.85,
+   "pairs": 1,
+   "px": 176,
+   "why": "a level of Ramp: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Ramp/glTF-Binary/ramp.lod2.glb": {
+   "cm2": 1.85,
+   "pairs": 1,
+   "px": 199,
+   "why": "a level of Ramp: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/RoofSlope/glTF-Binary/roof-slope.glb": {
+   "cm2": 1040.06,
+   "pairs": 8,
+   "px": 296,
+   "why": "defight (surface) settled the visible layers; the rest are hidden"
+  },
+  "architecture-kit/RoofSlope/glTF-Binary/roof-slope.lod1.glb": {
+   "cm2": 732.02,
+   "pairs": 6,
+   "px": 185,
+   "why": "a level of RoofSlope: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Stairs/glTF-Binary/stairs.glb": {
+   "cm2": 382.66,
+   "pairs": 139,
+   "px": 96,
+   "why": "defight (drop-only) settled the visible layers; the rest are hidden"
+  },
+  "architecture-kit/Stairs/glTF-Binary/stairs.lod1.glb": {
+   "cm2": 186.88,
+   "pairs": 53,
+   "px": 52,
+   "why": "a level of Stairs: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Stairs/glTF-Binary/stairs.lod2.glb": {
+   "cm2": 118.63,
+   "pairs": 25,
+   "px": 33,
+   "why": "a level of Stairs: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/StairsWood/glTF-Binary/stairs-wood.glb": {
+   "cm2": 455.88,
+   "pairs": 151,
+   "px": 95,
+   "why": "defight left it: no candidate flickers clearly less (render 95 → 79 px)"
+  },
+  "architecture-kit/StairsWood/glTF-Binary/stairs-wood.lod1.glb": {
+   "cm2": 180.01,
+   "pairs": 53,
+   "px": 55,
+   "why": "a level of StairsWood: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/StairsWood/glTF-Binary/stairs-wood.lod2.glb": {
+   "cm2": 118.29,
+   "pairs": 21,
+   "px": 18,
+   "why": "a level of StairsWood: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "architecture-kit/Tower/glTF-Binary/tower.glb": {
+   "cm2": 1329.54,
+   "pairs": 313,
+   "px": 78,
+   "why": "defight left it: no candidate flickers clearly less (render 78 → 77 px)"
+  },
+  "architecture-kit/Tower/glTF-Binary/tower.lod1.glb": {
+   "cm2": 530.42,
+   "pairs": 79,
+   "px": 68,
+   "why": "a level of Tower: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "cube_diorama/Desk/glTF-Binary/desk.glb": {
+   "cm2": 25.51,
+   "pairs": 5,
+   "px": 4,
+   "why": "defight left it: no candidate flickers clearly less (render 4 → 5 px)"
+  },
+  "cube_diorama/Dresser/glTF-Binary/dresser.glb": {
+   "cm2": 5009.29,
+   "pairs": 16,
+   "px": 7,
+   "why": "defight left it: no candidate flickers clearly less (render 7 → 8 px)"
+  },
+  "cube_diorama/Dresser/glTF-Binary/dresser.lod1.glb": {
+   "cm2": 5105.64,
+   "pairs": 20,
+   "px": 6,
+   "why": "a level of Dresser: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "cube_diorama/Dresser/glTF-Binary/dresser.lod2.glb": {
+   "cm2": 5060.6,
+   "pairs": 18,
+   "px": 9,
+   "why": "a level of Dresser: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "cube_diorama/Window/glTF-Binary/window.glb": {
+   "cm2": 136.03,
+   "pairs": 22,
+   "px": 15,
+   "why": "defight left it: no candidate flickers clearly less (render 15 → 15 px)"
+  },
+  "interactive-kit/DoorStudded/glTF-Binary/door-studded.glb": {
+   "cm2": 1953.37,
+   "pairs": 32,
+   "px": 50,
+   "why": "not in defight-report.json (built before tools/lod or outside it)"
+  },
+  "interactive-kit/DoorStudded/glTF-Binary/door-studded.lod1.glb": {
+   "cm2": 1961.41,
+   "pairs": 31,
+   "px": 55,
+   "why": "a level of DoorStudded: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "interactive-kit/DoorStudded/glTF-Binary/door-studded.lod2.glb": {
+   "cm2": 1846.21,
+   "pairs": 16,
+   "px": 69,
+   "why": "a level of DoorStudded: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "interactive-kit/DoorWood/glTF-Binary/door-wood.lod1.glb": {
+   "cm2": 146.98,
+   "pairs": 4,
+   "px": 31,
+   "why": "a level of DoorWood: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "interactive-kit/Drawers/glTF-Binary/drawers.lod2.glb": {
+   "cm2": 243.33,
+   "pairs": 1,
+   "px": 41,
+   "why": "a level of Drawers: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "interactive-kit/IronGate/glTF-Binary/iron-gate.lod2.glb": {
+   "cm2": 7.57,
+   "pairs": 1,
+   "px": 174,
+   "why": "a level of IronGate: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "interactive-kit/Portcullis/glTF-Binary/portcullis.glb": {
+   "cm2": 3624.92,
+   "pairs": 79,
+   "px": 226,
+   "why": "not in defight-report.json (built before tools/lod or outside it)"
+  },
+  "interactive-kit/Portcullis/glTF-Binary/portcullis.lod1.glb": {
+   "cm2": 3560.37,
+   "pairs": 49,
+   "px": 230,
+   "why": "a level of Portcullis: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "interactive-kit/Shutters/glTF-Binary/shutters.lod1.glb": {
+   "cm2": 1.05,
+   "pairs": 2,
+   "px": 77,
+   "why": "a level of Shutters: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "nature-kit/Birch/glTF-Binary/Birch.glb": {
+   "cm2": 4.41,
+   "pairs": 1,
+   "px": 25,
+   "why": "defight left it: no candidate flickers clearly less (render 25 → 25 px)"
+  },
+  "nature-kit/Bridge/glTF-Binary/Bridge.lod1.glb": {
+   "cm2": 2.46,
+   "pairs": 3,
+   "px": 37,
+   "why": "a level of Bridge: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "nature-kit/Bridge/glTF-Binary/Bridge.lod2.glb": {
+   "cm2": 2.46,
+   "pairs": 3,
+   "px": 33,
+   "why": "a level of Bridge: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "nature-kit/Bush/glTF-Binary/Bush.glb": {
+   "cm2": 40.57,
+   "pairs": 1,
+   "px": 41,
+   "why": "defight left it: no candidate flickers clearly less (render 41 → 40 px)"
+  },
+  "nature-kit/BushAutumn/glTF-Binary/BushAutumn.glb": {
+   "cm2": 40.57,
+   "pairs": 1,
+   "px": 39,
+   "why": "defight left it: no candidate flickers clearly less (render 39 → 38 px)"
+  },
+  "nature-kit/Fern/glTF-Binary/Fern.glb": {
+   "cm2": 136.42,
+   "pairs": 18,
+   "px": 67,
+   "why": "defight left it: no candidate flickers clearly less (render 67 → 66 px)"
+  },
+  "nature-kit/FlowerPatch/glTF-Binary/FlowerPatch.glb": {
+   "cm2": 79.03,
+   "pairs": 66,
+   "px": 238,
+   "why": "defight left it: no candidate flickers clearly less (render 238 → 238 px)"
+  },
+  "nature-kit/Flowers/glTF-Binary/Flowers.glb": {
+   "cm2": 29.84,
+   "pairs": 20,
+   "px": 18,
+   "why": "defight left it: no candidate flickers clearly less (render 18 → 18 px)"
+  },
+  "nature-kit/FlowersViolet/glTF-Binary/FlowersViolet.glb": {
+   "cm2": 29.84,
+   "pairs": 20,
+   "px": 21,
+   "why": "defight left it: no candidate flickers clearly less (render 21 → 20 px)"
+  },
+  "nature-kit/Log/glTF-Binary/Log.lod1.glb": {
+   "cm2": 3.18,
+   "pairs": 2,
+   "px": 37,
+   "why": "a level of Log: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "nature-kit/Pine/glTF-Binary/Pine.glb": {
+   "cm2": 17.75,
+   "pairs": 3,
+   "px": 31,
+   "why": "defight left it: no candidate flickers clearly less (render 31 → 31 px)"
+  },
+  "nature-kit/PondSet/glTF-Binary/PondSet.lod1.glb": {
+   "cm2": 11.54,
+   "pairs": 3,
+   "px": 300,
+   "why": "a level of PondSet: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "nature-kit/Reeds/glTF-Binary/Reeds.glb": {
+   "cm2": 134.8,
+   "pairs": 8,
+   "px": 62,
+   "why": "defight left it: no candidate flickers clearly less (render 62 → 47 px)"
+  },
+  "props-kit/Bed/glTF-Binary/bed.glb": {
+   "cm2": 2437.17,
+   "pairs": 48,
+   "px": 48,
+   "why": "defight left it: no candidate flickers clearly less (render 48 → 48 px)"
+  },
+  "props-kit/Bed/glTF-Binary/bed.lod1.glb": {
+   "cm2": 1901.46,
+   "pairs": 33,
+   "px": 25,
+   "why": "a level of Bed: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Bed/glTF-Binary/bed.lod2.glb": {
+   "cm2": 1707.81,
+   "pairs": 31,
+   "px": 22,
+   "why": "a level of Bed: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Bench/glTF-Binary/bench.glb": {
+   "cm2": 298.04,
+   "pairs": 52,
+   "px": 113,
+   "why": "defight left it: no candidate flickers clearly less (render 113 → 105 px)"
+  },
+  "props-kit/Bench/glTF-Binary/bench.lod1.glb": {
+   "cm2": 313.22,
+   "pairs": 30,
+   "px": 74,
+   "why": "a level of Bench: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Bookcase/glTF-Binary/bookcase.glb": {
+   "cm2": 4441.45,
+   "pairs": 23,
+   "px": 29,
+   "why": "defight left it: no candidate flickers clearly less (render 29 → 29 px)"
+  },
+  "props-kit/Bookcase/glTF-Binary/bookcase.lod1.glb": {
+   "cm2": 2581.66,
+   "pairs": 6,
+   "px": 32,
+   "why": "a level of Bookcase: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Candles/glTF-Binary/candles.glb": {
+   "cm2": 5.94,
+   "pairs": 20,
+   "px": 13,
+   "why": "defight left it: no candidate flickers clearly less (render 13 → 14 px)"
+  },
+  "props-kit/Candles/glTF-Binary/candles.lod1.glb": {
+   "cm2": 4.29,
+   "pairs": 6,
+   "px": 12,
+   "why": "a level of Candles: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Chest/glTF-Binary/chest.glb": {
+   "cm2": 210.01,
+   "pairs": 18,
+   "px": 57,
+   "why": "defight left it: no candidate flickers clearly less (render 57 → 46 px)"
+  },
+  "props-kit/Chest/glTF-Binary/chest.lod1.glb": {
+   "cm2": 209.65,
+   "pairs": 16,
+   "px": 53,
+   "why": "a level of Chest: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Chest/glTF-Binary/chest.lod2.glb": {
+   "cm2": 148.74,
+   "pairs": 12,
+   "px": 29,
+   "why": "a level of Chest: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Hatch/glTF-Binary/hatch.glb": {
+   "cm2": 33.37,
+   "pairs": 12,
+   "px": 24,
+   "why": "defight left it: no candidate flickers clearly less (render 22 → 24 px)"
+  },
+  "props-kit/Ladder/glTF-Binary/ladder.glb": {
+   "cm2": 70,
+   "pairs": 8,
+   "px": 2,
+   "why": "defight left it: no candidate flickers clearly less (render 2 → 2 px)"
+  },
+  "props-kit/Lantern/glTF-Binary/lantern.glb": {
+   "cm2": 2.66,
+   "pairs": 6,
+   "px": 33,
+   "why": "defight (drop-only) settled the visible layers; the rest are hidden"
+  },
+  "props-kit/Lantern/glTF-Binary/lantern.lod1.glb": {
+   "cm2": 2.03,
+   "pairs": 3,
+   "px": 21,
+   "why": "a level of Lantern: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/PottedPlant/glTF-Binary/potted-plant.glb": {
+   "cm2": 53.6,
+   "pairs": 19,
+   "px": 28,
+   "why": "defight left it: no candidate flickers clearly less (render 28 → 23 px)"
+  },
+  "props-kit/Table/glTF-Binary/table.glb": {
+   "cm2": 249.04,
+   "pairs": 108,
+   "px": 77,
+   "why": "defight left it: no candidate flickers clearly less (render 77 → 66 px)"
+  },
+  "props-kit/Table/glTF-Binary/table.lod1.glb": {
+   "cm2": 240.54,
+   "pairs": 18,
+   "px": 64,
+   "why": "a level of Table: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/WallTorch/glTF-Binary/wall-torch.glb": {
+   "cm2": 4.07,
+   "pairs": 8,
+   "px": 8,
+   "why": "defight left it: no candidate flickers clearly less (render 8 → 5 px)"
+  },
+  "props-kit/WallTorch/glTF-Binary/wall-torch.lod1.glb": {
+   "cm2": 2.88,
+   "pairs": 4,
+   "px": 9,
+   "why": "a level of WallTorch: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/WallTorch/glTF-Binary/wall-torch.lod2.glb": {
+   "cm2": 2.88,
+   "pairs": 4,
+   "px": 5,
+   "why": "a level of WallTorch: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Well/glTF-Binary/well.glb": {
+   "cm2": 122.18,
+   "pairs": 3,
+   "px": 45,
+   "why": "defight left it: no candidate flickers clearly less (render 45 → 45 px)"
+  },
+  "props-kit/Well/glTF-Binary/well.lod1.glb": {
+   "cm2": 128.78,
+   "pairs": 1,
+   "px": 39,
+   "why": "a level of Well: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Workbench/glTF-Binary/workbench.glb": {
+   "cm2": 55.93,
+   "pairs": 16,
+   "px": 69,
+   "why": "defight left it: no candidate flickers clearly less (render 69 → 69 px)"
+  },
+  "props-kit/Workbench/glTF-Binary/workbench.lod1.glb": {
+   "cm2": 54.54,
+   "pairs": 9,
+   "px": 56,
+   "why": "a level of Workbench: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "props-kit/Workbench/glTF-Binary/workbench.lod2.glb": {
+   "cm2": 53.01,
+   "pairs": 7,
+   "px": 60,
+   "why": "a level of Workbench: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/Chair/glTF-Binary/chair.glb": {
+   "cm2": 75.16,
+   "pairs": 3,
+   "px": 25,
+   "why": "defight left it: no candidate flickers clearly less (render 25 → 25 px)"
+  },
+  "scifi-kit/Chair/glTF-Binary/chair.lod1.glb": {
+   "cm2": 62.35,
+   "pairs": 2,
+   "px": 27,
+   "why": "a level of Chair: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/CornerPost/glTF-Binary/corner-post.glb": {
+   "cm2": 5889.88,
+   "pairs": 217,
+   "px": 7,
+   "why": "defight left it: no candidate flickers clearly less (render 7 → 7 px)"
+  },
+  "scifi-kit/CornerPost/glTF-Binary/corner-post.lod1.glb": {
+   "cm2": 1116.33,
+   "pairs": 112,
+   "px": 6,
+   "why": "a level of CornerPost: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/Desk/glTF-Binary/desk.glb": {
+   "cm2": 79.92,
+   "pairs": 11,
+   "px": 71,
+   "why": "defight left it: no candidate flickers clearly less (render 71 → 68 px)"
+  },
+  "scifi-kit/Desk/glTF-Binary/desk.lod1.glb": {
+   "cm2": 1.76,
+   "pairs": 3,
+   "px": 105,
+   "why": "a level of Desk: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/Desk/glTF-Binary/desk.lod2.glb": {
+   "cm2": 1.32,
+   "pairs": 1,
+   "px": 113,
+   "why": "a level of Desk: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/Drone/glTF-Binary/drone.lod1.glb": {
+   "cm2": 1.38,
+   "pairs": 1,
+   "px": 16,
+   "why": "a level of Drone: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/FloorPlate/glTF-Binary/floor-plate.glb": {
+   "cm2": 186402.81,
+   "pairs": 1243,
+   "px": 86,
+   "why": "defight left it: no candidate flickers clearly less (render 86 → 79 px)"
+  },
+  "scifi-kit/FloorPlate/glTF-Binary/floor-plate.lod1.glb": {
+   "cm2": 1274.29,
+   "pairs": 22,
+   "px": 98,
+   "why": "a level of FloorPlate: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/FloorPlate/glTF-Binary/floor-plate.lod2.glb": {
+   "cm2": 1424.03,
+   "pairs": 19,
+   "px": 74,
+   "why": "a level of FloorPlate: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/Lamp/glTF-Binary/lamp.glb": {
+   "cm2": 27.55,
+   "pairs": 32,
+   "px": 5,
+   "why": "defight left it: no candidate flickers clearly less (render 3 → 3 px)"
+  },
+  "scifi-kit/PlantPod/glTF-Binary/plant-pod.glb": {
+   "cm2": 112.98,
+   "pairs": 9,
+   "px": 95,
+   "why": "defight left it: no candidate flickers clearly less (render 95 → 92 px)"
+  },
+  "scifi-kit/Railing/glTF-Binary/railing.glb": {
+   "cm2": 2.13,
+   "pairs": 8,
+   "px": 13,
+   "why": "defight left it: no candidate flickers clearly less (render 13 → 14 px)"
+  },
+  "scifi-kit/Ramp/glTF-Binary/ramp.glb": {
+   "cm2": 176,
+   "pairs": 4,
+   "px": 24,
+   "why": "defight left it: no candidate flickers clearly less (render 25 → 24 px)"
+  },
+  "scifi-kit/ServerRack/glTF-Binary/server-rack.glb": {
+   "cm2": 7561.23,
+   "pairs": 43,
+   "px": 35,
+   "why": "defight left it: no candidate flickers clearly less (render 35 → 28 px)"
+  },
+  "scifi-kit/SlidingDoor/glTF-Binary/sliding-door.glb": {
+   "cm2": 47.29,
+   "pairs": 27,
+   "px": 61,
+   "why": "defight left it: no candidate flickers clearly less (render 61 → 58 px)"
+  },
+  "scifi-kit/SlidingDoor/glTF-Binary/sliding-door.lod1.glb": {
+   "cm2": 47.05,
+   "pairs": 22,
+   "px": 42,
+   "why": "a level of SlidingDoor: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/SlidingDoor/glTF-Binary/sliding-door.lod2.glb": {
+   "cm2": 36.87,
+   "pairs": 18,
+   "px": 40,
+   "why": "a level of SlidingDoor: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/Stairs/glTF-Binary/stairs.lod2.glb": {
+   "cm2": 6.21,
+   "pairs": 8,
+   "px": 245,
+   "why": "a level of Stairs: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/TeleportPad/glTF-Binary/teleport-pad.lod2.glb": {
+   "cm2": 3.62,
+   "pairs": 3,
+   "px": 12,
+   "why": "a level of TeleportPad: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "scifi-kit/Vent/glTF-Binary/vent.glb": {
+   "cm2": 578.44,
+   "pairs": 75,
+   "px": 21,
+   "why": "defight left it: no candidate flickers clearly less (render 21 → 21 px)"
+  },
+  "town-kit/ClockTowerTop/glTF-Binary/clock-tower-top.lod2.glb": {
+   "cm2": 1614.25,
+   "pairs": 1,
+   "px": 34,
+   "why": "a level of ClockTowerTop: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  },
+  "town-kit/MarketStall/glTF-Binary/market-stall.lod2.glb": {
+   "cm2": 26.39,
+   "pairs": 1,
+   "px": 53,
+   "why": "a level of MarketStall: tools/lod simplifies LOD0 per primitive and only drops hidden duplicates (core draws it far away, with LOD0's material)"
+  }
+ }
+}

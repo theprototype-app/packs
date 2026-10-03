@@ -11,11 +11,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { SWATCHES, rugSvg, tapestrySvg, jpeg } from './textures.mjs';
 
-const TOOLS = process.env.MESHY_TOOLS ?? '/home/deck/.code/theprototype-app/packs-lane-30c-tools/tools/meshy';
+// tools/meshy through the shared loader (roadmap 34 E2): the build hands its Documents to appendFlames,
+// so gltf-transform must be the same module instance as the build's
+const { TOOLS, load } = await import('../../tools/kit-build/lib/deps.mjs');
 const THREE = await import(`${TOOLS}/node_modules/three/build/three.module.js`);
 const { mergeGeometries } = await import(`${TOOLS}/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js`);
-const { Document, NodeIO } = await import(`${TOOLS}/node_modules/@gltf-transform/core/dist/index.js`);
-const { KHRMaterialsEmissiveStrength } = await import(`${TOOLS}/node_modules/@gltf-transform/extensions/dist/index.js`);
+const { Document, NodeIO } = await load('@gltf-transform/core');
+const { KHRMaterialsEmissiveStrength } = await load('@gltf-transform/extensions');
 
 /** texels: one swatch tile covers this many metres */
 const TILE_M = 0.8;

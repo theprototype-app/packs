@@ -1,0 +1,61 @@
+# The pack CI (roadmap 34 E2): every PR to main runs the pack tools' unit tests and
+# `kit-build check` over EVERY pack — manifest schema (incl. lods / behavior), GLB size, triangle
+# budgets, texture caps, emissive policy, scale, pivot, LOD files, the static z-fight probe and
+# thumbnails. Failures that are known and accepted live in tools/kit-build/allow.json with a reason.
+# Make the "pack-checks" job a REQUIRED status check on main (Settings → Branches / Rulesets).
+name: pack checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pack-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pack-checks:
+    name: pack-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/meshy/package-lock.json
+
+      - name: install the pack tools (tools/meshy — no browser, no Meshy key)
+        working-directory: tools/meshy
+        run: npm ci --no-audit --no-fund
+
+      - name: unit tests (kit-build, lod, the kit builds, meshy)
+        run: |
+          node --test tools/kit-build/test/*.test.mjs tools/lod/test/*.test.mjs \
+            tools/architecture-kit/test/*.test.mjs tools/scifi-kit/test/*.test.mjs \
+            tools/town-kit/test/*.test.mjs tools/anim/test/*.test.mjs interior-kit/_src/test/*.test.mjs
+          (cd tools/meshy && npm test)
+
+      - name: kit-build check (every pack)
+        run: node tools/kit-build/kit-build.mjs check --summary "$GITHUB_STEP_SUMMARY" --json pack-check.json
+
+      - name: budget report
+        if: always()
+        run: node tools/kit-build/kit-build.mjs report --md pack-budget.md
+
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: pack-check
+          path: |
+            pack-check.json
+            pack-budget.md
+          if-no-files-found: ignore

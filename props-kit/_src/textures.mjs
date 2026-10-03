@@ -5,7 +5,7 @@
 // slate, and the pack's ONE accent colour — teal (#2f7f7b), the painted crate's.
 import { createRequire } from 'node:module';
 
-const TOOLS = process.env.MESHY_TOOLS ?? '/home/deck/.code/theprototype-app/packs-lane-30c-tools/tools/meshy';
+const TOOLS = process.env.MESHY_TOOLS ?? new URL('../../tools/meshy', import.meta.url).pathname;
 const sharp = createRequire(`${TOOLS}/package.json`)('sharp');
 
 export const TEAL = '#2a6e6a';
