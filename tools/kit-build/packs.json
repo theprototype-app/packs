@@ -385,6 +385,13 @@
 			"category": "legacy",
 			"pivot": "any",
 			"about": "upstream-fetch: every row is an absolute URL into KhronosGroup/glTF-Sample-Assets, no bytes here"
+		},
+		"avatars": {
+			"textureCap": 256,
+			"emissive": "none",
+			"category": "hero",
+			"pivot": "bottom-center",
+			"about": "rigged KayKit characters (tools/avatars); one skinned mesh each, the app's avatars"
 		}
 	}
 }

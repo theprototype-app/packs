@@ -113,5 +113,14 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/arcane-kit",
     "cover": "arcane-kit/cover.webp"
+  },
+  {
+    "name": "avatars",
+    "title": "Adventurers (rigged characters)",
+    "value": "avatars/default.json",
+    "attribution": "avatars/attribution.html",
+    "copyright": "(c) Kay Lousberg (KayKit)",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/avatars"
   }
 ]

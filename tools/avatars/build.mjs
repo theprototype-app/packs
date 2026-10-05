@@ -1,6 +1,7 @@
 // tools/avatars/build.mjs — the avatar characters (roadmap 36, plan 76) from KayKit's CC0 character packs.
 //
 //   node tools/avatars/build.mjs [--src <dir>] [--core <core checkout>]
+//   node tools/avatars/build.mjs --thumbs     (each pack row's thumb.webp, posed at Idle 0.4 s — renders headless)
 //
 // Sources: KayKit Adventurers 1.0 + Skeletons 1.0 (Kay Lousberg, CC0), fetched at PINNED commits into
 // ~/.cache/tp-avatars (or --src). Every character shares one 41-joint rig, so ONE clip file animates all.
@@ -15,16 +16,17 @@
 //  - no animations (clips.glb carries them once).
 //
 // Outputs:
-//  - avatars/<Id>/<id>.glb         the Explorer pack row: the merged mesh WITH the clips (a placeable,
+//  - avatars/<Item>/glTF-Binary/<id>.glb + avatars/default.json   the Explorer pack row: the merged mesh WITH the clips (a placeable,
 //                                  animated character; behavior loop Idle)
-//  - avatars/_runtime/<id>.glb     mesh only — what core ships in static/avatars/
-//  - avatars/_runtime/clips.glb    the rig + the locomotion/emote clips, deform-bone channels only
-//  - avatars/_runtime/avatars.json the catalog core reads (tris, height, eye height, outfit cells)
-//  --core <dir> also copies _runtime/* into <dir>/static/avatars/.
+//  - tools/avatars/runtime/<id>.glb     mesh only — what core ships in static/avatars/
+//  - tools/avatars/runtime/clips.glb    the rig + the locomotion/emote clips, deform-bone channels only
+//  - tools/avatars/runtime/avatars.json the catalog core reads (tris, height, eye height, outfit cells)
+//  --core <dir> also copies runtime/* into <dir>/static/avatars/.
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { execFileSync } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
 import { load, makeIO, REPO } from '../kit-build/lib/deps.mjs';
 
 const { Document } = await load('@gltf-transform/core');
@@ -40,7 +42,7 @@ const opt = (name) => {
 const SRC = opt('--src') || path.join(os.homedir(), '.cache/tp-avatars');
 const CORE = opt('--core');
 const OUT = path.join(REPO, 'avatars');
-const RUNTIME = path.join(OUT, '_runtime');
+const RUNTIME = path.join(REPO, 'tools/avatars/runtime');
 
 const PACKS = {
 	adventurers: {
@@ -321,11 +323,51 @@ async function withClips(charDoc, clipFile) {
 	return doc;
 }
 
+/** a copy of a character posed at `t` seconds of one clip (the thumbnailer draws the bind pose otherwise) */
+async function posedCopy(file, clip = 'Idle', t = 0.4) {
+	const io = makeIO();
+	const doc = await io.read(file);
+	const anim = doc.getRoot().listAnimations().find((a) => a.getName() === clip);
+	if (anim)
+		for (const ch of anim.listChannels()) {
+			const node = ch.getTargetNode();
+			const s = ch.getSampler();
+			if (!node || !s) continue;
+			const times = s.getInput().getArray();
+			let k = 0;
+			while (k + 1 < times.length && times[k + 1] <= t) k++;
+			const v = s.getOutput().getElement(k, []);
+			const path_ = ch.getTargetPath();
+			if (path_ === 'rotation') node.setRotation(v);
+			else if (path_ === 'translation') node.setTranslation(v);
+			else if (path_ === 'scale') node.setScale(v);
+		}
+	for (const a of doc.getRoot().listAnimations()) disposeAnimation(a);
+	return io.writeBinary(doc);
+}
+
+async function thumbs() {
+	const { renderThumbs } = await import(pathToFileURL(path.join(REPO, 'tools/meshy/lib/thumb.js')).href);
+	const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'tp-avatar-thumbs-'));
+	const items = [];
+	for (const row of JSON.parse(fs.readFileSync(path.join(OUT, 'default.json'), 'utf8'))) {
+		const glb = path.join(tmp, row.name + '.glb');
+		fs.writeFileSync(glb, await posedCopy(path.join(OUT, row.name, 'glTF-Binary', row.variants['glTF-Binary'])));
+		items.push({ glb, out: path.join(OUT, row.name, row.screenshot) });
+	}
+	await renderThumbs(items, { size: 512, yaw: 25 });
+	fs.rmSync(tmp, { recursive: true, force: true });
+	console.error('thumbs: ' + items.length);
+}
+
 async function main() {
+	if (args.includes('--thumbs')) return thumbs();
 	fetchSources();
 	fs.mkdirSync(RUNTIME, { recursive: true });
 	const io = makeIO();
 	const catalog = [];
+	/** @type {any[]} the Explorer pack's model list */
+	const rows = [];
 	const clipSrc = path.join(SRC, 'adventurers', 'Knight.glb');
 	for (const c of CHARACTERS) {
 		const file = path.join(SRC, c.pack, c.file);
@@ -333,9 +375,16 @@ async function main() {
 		const { doc, tris, cellsByPart, dropped, bounds, headY } = built;
 		const runtimeFile = path.join(RUNTIME, c.id + '.glb');
 		await io.write(runtimeFile, doc);
-		const folder = c.name.replace(/[^A-Za-z0-9]+/g, '');
-		fs.mkdirSync(path.join(OUT, folder), { recursive: true });
-		await io.write(path.join(OUT, folder, c.id + '.glb'), await withClips(doc, clipSrc));
+		const folder = c.name.replace(/(^|[^A-Za-z0-9]+)([a-z])/g, (_, __, ch) => ch.toUpperCase()).replace(/[^A-Za-z0-9]+/g, '');
+		fs.mkdirSync(path.join(OUT, folder, 'glTF-Binary'), { recursive: true });
+		await io.write(path.join(OUT, folder, 'glTF-Binary', c.id + '.glb'), await withClips(doc, clipSrc));
+		rows.push({
+			name: folder,
+			screenshot: 'thumb.webp',
+			label: c.name + ' (rigged, animated: Idle loops; clips ' + CLIPS.join(', ') + ')',
+			variants: { 'glTF-Binary': c.id + '.glb' },
+			behavior: { type: 'loop', clip: 'Idle', trigger: 'click', autoplay: true }
+		});
 		// the outfit = the atlas cells the body/arms/legs/cape use most that the HEAD part does not
 		// (the head carries skin + face, which an outfit colour must never repaint)
 		const sum = (re) => {
@@ -364,6 +413,7 @@ async function main() {
 		});
 		console.error(`${c.id}: ${tris} tris, ${(fs.statSync(runtimeFile).size / 1024).toFixed(0)} KiB, height ${height.toFixed(2)}, dropped ${dropped.join(',') || '-'}, outfit cells ${outfitCells}`);
 	}
+	fs.writeFileSync(path.join(OUT, 'default.json'), JSON.stringify(rows, null, '\t') + '\n');
 	const clips = await buildClips(clipSrc);
 	await io.write(path.join(RUNTIME, 'clips.glb'), clips);
 	fs.writeFileSync(path.join(RUNTIME, 'avatars.json'), JSON.stringify({ version: 1, atlasGrid: GRID, clips: CLIPS, characters: catalog }, null, '\t') + '\n');

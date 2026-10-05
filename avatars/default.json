@@ -1,0 +1,128 @@
+[
+	{
+		"name": "Knight",
+		"screenshot": "thumb.webp",
+		"label": "Knight (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "knight.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "Mage",
+		"screenshot": "thumb.webp",
+		"label": "Mage (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "mage.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "Rogue",
+		"screenshot": "thumb.webp",
+		"label": "Rogue (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "rogue.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "HoodedRogue",
+		"screenshot": "thumb.webp",
+		"label": "Hooded rogue (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "rogue-hooded.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "Barbarian",
+		"screenshot": "thumb.webp",
+		"label": "Barbarian (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "barbarian.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "Skeleton",
+		"screenshot": "thumb.webp",
+		"label": "Skeleton (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "skeleton-minion.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "SkeletonWarrior",
+		"screenshot": "thumb.webp",
+		"label": "Skeleton warrior (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "skeleton-warrior.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "SkeletonMage",
+		"screenshot": "thumb.webp",
+		"label": "Skeleton mage (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "skeleton-mage.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	},
+	{
+		"name": "SkeletonRogue",
+		"screenshot": "thumb.webp",
+		"label": "Skeleton rogue (rigged, animated: Idle loops; clips Idle, Walking_A, Walking_Backwards, Running_A, Running_Strafe_Left, Running_Strafe_Right, Jump_Idle, Cheer, Interact, Sit_Floor_Idle)",
+		"variants": {
+			"glTF-Binary": "skeleton-rogue.glb"
+		},
+		"behavior": {
+			"type": "loop",
+			"clip": "Idle",
+			"trigger": "click",
+			"autoplay": true
+		}
+	}
+]

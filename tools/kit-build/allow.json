@@ -97,6 +97,12 @@
 			"check": "flicker",
 			"file": "nature-kit/PondSet/glTF-Binary/PondSet.glb",
 			"reason": "render probe 404 px (> the 400 px recording limit) — the same 404 px 33-pack-fix-lod measured; none of defight's candidates flickers clearly less (best 403 px), and the roadmap-33 in-app scan passed it under the patch limit. The kitbash's reeds and pond edge, not a fixable coplanar layer; re-judge if the pond is rebuilt"
+		},
+		{
+			"pack": "avatars",
+			"item": "*",
+			"check": "lods",
+			"reason": "skinned characters: a decimated level changes the skin weights and the rig, and a scene holds a handful of them (8 peers = ~40k tris); core's runtime LOD skips skinned meshes anyway"
 		}
 	]
 }
