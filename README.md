@@ -41,6 +41,10 @@ town-kit/                        Town & Market Kit: 27 pieces — street tiles (
 tools/town-kit/                  its reproducible build + e2e
 arcane-kit/                      Arcane Study Kit: 7 wizard's-study hero props with LODs (crystal ball,
                                  alchemist's table, lectern, telescope, armillary, potions, rune rug; CC0, Meshy.ai)
+avatars/                         Adventurers: 9 rigged, animated characters (KayKit by Kay Lousberg, CC0) — the
+                                 app's player avatars, placeable as animated models (Idle loops)
+tools/avatars/                   their build: merge to one skinned mesh + 1 material, shared clips, thumbnails;
+                                 runtime/ = what core ships in static/avatars/
 ```
 
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
