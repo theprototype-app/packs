@@ -15,6 +15,10 @@
 //                                               the limit (headless) and writes flicker-baseline.json
 //   report [pack…] [--md file] [--json file]   the budget report (tris vs budget, MiB, textures, LODs)
 //   check  [pack…] [--json file] [--summary file]   the CI: exit 1 on any error not in allow.json
+//   dims   [pack…|--all] [--write] [--remote]   measure each row's size/box/tris/bytes/animated and
+//                                               write them onto the row (core 39 P4: the app's
+//                                               drag-to-place ghost reads them before any download);
+//                                               --remote downloads absolute-URL rows (Khronos)
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -62,6 +66,14 @@ async function main() {
 			if (opt('--md')) fs.writeFileSync(/** @type {string} */ (opt('--md')), md);
 			else process.stdout.write(md);
 			if (opt('--json')) fs.writeFileSync(/** @type {string} */ (opt('--json')), JSON.stringify(r.items, null, 1) + '\n');
+			return;
+		}
+		case 'dims': {
+			const { dimsPacks } = await import('./lib/dims.mjs');
+			const packs = flag('--all') ? null : positional();
+			const r = await dimsPacks(REPO, packs, { write: flag('--write'), remote: flag('--remote') });
+			const changed = r.reduce((n, p) => n + p.changed, 0);
+			console.log(`${changed} row(s) ${flag('--write') ? 'written' : 'would change (dry run; --write to apply)'}`);
 			return;
 		}
 		case 'post': {
@@ -115,6 +127,8 @@ async function main() {
 			node(['tools/lod/defight-all.mjs', pack]);
 			node(['tools/lod/lod.mjs', pack]);
 			if (!flag('--no-thumbs')) await thumbsPack(REPO, pack, only?.split(',') ?? null);
+			const { dimsPacks } = await import('./lib/dims.mjs');
+			await dimsPacks(REPO, [pack], { write: true });
 			node(['tools/kit-build/kit-build.mjs', 'check', pack]);
 			return;
 		}

@@ -17,6 +17,8 @@
 //             when double-sided) ≤ 1 cm² — or no worse than the file's recorded baseline
 //             (flicker-baseline.json, written by `kit-build flicker --record` after a RENDER probe)
 //   thumb     the row's screenshot exists and decodes, ≥ 64 px
+//   dims      the row's size/box/tris/bytes/animated match the file (core 39 P4 reads them before any
+//             download; `kit-build dims <pack> --write` writes them)
 //
 // A failure is an ERROR unless allow.json lists it (pack, item, check) with a reason; an allow-list
 // entry that matched nothing is reported so it gets cleaned up.
@@ -24,6 +26,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { load } from './deps.mjs';
 import { inspectGlb } from './inspect.mjs';
+import { dimsProblem } from './dims.mjs';
 import { indexRowProblems, itemRowProblems, behaviorClipProblems, pivotProblem, scaleProblem, safeRel } from './rules.mjs';
 import { probeFile } from '../../lod/coplanar.mjs';
 
@@ -137,6 +140,9 @@ export async function runChecks(repo, o = {}) {
 				if (pv) add('error', pack, item, 'pivot', `${pv}; rule "${pol.pivot}"`);
 			}
 			for (const m of info.materials) if (m.emissiveTexture && !m.emissive) add('warn', pack, item, 'emissive', `material ${m.name || '(unnamed)'} has an emissive map with a black factor (a wasted texture)`);
+			// dims (core 39 P4): the row says how big the item is before the app downloads it
+			const dp = dimsProblem(r, info);
+			if (dp) add('error', pack, item, 'dims', dp.replace('<pack>', pack));
 			// lods
 			const lods = Array.isArray(r.lods) ? r.lods : [];
 			if (!lods.length && info.tris > L.lodRequiredOver) add('error', pack, item, 'lods', `${info.tris} triangles and no LOD files (node tools/kit-build/kit-build.mjs lod ${pack})`);

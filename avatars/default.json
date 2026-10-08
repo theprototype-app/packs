@@ -11,7 +11,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.942, 2.467, 1.253],
+		"box": [-0.971, 0, -0.542, 0.971, 2.467, 0.711],
+		"tris": 4712,
+		"bytes": 497264,
+		"animated": true
 	},
 	{
 		"name": "Mage",
@@ -25,7 +30,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [2.093, 2.716, 2.04],
+		"box": [-1.046, 0, -1.017, 1.047, 2.716, 1.023],
+		"tris": 4509,
+		"bytes": 477352,
+		"animated": true
 	},
 	{
 		"name": "Rogue",
@@ -39,7 +49,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.942, 2.187, 1.015],
+		"box": [-0.971, 0, -0.496, 0.971, 2.187, 0.519],
+		"tris": 4347,
+		"bytes": 461980,
+		"animated": true
 	},
 	{
 		"name": "HoodedRogue",
@@ -53,7 +68,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.942, 2.251, 1.156],
+		"box": [-0.971, 0, -0.567, 0.971, 2.251, 0.589],
+		"tris": 4005,
+		"bytes": 442292,
+		"animated": true
 	},
 	{
 		"name": "Barbarian",
@@ -67,7 +87,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.942, 2.398, 1.264],
+		"box": [-0.971, 0, -0.525, 0.971, 2.398, 0.739],
+		"tris": 4777,
+		"bytes": 480244,
+		"animated": true
 	},
 	{
 		"name": "Skeleton",
@@ -81,7 +106,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.938, 2.166, 0.912],
+		"box": [-0.969, 0, -0.458, 0.969, 2.166, 0.454],
+		"tris": 5288,
+		"bytes": 540852,
+		"animated": true
 	},
 	{
 		"name": "SkeletonWarrior",
@@ -95,7 +125,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.942, 2.59, 1.459],
+		"box": [-0.971, 0, -0.758, 0.971, 2.59, 0.701],
+		"tris": 5934,
+		"bytes": 615228,
+		"animated": true
 	},
 	{
 		"name": "SkeletonMage",
@@ -109,7 +144,12 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.938, 2.63, 1.735],
+		"box": [-0.969, 0, -0.848, 0.969, 2.63, 0.887],
+		"tris": 4588,
+		"bytes": 491736,
+		"animated": true
 	},
 	{
 		"name": "SkeletonRogue",
@@ -123,6 +163,11 @@
 			"clip": "Idle",
 			"trigger": "click",
 			"autoplay": true
-		}
+		},
+		"size": [1.942, 2.308, 1.153],
+		"box": [-0.971, 0, -0.582, 0.971, 2.308, 0.571],
+		"tris": 5278,
+		"bytes": 563260,
+		"animated": true
 	}
 ]

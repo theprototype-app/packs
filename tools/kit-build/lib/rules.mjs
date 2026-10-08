@@ -8,7 +8,7 @@ export const BEHAVIOR_TRIGGERS = ['click', 'proximity', 'knock'];
 const BEHAVIOR_KEYS = ['type', 'clip', 'closeClip', 'trigger', 'autoplay', 'sound', 'collider'];
 /** core lodGroupCore MAX_LEVELS is 6 (LOD0 + 5 files) */
 export const MAX_LOD_FILES = 5;
-const ROW_KEYS = ['name', 'label', 'screenshot', 'variants', 'lods', 'behavior'];
+const ROW_KEYS = ['name', 'label', 'screenshot', 'variants', 'lods', 'behavior', 'size', 'box', 'tris', 'bytes', 'animated'];
 const INDEX_KEYS = ['name', 'title', 'value', 'zip', 'attribution', 'copyright', 'license', 'source', 'cover'];
 export const PIVOTS = ['bottom-center', 'bottom-center-back', 'top-center', 'wall-pivot', 'wall-face', 'foot', 'hinge', 'any'];
 
@@ -49,6 +49,7 @@ export function itemRowProblems(row) {
 	else if (!isUrl(glb) && !/\.glb$/i.test(glb)) out.push('variants["glTF-Binary"] must be a .glb');
 	if (row.lods !== undefined) out.push(...lodsProblems(row.lods));
 	if (row.behavior !== undefined) out.push(...behaviorProblems(row.behavior));
+	out.push(...dimsShapeProblems(row));
 	for (const k of Object.keys(row)) if (!ROW_KEYS.includes(k)) out.push(`unknown key "${k}"`);
 	return out;
 }
@@ -161,4 +162,22 @@ export function scaleProblem(size, maxExtent, minExtent) {
 	if (big < minExtent) return `largest extent ${big.toFixed(3)} m is under ${minExtent} m — exported in km, or empty?`;
 	if (big > maxExtent) return `largest extent ${big.toFixed(2)} m is over the category's ${maxExtent} m — exported in cm?`;
 	return null;
+}
+
+/**
+ * The dims fields' SHAPE (core 39 P4) — core reads them before any download, so a malformed one
+ * draws a wrong ghost. Whether they are CURRENT is check.mjs's job (it measures the file).
+ * @param {any} row @returns {string[]}
+ */
+export function dimsShapeProblems(row) {
+	const out = [];
+	const num = (/** @type {any} */ v) => typeof v === 'number' && Number.isFinite(v);
+	if (row.size !== undefined && !(Array.isArray(row.size) && row.size.length === 3 && row.size.every((/** @type {any} */ v) => num(v) && v >= 0)))
+		out.push('size must be [width, height, depth] in metres (three numbers >= 0)');
+	if (row.box !== undefined && !(Array.isArray(row.box) && row.box.length === 6 && row.box.every(num) && row.box[3] >= row.box[0] && row.box[4] >= row.box[1] && row.box[5] >= row.box[2]))
+		out.push('box must be [minX, minY, minZ, maxX, maxY, maxZ] with max >= min');
+	if (row.tris !== undefined && !(Number.isInteger(row.tris) && row.tris >= 0)) out.push('tris must be a whole number >= 0');
+	if (row.bytes !== undefined && !(Number.isInteger(row.bytes) && row.bytes > 0)) out.push('bytes must be a whole number > 0');
+	if (row.animated !== undefined && row.animated !== true) out.push('animated is true or absent');
+	return out;
 }

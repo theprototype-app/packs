@@ -47,6 +47,11 @@ tools/avatars/                   their build: merge to one skinned mesh + 1 mate
                                  runtime/ = what core ships in static/avatars/
 ```
 
+Each item row in a model list also carries its measured **`size`** (`[w, h, d]` metres), **`box`**,
+**`tris`**, **`bytes`** (and `animated: true` for a rigged/clipped file) — written by
+`node tools/kit-build/kit-build.mjs dims <pack> --write`, checked by the CI. The app reads them to
+draw an item's size while it is dragged in, before the file downloads.
+
 Each `index.json` row: `{name, title, value | zip, attribution, copyright, license, source}` —
 `value` points at a model-list JSON (relative to this repo), `zip` at a self-describing
 installable pack. The formats are documented in the app repo's

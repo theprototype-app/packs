@@ -5,7 +5,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/AntiqueCamera/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/AntiqueCamera/glTF-Binary/AntiqueCamera.glb"
-    }
+    },
+    "size": [2.598, 7.209, 3.395],
+    "box": [-1.626, -0.001, -1.895, 0.972, 7.208, 1.5],
+    "tris": 20066,
+    "bytes": 17540348
   },
   {
     "name": "CesiumMilkTruck",
@@ -13,7 +17,12 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CesiumMilkTruck/screenshot/screenshot.gif",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CesiumMilkTruck/glTF-Binary/CesiumMilkTruck.glb"
-    }
+    },
+    "size": [2.792, 2.582, 4.869],
+    "box": [-1.396, 0.002, -2.431, 1.396, 2.584, 2.438],
+    "tris": 3624,
+    "bytes": 369980,
+    "animated": true
   },
   {
     "name": "ChairDamaskPurplegold",
@@ -21,7 +30,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ChairDamaskPurplegold/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ChairDamaskPurplegold/glTF-Binary/ChairDamaskPurplegold.glb"
-    }
+    },
+    "size": [0.829, 0.687, 0.572],
+    "box": [-0.415, 0, -0.277, 0.414, 0.687, 0.295],
+    "tris": 9984,
+    "bytes": 2028924
   },
   {
     "name": "ClearCoatCarPaint",
@@ -29,7 +42,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearCoatCarPaint/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearCoatCarPaint/glTF-Binary/ClearCoatCarPaint.glb"
-    }
+    },
+    "size": [1, 0.98, 1],
+    "box": [-0.5, 0.01, -0.5, 0.5, 0.99, 0.5],
+    "tris": 3072,
+    "bytes": 116948
   },
   {
     "name": "ClearcoatWicker",
@@ -37,7 +54,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearcoatWicker/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearcoatWicker/glTF-Binary/ClearcoatWicker.glb"
-    }
+    },
+    "size": [1, 0.98, 1],
+    "box": [-0.5, 0.01, -0.5, 0.5, 0.99, 0.5],
+    "tris": 3072,
+    "bytes": 1299752
   },
   {
     "name": "DamagedHelmet",
@@ -45,7 +66,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DamagedHelmet/screenshot/screenshot.png",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DamagedHelmet/glTF-Binary/DamagedHelmet.glb"
-    }
+    },
+    "size": [1.89, 1.802, 2],
+    "box": [-0.947, -0.901, -1.187, 0.943, 0.901, 0.813],
+    "tris": 15452,
+    "bytes": 3773916
   },
   {
     "name": "DragonAttenuation",
@@ -53,7 +78,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonAttenuation/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonAttenuation/glTF-Binary/DragonAttenuation.glb"
-    }
+    },
+    "size": [6.309, 3.572, 6.612],
+    "box": [-3.03, -0.836, -1.783, 3.279, 2.736, 4.829],
+    "tris": 134995,
+    "bytes": 6401616
   },
   {
     "name": "DragonDispersion",
@@ -61,7 +90,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonDispersion/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DragonDispersion/glTF-Binary/DragonDispersion.glb"
-    }
+    },
+    "size": [6.309, 3.572, 6.612],
+    "box": [-3.03, -0.832, -1.783, 3.279, 2.74, 4.829],
+    "tris": 134995,
+    "bytes": 6401724
   },
   {
     "name": "Duck",
@@ -69,7 +102,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/screenshot/screenshot.png",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/glTF-Binary/Duck.glb"
-    }
+    },
+    "size": [1.655, 1.541, 1.152],
+    "box": [-0.693, 0.099, -0.613, 0.962, 1.64, 0.539],
+    "tris": 4212,
+    "bytes": 120484
   },
   {
     "name": "GlamVelvetSofa",
@@ -77,7 +114,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlamVelvetSofa/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb"
-    }
+    },
+    "size": [2.189, 0.788, 1.023],
+    "box": [-1.114, 0, -0.628, 1.075, 0.788, 0.395],
+    "tris": 4196,
+    "bytes": 3149844
   },
   {
     "name": "IridescenceLamp",
@@ -85,7 +126,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/IridescenceLamp/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/IridescenceLamp/glTF-Binary/IridescenceLamp.glb"
-    }
+    },
+    "size": [0.298, 0.476, 0.302],
+    "box": [-0.149, 0, -0.151, 0.149, 0.476, 0.151],
+    "tris": 18866,
+    "bytes": 4083912
   },
   {
     "name": "Lantern",
@@ -93,7 +138,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Lantern/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Lantern/glTF-Binary/Lantern.glb"
-    }
+    },
+    "size": [15.491, 25.664, 4.632],
+    "box": [-3.922, 0.184, -2.316, 11.569, 25.848, 2.316],
+    "tris": 5394,
+    "bytes": 9564264
   },
   {
     "name": "LightsPunctualLamp",
@@ -101,7 +150,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/LightsPunctualLamp/screenshot/screenshot.png",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/LightsPunctualLamp/glTF-Binary/LightsPunctualLamp.glb"
-    }
+    },
+    "size": [1.127, 1.864, 0.722],
+    "box": [-0.312, 0.011, -0.362, 0.815, 1.875, 0.36],
+    "tris": 6000,
+    "bytes": 4341320
   },
   {
     "name": "MosquitoInAmber",
@@ -109,7 +162,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MosquitoInAmber/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MosquitoInAmber/glTF-Binary/MosquitoInAmber.glb"
-    }
+    },
+    "size": [0.098, 0.099, 0.088],
+    "box": [-0.05, -0.048, -0.051, 0.048, 0.051, 0.037],
+    "tris": 14349,
+    "bytes": 24229904
   },
   {
     "name": "RiggedFigure",
@@ -117,7 +174,12 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/screenshot/screenshot.gif",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/glTF-Binary/RiggedFigure.glb"
-    }
+    },
+    "size": [1.179, 1.45, 0.326],
+    "box": [-0.589, 0, -0.131, 0.59, 1.45, 0.195],
+    "tris": 256,
+    "bytes": 50116,
+    "animated": true
   },
   {
     "name": "RiggedSimple",
@@ -125,7 +187,12 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedSimple/screenshot/screenshot.gif",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedSimple/glTF-Binary/RiggedSimple.glb"
-    }
+    },
+    "size": [2, 9.15, 2],
+    "box": [-1, -4.575, -1, 1, 4.575, 1],
+    "tris": 188,
+    "bytes": 15104,
+    "animated": true
   },
   {
     "name": "SheenChair",
@@ -133,7 +200,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
-    }
+    },
+    "size": [0.827, 0.686, 0.571],
+    "box": [-0.414, 0, -0.277, 0.413, 0.686, 0.294],
+    "tris": 39936,
+    "bytes": 4125648
   },
   {
     "name": "SheenWoodLeatherSofa",
@@ -141,7 +212,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenWoodLeatherSofa/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenWoodLeatherSofa/glTF-Binary/SheenWoodLeatherSofa.glb"
-    }
+    },
+    "size": [2.726, 1.117, 0.924],
+    "box": [-1.363, 0.001, -0.463, 1.363, 1.118, 0.461],
+    "tris": 46492,
+    "bytes": 10107912
   },
   {
     "name": "SpecularSilkPouf",
@@ -149,7 +224,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SpecularSilkPouf/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SpecularSilkPouf/glTF-Binary/SpecularSilkPouf.glb"
-    }
+    },
+    "size": [0.61, 0.198, 0.61],
+    "box": [-0.305, 0, -0.305, 0.305, 0.198, 0.305],
+    "tris": 81280,
+    "bytes": 4632512
   },
   {
     "name": "ToyCar",
@@ -157,7 +236,11 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/glTF-Binary/ToyCar.glb"
-    }
+    },
+    "size": [0.073, 0.029, 0.074],
+    "box": [-0.035, -0.016, -0.037, 0.038, 0.013, 0.037],
+    "tris": 108936,
+    "bytes": 5422412
   },
   {
     "name": "WaterBottle",
@@ -165,6 +248,10 @@
     "screenshot": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/WaterBottle/screenshot/screenshot.jpg",
     "variants": {
       "glTF-Binary": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/WaterBottle/glTF-Binary/WaterBottle.glb"
-    }
+    },
+    "size": [0.109, 0.26, 0.109],
+    "box": [-0.054, -0.13, -0.054, 0.055, 0.13, 0.055],
+    "tris": 4510,
+    "bytes": 8966700
   }
 ]

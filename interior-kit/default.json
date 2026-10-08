@@ -15,7 +15,11 @@
         "file": "round-table.lod2.glb",
         "ratio": 0.28
       }
-    ]
+    ],
+    "size": [0.95, 0.76, 0.95],
+    "box": [-0.475, 0, -0.475, 0.475, 0.76, 0.475],
+    "tris": 3000,
+    "bytes": 478852
   },
   {
     "name": "LongTable",
@@ -29,7 +33,11 @@
         "file": "long-table.lod1.glb",
         "ratio": 0.52
       }
-    ]
+    ],
+    "size": [2.2, 0.78, 0.9],
+    "box": [-1.1, 0, -0.45, 1.1, 0.78, 0.45],
+    "tris": 3000,
+    "bytes": 703752
   },
   {
     "name": "Bench",
@@ -43,7 +51,11 @@
         "file": "bench.lod1.glb",
         "ratio": 0.76
       }
-    ]
+    ],
+    "size": [1.8, 0.46, 0.36],
+    "box": [-0.9, 0, -0.18, 0.9, 0.46, 0.18],
+    "tris": 2000,
+    "bytes": 666504
   },
   {
     "name": "BarStool",
@@ -57,7 +69,11 @@
         "file": "bar-stool.lod1.glb",
         "ratio": 0.51
       }
-    ]
+    ],
+    "size": [0.388, 0.75, 0.39],
+    "box": [-0.194, 0, -0.195, 0.194, 0.75, 0.195],
+    "tris": 1799,
+    "bytes": 350180
   },
   {
     "name": "Stool",
@@ -71,7 +87,11 @@
         "file": "stool.lod1.glb",
         "ratio": 0.63
       }
-    ]
+    ],
+    "size": [0.38, 0.46, 0.38],
+    "box": [-0.19, 0, -0.19, 0.19, 0.46, 0.19],
+    "tris": 1500,
+    "bytes": 338848
   },
   {
     "name": "BarCounter",
@@ -85,7 +105,11 @@
         "file": "bar-counter.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [2, 1.1, 0.7],
+    "box": [-1, 0, -0.35, 1, 1.1, 0.35],
+    "tris": 3999,
+    "bytes": 505548
   },
   {
     "name": "BackBar",
@@ -103,7 +127,11 @@
         "file": "back-bar.lod2.glb",
         "ratio": 0.37
       }
-    ]
+    ],
+    "size": [2, 2, 0.5],
+    "box": [-1, 0, 0.125, 1, 2, 0.625],
+    "tris": 4990,
+    "bytes": 585740
   },
   {
     "name": "CrateGoods",
@@ -117,7 +145,11 @@
         "file": "crate-goods.lod1.glb",
         "ratio": 0.58
       }
-    ]
+    ],
+    "size": [0.456, 0.5, 0.446],
+    "box": [-0.228, 0, -0.223, 0.228, 0.5, 0.223],
+    "tris": 3065,
+    "bytes": 665508
   },
   {
     "name": "Armchair",
@@ -131,7 +163,11 @@
         "file": "armchair.lod1.glb",
         "ratio": 0.52
       }
-    ]
+    ],
+    "size": [0.896, 1.05, 1.002],
+    "box": [-0.448, 0, -0.501, 0.448, 1.05, 0.501],
+    "tris": 3897,
+    "bytes": 547604
   },
   {
     "name": "Sofa",
@@ -145,7 +181,11 @@
         "file": "sofa.lod1.glb",
         "ratio": 0.51
       }
-    ]
+    ],
+    "size": [2.1, 0.85, 0.9],
+    "box": [-1.05, 0, -0.45, 1.05, 0.85, 0.45],
+    "tris": 4743,
+    "bytes": 454252
   },
   {
     "name": "DoubleBed",
@@ -163,7 +203,11 @@
         "file": "double-bed.lod2.glb",
         "ratio": 0.2
       }
-    ]
+    ],
+    "size": [1.6, 1.15, 2.1],
+    "box": [-0.8, 0, 0.125, 0.8, 1.15, 2.225],
+    "tris": 4934,
+    "bytes": 468736
   },
   {
     "name": "Wardrobe",
@@ -181,7 +225,11 @@
         "file": "wardrobe.lod2.glb",
         "ratio": 0.33
       }
-    ]
+    ],
+    "size": [1.2, 2, 0.6],
+    "box": [-0.6, 0, 0.125, 0.6, 2, 0.725],
+    "tris": 3961,
+    "bytes": 557832
   },
   {
     "name": "Plant",
@@ -189,7 +237,11 @@
     "label": "Snake plant in a teal pot",
     "variants": {
       "glTF-Binary": "plant.glb"
-    }
+    },
+    "size": [0.35, 0.95, 0.343],
+    "box": [-0.175, 0, -0.171, 0.175, 0.95, 0.172],
+    "tris": 3989,
+    "bytes": 893364
   },
   {
     "name": "Desk",
@@ -207,7 +259,11 @@
         "file": "desk.lod2.glb",
         "ratio": 0.32
       }
-    ]
+    ],
+    "size": [1.4, 0.76, 0.7],
+    "box": [-0.7, 0, -0.35, 0.7, 0.76, 0.35],
+    "tris": 3188,
+    "bytes": 457272
   },
   {
     "name": "KitchenCounter",
@@ -225,7 +281,11 @@
         "file": "kitchen-counter.lod2.glb",
         "ratio": 0.36
       }
-    ]
+    ],
+    "size": [1, 0.92, 0.62],
+    "box": [-0.5, 0, 0.125, 0.5, 0.92, 0.745],
+    "tris": 3000,
+    "bytes": 428152
   },
   {
     "name": "Stove",
@@ -243,7 +303,11 @@
         "file": "stove.lod2.glb",
         "ratio": 0.22
       }
-    ]
+    ],
+    "size": [0.9, 0.95, 0.65],
+    "box": [-0.45, 0, 0.125, 0.45, 0.95, 0.775],
+    "tris": 3873,
+    "bytes": 622844
   },
   {
     "name": "Fireplace",
@@ -261,7 +325,11 @@
         "file": "fireplace.lod2.glb",
         "ratio": 0.2
       }
-    ]
+    ],
+    "size": [1.8, 1.6, 0.6],
+    "box": [-0.9, 0, 0.125, 0.9, 1.6, 0.725],
+    "tris": 4971,
+    "bytes": 642844
   },
   {
     "name": "WallSconce",
@@ -269,7 +337,11 @@
     "label": "Wall sconce (brass)",
     "variants": {
       "glTF-Binary": "wall-sconce.glb"
-    }
+    },
+    "size": [0.124, 0.44, 0.204],
+    "box": [-0.062, 0, 0.125, 0.062, 0.44, 0.329],
+    "tris": 400,
+    "bytes": 56292
   },
   {
     "name": "FloorLamp",
@@ -283,7 +355,11 @@
         "file": "floor-lamp.lod1.glb",
         "ratio": 0.52
       }
-    ]
+    ],
+    "size": [0.474, 1.655, 0.474],
+    "box": [-0.237, 0, -0.237, 0.237, 1.655, 0.237],
+    "tris": 1200,
+    "bytes": 139504
   },
   {
     "name": "Chandelier",
@@ -291,7 +367,11 @@
     "label": "Iron chandelier (hangs from y = 3)",
     "variants": {
       "glTF-Binary": "chandelier.glb"
-    }
+    },
+    "size": [0.92, 0.92, 0.876],
+    "box": [-0.46, -0.92, -0.438, 0.46, 0, 0.438],
+    "tris": 4444,
+    "bytes": 229172
   },
   {
     "name": "RugRound",
@@ -299,7 +379,11 @@
     "label": "Round rug Ø 2 m (teal)",
     "variants": {
       "glTF-Binary": "rug-round.glb"
-    }
+    },
+    "size": [2, 0.012, 2],
+    "box": [-1, 0, -1, 1, 0.012, 1],
+    "tris": 256,
+    "bytes": 452588
   },
   {
     "name": "Picture",
@@ -307,7 +391,11 @@
     "label": "Framed landscape (wall)",
     "variants": {
       "glTF-Binary": "picture.glb"
-    }
+    },
+    "size": [0.924, 0.684, 0.045],
+    "box": [-0.462, 0, 0.121, 0.462, 0.684, 0.166],
+    "tris": 130,
+    "bytes": 154572
   },
   {
     "name": "WallShelfBooks",
@@ -315,7 +403,11 @@
     "label": "Wall shelf with books",
     "variants": {
       "glTF-Binary": "wall-shelf-books.glb"
-    }
+    },
+    "size": [1.2, 0.833, 0.24],
+    "box": [-0.6, 0, 0.125, 0.6, 0.833, 0.365],
+    "tris": 860,
+    "bytes": 196536
   },
   {
     "name": "Skirting",
@@ -323,7 +415,11 @@
     "label": "Skirting (2 m, on a wall)",
     "variants": {
       "glTF-Binary": "skirting.glb"
-    }
+    },
+    "size": [2, 0.252, 0.042],
+    "box": [-1, 0, 0.105, 1, 0.252, 0.147],
+    "tris": 64,
+    "bytes": 30292
   },
   {
     "name": "SkirtingDoorway",
@@ -331,7 +427,11 @@
     "label": "Skirting, doorway (2 m)",
     "variants": {
       "glTF-Binary": "skirting-doorway.glb"
-    }
+    },
+    "size": [2, 0.252, 0.042],
+    "box": [-1, 0, 0.105, 1, 0.252, 0.147],
+    "tris": 56,
+    "bytes": 30620
   },
   {
     "name": "Wainscot",
@@ -339,7 +439,11 @@
     "label": "Wainscot panelling (2 m, teal)",
     "variants": {
       "glTF-Binary": "wainscot.glb"
-    }
+    },
+    "size": [2, 0.93, 0.057],
+    "box": [-1, 0, 0.105, 1, 0.93, 0.162],
+    "tris": 166,
+    "bytes": 50248
   },
   {
     "name": "WainscotDoorway",
@@ -347,7 +451,11 @@
     "label": "Wainscot, doorway (2 m, teal)",
     "variants": {
       "glTF-Binary": "wainscot-doorway.glb"
-    }
+    },
+    "size": [2, 0.93, 0.057],
+    "box": [-1, 0, 0.105, 1, 0.93, 0.162],
+    "tris": 136,
+    "bytes": 49664
   },
   {
     "name": "Cornice",
@@ -355,7 +463,11 @@
     "label": "Cornice (2 m, at the ceiling)",
     "variants": {
       "glTF-Binary": "cornice.glb"
-    }
+    },
+    "size": [2, 0.21, 0.18],
+    "box": [-1, 2.79, 0.105, 1, 3, 0.285],
+    "tris": 100,
+    "bytes": 37936
   },
   {
     "name": "TavernTableSet",
@@ -369,7 +481,11 @@
         "file": "tavern-table-set.lod1.glb",
         "ratio": 0.63
       }
-    ]
+    ],
+    "size": [1.8, 0.76, 1.8],
+    "box": [-0.9, 0, -0.9, 0.9, 0.76, 0.9],
+    "tris": 7498,
+    "bytes": 1003636
   },
   {
     "name": "DiningSet",
@@ -383,6 +499,10 @@
         "file": "dining-set.lod1.glb",
         "ratio": 0.65
       }
-    ]
+    ],
+    "size": [2.2, 0.78, 1.8],
+    "box": [-1.1, 0, -0.9, 1.1, 0.78, 0.9],
+    "tris": 7000,
+    "bytes": 930688
   }
 ]

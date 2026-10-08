@@ -5,7 +5,11 @@
     "label": "The Prototype Logo",
     "variants": {
       "glTF-Binary": "ThePrototype-Logo.glb"
-    }
+    },
+    "size": [6.046, 7.732, 5.197],
+    "box": [-5.046, -3.141, -4.197, 1, 4.591, 1],
+    "tris": 112,
+    "bytes": 7008
   },
   {
     "name": "SvelteRune",
@@ -13,7 +17,11 @@
     "label": "Svelte Rune",
     "variants": {
       "glTF-Binary": "SvelteRune.glb"
-    }
+    },
+    "size": [1.76, 2.397, 2.086],
+    "box": [-0.021, -1.143, 0.137, 1.739, 1.254, 2.223],
+    "tris": 17612,
+    "bytes": 3704300
   },
   {
     "name": "Duck",
@@ -31,6 +39,10 @@
         "file": "Duck.lod2.glb",
         "ratio": 0.2
       }
-    ]
+    ],
+    "size": [1.655, 1.541, 1.152],
+    "box": [-0.693, 0.099, -0.613, 0.962, 1.64, 0.539],
+    "tris": 4212,
+    "bytes": 120484
   }
 ]

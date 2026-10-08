@@ -233,3 +233,10 @@ test('pass: LOD0 over its triangle budget is decimated to it (node names kept)',
 		fs.rmSync(dir, { recursive: true, force: true });
 	}
 });
+
+test('dims: a row without its size/box/tris/bytes is red (core 39 P4)', async () => {
+	const errs = await errors((f) => {
+		f.noDims = true;
+	});
+	assert.ok(errs.some((e) => /^dims: no dims/.test(e)), errs.join('\n'));
+});
