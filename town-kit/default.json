@@ -5,7 +5,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "road.glb"
-    }
+    },
+    "size": [2, 0.2, 2],
+    "box": [-1, 0, -1, 1, 0.2, 1],
+    "tris": 320,
+    "bytes": 603416
   },
   {
     "name": "RoadCurb",
@@ -13,7 +17,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "road-curb.glb"
-    }
+    },
+    "size": [2, 0.35, 2],
+    "box": [-1, 0, -1, 1, 0.35, 1],
+    "tris": 416,
+    "bytes": 633404
   },
   {
     "name": "RoadCorner",
@@ -31,7 +39,11 @@
         "file": "road-corner.lod2.glb",
         "ratio": 0.27
       }
-    ]
+    ],
+    "size": [2, 0.35, 2],
+    "box": [-1, 0, -1, 1, 0.35, 1],
+    "tris": 512,
+    "bytes": 642636
   },
   {
     "name": "RoadCrossing",
@@ -49,7 +61,11 @@
         "file": "road-crossing.lod2.glb",
         "ratio": 0.27
       }
-    ]
+    ],
+    "size": [2, 0.2, 2],
+    "box": [-1, 0, -1, 1, 0.2, 1],
+    "tris": 512,
+    "bytes": 974912
   },
   {
     "name": "Sidewalk",
@@ -57,7 +73,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "sidewalk.glb"
-    }
+    },
+    "size": [2, 0.35, 2],
+    "box": [-1, 0, -1, 1, 0.35, 1],
+    "tris": 320,
+    "bytes": 368540
   },
   {
     "name": "StoneStairs",
@@ -65,7 +85,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "stone-stairs.glb"
-    }
+    },
+    "size": [2, 1, 2],
+    "box": [-1, 0, -1, 1, 1, 1],
+    "tris": 1538,
+    "bytes": 543120
   },
   {
     "name": "Well",
@@ -79,7 +103,11 @@
         "file": "well.lod1.glb",
         "ratio": 0.7
       }
-    ]
+    ],
+    "size": [2.62, 2.5, 2.62],
+    "box": [-1.31, 0, -1.31, 1.31, 2.5, 1.31],
+    "tris": 3864,
+    "bytes": 726972
   },
   {
     "name": "Fountain",
@@ -97,7 +125,11 @@
         "file": "fountain.lod2.glb",
         "ratio": 0.38
       }
-    ]
+    ],
+    "size": [3, 2.055, 3],
+    "box": [-1.5, 0, -1.5, 1.5, 2.055, 1.5],
+    "tris": 4998,
+    "bytes": 772656
   },
   {
     "name": "MarketStall",
@@ -115,7 +147,11 @@
         "file": "market-stall.lod2.glb",
         "ratio": 0.23
       }
-    ]
+    ],
+    "size": [2.4, 1.805, 2.008],
+    "box": [-1.2, 0, -1.004, 1.2, 1.805, 1.004],
+    "tris": 4764,
+    "bytes": 744016
   },
   {
     "name": "LampPost",
@@ -129,7 +165,11 @@
         "file": "lamp-post.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [0.64, 3.4, 0.648],
+    "box": [-0.32, 0, -0.324, 0.32, 3.4, 0.324],
+    "tris": 2496,
+    "bytes": 500584
   },
   {
     "name": "ParkBench",
@@ -147,7 +187,11 @@
         "file": "park-bench.lod2.glb",
         "ratio": 0.3
       }
-    ]
+    ],
+    "size": [1.6, 0.764, 0.696],
+    "box": [-0.8, 0, -0.348, 0.8, 0.764, 0.348],
+    "tris": 2500,
+    "bytes": 558980
   },
   {
     "name": "MarketCart",
@@ -161,7 +205,11 @@
         "file": "market-cart.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [2.2, 0.959, 1.358],
+    "box": [-1.1, 0, -0.679, 1.1, 0.959, 0.679],
+    "tris": 3999,
+    "bytes": 640492
   },
   {
     "name": "HayBale",
@@ -169,7 +217,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "hay-bale.glb"
-    }
+    },
+    "size": [0.9, 0.45, 0.45],
+    "box": [-0.45, 0, -0.225, 0.45, 0.45, 0.225],
+    "tris": 1287,
+    "bytes": 907488
   },
   {
     "name": "FlowerBox",
@@ -177,7 +229,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "flower-box.glb"
-    }
+    },
+    "size": [1, 0.5, 0.32],
+    "box": [-0.5, 0, -0.16, 0.5, 0.5, 0.16],
+    "tris": 2806,
+    "bytes": 857232
   },
   {
     "name": "NoticeBoard",
@@ -195,7 +251,11 @@
         "file": "notice-board.lod2.glb",
         "ratio": 0.28
       }
-    ]
+    ],
+    "size": [2.2, 2.2, 0.86],
+    "box": [-1.1, 0, -0.43, 1.1, 2.2, 0.43],
+    "tris": 2996,
+    "bytes": 804556
   },
   {
     "name": "ClockTowerTop",
@@ -213,7 +273,11 @@
         "file": "clock-tower-top.lod2.glb",
         "ratio": 0.28
       }
-    ]
+    ],
+    "size": [4.25, 8.528, 4.204],
+    "box": [-2.125, 0, -2.102, 2.125, 8.528, 2.102],
+    "tris": 5365,
+    "bytes": 777932
   },
   {
     "name": "Fence",
@@ -221,7 +285,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "fence.glb"
-    }
+    },
+    "size": [2, 1.05, 0.12],
+    "box": [-1, 0, -0.06, 1, 1.05, 0.06],
+    "tris": 256,
+    "bytes": 64328
   },
   {
     "name": "FenceGate",
@@ -238,7 +306,12 @@
       "autoplay": false,
       "collider": "follow",
       "sound": "gate"
-    }
+    },
+    "size": [2.022, 2.1, 0.142],
+    "box": [-1.011, 0, -0.071, 1.011, 2.1, 0.071],
+    "tris": 368,
+    "bytes": 109984,
+    "animated": true
   },
   {
     "name": "Bridge",
@@ -256,7 +329,11 @@
         "file": "bridge.lod2.glb",
         "ratio": 0.29
       }
-    ]
+    ],
+    "size": [1.9, 1.64, 4.444],
+    "box": [-0.95, 0, -2.222, 0.95, 1.64, 2.222],
+    "tris": 2328,
+    "bytes": 263684
   },
   {
     "name": "Banner",
@@ -264,7 +341,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "banner.glb"
-    }
+    },
+    "size": [1.07, 1.5, 0.153],
+    "box": [-0.535, 0.4, 0, 0.535, 1.9, 0.153],
+    "tris": 352,
+    "bytes": 88912
   },
   {
     "name": "BannerPole",
@@ -272,7 +353,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "banner-pole.glb"
-    }
+    },
+    "size": [1.04, 3.735, 0.5],
+    "box": [-0.52, 0, -0.25, 0.52, 3.735, 0.25],
+    "tris": 316,
+    "bytes": 107668
   },
   {
     "name": "Signpost",
@@ -280,7 +365,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "signpost.glb"
-    }
+    },
+    "size": [1.615, 2.46, 1.235],
+    "box": [-0.755, 0, -0.447, 0.86, 2.46, 0.788],
+    "tris": 68,
+    "bytes": 63452
   },
   {
     "name": "HayStack",
@@ -288,7 +377,11 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "hay-stack.glb"
-    }
+    },
+    "size": [0.9, 0.9, 0.92],
+    "box": [-0.45, 0, -0.46, 0.45, 0.9, 0.46],
+    "tris": 3861,
+    "bytes": 1000372
   },
   {
     "name": "LoadedCart",
@@ -302,7 +395,11 @@
         "file": "loaded-cart.lod1.glb",
         "ratio": 0.67
       }
-    ]
+    ],
+    "size": [2.2, 1.34, 1.358],
+    "box": [-1.1, 0, -0.679, 1.1, 1.34, 0.679],
+    "tris": 7860,
+    "bytes": 1609596
   },
   {
     "name": "BarrelCluster",
@@ -320,7 +417,11 @@
         "file": "barrel-cluster.lod2.glb",
         "ratio": 0.26
       }
-    ]
+    ],
+    "size": [1.225, 0.9, 0.911],
+    "box": [-0.522, 0, -0.562, 0.703, 0.9, 0.349],
+    "tris": 7434,
+    "bytes": 734120
   },
   {
     "name": "SacksBarrel",
@@ -338,7 +439,11 @@
         "file": "sacks-barrel.lod2.glb",
         "ratio": 0.38
       }
-    ]
+    ],
+    "size": [1.646, 0.75, 1.098],
+    "box": [-0.822, 0, -0.549, 0.824, 0.75, 0.549],
+    "tris": 6068,
+    "bytes": 1847232
   },
   {
     "name": "FlowerBoxLong",
@@ -346,6 +451,10 @@
     "screenshot": "thumb.webp",
     "variants": {
       "glTF-Binary": "flower-box-long.glb"
-    }
+    },
+    "size": [2, 0.5, 0.32],
+    "box": [-1, 0, -0.16, 1, 0.5, 0.16],
+    "tris": 5612,
+    "bytes": 989948
   }
 ]

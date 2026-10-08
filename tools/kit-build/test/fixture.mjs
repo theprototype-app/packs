@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { load, makeIO, REPO } from '../lib/deps.mjs';
+import { inspectGlb } from '../lib/inspect.mjs';
+import { dimsOf, withDims } from '../lib/dims.mjs';
 
 const { Document } = await load('@gltf-transform/core');
 const sharp = (await load('sharp')).default;
@@ -98,8 +100,15 @@ export async function fixture(edit) {
 		fs.writeFileSync(path.join(dir, rel), data);
 	};
 	w('index.json', JSON.stringify(f.index));
-	w('kit/default.json', JSON.stringify(f.rows));
 	for (const [rel, data] of Object.entries(f.files)) w(rel, data);
+	// core 39 P4: a shipped row carries its dims, measured from the file as written (so a test that
+	// breaks something else is not also red on dims); `f.noDims` leaves them off to test that check
+	const rows = [];
+	for (const row of f.rows) {
+		const glb = path.join(dir, 'kit', String(row?.name), 'glTF-Binary', String(row?.variants?.['glTF-Binary']));
+		rows.push(!f.noDims && row && !('size' in row) && fs.existsSync(glb) ? withDims(row, dimsOf(await inspectGlb(glb))) : row);
+	}
+	w('kit/default.json', JSON.stringify(rows));
 	w('tools/kit-build/packs.json', JSON.stringify({ limits: f.limits, categories: f.categories, packs: { kit: f.policy } }));
 	w('tools/kit-build/allow.json', JSON.stringify({ allow: f.allow }));
 	w('tools/kit-build/flicker-baseline.json', JSON.stringify({ files: f.baseline }));

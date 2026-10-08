@@ -129,6 +129,11 @@ export async function passPack(repo, pack, o = {}) {
 		} else console.log(`${rel}: would — ${did.join('; ')}`);
 	}
 	if (decimated) console.log(`${pack}: ${decimated} LOD0(s) decimated — run: node tools/kit-build/kit-build.mjs lod ${pack}`);
+	// core 39 P4: a rewritten file has new tris / bytes (maybe a new box) — its row says so too
+	if (o.write && changed) {
+		const { dimsPacks } = await import('./dims.mjs');
+		await dimsPacks(repo, [pack], { write: true, log: () => {} });
+	}
 	return changed;
 }
 

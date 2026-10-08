@@ -20,6 +20,7 @@ node tools/kit-build/kit-build.mjs <command> …
 | `flicker <pack…\|--all> [--record]` | the static z-fight probe; `--record` RENDERS every file over the limit (headless) and writes `flicker-baseline.json` |
 | `report [pack…] [--md f] [--json f]` | the **budget report**: per item tris vs budget, MiB, largest texture, LOD triangles, z-fight cm² |
 | `check [pack…] [--summary f] [--json f]` | **the CI** — exit 1 on any error that `allow.json` does not list |
+| `dims [pack…\|--all] [--write] [--remote]` | measures each row's **`size`** `[w, h, d]` (metres), **`box`** (exact bounds), **`tris`**, **`bytes`** and **`animated`** and writes them onto the row — core's drag-to-place ghost (roadmap 39) shows an item's size before it downloads. `build` and `pass --write` run it for you; `--remote` downloads absolute-URL rows (the Khronos index) for a one-off measure |
 
 The recipes `build` runs: `tools/architecture-kit/build.mjs`, `tools/scifi-kit/build.mjs`,
 `tools/town-kit/build.mjs`, `tools/interactive-kit/build.mjs`, `nature-kit/build/finalize.mjs`,
@@ -46,6 +47,7 @@ byte-identical. `pass --all` on main changes exactly one file (default/SvelteRun
 | behavior | the clips a behavior names exist in the GLB and in every LOD file |
 | flicker | the static z-fight probe (`tools/lod/coplanar.mjs`: coplanar triangle pairs, both facings when double-sided) ≤ 1 cm² — or at most the file's recorded baseline |
 | thumb | the row's screenshot exists, decodes, ≥ 64 px |
+| dims | the row's `size` / `box` / `tris` / `bytes` / `animated` match the file (± 1.5 mm on the bounds) — `kit-build dims <pack> --write` fixes it |
 
 ### Policy: `packs.json`
 

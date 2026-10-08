@@ -11,7 +11,11 @@
         "file": "table.lod1.glb",
         "ratio": 0.53
       }
-    ]
+    ],
+    "size": [1.8, 0.78, 0.95],
+    "box": [-0.9, 0, -0.475, 0.9, 0.78, 0.475],
+    "tris": 2999,
+    "bytes": 517984
   },
   {
     "name": "Bench",
@@ -25,7 +29,11 @@
         "file": "bench.lod1.glb",
         "ratio": 0.52
       }
-    ]
+    ],
+    "size": [1.5, 0.46, 0.38],
+    "box": [-0.75, 0, -0.19, 0.75, 0.46, 0.19],
+    "tris": 2999,
+    "bytes": 517956
   },
   {
     "name": "Chair",
@@ -39,7 +47,11 @@
         "file": "chair.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [0.506, 0.95, 0.52],
+    "box": [-0.253, 0, -0.26, 0.253, 0.95, 0.26],
+    "tris": 2500,
+    "bytes": 484792
   },
   {
     "name": "Bed",
@@ -57,7 +69,11 @@
         "file": "bed.lod2.glb",
         "ratio": 0.37
       }
-    ]
+    ],
+    "size": [1.1, 1, 2.05],
+    "box": [-0.55, 0, -1.025, 0.55, 1, 1.025],
+    "tris": 4000,
+    "bytes": 684552
   },
   {
     "name": "Bookcase",
@@ -71,7 +87,11 @@
         "file": "bookcase.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [1.316, 2, 0.684],
+    "box": [-0.658, 0, -0.342, 0.658, 2, 0.342],
+    "tris": 4928,
+    "bytes": 708736
   },
   {
     "name": "Workbench",
@@ -89,7 +109,11 @@
         "file": "workbench.lod2.glb",
         "ratio": 0.22
       }
-    ]
+    ],
+    "size": [1.24, 0.92, 0.594],
+    "box": [-0.62, 0, -0.297, 0.62, 0.92, 0.297],
+    "tris": 4919,
+    "bytes": 556360
   },
   {
     "name": "Rug",
@@ -97,7 +121,11 @@
     "label": "Rug 2 × 1.3 m",
     "variants": {
       "glTF-Binary": "rug.glb"
-    }
+    },
+    "size": [2.12, 0.015, 1.3],
+    "box": [-1.06, 0, -0.65, 1.06, 0.015, 0.65],
+    "tris": 396,
+    "bytes": 297956
   },
   {
     "name": "Tapestry",
@@ -115,7 +143,11 @@
         "file": "tapestry.lod2.glb",
         "ratio": 0.28
       }
-    ]
+    ],
+    "size": [1.34, 1.66, 0.09],
+    "box": [-0.67, 0, 0, 0.67, 1.66, 0.09],
+    "tris": 640,
+    "bytes": 415924
   },
   {
     "name": "PottedPlant",
@@ -123,7 +155,11 @@
     "label": "Potted plant",
     "variants": {
       "glTF-Binary": "potted-plant.glb"
-    }
+    },
+    "size": [0.602, 1, 0.632],
+    "box": [-0.301, 0, -0.316, 0.301, 1, 0.316],
+    "tris": 5007,
+    "bytes": 765752
   },
   {
     "name": "Crate",
@@ -137,7 +173,11 @@
         "file": "crate.lod1.glb",
         "ratio": 0.77
       }
-    ]
+    ],
+    "size": [0.806, 0.55, 0.546],
+    "box": [-0.403, 0, -0.273, 0.403, 0.55, 0.273],
+    "tris": 2500,
+    "bytes": 704584
   },
   {
     "name": "CrateLarge",
@@ -151,7 +191,11 @@
         "file": "crate-large.lod1.glb",
         "ratio": 0.77
       }
-    ]
+    ],
+    "size": [1.246, 0.85, 0.844],
+    "box": [-0.623, 0, -0.422, 0.623, 0.85, 0.422],
+    "tris": 2500,
+    "bytes": 704584
   },
   {
     "name": "CrateTeal",
@@ -165,7 +209,11 @@
         "file": "crate-teal.lod1.glb",
         "ratio": 0.77
       }
-    ]
+    ],
+    "size": [0.732, 0.5, 0.496],
+    "box": [-0.366, 0, -0.248, 0.366, 0.5, 0.248],
+    "tris": 2500,
+    "bytes": 677944
   },
   {
     "name": "CrateStack",
@@ -179,7 +227,11 @@
         "file": "crate-stack.lod1.glb",
         "ratio": 0.77
       }
-    ]
+    ],
+    "size": [1.664, 1.05, 0.669],
+    "box": [-0.816, 0, -0.297, 0.848, 1.05, 0.372],
+    "tris": 7500,
+    "bytes": 1333600
   },
   {
     "name": "Barrel",
@@ -197,7 +249,11 @@
         "file": "barrel.lod2.glb",
         "ratio": 0.37
       }
-    ]
+    ],
+    "size": [0.484, 0.9, 0.552],
+    "box": [-0.242, 0, -0.276, 0.242, 0.9, 0.276],
+    "tris": 2478,
+    "bytes": 613800
   },
   {
     "name": "BarrelSmall",
@@ -215,7 +271,11 @@
         "file": "barrel-small.lod2.glb",
         "ratio": 0.37
       }
-    ]
+    ],
+    "size": [0.322, 0.6, 0.368],
+    "box": [-0.161, 0, -0.184, 0.161, 0.6, 0.184],
+    "tris": 2478,
+    "bytes": 613800
   },
   {
     "name": "Chest",
@@ -233,7 +293,11 @@
         "file": "chest.lod2.glb",
         "ratio": 0.28
       }
-    ]
+    ],
+    "size": [0.768, 0.6, 0.686],
+    "box": [-0.384, 0, -0.343, 0.384, 0.6, 0.343],
+    "tris": 2910,
+    "bytes": 806320
   },
   {
     "name": "Sacks",
@@ -247,7 +311,11 @@
         "file": "sacks.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [1.244, 0.75, 1.098],
+    "box": [-0.622, 0, -0.549, 0.622, 0.75, 0.549],
+    "tris": 3590,
+    "bytes": 1233904
   },
   {
     "name": "Lantern",
@@ -261,7 +329,11 @@
         "file": "lantern.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [0.19, 0.38, 0.152],
+    "box": [-0.095, 0, -0.076, 0.095, 0.38, 0.076],
+    "tris": 1865,
+    "bytes": 479824
   },
   {
     "name": "WallTorch",
@@ -279,7 +351,11 @@
         "file": "wall-torch.lod2.glb",
         "ratio": 0.41
       }
-    ]
+    ],
+    "size": [0.105, 0.685, 0.324],
+    "box": [-0.052, 0, 0, 0.053, 0.685, 0.324],
+    "tris": 652,
+    "bytes": 147604
   },
   {
     "name": "Candles",
@@ -293,7 +369,11 @@
         "file": "candles.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [0.17, 0.3, 0.17],
+    "box": [-0.085, 0, -0.085, 0.085, 0.3, 0.085],
+    "tris": 2500,
+    "bytes": 581000
   },
   {
     "name": "Cauldron",
@@ -311,7 +391,11 @@
         "file": "cauldron.lod2.glb",
         "ratio": 0.4
       }
-    ]
+    ],
+    "size": [0.972, 0.6, 0.824],
+    "box": [-0.486, 0, -0.412, 0.486, 0.6, 0.412],
+    "tris": 3000,
+    "bytes": 318260
   },
   {
     "name": "Well",
@@ -325,7 +409,11 @@
         "file": "well.lod1.glb",
         "ratio": 0.5
       }
-    ]
+    ],
+    "size": [2.584, 2.6, 2.56],
+    "box": [-1.292, 0, -1.28, 1.292, 2.6, 1.28],
+    "tris": 5999,
+    "bytes": 776244
   },
   {
     "name": "MarketStall",
@@ -343,7 +431,11 @@
         "file": "market-stall.lod2.glb",
         "ratio": 0.37
       }
-    ]
+    ],
+    "size": [2.6, 2.6, 1.848],
+    "box": [-1.3, 0, -0.924, 1.3, 2.6, 0.924],
+    "tris": 5660,
+    "bytes": 740744
   },
   {
     "name": "Signpost",
@@ -351,7 +443,11 @@
     "label": "Signpost",
     "variants": {
       "glTF-Binary": "signpost.glb"
-    }
+    },
+    "size": [1.35, 2.32, 0.7],
+    "box": [-0.65, 0, -0.55, 0.7, 2.32, 0.15],
+    "tris": 104,
+    "bytes": 106532
   },
   {
     "name": "Ladder",
@@ -359,7 +455,11 @@
     "label": "Ladder (3 m, one storey)",
     "variants": {
       "glTF-Binary": "ladder.glb"
-    }
+    },
+    "size": [0.53, 3, 0.06],
+    "box": [-0.265, 0, -0.03, 0.265, 3, 0.03],
+    "tris": 336,
+    "bytes": 81816
   },
   {
     "name": "LeverBase",
@@ -367,7 +467,11 @@
     "label": "Lever base",
     "variants": {
       "glTF-Binary": "lever-base.glb"
-    }
+    },
+    "size": [0.34, 0.2, 0.24],
+    "box": [-0.17, 0, -0.12, 0.17, 0.2, 0.12],
+    "tris": 120,
+    "bytes": 65396
   },
   {
     "name": "LeverHandle",
@@ -375,7 +479,11 @@
     "label": "Lever handle (hinge pivot)",
     "variants": {
       "glTF-Binary": "lever-handle.glb"
-    }
+    },
+    "size": [0.14, 0.536, 0.076],
+    "box": [-0.07, -0.028, -0.038, 0.07, 0.508, 0.038],
+    "tris": 304,
+    "bytes": 100132
   },
   {
     "name": "WallButton",
@@ -383,7 +491,11 @@
     "label": "Wall button",
     "variants": {
       "glTF-Binary": "wall-button.glb"
-    }
+    },
+    "size": [0.2, 0.2, 0.095],
+    "box": [-0.1, 0, 0, 0.1, 0.2, 0.095],
+    "tris": 300,
+    "bytes": 107128
   },
   {
     "name": "PressurePlate",
@@ -391,7 +503,11 @@
     "label": "Pressure plate 1 × 1 m",
     "variants": {
       "glTF-Binary": "pressure-plate.glb"
-    }
+    },
+    "size": [1, 0.052, 1],
+    "box": [-0.5, 0, -0.5, 0.5, 0.052, 0.5],
+    "tris": 72,
+    "bytes": 89392
   },
   {
     "name": "Hatch",
@@ -399,7 +515,11 @@
     "label": "Trapdoor 1 × 1 m (hinge pivot)",
     "variants": {
       "glTF-Binary": "hatch.glb"
-    }
+    },
+    "size": [1, 0.087, 1],
+    "box": [-0.5, 0, 0, 0.5, 0.087, 1],
+    "tris": 496,
+    "bytes": 87148
   },
   {
     "name": "DoorKey",
@@ -413,7 +533,11 @@
         "file": "door-key.lod1.glb",
         "ratio": 0.79
       }
-    ]
+    ],
+    "size": [0.161, 0.022, 0.072],
+    "box": [-0.086, -0.011, -0.036, 0.075, 0.011, 0.036],
+    "tris": 556,
+    "bytes": 81924
   },
   {
     "name": "SciFiConsole",
@@ -431,7 +555,11 @@
         "file": "sci-fi-console.lod2.glb",
         "ratio": 0.2
       }
-    ]
+    ],
+    "size": [0.632, 1.1, 0.528],
+    "box": [-0.316, 0, -0.264, 0.316, 1.1, 0.264],
+    "tris": 3811,
+    "bytes": 506880
   },
   {
     "name": "SciFiCrate",
@@ -445,6 +573,10 @@
         "file": "sci-fi-crate.lod1.glb",
         "ratio": 0.77
       }
-    ]
+    ],
+    "size": [0.88, 0.6, 0.596],
+    "box": [-0.44, 0, -0.298, 0.44, 0.6, 0.298],
+    "tris": 2500,
+    "bytes": 621104
   }
 ]
