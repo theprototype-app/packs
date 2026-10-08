@@ -3063,5 +3063,174 @@
     "skipped": "under 2000 triangles"
    }
   ]
+ },
+ "aquarium-kit": {
+  "floor": 500,
+  "items": [
+   {
+    "name": "FishClown",
+    "tris": 4000,
+    "levels": [
+     {
+      "file": "fish-clown.lod1.glb",
+      "tris": 1999,
+      "ratio": 0.5,
+      "bytes": 150488,
+      "pairs": 0,
+      "defight": 55,
+      "grow": 0,
+      "cap": 0.01,
+      "mean": 12
+     },
+     {
+      "file": "fish-clown.lod2.glb",
+      "tris": 1569,
+      "ratio": 0.39,
+      "bytes": 108908,
+      "pairs": 0,
+      "defight": 52,
+      "grow": 0,
+      "cap": 0.04,
+      "mean": 26.3
+     }
+    ]
+   },
+   {
+    "name": "FishTang",
+    "tris": 3973,
+    "levels": [
+     {
+      "file": "fish-tang.lod1.glb",
+      "tris": 1986,
+      "ratio": 0.5,
+      "bytes": 145656,
+      "pairs": 1,
+      "defight": 3,
+      "grow": 0,
+      "cap": 0.01,
+      "mean": 17.1
+     }
+    ],
+    "droppedLevels": [
+     {
+      "level": 2,
+      "tris": 3973,
+      "ratio": 1
+     }
+    ]
+   },
+   {
+    "name": "FishAngel",
+    "tris": 3908,
+    "levels": [
+     {
+      "file": "fish-angel.lod1.glb",
+      "tris": 1952,
+      "ratio": 0.5,
+      "bytes": 160460,
+      "pairs": 2,
+      "defight": 16,
+      "grow": 0,
+      "cap": 0.02,
+      "mean": 22.4
+     }
+    ],
+    "droppedLevels": [
+     {
+      "level": 2,
+      "tris": 1850,
+      "ratio": 0.47,
+      "cap": 0.02,
+      "mean": 27.2
+     }
+    ]
+   },
+   {
+    "name": "CoralArch",
+    "tris": 5209,
+    "levels": [
+     {
+      "file": "coral-arch.lod1.glb",
+      "tris": 2682,
+      "ratio": 0.51,
+      "bytes": 195100,
+      "pairs": 0,
+      "defight": 1,
+      "grow": 0,
+      "cap": 0.03,
+      "mean": 28.2
+     }
+    ],
+    "droppedLevels": [
+     {
+      "level": 2,
+      "tris": 2645,
+      "ratio": 0.51,
+      "cap": 0.04,
+      "mean": 28.6
+     }
+    ]
+   },
+   {
+    "name": "CoralBranch",
+    "tris": 5234,
+    "levels": [],
+    "droppedLevels": [
+     {
+      "level": 1,
+      "tris": 4484,
+      "ratio": 0.86,
+      "cap": 0.04,
+      "mean": 12.3
+     },
+     {
+      "level": 2,
+      "tris": 4484,
+      "ratio": 0.86,
+      "cap": 0.04,
+      "mean": 11.3
+     }
+    ],
+    "skipped": "no level reaches <= 80 % within the error caps (best 0.86 / 0.86)"
+   },
+   {
+    "name": "PlantSword",
+    "tris": 4004,
+    "levels": [],
+    "droppedLevels": [
+     {
+      "level": 1,
+      "tris": 4004,
+      "ratio": 1
+     },
+     {
+      "level": 2,
+      "tris": 4004,
+      "ratio": 1
+     }
+    ],
+    "skipped": "no level reaches <= 80 % within the error caps (best 1 / 1)"
+   },
+   {
+    "name": "PlantEelgrass",
+    "tris": 3509,
+    "levels": [],
+    "droppedLevels": [
+     {
+      "level": 1,
+      "tris": 3157,
+      "ratio": 0.9,
+      "cap": 0.01,
+      "mean": 19.4
+     },
+     {
+      "level": 2,
+      "tris": 3509,
+      "ratio": 1
+     }
+    ],
+    "skipped": "no level reaches <= 80 % within the error caps (best 0.9 / 1)"
+   }
+  ]
  }
 }

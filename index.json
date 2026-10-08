@@ -43,8 +43,8 @@
     "copyright": "(c) theprototype",
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs"
-    },
-    {
+  },
+  {
     "name": "architecture-kit",
     "title": "Modular Architecture Kit",
     "value": "architecture-kit/default.json",
@@ -53,8 +53,8 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/architecture-kit",
     "cover": "architecture-kit/cover.webp"
-    },
-    {
+  },
+  {
     "name": "props-kit",
     "title": "Props & Interiors",
     "value": "props-kit/default.json",
@@ -63,8 +63,8 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/props-kit",
     "cover": "props-kit/cover.webp"
-    },
-    {
+  },
+  {
     "name": "scifi-kit",
     "title": "Sci-fi & Modern Kit",
     "value": "scifi-kit/default.json",
@@ -113,6 +113,16 @@
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/arcane-kit",
     "cover": "arcane-kit/cover.webp"
+  },
+  {
+    "name": "aquarium-kit",
+    "title": "Aquarium Kit (reef fish, coral, aquatic plants)",
+    "value": "aquarium-kit/default.json",
+    "attribution": "aquarium-kit/attribution.html",
+    "copyright": "(c) theprototype",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/aquarium-kit",
+    "cover": "aquarium-kit/cover.webp"
   },
   {
     "name": "avatars",
