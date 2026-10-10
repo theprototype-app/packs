@@ -1,0 +1,51 @@
+[
+ {
+  "name": "FishClown",
+  "raw": "fish-clown-a/refine-1/raw.glb",
+  "tris": 4000,
+  "bytes": 610416,
+  "film": true
+ },
+ {
+  "name": "FishTang",
+  "raw": "fish-tang-a/refine-1/raw.glb",
+  "tris": 3973,
+  "bytes": 588728,
+  "film": true
+ },
+ {
+  "name": "FishAngel",
+  "raw": "fish-angel-a/refine-1/raw.glb",
+  "tris": 3916,
+  "bytes": 751488,
+  "film": true
+ },
+ {
+  "name": "CoralArch",
+  "raw": "coral-arch-b/retexture-1/raw.glb",
+  "tris": 5209,
+  "bytes": 780648,
+  "film": false
+ },
+ {
+  "name": "CoralBranch",
+  "raw": "coral-branch-a/refine-1/raw.glb",
+  "tris": 5234,
+  "bytes": 875996,
+  "film": false
+ },
+ {
+  "name": "PlantSword",
+  "raw": "plant-sword-b/retexture-1/raw.glb",
+  "tris": 4005,
+  "bytes": 928396,
+  "film": false
+ },
+ {
+  "name": "PlantEelgrass",
+  "raw": "plant-vallis-a/refine-1/raw.glb",
+  "tris": 3512,
+  "bytes": 1033668,
+  "film": false
+ }
+]

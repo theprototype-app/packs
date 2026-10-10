@@ -1,0 +1,21 @@
+{
+  "pack": "aquarium-kit",
+  "staging": "40-aquarium",
+  "items": [
+    {"name": "FishClown", "file": "fish-clown.glb", "label": "Clownfish (realistic)", "src": {"job": "fish-clown-a", "stage": "refine"},
+     "post": {"targetTris": 4000, "dims": {"z": 0.32}, "fit": "contain", "pivot": "center"}, "film": true, "category": "prop", "pivotRule": "center"},
+    {"name": "FishTang", "file": "fish-tang.glb", "label": "Regal blue tang (realistic)", "src": {"job": "fish-tang-a", "stage": "refine"},
+     "post": {"targetTris": 4000, "dims": {"z": 0.42}, "fit": "contain", "pivot": "center"}, "film": true, "category": "prop", "pivotRule": "center"},
+    {"name": "FishAngel", "file": "fish-angel.glb", "label": "Emperor angelfish (realistic)", "src": {"job": "fish-angel-a", "stage": "refine"},
+     "post": {"targetTris": 4000, "dims": {"z": 0.42}, "fit": "contain", "pivot": "center"}, "film": true, "category": "prop", "pivotRule": "center"},
+    {"name": "CoralArch", "file": "coral-arch.glb", "label": "Reef rock arch with coral (swim-through)", "src": {"job": "coral-arch-b", "stage": "retexture"},
+     "post": {"targetTris": 5000, "dims": {"x": 1.0}, "fit": "contain", "pivot": "bottom-center"}},
+    {"name": "CoralBranch", "file": "coral-branch.glb", "label": "Staghorn coral on reef rock", "src": {"job": "coral-branch-a", "stage": "refine"},
+     "post": {"targetTris": 5000, "dims": {"y": 0.5}, "fit": "contain", "pivot": "bottom-center"}},
+    {"name": "PlantSword", "file": "plant-sword.glb", "label": "Amazon sword plant", "src": {"job": "plant-sword-b", "stage": "retexture"},
+     "post": {"targetTris": 4000, "dims": {"y": 0.9}, "fit": "contain", "pivot": "bottom-center"}, "doubleSided": true},
+    {"name": "PlantEelgrass", "file": "plant-eelgrass.glb", "label": "Eelgrass clump (vallisneria)", "src": {"job": "plant-vallis-a", "stage": "refine"},
+     "post": {"targetTris": 4000, "dims": {"y": 1.3}, "fit": "contain", "pivot": "bottom-center"}, "doubleSided": true}
+  ],
+  "film": {"factor": 0.55, "ior": 1.45, "thickness": [140, 460]}
+}

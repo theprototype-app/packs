@@ -1,0 +1,114 @@
+[
+  {
+    "name": "FishClown",
+    "screenshot": "thumb.webp",
+    "label": "Clownfish (realistic)",
+    "variants": {
+      "glTF-Binary": "fish-clown.glb"
+    },
+    "lods": [
+      {
+        "file": "fish-clown.lod1.glb",
+        "ratio": 0.5
+      },
+      {
+        "file": "fish-clown.lod2.glb",
+        "ratio": 0.39
+      }
+    ],
+    "size": [0.132, 0.142, 0.32],
+    "box": [-0.066, -0.071, -0.16, 0.066, 0.071, 0.16],
+    "tris": 4000,
+    "bytes": 610416
+  },
+  {
+    "name": "FishTang",
+    "screenshot": "thumb.webp",
+    "label": "Regal blue tang (realistic)",
+    "variants": {
+      "glTF-Binary": "fish-tang.glb"
+    },
+    "lods": [
+      {
+        "file": "fish-tang.lod1.glb",
+        "ratio": 0.5
+      }
+    ],
+    "size": [0.172, 0.218, 0.42],
+    "box": [-0.086, -0.109, -0.21, 0.086, 0.109, 0.21],
+    "tris": 3973,
+    "bytes": 588728
+  },
+  {
+    "name": "FishAngel",
+    "screenshot": "thumb.webp",
+    "label": "Emperor angelfish (realistic)",
+    "variants": {
+      "glTF-Binary": "fish-angel.glb"
+    },
+    "lods": [
+      {
+        "file": "fish-angel.lod1.glb",
+        "ratio": 0.5
+      }
+    ],
+    "size": [0.176, 0.238, 0.42],
+    "box": [-0.088, -0.119, -0.21, 0.088, 0.119, 0.21],
+    "tris": 3908,
+    "bytes": 751488
+  },
+  {
+    "name": "CoralArch",
+    "screenshot": "thumb.webp",
+    "label": "Reef rock arch with coral (swim-through)",
+    "variants": {
+      "glTF-Binary": "coral-arch.glb"
+    },
+    "lods": [
+      {
+        "file": "coral-arch.lod1.glb",
+        "ratio": 0.51
+      }
+    ],
+    "size": [1, 0.692, 0.544],
+    "box": [-0.5, 0, -0.272, 0.5, 0.692, 0.272],
+    "tris": 5209,
+    "bytes": 780648
+  },
+  {
+    "name": "CoralBranch",
+    "screenshot": "thumb.webp",
+    "label": "Staghorn coral on reef rock",
+    "variants": {
+      "glTF-Binary": "coral-branch.glb"
+    },
+    "size": [0.566, 0.5, 0.538],
+    "box": [-0.283, 0, -0.269, 0.283, 0.5, 0.269],
+    "tris": 5234,
+    "bytes": 875996
+  },
+  {
+    "name": "PlantSword",
+    "screenshot": "thumb.webp",
+    "label": "Amazon sword plant",
+    "variants": {
+      "glTF-Binary": "plant-sword.glb"
+    },
+    "size": [0.568, 0.9, 0.614],
+    "box": [-0.284, 0, -0.307, 0.284, 0.9, 0.307],
+    "tris": 4004,
+    "bytes": 928396
+  },
+  {
+    "name": "PlantEelgrass",
+    "screenshot": "thumb.webp",
+    "label": "Eelgrass clump (vallisneria)",
+    "variants": {
+      "glTF-Binary": "plant-eelgrass.glb"
+    },
+    "size": [0.768, 1.3, 0.772],
+    "box": [-0.384, 0, -0.386, 0.384, 1.3, 0.386],
+    "tris": 3509,
+    "bytes": 1033668
+  }
+]

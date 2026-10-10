@@ -1036,5 +1036,40 @@
    15
   ],
   "left": "no candidate flickers clearly less"
+ },
+ "aquarium-kit/FishClown": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "aquarium-kit/FishTang": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "aquarium-kit/FishAngel": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "aquarium-kit/CoralArch": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "aquarium-kit/CoralBranch": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "aquarium-kit/PlantSword": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
+ },
+ "aquarium-kit/PlantEelgrass": {
+  "before": 0,
+  "after": 0,
+  "left": "under 1 cm² of overlap"
  }
 }
