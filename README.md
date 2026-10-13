@@ -41,6 +41,8 @@ town-kit/                        Town & Market Kit: 27 pieces — street tiles (
 tools/town-kit/                  its reproducible build + e2e
 arcane-kit/                      Arcane Study Kit: 7 wizard's-study hero props with LODs (crystal ball,
                                  alchemist's table, lectern, telescope, armillary, potions, rune rug; CC0, Meshy.ai)
+aquarium-kit/                    Aquarium Kit: 3 realistic reef fish (centre pivot, nose +Z, thin-film iridescence), a reef rock
+                                 arch, staghorn coral and 2 aquatic plants (CC0, Meshy.ai; kit.md, build in tools/aquarium-kit/)
 avatars/                         Adventurers: 9 rigged, animated characters (KayKit by Kay Lousberg, CC0) — the
                                  app's player avatars, placeable as animated models (Idle loops)
 tools/avatars/                   their build: merge to one skinned mesh + 1 material, shared clips, thumbnails;

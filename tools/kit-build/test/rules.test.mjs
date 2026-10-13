@@ -58,6 +58,8 @@ test('pivot rules: each preset accepts its shape and refuses an off-origin piece
 	assert.match(String(pivotProblem([0.2, 0, 0.2], [1, 2, 1], 'foot')), /not under the piece/);
 	assert.equal(pivotProblem([-0.07, -0.03, -0.04], [0.07, 0.51, 0.04], 'hinge'), null);
 	assert.match(String(pivotProblem([1, 1, 1], [2, 2, 2], 'hinge')), /outside the piece/);
+	assert.equal(pivotProblem([-0.1, -0.08, -0.21], [0.1, 0.08, 0.21], 'center'), null, 'a fish about its middle');
+	assert.match(String(pivotProblem([-0.1, 0, -0.21], [0.1, 0.16, 0.21], 'center')), /not the bbox centre/, 'a fish standing on its belly');
 	assert.equal(pivotProblem([5, 5, 5], [6, 6, 6], 'any'), null);
 	assert.match(String(pivotProblem(wall[0], wall[1], 'middle')), /unknown pivot rule/);
 });

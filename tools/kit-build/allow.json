@@ -103,6 +103,24 @@
 			"item": "*",
 			"check": "lods",
 			"reason": "skinned characters: a decimated level changes the skin weights and the rig, and a scene holds a handful of them (8 peers = ~40k tris); core's runtime LOD skips skinned meshes anyway"
+		},
+		{
+			"pack": "aquarium-kit",
+			"item": "CoralBranch",
+			"check": "lods",
+			"reason": "tools/lod builds no level: no level reaches <= 80 % within the error caps (best 0.86 / 0.86) — the visual gate refuses every candidate (thin coral branches / ribbon leaves need impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "aquarium-kit",
+			"item": "PlantSword",
+			"check": "lods",
+			"reason": "tools/lod builds no level: no level reaches <= 80 % within the error caps (best 1 / 1) — the visual gate refuses every candidate (thin coral branches / ribbon leaves need impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
+		},
+		{
+			"pack": "aquarium-kit",
+			"item": "PlantEelgrass",
+			"check": "lods",
+			"reason": "tools/lod builds no level: no level reaches <= 80 % within the error caps (best 0.9 / 1) — the visual gate refuses every candidate (thin coral branches / ribbon leaves need impostor levels, roadmap-33 F2); core's automatic runtime LOD still applies"
 		}
 	]
 }

@@ -1,5 +1,5 @@
 {
-	"note": "kit-build's per-pack policy (roadmap 34 E2). categories: triangle budget of LOD0 (drawn, per node) and the largest bbox extent in metres. packs: textureCap (largest texture side), emissive ('none' = nothing in the pack may glow, 'allowed'), the default category and pivot, and per-item overrides. Pivots: bottom-center | bottom-center-back | top-center | wall-pivot (shares the wall's bottom-centre origin, starts above the floor) | wall-face (origin on the wall line, piece on the wall's face) | foot (stands on its origin, which is under the piece but not its middle: a signpost's post, a pipe's open end) | hinge (origin within 5 cm of the piece: a moving part) | any (legacy packs that keep their source scene's coordinates).",
+	"note": "kit-build's per-pack policy (roadmap 34 E2). categories: triangle budget of LOD0 (drawn, per node) and the largest bbox extent in metres. packs: textureCap (largest texture side), emissive ('none' = nothing in the pack may glow, 'allowed'), the default category and pivot, and per-item overrides. Pivots: bottom-center | bottom-center-back | top-center | wall-pivot (shares the wall's bottom-centre origin, starts above the floor) | wall-face (origin on the wall line, piece on the wall's face) | foot (stands on its origin, which is under the piece but not its middle: a signpost's post, a pipe's open end) | hinge (origin within 5 cm of the piece: a moving part) | center (the bbox middle: a free-floating fish, bird or drone that turns about itself) | any (legacy packs that keep their source scene's coordinates).",
 	"limits": {
 		"glbFailBytes": 5242880,
 		"glbWarnBytes": 2097152,
@@ -392,6 +392,23 @@
 			"category": "hero",
 			"pivot": "bottom-center",
 			"about": "rigged KayKit characters (tools/avatars); one skinned mesh each, the app's avatars"
+		},
+		"aquarium-kit": {
+			"textureCap": 1024,
+			"emissive": "none",
+			"category": "prop",
+			"pivot": "bottom-center",
+			"items": {
+				"FishClown": {
+					"pivot": "center"
+				},
+				"FishTang": {
+					"pivot": "center"
+				},
+				"FishAngel": {
+					"pivot": "center"
+				}
+			}
 		}
 	}
 }

@@ -10,7 +10,7 @@ const BEHAVIOR_KEYS = ['type', 'clip', 'closeClip', 'trigger', 'autoplay', 'soun
 export const MAX_LOD_FILES = 5;
 const ROW_KEYS = ['name', 'label', 'screenshot', 'variants', 'lods', 'behavior', 'size', 'box', 'tris', 'bytes', 'animated'];
 const INDEX_KEYS = ['name', 'title', 'value', 'zip', 'attribution', 'copyright', 'license', 'source', 'cover'];
-export const PIVOTS = ['bottom-center', 'bottom-center-back', 'top-center', 'wall-pivot', 'wall-face', 'foot', 'hinge', 'any'];
+export const PIVOTS = ['bottom-center', 'bottom-center-back', 'top-center', 'wall-pivot', 'wall-face', 'foot', 'hinge', 'center', 'any'];
 
 /** a repo-relative path that stays inside its folder @param {any} p */
 export const safeRel = (p) => typeof p === 'string' && p.trim() !== '' && !p.includes('..') && !p.startsWith('/') && !/^[a-z]+:/i.test(p);
@@ -148,6 +148,9 @@ export function pivotProblem(min, max, rule) {
 			return p.y.min && min[0] <= 0 && max[0] >= 0 && min[2] <= 0 && max[2] >= 0 ? null : `pivot is not under the piece (${at})`;
 		case 'hinge':
 			return p.x.inside && p.y.inside && p.z.inside ? null : `the hinge pivot is outside the piece (${at})`;
+		// 40: free-floating pieces (fish, birds, a drone) turn and bend about their middle
+		case 'center':
+			return p.x.centre && p.y.centre && p.z.centre ? null : `pivot is not the bbox centre (${at})`;
 	}
 	return `unknown pivot rule "${rule}" (one of ${PIVOTS.join('|')})`;
 }
