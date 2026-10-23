@@ -41,8 +41,12 @@ jobs:
         run: |
           node --test tools/kit-build/test/*.test.mjs tools/lod/test/*.test.mjs \
             tools/architecture-kit/test/*.test.mjs tools/scifi-kit/test/*.test.mjs \
-            tools/town-kit/test/*.test.mjs tools/anim/test/*.test.mjs interior-kit/_src/test/*.test.mjs
+            tools/town-kit/test/*.test.mjs tools/anim/test/*.test.mjs interior-kit/_src/test/*.test.mjs \
+            tools/licence-lint/test/*.test.mjs
           (cd tools/meshy && npm test)
+
+      - name: licence lint (every file of a pack with licences.json — CC0 only, read from the files themselves)
+        run: node tools/licence-lint/lint.mjs --json licence-lint.json
 
       - name: kit-build check (every pack)
         run: node tools/kit-build/kit-build.mjs check --summary "$GITHUB_STEP_SUMMARY" --json pack-check.json
@@ -58,4 +62,5 @@ jobs:
           path: |
             pack-check.json
             pack-budget.md
+            licence-lint.json
           if-no-files-found: ignore

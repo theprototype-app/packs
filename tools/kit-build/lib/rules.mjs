@@ -46,7 +46,7 @@ export function itemRowProblems(row) {
 	if (row.screenshot !== undefined && !safeRel(row.screenshot) && !isUrl(row.screenshot)) out.push('screenshot must be a relative path or an https URL');
 	const glb = row.variants?.['glTF-Binary'];
 	if (typeof glb !== 'string' || !(safeRel(glb) || isUrl(glb))) out.push('variants["glTF-Binary"] must be a file name or an https URL');
-	else if (!isUrl(glb) && !/\.glb$/i.test(glb)) out.push('variants["glTF-Binary"] must be a .glb');
+	else if (!isUrl(glb) && !/\.(glb|vrm)$/i.test(glb)) out.push('variants["glTF-Binary"] must be a .glb (or a .vrm — a GLB with the VRM extension)');
 	if (row.lods !== undefined) out.push(...lodsProblems(row.lods));
 	if (row.behavior !== undefined) out.push(...behaviorProblems(row.behavior));
 	out.push(...dimsShapeProblems(row));

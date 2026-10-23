@@ -1,0 +1,111 @@
+{
+	"note": "57 M5 characters-kit sources, pinned by sha256. 100Avatars by Polygonal Mind (CC0 1.0, via the Open Source Avatars registry github.com/ToxSam/open-source-avatars, CC0) — each VRM also states CC0 in its own meta (the licence lint reads it). Quaternius mannequins from the Universal Animation Library 1 / 2 Standard (CC0 1.0, OpenGameArt).",
+	"vrm": [
+		{
+			"name": "Astronaut",
+			"file": "astronaut.vrm",
+			"number": "048",
+			"series": "R1",
+			"registryId": "e69fd8b9-d6ae-44ca-84e0-be4bb075d426",
+			"url": "https://arweave.net/T0c0z_XEPQHy3vyXz31XB22s_6JTqHdnau8exq_I8tI",
+			"sha256": "1cb8218610deafc0fd4608507fc52cf3303de84b0f641b9a452efb5e8a0e6f23",
+			"thumbnail": "https://arweave.net/Qo512sj7GqyM2wvlubg4aPyA-Hl_VTxRGYiDZ0A4Wx4",
+			"thumbnailSha256": "e12cc43b73ab8c3c977ba47509928f4f8a7c89393aaba7c5bcbd29f116e2c6f6"
+		},
+		{
+			"name": "ChillPenguin",
+			"file": "chillpenguin.vrm",
+			"number": "160",
+			"series": "R2",
+			"registryId": "aa2360e6-87ca-4f16-b5d1-8bae48000276",
+			"url": "https://arweave.net/4c5EhflLKYfBtzpcLlvZY0afAwXLVdxXmpgwGaarAIQ",
+			"sha256": "52b235d5a36c17798f6ce145d1d56965a17b3be81c143d0b301e7ae881660b14",
+			"thumbnail": "https://arweave.net/IIaNU4y7r4oOHrj3Zx_E-KZX7Ye9RHht9Q2K0i61BtQ",
+			"thumbnailSha256": "49f9cdb896c98912e52064826441f2288b49868590e35dabdc0890c9612392ee"
+		},
+		{
+			"name": "CoolPirate",
+			"file": "coolpirate.vrm",
+			"number": "145",
+			"series": "R2",
+			"registryId": "ecd9d092-f34f-4a29-9ebd-0b83f8266cf9",
+			"url": "https://arweave.net/lQwSPMpcSKzL9lMYyAaQ63vHK1ATP1Xmir43jZg2Ob0",
+			"sha256": "2193b911fe1e1bf3c38b0efb3d09d173aa1c69a1092b73ef4ee1b1e6c29119ea",
+			"thumbnail": "https://arweave.net/xohKEjCNVvTxscKi8PraA-yVanniHik9pMdETdjXNDI",
+			"thumbnailSha256": "f260558ab87bcc6d4214d35445a812daf1b5d7f6173fe4a39cdbf92adfdc27ba"
+		},
+		{
+			"name": "Erika",
+			"file": "erika.vrm",
+			"number": "053",
+			"series": "R1",
+			"registryId": "f6c50bbf-b41a-470e-84b8-bb3a12efc902",
+			"url": "https://arweave.net/GZkfa0SNnrBWluRL_pXpakg7T3K3d4l87__wR4mD3UM",
+			"sha256": "ac2030d23c791065e5cd596e251257269bc55b8c76b29a6ebf183bcfe8c7c1f7",
+			"thumbnail": "https://arweave.net/C3HkA5xa9jXxSySEJCZEhtrFkrCyccD4RR25QfXIpyE",
+			"thumbnailSha256": "cc37f4e9072c07a1a8343ff554679f6865ca3e5784040584642f24d0e31c19b3"
+		},
+		{
+			"name": "Kate",
+			"file": "kate.vrm",
+			"number": "038",
+			"series": "R1",
+			"registryId": "3d842fb6-29f5-494a-a696-d9ab10a0257d",
+			"url": "https://arweave.net/1q4IQwLQXJVS0JGSpeXlRdazmZYdwJbmLbTv7o0s5Y8",
+			"sha256": "d857bca56a26730b4f78872ffa322d11b6f427580e3224d1b1cd43368b50f9de",
+			"thumbnail": "https://arweave.net/ZRZbxFWEXmD7VkMDaGp8RTCrJgZE72kEAnnMqFrwS7I",
+			"thumbnailSha256": "81641a01615ab4873fa3e0128f3754561c3ea0664fbb1f7c4b9b8a434367e4f0"
+		},
+		{
+			"name": "Olivia",
+			"file": "olivia.vrm",
+			"number": "056",
+			"series": "R1",
+			"registryId": "4239c466-c3c1-4f97-ba56-a871f361ed84",
+			"url": "https://arweave.net/MgsNlTetzAoVEC6E-lswj65vp7StkOZXXd5OjjqzYZI",
+			"sha256": "d2597a8e0f6fbfc6c1e77886b737cea9cd9d2640474dc5cb5eafc847376a2473",
+			"thumbnail": "https://arweave.net/5wQlWAKsJjepBJacFSYjF72M0b5lbCOqWwDgoPZ8Hhw",
+			"thumbnailSha256": "4e61f525d7609c280cda16dd341112a034dce97c1bc1e140ade934070d8bfbf0"
+		},
+		{
+			"name": "Skelly",
+			"file": "skelly.vrm",
+			"number": "029",
+			"series": "R1",
+			"registryId": "ba0cc801-97f8-4c11-8916-144c560f8064",
+			"url": "https://arweave.net/3qGxPjmrwuHxuiT5v4LaR_PVoJ9XYLXLM_N7fdxiF_M",
+			"sha256": "3b789306ad0e22845a3668398f7d71c93fd8f99b0a2ee6116311270655dda06c",
+			"thumbnail": "https://arweave.net/L4roz__VkpKXMFpFdMpfqL7ME79-PW7-mysfDp-Ovfo",
+			"thumbnailSha256": "7b7c0a1ba5392b9bd043a26c82a49388ff6e014a6d78081250ddd36caa604171"
+		},
+		{
+			"name": "Witch",
+			"file": "witch.vrm",
+			"number": "039",
+			"series": "R1",
+			"registryId": "00df253c-4665-4cbf-b420-761a1cc4f9dd",
+			"url": "https://arweave.net/0YLwWzDkvVWn9ttv2RAdc8bvWcCBjvYPpu7fpjpHYU0",
+			"sha256": "33fa9a9c4c10d0ba0ab22a051809afddb9b53e7f51cbb69df91e1bf9e1653652",
+			"thumbnail": "https://arweave.net/ZxofC0CRXIB40r26MqyHK7tVAjoYs1a6SYBaxeqruwM",
+			"thumbnailSha256": "b99ce13bec623cf865ffc459a5829be4495607eaf63f72b40ed51dcae46e51a9"
+		}
+	],
+	"quaternius": [
+		{
+			"name": "MannequinFemale",
+			"zip": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
+			"sha256": "ec0e40d6d78fe9aaad59e322f40865a8675c22f0745e291622e54520391a9217",
+			"entry": "Universal Animation Library 2 [Standard]/Female Mannequin/Unreal-Godot/Mannequin_F.glb",
+			"file": "mannequin-female.glb",
+			"stripAnimations": false
+		},
+		{
+			"name": "MannequinMale",
+			"zip": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
+			"sha256": "18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2",
+			"entry": "Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb",
+			"file": "mannequin-male.glb",
+			"stripAnimations": true
+		}
+	]
+}

@@ -99,6 +99,12 @@
 			"reason": "render probe 404 px (> the 400 px recording limit) — the same 404 px 33-pack-fix-lod measured; none of defight's candidates flickers clearly less (best 403 px), and the roadmap-33 in-app scan passed it under the patch limit. The kitbash's reeds and pond edge, not a fixable coplanar layer; re-judge if the pond is rebuilt"
 		},
 		{
+			"pack": "characters-kit",
+			"item": "*",
+			"check": "lods",
+			"reason": "skinned characters (57 M5): a decimated level changes the skin weights and the rig, a VRM ships as its author made it, and core's runtime LOD skips skinned meshes"
+		},
+		{
 			"pack": "avatars",
 			"item": "*",
 			"check": "lods",

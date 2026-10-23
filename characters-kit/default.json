@@ -1,0 +1,122 @@
+[
+	{
+		"name": "Astronaut",
+		"screenshot": "thumb.webp",
+		"label": "Astronaut (VRM avatar, 100Avatars R1 #048)",
+		"variants": {
+			"glTF-Binary": "astronaut.vrm"
+		},
+		"size": [1.296, 1.363, 0.619],
+		"box": [-0.648, 0, -0.322, 0.648, 1.363, 0.297],
+		"tris": 4350,
+		"bytes": 1679188
+	},
+	{
+		"name": "ChillPenguin",
+		"screenshot": "thumb.webp",
+		"label": "ChillPenguin (VRM avatar, 100Avatars R2 #160)",
+		"variants": {
+			"glTF-Binary": "chillpenguin.vrm"
+		},
+		"size": [2.145, 1.598, 0.478],
+		"box": [-1.073, 0, -0.228, 1.072, 1.598, 0.25],
+		"tris": 3958,
+		"bytes": 1670412
+	},
+	{
+		"name": "CoolPirate",
+		"screenshot": "thumb.webp",
+		"label": "CoolPirate (VRM avatar, 100Avatars R2 #145)",
+		"variants": {
+			"glTF-Binary": "coolpirate.vrm"
+		},
+		"size": [1.851, 1.638, 0.312],
+		"box": [-0.925, 0, -0.155, 0.926, 1.638, 0.157],
+		"tris": 4374,
+		"bytes": 1649636
+	},
+	{
+		"name": "Erika",
+		"screenshot": "thumb.webp",
+		"label": "Erika (VRM avatar, 100Avatars R1 #053)",
+		"variants": {
+			"glTF-Binary": "erika.vrm"
+		},
+		"size": [2.014, 1.66, 0.312],
+		"box": [-1.007, 0, -0.166, 1.007, 1.66, 0.146],
+		"tris": 4032,
+		"bytes": 1548672
+	},
+	{
+		"name": "Kate",
+		"screenshot": "thumb.webp",
+		"label": "Kate (VRM avatar, 100Avatars R1 #038)",
+		"variants": {
+			"glTF-Binary": "kate.vrm"
+		},
+		"size": [2.013, 1.728, 0.365],
+		"box": [-1.006, 0, -0.181, 1.007, 1.728, 0.184],
+		"tris": 3960,
+		"bytes": 1402180
+	},
+	{
+		"name": "Olivia",
+		"screenshot": "thumb.webp",
+		"label": "Olivia (VRM avatar, 100Avatars R1 #056)",
+		"variants": {
+			"glTF-Binary": "olivia.vrm"
+		},
+		"size": [1.71, 1.667, 0.377],
+		"box": [-0.855, -0.001, -0.158, 0.855, 1.666, 0.219],
+		"tris": 3888,
+		"bytes": 1699736
+	},
+	{
+		"name": "Skelly",
+		"screenshot": "thumb.webp",
+		"label": "Skelly (VRM avatar, 100Avatars R1 #029)",
+		"variants": {
+			"glTF-Binary": "skelly.vrm"
+		},
+		"size": [1.776, 1.727, 0.33],
+		"box": [-0.888, 0, -0.159, 0.888, 1.727, 0.171],
+		"tris": 2880,
+		"bytes": 1169152
+	},
+	{
+		"name": "Witch",
+		"screenshot": "thumb.webp",
+		"label": "Witch (VRM avatar, 100Avatars R1 #039)",
+		"variants": {
+			"glTF-Binary": "witch.vrm"
+		},
+		"size": [1.98, 2.001, 0.874],
+		"box": [-0.99, -0.001, -0.411, 0.99, 2, 0.463],
+		"tris": 4058,
+		"bytes": 1488388
+	},
+	{
+		"name": "MannequinFemale",
+		"screenshot": "thumb.webp",
+		"label": "Female mannequin (Quaternius, rigged — motion-kit clips play on it)",
+		"variants": {
+			"glTF-Binary": "mannequin-female.glb"
+		},
+		"size": [1.762, 1.806, 0.309],
+		"box": [-0.881, 0.002, -0.128, 0.881, 1.808, 0.181],
+		"tris": 14612,
+		"bytes": 1442824
+	},
+	{
+		"name": "MannequinMale",
+		"screenshot": "thumb.webp",
+		"label": "Male mannequin (Quaternius, rigged — motion-kit clips play on it)",
+		"variants": {
+			"glTF-Binary": "mannequin-male.glb"
+		},
+		"size": [1.944, 1.828, 0.369],
+		"box": [-0.972, 0.001, -0.164, 0.972, 1.829, 0.205],
+		"tris": 13744,
+		"bytes": 474792
+	}
+]

@@ -132,5 +132,14 @@
     "copyright": "(c) Kay Lousberg (KayKit)",
     "license": "CC0-1.0",
     "source": "https://github.com/theprototype-app/packs/tree/main/avatars"
+  },
+  {
+    "name": "characters-kit",
+    "title": "Characters (VRM avatars + mannequins)",
+    "value": "characters-kit/default.json",
+    "attribution": "characters-kit/attribution.html",
+    "copyright": "(c) Polygonal Mind (100Avatars), Quaternius",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/characters-kit"
   }
 ]
