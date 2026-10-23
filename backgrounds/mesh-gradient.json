@@ -1,0 +1,132 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Mesh gradient",
+	"preset": "mesh-gradient",
+	"layer": {
+		"pointer": true,
+		"scroll": false
+	},
+	"nodes": [
+		{
+			"id": "uv",
+			"type": "aspectUv",
+			"position": {
+				"x": 40,
+				"y": 60
+			},
+			"data": {}
+		},
+		{
+			"id": "ptr",
+			"type": "pointer",
+			"position": {
+				"x": 40,
+				"y": 220
+			},
+			"data": {}
+		},
+		{
+			"id": "ptrUv",
+			"type": "aspectUv",
+			"position": {
+				"x": 240,
+				"y": 240
+			},
+			"data": {}
+		},
+		{
+			"id": "mesh",
+			"type": "meshGradient",
+			"position": {
+				"x": 460,
+				"y": 80
+			},
+			"data": {
+				"colorA": "#ff7a9c",
+				"colorB": "#ffd58a",
+				"colorC": "#7a8cff",
+				"colorD": "#46d9c4",
+				"speed": 0.35,
+				"warp": 0.7,
+				"pull": 0.45,
+				"sharpness": 2.2
+			}
+		},
+		{
+			"id": "grain",
+			"type": "grain",
+			"position": {
+				"x": 460,
+				"y": 380
+			},
+			"data": {
+				"amount": 0.035,
+				"size": 1.5,
+				"animate": 1
+			}
+		},
+		{
+			"id": "mixed",
+			"type": "add",
+			"position": {
+				"x": 760,
+				"y": 160
+			},
+			"data": {}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 980,
+				"y": 160
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-uv.out-mesh.uv",
+			"source": "uv",
+			"sourceHandle": "out",
+			"target": "mesh",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-ptr.position-ptrUv.uv",
+			"source": "ptr",
+			"sourceHandle": "position",
+			"target": "ptrUv",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-ptrUv.out-mesh.focus",
+			"source": "ptrUv",
+			"sourceHandle": "out",
+			"target": "mesh",
+			"targetHandle": "focus"
+		},
+		{
+			"id": "e-mesh.out-mixed.a",
+			"source": "mesh",
+			"sourceHandle": "out",
+			"target": "mixed",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-grain.out-mixed.b",
+			"source": "grain",
+			"sourceHandle": "out",
+			"target": "mixed",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-mixed.out-out.color",
+			"source": "mixed",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}

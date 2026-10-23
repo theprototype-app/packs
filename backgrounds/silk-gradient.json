@@ -1,0 +1,423 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Silk gradient",
+	"preset": "silk-gradient",
+	"layer": {
+		"pointer": true,
+		"scroll": true
+	},
+	"nodes": [
+		{
+			"id": "uv",
+			"type": "aspectUv",
+			"position": {
+				"x": 40,
+				"y": 40
+			},
+			"data": {}
+		},
+		{
+			"id": "ptr",
+			"type": "pointer",
+			"position": {
+				"x": 40,
+				"y": 200
+			},
+			"data": {}
+		},
+		{
+			"id": "nudgeAmt",
+			"type": "float",
+			"position": {
+				"x": 40,
+				"y": 330
+			},
+			"data": {
+				"value": 0.06
+			}
+		},
+		{
+			"id": "nudge",
+			"type": "multiply",
+			"position": {
+				"x": 240,
+				"y": 220
+			},
+			"data": {}
+		},
+		{
+			"id": "shifted",
+			"type": "add",
+			"position": {
+				"x": 240,
+				"y": 60
+			},
+			"data": {}
+		},
+		{
+			"id": "tilt",
+			"type": "rotateUv",
+			"position": {
+				"x": 440,
+				"y": 60
+			},
+			"data": {
+				"angle": -14,
+				"speed": 0,
+				"center": [
+					0.5,
+					0.5
+				]
+			}
+		},
+		{
+			"id": "warp",
+			"type": "domainWarp",
+			"position": {
+				"x": 640,
+				"y": 60
+			},
+			"data": {
+				"amount": 0.55,
+				"scale": 1.4,
+				"speed": 0.05
+			}
+		},
+		{
+			"id": "chan",
+			"type": "split",
+			"position": {
+				"x": 840,
+				"y": 20
+			},
+			"data": {}
+		},
+		{
+			"id": "folds",
+			"type": "fbm",
+			"position": {
+				"x": 840,
+				"y": 200
+			},
+			"data": {
+				"scale": 1.6,
+				"octaves": 3,
+				"lacunarity": 2,
+				"gain": 0.5
+			}
+		},
+		{
+			"id": "xw",
+			"type": "float",
+			"position": {
+				"x": 840,
+				"y": 380
+			},
+			"data": {
+				"value": 0.85
+			}
+		},
+		{
+			"id": "xs",
+			"type": "multiply",
+			"position": {
+				"x": 1040,
+				"y": 20
+			},
+			"data": {}
+		},
+		{
+			"id": "fw",
+			"type": "float",
+			"position": {
+				"x": 1040,
+				"y": 380
+			},
+			"data": {
+				"value": 0.55
+			}
+		},
+		{
+			"id": "fs",
+			"type": "multiply",
+			"position": {
+				"x": 1040,
+				"y": 200
+			},
+			"data": {}
+		},
+		{
+			"id": "scroll",
+			"type": "scroll",
+			"position": {
+				"x": 1040,
+				"y": 500
+			},
+			"data": {}
+		},
+		{
+			"id": "sw",
+			"type": "float",
+			"position": {
+				"x": 1040,
+				"y": 620
+			},
+			"data": {
+				"value": 0.45
+			}
+		},
+		{
+			"id": "ss",
+			"type": "multiply",
+			"position": {
+				"x": 1240,
+				"y": 500
+			},
+			"data": {}
+		},
+		{
+			"id": "t1",
+			"type": "add",
+			"position": {
+				"x": 1240,
+				"y": 100
+			},
+			"data": {}
+		},
+		{
+			"id": "t",
+			"type": "add",
+			"position": {
+				"x": 1420,
+				"y": 160
+			},
+			"data": {}
+		},
+		{
+			"id": "ramp",
+			"type": "gradient",
+			"position": {
+				"x": 1600,
+				"y": 120
+			},
+			"data": {
+				"colorA": "#1d2a7a",
+				"colorB": "#c23bd4",
+				"colorC": "#ffb067",
+				"mid": 0.48
+			}
+		},
+		{
+			"id": "cyan",
+			"type": "color",
+			"position": {
+				"x": 1600,
+				"y": 340
+			},
+			"data": {
+				"value": "#52e5ff"
+			}
+		},
+		{
+			"id": "hl",
+			"type": "smoothstep",
+			"position": {
+				"x": 1600,
+				"y": 470
+			},
+			"data": {
+				"edge0": 0.62,
+				"edge1": 0.9
+			}
+		},
+		{
+			"id": "silk",
+			"type": "mix",
+			"position": {
+				"x": 1820,
+				"y": 200
+			},
+			"data": {}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 2040,
+				"y": 200
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-ptr.position-nudge.a",
+			"source": "ptr",
+			"sourceHandle": "position",
+			"target": "nudge",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-nudgeAmt.out-nudge.b",
+			"source": "nudgeAmt",
+			"sourceHandle": "out",
+			"target": "nudge",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-uv.out-shifted.a",
+			"source": "uv",
+			"sourceHandle": "out",
+			"target": "shifted",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-nudge.out-shifted.b",
+			"source": "nudge",
+			"sourceHandle": "out",
+			"target": "shifted",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-shifted.out-tilt.uv",
+			"source": "shifted",
+			"sourceHandle": "out",
+			"target": "tilt",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-tilt.out-warp.uv",
+			"source": "tilt",
+			"sourceHandle": "out",
+			"target": "warp",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-warp.out-chan.value",
+			"source": "warp",
+			"sourceHandle": "out",
+			"target": "chan",
+			"targetHandle": "value"
+		},
+		{
+			"id": "e-warp.out-folds.uv",
+			"source": "warp",
+			"sourceHandle": "out",
+			"target": "folds",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-chan.x-xs.a",
+			"source": "chan",
+			"sourceHandle": "x",
+			"target": "xs",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-xw.out-xs.b",
+			"source": "xw",
+			"sourceHandle": "out",
+			"target": "xs",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-folds.out-fs.a",
+			"source": "folds",
+			"sourceHandle": "out",
+			"target": "fs",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-fw.out-fs.b",
+			"source": "fw",
+			"sourceHandle": "out",
+			"target": "fs",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-scroll.progress-ss.a",
+			"source": "scroll",
+			"sourceHandle": "progress",
+			"target": "ss",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-sw.out-ss.b",
+			"source": "sw",
+			"sourceHandle": "out",
+			"target": "ss",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-xs.out-t1.a",
+			"source": "xs",
+			"sourceHandle": "out",
+			"target": "t1",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-fs.out-t1.b",
+			"source": "fs",
+			"sourceHandle": "out",
+			"target": "t1",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-t1.out-t.a",
+			"source": "t1",
+			"sourceHandle": "out",
+			"target": "t",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-ss.out-t.b",
+			"source": "ss",
+			"sourceHandle": "out",
+			"target": "t",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-t.out-ramp.t",
+			"source": "t",
+			"sourceHandle": "out",
+			"target": "ramp",
+			"targetHandle": "t"
+		},
+		{
+			"id": "e-folds.out-hl.a",
+			"source": "folds",
+			"sourceHandle": "out",
+			"target": "hl",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-ramp.out-silk.a",
+			"source": "ramp",
+			"sourceHandle": "out",
+			"target": "silk",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-cyan.out-silk.b",
+			"source": "cyan",
+			"sourceHandle": "out",
+			"target": "silk",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-hl.out-silk.t",
+			"source": "hl",
+			"sourceHandle": "out",
+			"target": "silk",
+			"targetHandle": "t"
+		},
+		{
+			"id": "e-silk.out-out.color",
+			"source": "silk",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}

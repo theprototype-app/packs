@@ -1,0 +1,450 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Grain & dither",
+	"preset": "grain-dither",
+	"layer": {
+		"pointer": true,
+		"scroll": false
+	},
+	"nodes": [
+		{
+			"id": "uv",
+			"type": "aspectUv",
+			"position": {
+				"x": 40,
+				"y": 40
+			},
+			"data": {}
+		},
+		{
+			"id": "chan",
+			"type": "split",
+			"position": {
+				"x": 240,
+				"y": 40
+			},
+			"data": {}
+		},
+		{
+			"id": "cloud",
+			"type": "fbm",
+			"position": {
+				"x": 240,
+				"y": 220
+			},
+			"data": {
+				"scale": 2,
+				"octaves": 4,
+				"lacunarity": 2,
+				"gain": 0.5
+			}
+		},
+		{
+			"id": "cloudAmt",
+			"type": "float",
+			"position": {
+				"x": 240,
+				"y": 400
+			},
+			"data": {
+				"value": 0.22
+			}
+		},
+		{
+			"id": "cloudS",
+			"type": "multiply",
+			"position": {
+				"x": 440,
+				"y": 260
+			},
+			"data": {}
+		},
+		{
+			"id": "t",
+			"type": "add",
+			"position": {
+				"x": 620,
+				"y": 100
+			},
+			"data": {}
+		},
+		{
+			"id": "ramp",
+			"type": "gradient",
+			"position": {
+				"x": 800,
+				"y": 80
+			},
+			"data": {
+				"colorA": "#2b1b4a",
+				"colorB": "#c4577a",
+				"colorC": "#ffc98a",
+				"mid": 0.42
+			}
+		},
+		{
+			"id": "ptr",
+			"type": "pointer",
+			"position": {
+				"x": 40,
+				"y": 560
+			},
+			"data": {}
+		},
+		{
+			"id": "ptrUv",
+			"type": "aspectUv",
+			"position": {
+				"x": 240,
+				"y": 560
+			},
+			"data": {}
+		},
+		{
+			"id": "dist",
+			"type": "distance",
+			"position": {
+				"x": 440,
+				"y": 520
+			},
+			"data": {}
+		},
+		{
+			"id": "spotRise",
+			"type": "smoothstep",
+			"position": {
+				"x": 620,
+				"y": 460
+			},
+			"data": {
+				"edge0": 0,
+				"edge1": 0.35
+			}
+		},
+		{
+			"id": "spot",
+			"type": "oneMinus",
+			"position": {
+				"x": 660,
+				"y": 580
+			},
+			"data": {}
+		},
+		{
+			"id": "spotAmt",
+			"type": "float",
+			"position": {
+				"x": 620,
+				"y": 680
+			},
+			"data": {
+				"value": 0.35
+			}
+		},
+		{
+			"id": "spotS",
+			"type": "multiply",
+			"position": {
+				"x": 800,
+				"y": 540
+			},
+			"data": {}
+		},
+		{
+			"id": "lit",
+			"type": "add",
+			"position": {
+				"x": 1000,
+				"y": 200
+			},
+			"data": {}
+		},
+		{
+			"id": "bayer",
+			"type": "bayer",
+			"position": {
+				"x": 1000,
+				"y": 420
+			},
+			"data": {
+				"scale": 2
+			}
+		},
+		{
+			"id": "half",
+			"type": "float",
+			"position": {
+				"x": 1000,
+				"y": 560
+			},
+			"data": {
+				"value": 0.5
+			}
+		},
+		{
+			"id": "centred",
+			"type": "subtract",
+			"position": {
+				"x": 1180,
+				"y": 440
+			},
+			"data": {}
+		},
+		{
+			"id": "depth",
+			"type": "float",
+			"position": {
+				"x": 1180,
+				"y": 600
+			},
+			"data": {
+				"value": 0.16
+			}
+		},
+		{
+			"id": "dither",
+			"type": "multiply",
+			"position": {
+				"x": 1360,
+				"y": 460
+			},
+			"data": {}
+		},
+		{
+			"id": "dithered",
+			"type": "add",
+			"position": {
+				"x": 1360,
+				"y": 220
+			},
+			"data": {}
+		},
+		{
+			"id": "steps",
+			"type": "posterize",
+			"position": {
+				"x": 1540,
+				"y": 220
+			},
+			"data": {
+				"steps": 7
+			}
+		},
+		{
+			"id": "grain",
+			"type": "grain",
+			"position": {
+				"x": 1540,
+				"y": 420
+			},
+			"data": {
+				"amount": 0.05,
+				"size": 2,
+				"animate": 1
+			}
+		},
+		{
+			"id": "final",
+			"type": "add",
+			"position": {
+				"x": 1740,
+				"y": 260
+			},
+			"data": {}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 1940,
+				"y": 260
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-uv.out-chan.value",
+			"source": "uv",
+			"sourceHandle": "out",
+			"target": "chan",
+			"targetHandle": "value"
+		},
+		{
+			"id": "e-uv.out-cloud.uv",
+			"source": "uv",
+			"sourceHandle": "out",
+			"target": "cloud",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-cloud.out-cloudS.a",
+			"source": "cloud",
+			"sourceHandle": "out",
+			"target": "cloudS",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-cloudAmt.out-cloudS.b",
+			"source": "cloudAmt",
+			"sourceHandle": "out",
+			"target": "cloudS",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-chan.y-t.a",
+			"source": "chan",
+			"sourceHandle": "y",
+			"target": "t",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-cloudS.out-t.b",
+			"source": "cloudS",
+			"sourceHandle": "out",
+			"target": "t",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-t.out-ramp.t",
+			"source": "t",
+			"sourceHandle": "out",
+			"target": "ramp",
+			"targetHandle": "t"
+		},
+		{
+			"id": "e-ptr.position-ptrUv.uv",
+			"source": "ptr",
+			"sourceHandle": "position",
+			"target": "ptrUv",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-uv.out-dist.a",
+			"source": "uv",
+			"sourceHandle": "out",
+			"target": "dist",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-ptrUv.out-dist.b",
+			"source": "ptrUv",
+			"sourceHandle": "out",
+			"target": "dist",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-dist.out-spotRise.a",
+			"source": "dist",
+			"sourceHandle": "out",
+			"target": "spotRise",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-spotRise.out-spot.a",
+			"source": "spotRise",
+			"sourceHandle": "out",
+			"target": "spot",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-spot.out-spotS.a",
+			"source": "spot",
+			"sourceHandle": "out",
+			"target": "spotS",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-spotAmt.out-spotS.b",
+			"source": "spotAmt",
+			"sourceHandle": "out",
+			"target": "spotS",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-ramp.out-lit.a",
+			"source": "ramp",
+			"sourceHandle": "out",
+			"target": "lit",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-spotS.out-lit.b",
+			"source": "spotS",
+			"sourceHandle": "out",
+			"target": "lit",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-bayer.out-centred.a",
+			"source": "bayer",
+			"sourceHandle": "out",
+			"target": "centred",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-half.out-centred.b",
+			"source": "half",
+			"sourceHandle": "out",
+			"target": "centred",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-centred.out-dither.a",
+			"source": "centred",
+			"sourceHandle": "out",
+			"target": "dither",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-depth.out-dither.b",
+			"source": "depth",
+			"sourceHandle": "out",
+			"target": "dither",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-lit.out-dithered.a",
+			"source": "lit",
+			"sourceHandle": "out",
+			"target": "dithered",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-dither.out-dithered.b",
+			"source": "dither",
+			"sourceHandle": "out",
+			"target": "dithered",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-dithered.out-steps.a",
+			"source": "dithered",
+			"sourceHandle": "out",
+			"target": "steps",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-steps.out-final.a",
+			"source": "steps",
+			"sourceHandle": "out",
+			"target": "final",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-grain.out-final.b",
+			"source": "grain",
+			"sourceHandle": "out",
+			"target": "final",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-final.out-out.color",
+			"source": "final",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}
