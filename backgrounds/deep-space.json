@@ -1,0 +1,67 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Deep space",
+	"preset": "deep-space",
+	"license": "MIT",
+	"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper",
+	"layer": {
+		"pointer": false,
+		"scroll": false
+	},
+	"nodes": [
+		{
+			"id": "lab",
+			"type": "gradientLab",
+			"position": {
+				"x": 80,
+				"y": 80
+			},
+			"data": {
+				"shape": "waterPlane",
+				"color1": "#5606ff",
+				"color2": "#fe8989",
+				"color3": "#000000",
+				"speed": 0.1,
+				"density": 1.1,
+				"strength": 2.4,
+				"frequency": 0,
+				"amplitude": 0,
+				"brightness": 1.1,
+				"lighting": "ambient",
+				"environment": "city",
+				"reflection": 0.1,
+				"azimuth": 180,
+				"polar": 115,
+				"distance": 3.9,
+				"zoom": 1,
+				"fov": 45,
+				"posX": -0.5,
+				"posY": 0.1,
+				"posZ": 0,
+				"rotX": 0,
+				"rotY": 0,
+				"rotZ": 235,
+				"grain": 0
+			}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 420,
+				"y": 120
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-lab.out-out.color",
+			"source": "lab",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}

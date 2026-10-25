@@ -5,6 +5,12 @@
 // tab), so "delete a node and see what changes" is how the vocabulary is learnt. Positions
 // are authored left-to-right because these are the first background graphs most people open.
 //
+// 65 gradient adds the GRADIENT family: eight looks close to ShaderGradient's well-known presets
+// (github.com/ruucm/shadergradient, MIT © ruucm, stone-skipper — the parameter sets are adapted
+// from its presets.ts, so those rows carry its licence; see backgrounds/ATTRIBUTION.md), each a
+// two-node graph: the core's Gradient lab node into the Background output. Their index rows name
+// the node in `needs`, so a build of the app without it never lists them.
+//
 //   node tools/backgrounds/build.cjs          writes the files
 //   node tools/backgrounds/build.cjs --check  exits 1 when the committed files are stale
 const fs = require('fs');
@@ -272,6 +278,83 @@ const PRESETS = [
 	}
 ];
 
+// ---- the Gradient family (65 gradient) --------------------------------------------------------
+/** the Gradient lab node's params, mirroring core src/lib/gradientLabCore.js GRADIENT_PARAMS defaults
+ *  (the app normalizes whatever a file holds, so a key left out only takes the default) */
+const LAB_DEFAULTS = {
+	shape: 'plane', color1: '#ff5005', color2: '#dbba95', color3: '#d0bce1', speed: 0.4, density: 1.3, strength: 4,
+	frequency: 5.5, amplitude: 1, brightness: 1.2, lighting: 'ambient', environment: 'city', reflection: 0.1,
+	azimuth: 180, polar: 90, distance: 3.6, zoom: 1, fov: 45, posX: -1.4, posY: 0, posZ: 0, rotX: 0, rotY: 10, rotZ: 50, grain: 1
+};
+const SPHERE = { shape: 'sphere', distance: 14, posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0 };
+const WATER = { shape: 'waterPlane', amplitude: 0, frequency: 0, posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0 };
+const GRADIENTS = [
+	{
+		key: 'ember-ribbon',
+		label: 'Ember ribbon',
+		hint: 'A warm ribbon of orange, sand and lilac folding slowly across the frame, with a fine print grain.',
+		lab: { speed: 0.4, density: 1.3, strength: 4 }
+	},
+	{
+		key: 'violet-orb',
+		label: 'Violet orb',
+		hint: 'Seen up close, a sphere of periwinkle and violet that twists into soft spirals.',
+		lab: { ...SPHERE, color1: '#809bd6', color2: '#910aff', color3: '#af38ff', azimuth: 250, polar: 140, zoom: 12.5, rotZ: 140, amplitude: 7, density: 0.8, speed: 0.3, strength: 0.4, brightness: 1.5 }
+	},
+	{
+		key: 'mint-tide',
+		label: 'Mint tide',
+		hint: 'Rolling swells of mint and aqua fading to white, like light under shallow water. No grain.',
+		lab: { ...WATER, color1: '#94ffd1', color2: '#6bf5ff', color3: '#ffffff', azimuth: 170, polar: 70, distance: 4.4, posY: 0.9, posZ: -0.3, rotX: 45, density: 1.2, speed: 0.2, strength: 3.4, grain: 0 }
+	},
+	{
+		key: 'glass-orbit',
+		label: 'Glass orbit',
+		hint: 'A glossy teal and amber sphere seen from below, catching soft reflections from a studio around it.',
+		lab: { ...SPHERE, color1: '#73bfc4', color2: '#ff810a', color3: '#8da0ce', lighting: 'environment', reflection: 0.4, azimuth: 270, polar: 180, zoom: 15.1, posX: -0.1, rotY: 130, rotZ: 70, amplitude: 3.2, density: 0.8, speed: 0.3, strength: 0.3, brightness: 0.8 }
+	},
+	{
+		key: 'night-swell',
+		label: 'Night swell',
+		hint: 'Slate and lavender waves rising out of near black: a calm, dark backdrop.',
+		lab: { ...WATER, color1: '#606080', color2: '#8d7dca', color3: '#212121', azimuth: 180, polar: 80, distance: 2.8, rotX: 50, rotZ: -60, density: 1.5, speed: 0.3, strength: 1.5, brightness: 1 }
+	},
+	{
+		key: 'indigo-bloom',
+		label: 'Indigo bloom',
+		hint: 'White and gold blooming out of deep indigo on a slowly turning sphere. No grain.',
+		lab: { ...SPHERE, color1: '#ffffff', color2: '#ffbb00', color3: '#0700ff', azimuth: 0, polar: 140, zoom: 17.3, amplitude: 1.4, density: 1.1, speed: 0.1, strength: 1, brightness: 1.1, grain: 0 }
+	},
+	{
+		key: 'deep-space',
+		label: 'Deep space',
+		hint: 'Electric violet and coral drifting through black, like a nebula. No grain.',
+		lab: { ...WATER, color1: '#5606ff', color2: '#fe8989', color3: '#000000', azimuth: 180, polar: 115, distance: 3.9, posX: -0.5, posY: 0.1, rotZ: 235, density: 1.1, speed: 0.1, strength: 2.4, brightness: 1.1, grain: 0 }
+	},
+	{
+		key: 'tangerine-sea',
+		label: 'Tangerine sea',
+		hint: 'A sea of hot orange with rust-red troughs, seen low across its surface. No grain.',
+		lab: { ...WATER, color1: '#ff6a1a', color2: '#c73c00', color3: '#fd4912', azimuth: 180, polar: 95, distance: 2.4, posY: -2.1, rotZ: 225, density: 1.8, speed: 0.2, strength: 3, brightness: 1.2, grain: 0 }
+	}
+];
+const GRADIENT_LICENSE = 'MIT';
+const GRADIENT_ATTRIBUTION = 'Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper';
+for (const g of GRADIENTS) {
+	PRESETS.push({
+		key: g.key,
+		label: g.label,
+		hint: g.hint,
+		family: 'Gradient',
+		needs: ['gradientLab'],
+		license: GRADIENT_LICENSE,
+		attribution: GRADIENT_ATTRIBUTION,
+		layer: { pointer: false, scroll: false },
+		nodes: [node('lab', 'gradientLab', 80, 80, { ...LAB_DEFAULTS, ...g.lab }), node('out', 'backgroundOutput', 420, 120)],
+		edges: [edge('lab', 'out', 'out', 'color')]
+	});
+}
+
 function files() {
 	/** @type {Record<string, string>} */
 	const out = {};
@@ -279,7 +362,14 @@ function files() {
 		format: FORMAT,
 		title: 'Fluid backgrounds',
 		license: 'CC0-1.0',
-		presets: PRESETS.map((p) => ({ key: p.key, label: p.label, hint: p.hint, file: p.key + '.json' }))
+		presets: PRESETS.map((p) => ({
+			key: p.key,
+			label: p.label,
+			hint: p.hint,
+			file: p.key + '.json',
+			// 65 gradient: optional, additive within format 1 (core backgroundPresetsCore.normalizePresetIndex)
+			...(p.family ? { family: p.family, needs: p.needs, license: p.license, attribution: p.attribution } : {})
+		}))
 	};
 	out['index.json'] = JSON.stringify(index, null, '\t') + '\n';
 	for (const p of PRESETS) {
@@ -288,6 +378,7 @@ function files() {
 			domain: 'background',
 			name: p.label,
 			preset: p.key,
+			...(p.license ? { license: p.license, attribution: p.attribution } : {}),
 			layer: p.layer,
 			nodes: p.nodes,
 			edges: p.edges

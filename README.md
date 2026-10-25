@@ -11,6 +11,7 @@ default/                         The Prototype starter models (logo, Svelte rune
 cube_diorama/                    Blender Studio's Cube Diorama, split per object (CC0)
 khronos-sample-assets/           metadata only — model bytes are fetched straight from
                                  github.com/KhronosGroup/glTF-Sample-Assets (CC-BY 4.0)
+backgrounds/                     shader background presets: 5 fluid (CC0) + 8 Gradient (MIT, ShaderGradient-adapted)
 audio-essentials/                23 CC0 sounds (Kenney + OpenGameArt), installable .zip
 nature-kit/                      Nature & Terrain: 31 trees/plants/rocks/cliff/path/pond pieces
                                  (made with Meshy.ai, CC0) — see nature-kit/kit.md
@@ -104,6 +105,9 @@ reading the ref they were built against.
   post-processed here (`tools/architecture-kit/`) — see its `attribution.html` and `kit.md`.
 - `props-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) (paid
   plan: the output is ours) plus procedural pieces — see its `attribution.html` and `kit.md`.
+- `backgrounds/` — shader background presets: the fluid set is © theprototype, CC0; the Gradient family's
+  parameter sets are adapted from [ShaderGradient](https://github.com/ruucm/shadergradient)'s presets, MIT
+  © ruucm, stone-skipper — see [backgrounds/ATTRIBUTION.md](backgrounds/ATTRIBUTION.md).
 - `audio-essentials/` — all CC0; per-file sources in
   [CREDITS.md](audio-essentials/CREDITS.md) (Kenney.nl, OpenGameArt).
 - `nature-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) and

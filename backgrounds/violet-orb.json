@@ -1,0 +1,67 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Violet orb",
+	"preset": "violet-orb",
+	"license": "MIT",
+	"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper",
+	"layer": {
+		"pointer": false,
+		"scroll": false
+	},
+	"nodes": [
+		{
+			"id": "lab",
+			"type": "gradientLab",
+			"position": {
+				"x": 80,
+				"y": 80
+			},
+			"data": {
+				"shape": "sphere",
+				"color1": "#809bd6",
+				"color2": "#910aff",
+				"color3": "#af38ff",
+				"speed": 0.3,
+				"density": 0.8,
+				"strength": 0.4,
+				"frequency": 5.5,
+				"amplitude": 7,
+				"brightness": 1.5,
+				"lighting": "ambient",
+				"environment": "city",
+				"reflection": 0.1,
+				"azimuth": 250,
+				"polar": 140,
+				"distance": 14,
+				"zoom": 12.5,
+				"fov": 45,
+				"posX": 0,
+				"posY": 0,
+				"posZ": 0,
+				"rotX": 0,
+				"rotY": 0,
+				"rotZ": 140,
+				"grain": 1
+			}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 420,
+				"y": 120
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-lab.out-out.color",
+			"source": "lab",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}

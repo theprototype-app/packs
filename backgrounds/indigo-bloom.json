@@ -1,0 +1,67 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Indigo bloom",
+	"preset": "indigo-bloom",
+	"license": "MIT",
+	"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper",
+	"layer": {
+		"pointer": false,
+		"scroll": false
+	},
+	"nodes": [
+		{
+			"id": "lab",
+			"type": "gradientLab",
+			"position": {
+				"x": 80,
+				"y": 80
+			},
+			"data": {
+				"shape": "sphere",
+				"color1": "#ffffff",
+				"color2": "#ffbb00",
+				"color3": "#0700ff",
+				"speed": 0.1,
+				"density": 1.1,
+				"strength": 1,
+				"frequency": 5.5,
+				"amplitude": 1.4,
+				"brightness": 1.1,
+				"lighting": "ambient",
+				"environment": "city",
+				"reflection": 0.1,
+				"azimuth": 0,
+				"polar": 140,
+				"distance": 14,
+				"zoom": 17.3,
+				"fov": 45,
+				"posX": 0,
+				"posY": 0,
+				"posZ": 0,
+				"rotX": 0,
+				"rotY": 0,
+				"rotZ": 0,
+				"grain": 0
+			}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 420,
+				"y": 120
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-lab.out-out.color",
+			"source": "lab",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}
