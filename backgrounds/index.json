@@ -1,0 +1,133 @@
+{
+	"format": 1,
+	"title": "Fluid backgrounds",
+	"license": "CC0-1.0",
+	"presets": [
+		{
+			"key": "mesh-gradient",
+			"label": "Mesh gradient",
+			"hint": "Four soft colours drifting into each other; the first one leans towards your pointer.",
+			"file": "mesh-gradient.json"
+		},
+		{
+			"key": "silk-gradient",
+			"label": "Silk gradient",
+			"hint": "A tilted, slowly folding ribbon of colour in the style of modern product pages. Scrolling shifts the palette; the pointer nudges the folds.",
+			"file": "silk-gradient.json"
+		},
+		{
+			"key": "noise-flow",
+			"label": "Noise flow",
+			"hint": "Contour lines streaming through warped noise, like wind on a weather map. The flow bends towards your pointer.",
+			"file": "noise-flow.json"
+		},
+		{
+			"key": "metaballs",
+			"label": "Metaballs",
+			"hint": "Glossy blobs that melt into each other like a lava lamp; one of them follows your pointer.",
+			"file": "metaballs.json"
+		},
+		{
+			"key": "grain-dither",
+			"label": "Grain & dither",
+			"hint": "A soft dusk gradient broken into retro dither steps with film grain on top; a pool of light follows your pointer.",
+			"file": "grain-dither.json"
+		},
+		{
+			"key": "ember-ribbon",
+			"label": "Ember ribbon",
+			"hint": "A warm ribbon of orange, sand and lilac folding slowly across the frame, with a fine print grain.",
+			"file": "ember-ribbon.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		},
+		{
+			"key": "violet-orb",
+			"label": "Violet orb",
+			"hint": "Seen up close, a sphere of periwinkle and violet that twists into soft spirals.",
+			"file": "violet-orb.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		},
+		{
+			"key": "mint-tide",
+			"label": "Mint tide",
+			"hint": "Rolling swells of mint and aqua fading to white, like light under shallow water. No grain.",
+			"file": "mint-tide.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		},
+		{
+			"key": "glass-orbit",
+			"label": "Glass orbit",
+			"hint": "A glossy teal and amber sphere seen from below, catching soft reflections from a studio around it.",
+			"file": "glass-orbit.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		},
+		{
+			"key": "night-swell",
+			"label": "Night swell",
+			"hint": "Slate and lavender waves rising out of near black: a calm, dark backdrop.",
+			"file": "night-swell.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		},
+		{
+			"key": "indigo-bloom",
+			"label": "Indigo bloom",
+			"hint": "White and gold blooming out of deep indigo on a slowly turning sphere. No grain.",
+			"file": "indigo-bloom.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		},
+		{
+			"key": "deep-space",
+			"label": "Deep space",
+			"hint": "Electric violet and coral drifting through black, like a nebula. No grain.",
+			"file": "deep-space.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		},
+		{
+			"key": "tangerine-sea",
+			"label": "Tangerine sea",
+			"hint": "A sea of hot orange with rust-red troughs, seen low across its surface. No grain.",
+			"file": "tangerine-sea.json",
+			"family": "Gradient",
+			"needs": [
+				"gradientLab"
+			],
+			"license": "MIT",
+			"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper"
+		}
+	]
+}

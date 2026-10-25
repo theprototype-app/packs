@@ -1,0 +1,67 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Glass orbit",
+	"preset": "glass-orbit",
+	"license": "MIT",
+	"attribution": "Adapted from ShaderGradient presets (github.com/ruucm/shadergradient), MIT © ruucm, stone-skipper",
+	"layer": {
+		"pointer": false,
+		"scroll": false
+	},
+	"nodes": [
+		{
+			"id": "lab",
+			"type": "gradientLab",
+			"position": {
+				"x": 80,
+				"y": 80
+			},
+			"data": {
+				"shape": "sphere",
+				"color1": "#73bfc4",
+				"color2": "#ff810a",
+				"color3": "#8da0ce",
+				"speed": 0.3,
+				"density": 0.8,
+				"strength": 0.3,
+				"frequency": 5.5,
+				"amplitude": 3.2,
+				"brightness": 0.8,
+				"lighting": "environment",
+				"environment": "city",
+				"reflection": 0.4,
+				"azimuth": 270,
+				"polar": 180,
+				"distance": 14,
+				"zoom": 15.1,
+				"fov": 45,
+				"posX": -0.1,
+				"posY": 0,
+				"posZ": 0,
+				"rotX": 0,
+				"rotY": 130,
+				"rotZ": 70,
+				"grain": 1
+			}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 420,
+				"y": 120
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-lab.out-out.color",
+			"source": "lab",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}
