@@ -146,6 +146,14 @@ for (const lib of LIBS) {
 		}
 		for (const s of root.listSkins()) s.dispose();
 		for (const m of root.listMeshes()) m.dispose();
+		// valid VRM Animation: rotation on every bone, translation on the hips only, no scale (three-vrm refuses a scale track)
+		for (const c of root.listAnimations()[0].listChannels()) {
+			const p = c.getTargetPath();
+			if (p === 'scale' || (p === 'translation' && c.getTargetNode()?.getName() !== map.hips)) {
+				c.getSampler()?.dispose();
+				c.dispose();
+			}
+		}
 		await doc.transform(prune({ keepLeaves: true }));
 		const anim = root.listAnimations()[0];
 		const input = anim.listSamplers()[0]?.getInput();

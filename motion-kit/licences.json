@@ -5,7 +5,7 @@
 		"title": "Crouch_Fwd_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "e04bace9ae9c7ed9ce3069f8b24aa0f6c0fc0ceca75c4d97dd9bfbe871ba83bc"
+		"sha256": "681321c1f7eb95ae27e41e0a75451b15c05c65ad68921372696ab6a2f0f5b928"
 	},
 	"ual1/Crouch_Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -13,7 +13,7 @@
 		"title": "Crouch_Idle_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "59beaf6b140806c0a12cdfd9430a1b2d66e8a4625780f954381e2f84bb26494d"
+		"sha256": "446b45f5c1e1eaa50eb09793efd1caf9183ff39936454626478a3ccedf896bf9"
 	},
 	"ual1/Dance_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -21,7 +21,7 @@
 		"title": "Dance_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "5bc45eaa5774a15dae32c4724843cbbc9f60f7c6e23caa1ac094a211c25a43e8"
+		"sha256": "58814049b52184f81719818bf2e96e7283ade515d24738258bb1c22ff5a73745"
 	},
 	"ual1/Death01.tpanim": {
 		"licence": "CC0-1.0",
@@ -29,7 +29,7 @@
 		"title": "Death01 (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "38212b5848759db78277cb7b3f45f76dce46262802de832ae3d9ce69826394f8"
+		"sha256": "f1dcd5d40770012593138e5ca423935fdf2500688bb86ee0826040ab8153acba"
 	},
 	"ual1/Driving_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -37,7 +37,7 @@
 		"title": "Driving_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "199457913b5a9eb6168bba3a3b25a2a8cc952738d33c4b3feeb76e656a4a8200"
+		"sha256": "f7e9f585baec2b46e5d81b2896610a74852ca7db719a538474780906ee0ea201"
 	},
 	"ual1/Fixing_Kneeling.tpanim": {
 		"licence": "CC0-1.0",
@@ -45,7 +45,7 @@
 		"title": "Fixing_Kneeling (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "d92c44a952ba9e372980435dd963a7ffe67a09e148292c13c64542167e9a8485"
+		"sha256": "6b6180b95da986bc44c09dc3c7ad588f88c6ce2520ea8794d31200d62af2eb8a"
 	},
 	"ual1/Hit_Chest.tpanim": {
 		"licence": "CC0-1.0",
@@ -53,7 +53,7 @@
 		"title": "Hit_Chest (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "ad0456673c1c56ad0f9002b5a9498255e9e1f8754df06deea8b94c550d45ee48"
+		"sha256": "918f9f5fa085c6915694b0106fb83076727ee97f71f1c46c0a8ea9ef82c7784b"
 	},
 	"ual1/Hit_Head.tpanim": {
 		"licence": "CC0-1.0",
@@ -61,7 +61,7 @@
 		"title": "Hit_Head (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "bbcc41be3e37b71e6043dedfe348e74dba9e5e0a23b7bdd6bc1f6526aa5b82ca"
+		"sha256": "ca3dde7010693922824f2dfd70b39af77824788927fe50b7a149fa60f1e9db7f"
 	},
 	"ual1/Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -69,7 +69,7 @@
 		"title": "Idle_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "1b3064a8657bb3c383eebbbf467254a3c7b03af010eb920932fb13018c93ab55"
+		"sha256": "af9d8a21130ffa983034d64903792d3fdd211c9f340ee306095f3959b1d74d62"
 	},
 	"ual1/Idle_Talking_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -77,7 +77,7 @@
 		"title": "Idle_Talking_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "83e534295781a91772021824ca499d06ed5b5472db69bc1e680b90ac6109f1c3"
+		"sha256": "db450ee893481dbcaa10f1558ec3e620d9bbe8efa85c038b3558cc2551ce028a"
 	},
 	"ual1/Idle_Torch_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -85,7 +85,7 @@
 		"title": "Idle_Torch_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "11867f3bad274439650493f0408fdee464014dcd30f89f2bca0c15a68db07667"
+		"sha256": "664992a4d37e604635c68d83e9d8818936026d70fe427a23ed622aaa7eb209e4"
 	},
 	"ual1/Interact.tpanim": {
 		"licence": "CC0-1.0",
@@ -93,7 +93,7 @@
 		"title": "Interact (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "36ed868ae864c9fa39e584717222b419fc9d7ed7f0f0eae8d6cc092e96c4be55"
+		"sha256": "c29d5299490b5afc3f777f2bf3e1348414bcc95761736333120e6e60deae4174"
 	},
 	"ual1/Jog_Fwd_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -101,7 +101,7 @@
 		"title": "Jog_Fwd_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "1e3524108f5cbca180f7aa8d1b5efc7ed13acde4ed320ba1ead6ce4896cecc8c"
+		"sha256": "2131479fb28535b427b66a5489375cf728f78ef77da6c45c5131b79d5edec3c4"
 	},
 	"ual1/Jump_Land.tpanim": {
 		"licence": "CC0-1.0",
@@ -109,7 +109,7 @@
 		"title": "Jump_Land (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "02db453aa6f65e5ecb1149003edf9a4bb3cf1c327bedfaf524e79db0fe0136c1"
+		"sha256": "a867479636bea5209351eac457da84fa81e0ce8dd1dfce7907c81f4c6e38024d"
 	},
 	"ual1/Jump_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -117,7 +117,7 @@
 		"title": "Jump_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "4d267cea993838510e42a1637dc99828af60796e22e3024a1f61ca73c7d01929"
+		"sha256": "84c5f4ee4dafd626ed10b0a834e1cc90909bcc13fbbb91f8a780e0ac788ddb4d"
 	},
 	"ual1/Jump_Start.tpanim": {
 		"licence": "CC0-1.0",
@@ -125,7 +125,7 @@
 		"title": "Jump_Start (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "00bf3e707d8c97c2a4406e25e53e7c6d5c671d87b0668fd2f74c5c997337d907"
+		"sha256": "aabcbabdc6c97d689a109eb33a03c0fec2afc3dce54437df1c7b7ec4ac0e263f"
 	},
 	"ual1/PickUp_Table.tpanim": {
 		"licence": "CC0-1.0",
@@ -133,7 +133,7 @@
 		"title": "PickUp_Table (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "5186d26b8e2eabd8d5541f89953857d7a69fb18b49986bb2f4dc91a1564182c5"
+		"sha256": "241013cfdab5258522bdc88dccb5a774fb8fd052ed02a960951e8ecdfd0a206f"
 	},
 	"ual1/Pistol_Aim_Down.tpanim": {
 		"licence": "CC0-1.0",
@@ -141,7 +141,7 @@
 		"title": "Pistol_Aim_Down (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "f471e8aa912607a64f62030833b828541a55141ad244c16340d39d8d25a91be4"
+		"sha256": "c318cae263e258f450455c5553694682cd618ff11b8050f47cf35e182d030637"
 	},
 	"ual1/Pistol_Aim_Neutral.tpanim": {
 		"licence": "CC0-1.0",
@@ -149,7 +149,7 @@
 		"title": "Pistol_Aim_Neutral (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "c1b983b689ada60fd6796d39efe6ed67a9e13f333e5b520c93a0728cdac4c178"
+		"sha256": "dd3e32f604511c858c8fd52abeaa22385fe4f5d5f6573bd22efaf42bdec02441"
 	},
 	"ual1/Pistol_Aim_Up.tpanim": {
 		"licence": "CC0-1.0",
@@ -157,7 +157,7 @@
 		"title": "Pistol_Aim_Up (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "92515b474dad56e6c6ad1f4779a6ecda3b468615c4074daab6c43de30790ce76"
+		"sha256": "6d53f03d11a72545d972d46bda6a177170eba865325be19b3712cf9758851fe8"
 	},
 	"ual1/Pistol_Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -165,7 +165,7 @@
 		"title": "Pistol_Idle_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "28787a87608e015ae9f9c4375b73617189e8dcae302fc2ec4da347d6c9897ac8"
+		"sha256": "ae300b6a6a0936f7240af0ebd7cc2fe6f3abe908048e74507b591855afb623fe"
 	},
 	"ual1/Pistol_Reload.tpanim": {
 		"licence": "CC0-1.0",
@@ -173,7 +173,7 @@
 		"title": "Pistol_Reload (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "da95404d46032c4b3006d2f3fc79b5a72cac2e5eaaebd8daff12da8b3a86c2f6"
+		"sha256": "d20e6aadcfa96962adf099da5770c30318ff7125a863fb814c6d7e6172ba35ed"
 	},
 	"ual1/Pistol_Shoot.tpanim": {
 		"licence": "CC0-1.0",
@@ -181,7 +181,7 @@
 		"title": "Pistol_Shoot (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "9df14a9f39ac1e71e32fbd0317968ccae376682b179b7fc16320e3c5e48c74fc"
+		"sha256": "4be65ecc76dc22c2b33c8c937f1d527e9149ff993642ab7f91e8c5ee2570b4cc"
 	},
 	"ual1/Punch_Cross.tpanim": {
 		"licence": "CC0-1.0",
@@ -189,7 +189,7 @@
 		"title": "Punch_Cross (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "11404c0cf82bd151511003733cd4b057a6f9230f5121bec0758533011aee4ba3"
+		"sha256": "a8dc2bf78cc4579c6cc827d3c579e423f4e6590e8aa2056ea7f035e5e0a37e1d"
 	},
 	"ual1/Punch_Enter.tpanim": {
 		"licence": "CC0-1.0",
@@ -197,7 +197,7 @@
 		"title": "Punch_Enter (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "d68c880cde6afaae5b9b06792c14a5f214a333672bbb690d172c418a3e912f38"
+		"sha256": "62007efc2b2a0dbfb200e256cb225a038deb2e35b4a304bae0ebcc8c86a4e324"
 	},
 	"ual1/Punch_Jab.tpanim": {
 		"licence": "CC0-1.0",
@@ -205,7 +205,7 @@
 		"title": "Punch_Jab (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "e77f5c2d93d0ba85e500cde6360fd2241360b2afdb852744aa5b2f74ae2d7f5c"
+		"sha256": "327493bc0d555c4959987a1b7c34aa4e812c09136a548cd04ad2abf6b2ea8f3a"
 	},
 	"ual1/Push_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -213,7 +213,7 @@
 		"title": "Push_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "ef677689db407eb40448118bf8cab952716562374d7b76c80e5d56ddeda1732e"
+		"sha256": "a2c3c86a73e1e18ba2977a4be1e91f14da13e3c8faea5a9194313974feb6b9ad"
 	},
 	"ual1/Roll.tpanim": {
 		"licence": "CC0-1.0",
@@ -221,7 +221,7 @@
 		"title": "Roll (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "a61ad08622aa2ce78fc1ef2719a1f9e13ad1a813ced7b1874ba63b71ac67124a"
+		"sha256": "fa348b32395e3258a2c1eb7e79d46929defbe27a408b691feaf1593f255cf849"
 	},
 	"ual1/Roll_RM.tpanim": {
 		"licence": "CC0-1.0",
@@ -229,7 +229,7 @@
 		"title": "Roll_RM (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "00b3055d8be5810d372f9d694fc7af615ee5544bb3c188f6419b5849a0630eae"
+		"sha256": "64c07724d2f56e4f227e33e07d9964e9f3eaa8bf408a6995e7451df4bc29bd86"
 	},
 	"ual1/Sitting_Enter.tpanim": {
 		"licence": "CC0-1.0",
@@ -237,7 +237,7 @@
 		"title": "Sitting_Enter (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "aafc6516ca042433922aef3302ff1fe74327aff242956042f02092398555f387"
+		"sha256": "1bc7b34828288c9adcdddb6248eab64d6ccdb49bb053586ae8b4e29820b2044b"
 	},
 	"ual1/Sitting_Exit.tpanim": {
 		"licence": "CC0-1.0",
@@ -245,7 +245,7 @@
 		"title": "Sitting_Exit (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "709af95a4e643f1d1d476f7087d4c91c8a31323e5db2dbdf9a727c2433186d69"
+		"sha256": "fdf635fa3c28f9805a6f75c09a432d3fe2091cf5235b9dbf5da6768f2d4d39d1"
 	},
 	"ual1/Sitting_Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -253,7 +253,7 @@
 		"title": "Sitting_Idle_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "1b034ad9cf85352d2cd8cabab38a10ad5e5fd1983d8c73055e9934360f29fe44"
+		"sha256": "80fcbfe9fb31ecc32d36e96ab912ae8076de6f7d1b1571fcddd689b0963a843b"
 	},
 	"ual1/Sitting_Talking_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -261,7 +261,7 @@
 		"title": "Sitting_Talking_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "a15f5de41e1b7f25b449550662b977c177faea699902823e573e9f319952f1cc"
+		"sha256": "00266cafe4444afbbc0cc47014471dc72312a8ec84017077c97e69ed7f8f57cc"
 	},
 	"ual1/Spell_Simple_Enter.tpanim": {
 		"licence": "CC0-1.0",
@@ -269,7 +269,7 @@
 		"title": "Spell_Simple_Enter (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "a538ac3d31205b31d1e470dcb24dd508988f340bd9292a45311ea11596d65105"
+		"sha256": "cabb6f489bd5b3a94b94efb7128bfb542ede90e43c8fdd71b0aa9e9bc2913753"
 	},
 	"ual1/Spell_Simple_Exit.tpanim": {
 		"licence": "CC0-1.0",
@@ -277,7 +277,7 @@
 		"title": "Spell_Simple_Exit (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "cce29bea35030bf45b24ec0d72bd8ac92c662d8c19f0c459c71d9c28758b4cf5"
+		"sha256": "4e9d0124ed5944b966b41f82aca98cf4b1d9beaef2b3c1a839e8d0527de6cd39"
 	},
 	"ual1/Spell_Simple_Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -285,7 +285,7 @@
 		"title": "Spell_Simple_Idle_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "96aed5285f334e54f2ec8903c7152c3ebb93b33128dfc950e16a9165b3bfc726"
+		"sha256": "4f2d559035fe470246bbb6fc214e5c4f2d08b537d1a3da736bd92559e1894061"
 	},
 	"ual1/Spell_Simple_Shoot.tpanim": {
 		"licence": "CC0-1.0",
@@ -293,7 +293,7 @@
 		"title": "Spell_Simple_Shoot (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "1054df5f11059a79561d9eff69da725c75f39edc6bdefb50d7567524ae27892b"
+		"sha256": "28d6be8338144c31f0cddfcdb0278c33e27e08ed536e7d7bd2964242c0cb7d00"
 	},
 	"ual1/Sprint_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -301,7 +301,7 @@
 		"title": "Sprint_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "aec0021e563680f07c439bb4f3a4c6363b3cc3d65c91e824c3e2cc50e896a162"
+		"sha256": "0e70dbf35f7d875cc2318d367fbe6f48c0861b5335afe2c6e97643b966a912f6"
 	},
 	"ual1/Swim_Fwd_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -309,7 +309,7 @@
 		"title": "Swim_Fwd_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "ebf2d40d239551d6bed314dadaa9f25dcecb1377d67a544c6d2c31de6235d70f"
+		"sha256": "aa19041cfd1894eb7f9e214d7fa5ce6a87a60b89a1f3da21abe001ee43d694f5"
 	},
 	"ual1/Swim_Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -317,7 +317,7 @@
 		"title": "Swim_Idle_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "f4b1c772d583b586781258e505ccb0794f2b0131e454fce9f409d6ca5b2fa583"
+		"sha256": "b41819ee441bed8373817d185422ad48c57e29b5071efdbbf96dc22844cc079c"
 	},
 	"ual1/Sword_Attack.tpanim": {
 		"licence": "CC0-1.0",
@@ -325,7 +325,7 @@
 		"title": "Sword_Attack (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "594be3666fc055aa2fc0d10204cd014e5d2f39486f700d21af6ffabf21f1fcd1"
+		"sha256": "c0c41b04e070d3dc764a1a980faab2d3fecf8371457c62564c672947e69d99bb"
 	},
 	"ual1/Sword_Attack_RM.tpanim": {
 		"licence": "CC0-1.0",
@@ -333,7 +333,7 @@
 		"title": "Sword_Attack_RM (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "aa91cfc2dae9dafdb7d90b4e11f32a1cfa6f5e3e707d48626bd0207366b979a5"
+		"sha256": "b20066fe1d9a51221449d34c72c4b217070a1d06d0289d01c0f5e61ab91379c3"
 	},
 	"ual1/Sword_Idle.tpanim": {
 		"licence": "CC0-1.0",
@@ -341,7 +341,7 @@
 		"title": "Sword_Idle (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "6835d7301fd891af6592b0e019137942a7ff82bed710e715c661426bae00c36c"
+		"sha256": "4f97f24b3e2470418d2ddd2ee86c4a6eb1c4b4c174f95a17d353a3848a3a27a2"
 	},
 	"ual1/Walk_Formal_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -349,7 +349,7 @@
 		"title": "Walk_Formal_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "9e6d148aa4dfccb3786eb256bc867f0c9355677b341f9805b461a612b6dc70ed"
+		"sha256": "06a3c0eaa87dd0470216856aac1237cbfee8022230ed920ef79dc8554732132d"
 	},
 	"ual1/Walk_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -357,7 +357,7 @@
 		"title": "Walk_Loop (Universal Animation Library 1 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "e7bdb62599106a77786405245fd7770111c973bd740859fa9b1249108267a617"
+		"sha256": "6b8574c8dd56c564a99a71e6da9f5fc1a34245331136ec7461d9b093f72fd055"
 	},
 	"ual2/Chest_Open.tpanim": {
 		"licence": "CC0-1.0",
@@ -365,7 +365,7 @@
 		"title": "Chest_Open (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "36a9055a41f26c9544bfdf0a927638428b95539b1a5e7a79a6a1fde99ccff8d5"
+		"sha256": "c1b195b2c462cd8dd7cd02792791fa11dd04ec79394575db336e707e8e979e03"
 	},
 	"ual2/ClimbUp_1m_RM.tpanim": {
 		"licence": "CC0-1.0",
@@ -373,7 +373,7 @@
 		"title": "ClimbUp_1m_RM (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "6802eec9fff93afbc101d9addfecc4330ff27a6f150bc33360562af9ca460a82"
+		"sha256": "0bea5df3bb99df8a515a9b8ee0bb851737a362d7968ba4e7b82a9a9f43b5285a"
 	},
 	"ual2/Consume.tpanim": {
 		"licence": "CC0-1.0",
@@ -381,7 +381,7 @@
 		"title": "Consume (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "f534bb203b2847c129bbe5553ac208325fd26fbca94f68a00bbe4b909e1ef822"
+		"sha256": "1ab043e01f1c7a8d164a975acb942ab266273cf213dbeb2f350085caecafb10e"
 	},
 	"ual2/Farm_Harvest.tpanim": {
 		"licence": "CC0-1.0",
@@ -389,7 +389,7 @@
 		"title": "Farm_Harvest (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "e5b1d7c6e0dd8072cbf44214e9218e462a741d2225ea510d4c924c4bbac2a75a"
+		"sha256": "de17fc130829aff034200038ebcd29a6e0578b82e7bd8b755212d7cfcb397fc0"
 	},
 	"ual2/Farm_PlantSeed.tpanim": {
 		"licence": "CC0-1.0",
@@ -397,7 +397,7 @@
 		"title": "Farm_PlantSeed (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "8766d16b3ee63fea3bb1f9ffae517fa3ad94429d2fa4fa9044a3bc96ff02819c"
+		"sha256": "184fff55cb306160516b5a5f8c9a2f08fb152124d7aaf9cf731aacf077582ec6"
 	},
 	"ual2/Farm_Watering.tpanim": {
 		"licence": "CC0-1.0",
@@ -405,7 +405,7 @@
 		"title": "Farm_Watering (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "f3b9dbce9b4c010f6b8301f469a6ee5545028fc05f97c6ccb00d2359b521d7bd"
+		"sha256": "c0575bf66ecd76a1e2e4cd0297f4dd2cfd9db3f01117385653dbd3f65b5f9b1d"
 	},
 	"ual2/Hit_Knockback.tpanim": {
 		"licence": "CC0-1.0",
@@ -413,7 +413,7 @@
 		"title": "Hit_Knockback (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "3ad820bf12d2c85c52a3466bd5de1f7193de72deaaa0aaa2833ceb12e071d70c"
+		"sha256": "e273ea66687050fef1eafd4db517bb0665b633486d6c7ad508d062007e4ed08d"
 	},
 	"ual2/Hit_Knockback_RM.tpanim": {
 		"licence": "CC0-1.0",
@@ -421,7 +421,7 @@
 		"title": "Hit_Knockback_RM (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "20062fbab8797b6a9d7bcf567e2974c29407ba92be79d6a3ae58816f304a3268"
+		"sha256": "79b1a80d38c9bbca184d7c6410a473da04e25e92b829047aaa56ad337b029e45"
 	},
 	"ual2/Idle_FoldArms_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -429,7 +429,7 @@
 		"title": "Idle_FoldArms_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "8d8634300ac3ca7e9b9c4a73cd71357312ab682fa7c3fdacea696ed527fd6e1e"
+		"sha256": "415a0fbce4a715a6ef9ede98c2580b178fcdaeb402de6c97b4261a5d15b956de"
 	},
 	"ual2/Idle_Lantern_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -437,7 +437,7 @@
 		"title": "Idle_Lantern_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "6ff8d199b05bb6faad16753e4ee6c450ceb7920b1d46a2e1a9258ad0f860dd13"
+		"sha256": "1ecee9c7209c5e0af83d378b118fd866eaec4eac0eb27b6aaa507c043aa0b0ad"
 	},
 	"ual2/Idle_No_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -445,7 +445,7 @@
 		"title": "Idle_No_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "01efcf5e5801dc99dcc6a8d51dcf2180e93e9a2799959202b211fb79fc9d321c"
+		"sha256": "779e0b4688ace8270404b83de97519a14798e8538e5376463b4c04c24975c05a"
 	},
 	"ual2/Idle_Rail_Call.tpanim": {
 		"licence": "CC0-1.0",
@@ -453,7 +453,7 @@
 		"title": "Idle_Rail_Call (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "acaa850b158f4ab23f03fb54134d30d13983b27430dd2a16d4e96a74d65532a2"
+		"sha256": "c5c8d9eaecef86d6db04e853cdf18370919f30cc032a63aaf2b767b3cbe0ecb2"
 	},
 	"ual2/Idle_Rail_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -461,7 +461,7 @@
 		"title": "Idle_Rail_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "01e31a150012fb36d45c38a44e45ae2487c19adfaf15b11db6cca13c2360b53c"
+		"sha256": "1fd74046af449fb9639aa80f9a2f35de17792a14173148d6728fc8906e92a853"
 	},
 	"ual2/Idle_Shield_Break.tpanim": {
 		"licence": "CC0-1.0",
@@ -469,7 +469,7 @@
 		"title": "Idle_Shield_Break (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "3036d401872c425d8e8198fa393f2fe8c06f2c63827e2b4c16fbbeef5b188598"
+		"sha256": "e5d03f96de8d4636279aae56cbf65fdfd3e12f894f11f74c342cb99075cd9ddc"
 	},
 	"ual2/Idle_Shield_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -477,7 +477,7 @@
 		"title": "Idle_Shield_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "f06450b75d4f5de71c45690107d12f4ff06b1fc723128730a1ff90e921b09937"
+		"sha256": "dd350bfadec5be84d1dd5cf162e934606ba03edce280082ac12508e9532d4362"
 	},
 	"ual2/Idle_TalkingPhone_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -485,7 +485,7 @@
 		"title": "Idle_TalkingPhone_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "c762fbe431f6b1e5f696e15a20ff4693a0e6c2d2dea964927c7a1c338f6608a5"
+		"sha256": "772bb9eea71095d2d4be09f9072b9654a6c6b878ca2d056ceeb97c49071a8cfb"
 	},
 	"ual2/LayToIdle.tpanim": {
 		"licence": "CC0-1.0",
@@ -493,7 +493,7 @@
 		"title": "LayToIdle (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "6bbdcf0d24e3514369d772c9bdcc1dc2a778139d93415a144dff9e6c5b0a2e23"
+		"sha256": "8eca454486cd789dbcefaf238f80dbc5564ffe3066de9c4c848565b8feeecf39"
 	},
 	"ual2/Melee_Hook.tpanim": {
 		"licence": "CC0-1.0",
@@ -501,7 +501,7 @@
 		"title": "Melee_Hook (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "78cf36505e68450b2ba3c9ef0a27b49f23f118869fe2cdc1c946ab27af277310"
+		"sha256": "72011dd1bcd120412c3d3e3eae6369bf041d012f0eab2b8e7c4d3d2f77dcc150"
 	},
 	"ual2/Melee_Hook_Rec.tpanim": {
 		"licence": "CC0-1.0",
@@ -509,7 +509,7 @@
 		"title": "Melee_Hook_Rec (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "a4423987f23444a724c5300c9ff53446f78d3812faf44fcd8b3a9fc9572f781c"
+		"sha256": "c804c6607a2790c8e8a77f8b95970834915495d2caf63e9cbf621ca8d1ff468b"
 	},
 	"ual2/NinjaJump_Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -517,7 +517,7 @@
 		"title": "NinjaJump_Idle_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "bd17464f4e7ce51dbf01ab8b9a5a17d06ccdcb65fec4fed5f81e7d052f5aeec2"
+		"sha256": "1d71948de3d38adb607120e8ec38c6a71cf778c04d1c4f846cfd1814ea597c70"
 	},
 	"ual2/NinjaJump_Land.tpanim": {
 		"licence": "CC0-1.0",
@@ -525,7 +525,7 @@
 		"title": "NinjaJump_Land (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "68301d5b7b446c3d1b26e5b72e3848a326dbe72c5e997de8dae9ef11d94ec8c6"
+		"sha256": "34f49a319a3122e311ba0fc859a61e16f158b4e95cc61c4be9198711b1ae06f8"
 	},
 	"ual2/NinjaJump_Start.tpanim": {
 		"licence": "CC0-1.0",
@@ -533,7 +533,7 @@
 		"title": "NinjaJump_Start (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "d8687f1489606a619c168401a048361babc082c0ae9bc4c2919a593750c5b68a"
+		"sha256": "9657931d6f1f508bc2f5d5a4bb146d075ba97b54e54f4fb185ec93e9bd274722"
 	},
 	"ual2/OverhandThrow.tpanim": {
 		"licence": "CC0-1.0",
@@ -541,7 +541,7 @@
 		"title": "OverhandThrow (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "e871aff980d170259519d1cdbbdd17e1534df1c1021f8c33a5832402a507a437"
+		"sha256": "061b9138d556b8d07a20e1e6b9788c869ce22c57f8cf2ffddd1e40501f1eb226"
 	},
 	"ual2/Shield_Dash_RM.tpanim": {
 		"licence": "CC0-1.0",
@@ -549,7 +549,7 @@
 		"title": "Shield_Dash_RM (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "06e807dd71b5f0bea78e4f104fe64316dc840bf98cd347840de9f062b681ef8d"
+		"sha256": "913894001c34d72f0b5580fe8f3b9ee432b183eba5fdda1d808a4b7ee40f44f1"
 	},
 	"ual2/Shield_OneShot.tpanim": {
 		"licence": "CC0-1.0",
@@ -557,7 +557,7 @@
 		"title": "Shield_OneShot (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "ae2470ed215ee9f5e83332b092d5c4dbd27c60456fdef8ac1ad6d47a533ce89a"
+		"sha256": "1ea9163beb4b973e8d6ba9476ffb661e6f7d554f1d3a3ab73460a5e93a6f6591"
 	},
 	"ual2/Slide_Exit.tpanim": {
 		"licence": "CC0-1.0",
@@ -565,7 +565,7 @@
 		"title": "Slide_Exit (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "1c35f356f458637cb27771fcc53ddb6171367061ee847546fdc0e9b24e0661b6"
+		"sha256": "ffd9714ace97ff0eaaacb8b8e0c394452493f9d3467206e56334b4df6e5345cd"
 	},
 	"ual2/Slide_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -573,7 +573,7 @@
 		"title": "Slide_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "9cca7e4c9f3d3bb37208295fce2023f9f5294788d68b27598244ec1802a91b06"
+		"sha256": "344ce2431fb93861cdac801b01a81cb29bca7c017025ac37abc1c0b40d5af31a"
 	},
 	"ual2/Slide_Start.tpanim": {
 		"licence": "CC0-1.0",
@@ -581,7 +581,7 @@
 		"title": "Slide_Start (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "d72b6608676180725a678a51d7c92d9aba9582c1ea2ba76a15229a216b818013"
+		"sha256": "8f60d8cd0bc4d168dcb7eac82f0f7c62e9051a37318090a211eb6b6a2cf10c9c"
 	},
 	"ual2/Sword_Block.tpanim": {
 		"licence": "CC0-1.0",
@@ -589,7 +589,7 @@
 		"title": "Sword_Block (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "7adb98a54adc8640202d0de7bd18dd6e33eae841ef2b2c1d1a4a9686a7cf1fe7"
+		"sha256": "70205b65cc8aa96535993c20e7dcd6d423d981feb365483b2192230b1bcbea56"
 	},
 	"ual2/Sword_Dash_RM.tpanim": {
 		"licence": "CC0-1.0",
@@ -597,7 +597,7 @@
 		"title": "Sword_Dash_RM (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "fc4a34bd878ef3b6ad4b439fb393d967060225f41ea6eb26315ccb2f153a1ea4"
+		"sha256": "d9272c2ec324eb6f74e93ff47f9040e72b79cf969258fc4133ee15c2c10fb3b7"
 	},
 	"ual2/Sword_Regular_A.tpanim": {
 		"licence": "CC0-1.0",
@@ -605,7 +605,7 @@
 		"title": "Sword_Regular_A (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "9639df7bec50d0b598ad0213c4a83d9a4b8093e91ed9689d6bd6cb5072112e57"
+		"sha256": "65a440cb3384ec65de0239f4c3afe00970c8e2dc71e5f48415e6515cd8cc0d4a"
 	},
 	"ual2/Sword_Regular_A_Rec.tpanim": {
 		"licence": "CC0-1.0",
@@ -613,7 +613,7 @@
 		"title": "Sword_Regular_A_Rec (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "4e9d44b3920b9e7bca747e3862cd7a9829079172c182ca1c27280d0b5a58659b"
+		"sha256": "0639cb5849600266f445f61dd583e67f0fc86f3bf896fbc702b907b3cecdf737"
 	},
 	"ual2/Sword_Regular_B.tpanim": {
 		"licence": "CC0-1.0",
@@ -621,7 +621,7 @@
 		"title": "Sword_Regular_B (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "78f74bc7e08c44fc57ca17d1524cabdf88d110ecc39add5468d1f65e82fab633"
+		"sha256": "ca7a4b5ea23c081a89d47e43e34b97e09ddd06b325013024b8bea60fa4e34b30"
 	},
 	"ual2/Sword_Regular_B_Rec.tpanim": {
 		"licence": "CC0-1.0",
@@ -629,7 +629,7 @@
 		"title": "Sword_Regular_B_Rec (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "ac3247625d1a91885bcecd9ac89f9d05e6bd570a04c9343962a6129790198a75"
+		"sha256": "79fcefc358f6d650204bb708accb20b6448cd6ff469153d7e04841d5815e547a"
 	},
 	"ual2/Sword_Regular_C.tpanim": {
 		"licence": "CC0-1.0",
@@ -637,7 +637,7 @@
 		"title": "Sword_Regular_C (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "42be3910a7359fd156de480e148e2f5bbafabbfb9e6f7b62a6043e5e576578b7"
+		"sha256": "79d5e0fe004353fac6233cfaa7f50fc994da27ce8d64f0ddc528fc0579ef27a0"
 	},
 	"ual2/Sword_Regular_Combo.tpanim": {
 		"licence": "CC0-1.0",
@@ -645,7 +645,7 @@
 		"title": "Sword_Regular_Combo (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "dea42011519ab2d2c66aa564f099d562e1724aa4d6b5cfcb3cb526d30633f5ef"
+		"sha256": "b6ae3ab75af1e5ce2f0261414caa5b072dc9b754f9d992e770434c2f2cf3d31a"
 	},
 	"ual2/TreeChopping_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -653,7 +653,7 @@
 		"title": "TreeChopping_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "8952c38f75dd7661c0b769fc947ce549845d89cb5cc83dd77edd284bc0aac0f8"
+		"sha256": "de8ac103682415caeb56fbfb8f56af11bfda6d8b87e238a4956d8d486750eadf"
 	},
 	"ual2/Walk_Carry_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -661,7 +661,7 @@
 		"title": "Walk_Carry_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "b6353ddc51dacfca27125e07f5355a75fd392f90416bceb293aedd92b2ebcf7b"
+		"sha256": "9d95c01655bbda19acb5ac11ecb95ccb75e3cba8dca3b51f00d8cb74e1a266bf"
 	},
 	"ual2/Yes.tpanim": {
 		"licence": "CC0-1.0",
@@ -669,7 +669,7 @@
 		"title": "Yes (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "767973148210dd220f6aea6c56e8a8f13f05b449e6c675dd8e30672662062fa6"
+		"sha256": "41da0e056b91c9ba53fcd965ffaba45c1901a296f5af24d68d4b15d9aa3dd152"
 	},
 	"ual2/Zombie_Idle_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -677,7 +677,7 @@
 		"title": "Zombie_Idle_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "6484ec17b25ad92b8c33584caaa2af6f0b1d935498099055d9913a1be45bea06"
+		"sha256": "63cf018a08e1b3f4d721441faa0d0c7b0c82cbf293ec4aa4e8fa379d9b83f81b"
 	},
 	"ual2/Zombie_Scratch.tpanim": {
 		"licence": "CC0-1.0",
@@ -685,7 +685,7 @@
 		"title": "Zombie_Scratch (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "423bf596b41d366fc423e22382cebc9bc227d2fd807b27c7ee95a158eca10716"
+		"sha256": "a361d3577183a17b601e44a118ac4d77649d1f6118a12125e8366194a99e4a98"
 	},
 	"ual2/Zombie_Walk_Fwd_Loop.tpanim": {
 		"licence": "CC0-1.0",
@@ -693,6 +693,6 @@
 		"title": "Zombie_Walk_Fwd_Loop (Universal Animation Library 2 (Standard))",
 		"source": "https://opengameart.org/sites/default/files/universal_animation_library_2standard.zip",
 		"url": "https://quaternius.com",
-		"sha256": "acdccc47b02326b251b89f13d26b2943ddf0ef590a1a3f70bb4eef705c607a6e"
+		"sha256": "27089c4fff9d5b7618819ddb138a0ffd79955bc086dcc6fffb0c4ea1f23225db"
 	}
 }

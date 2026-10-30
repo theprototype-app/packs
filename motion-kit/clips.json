@@ -9,7 +9,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 172660
+		"bytes": 76244
 	},
 	{
 		"name": "Crouch_Idle_Loop",
@@ -21,7 +21,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 232196
+		"bytes": 100456
 	},
 	{
 		"name": "Dance_Loop",
@@ -33,7 +33,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 108876
+		"bytes": 50296
 	},
 	{
 		"name": "Death01",
@@ -45,7 +45,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 198164
+		"bytes": 86608
 	},
 	{
 		"name": "Driving_Loop",
@@ -57,7 +57,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 151400
+		"bytes": 67608
 	},
 	{
 		"name": "Fixing_Kneeling",
@@ -69,7 +69,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 376828
+		"bytes": 159284
 	},
 	{
 		"name": "Hit_Chest",
@@ -81,7 +81,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 66360
+		"bytes": 32992
 	},
 	{
 		"name": "Hit_Head",
@@ -93,7 +93,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 72748
+		"bytes": 35596
 	},
 	{
 		"name": "Idle_Loop",
@@ -105,7 +105,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 204532
+		"bytes": 89188
 	},
 	{
 		"name": "Idle_Talking_Loop",
@@ -117,7 +117,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 232196
+		"bytes": 100460
 	},
 	{
 		"name": "Idle_Torch_Loop",
@@ -129,7 +129,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 125904
+		"bytes": 57244
 	},
 	{
 		"name": "Interact",
@@ -141,7 +141,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 172640
+		"bytes": 76224
 	},
 	{
 		"name": "Jog_Fwd_Loop",
@@ -153,7 +153,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 104648
+		"bytes": 48592
 	},
 	{
 		"name": "Jump_Land",
@@ -165,7 +165,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 125888
+		"bytes": 57228
 	},
 	{
 		"name": "Jump_Loop",
@@ -177,7 +177,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 204532
+		"bytes": 89188
 	},
 	{
 		"name": "Jump_Start",
@@ -189,7 +189,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 130140
+		"bytes": 58960
 	},
 	{
 		"name": "PickUp_Table",
@@ -201,7 +201,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 98276
+		"bytes": 45996
 	},
 	{
 		"name": "Pistol_Aim_Down",
@@ -213,7 +213,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 55532
+		"bytes": 28628
 	},
 	{
 		"name": "Pistol_Aim_Neutral",
@@ -225,7 +225,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 55544
+		"bytes": 28640
 	},
 	{
 		"name": "Pistol_Aim_Up",
@@ -237,7 +237,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 55528
+		"bytes": 28624
 	},
 	{
 		"name": "Pistol_Idle_Loop",
@@ -249,7 +249,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 151412
+		"bytes": 67620
 	},
 	{
 		"name": "Pistol_Reload",
@@ -261,7 +261,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 151408
+		"bytes": 67616
 	},
 	{
 		"name": "Pistol_Shoot",
@@ -273,7 +273,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 85520
+		"bytes": 40804
 	},
 	{
 		"name": "Punch_Cross",
@@ -285,7 +285,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 108880
+		"bytes": 50300
 	},
 	{
 		"name": "Punch_Enter",
@@ -297,7 +297,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 100396
+		"bytes": 46860
 	},
 	{
 		"name": "Punch_Jab",
@@ -309,7 +309,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 100392
+		"bytes": 46852
 	},
 	{
 		"name": "Push_Loop",
@@ -321,7 +321,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 215172
+		"bytes": 93524
 	},
 	{
 		"name": "Roll",
@@ -333,7 +333,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 138620
+		"bytes": 62400
 	},
 	{
 		"name": "Roll_RM",
@@ -345,7 +345,7 @@
 		"loop": false,
 		"rootMotion": true,
 		"humanoid": true,
-		"bytes": 138628
+		"bytes": 62408
 	},
 	{
 		"name": "Sitting_Enter",
@@ -357,7 +357,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 128024
+		"bytes": 58108
 	},
 	{
 		"name": "Sitting_Exit",
@@ -369,7 +369,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 111024
+		"bytes": 51188
 	},
 	{
 		"name": "Sitting_Idle_Loop",
@@ -381,7 +381,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 151416
+		"bytes": 67624
 	},
 	{
 		"name": "Sitting_Talking_Loop",
@@ -393,7 +393,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 232208
+		"bytes": 100468
 	},
 	{
 		"name": "Spell_Simple_Enter",
@@ -405,7 +405,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 79160
+		"bytes": 38224
 	},
 	{
 		"name": "Spell_Simple_Exit",
@@ -417,7 +417,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 72772
+		"bytes": 35620
 	},
 	{
 		"name": "Spell_Simple_Idle_Loop",
@@ -429,7 +429,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 179076
+		"bytes": 78876
 	},
 	{
 		"name": "Spell_Simple_Shoot",
@@ -441,7 +441,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 77016
+		"bytes": 37344
 	},
 	{
 		"name": "Sprint_Loop",
@@ -453,7 +453,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 87640
+		"bytes": 41668
 	},
 	{
 		"name": "Swim_Fwd_Loop",
@@ -465,7 +465,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 130148
+		"bytes": 58968
 	},
 	{
 		"name": "Swim_Idle_Loop",
@@ -477,7 +477,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 257852
+		"bytes": 110880
 	},
 	{
 		"name": "Sword_Attack",
@@ -489,7 +489,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 142892
+		"bytes": 64152
 	},
 	{
 		"name": "Sword_Attack_RM",
@@ -501,7 +501,7 @@
 		"loop": false,
 		"rootMotion": true,
 		"humanoid": true,
-		"bytes": 142900
+		"bytes": 64160
 	},
 	{
 		"name": "Sword_Idle",
@@ -513,7 +513,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 151396
+		"bytes": 67604
 	},
 	{
 		"name": "Walk_Formal_Loop",
@@ -525,7 +525,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 130156
+		"bytes": 58976
 	},
 	{
 		"name": "Walk_Loop",
@@ -537,7 +537,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 130136
+		"bytes": 58956
 	},
 	{
 		"name": "Chest_Open",
@@ -549,7 +549,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 161276
+		"bytes": 72212
 	},
 	{
 		"name": "ClimbUp_1m_RM",
@@ -561,7 +561,7 @@
 		"loop": false,
 		"rootMotion": true,
 		"humanoid": true,
-		"bytes": 106560
+		"bytes": 50024
 	},
 	{
 		"name": "Consume",
@@ -573,7 +573,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 158660
+		"bytes": 71144
 	},
 	{
 		"name": "Farm_Harvest",
@@ -585,7 +585,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249892
+		"bytes": 108112
 	},
 	{
 		"name": "Farm_PlantSeed",
@@ -597,7 +597,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 270756
+		"bytes": 116584
 	},
 	{
 		"name": "Farm_Watering",
@@ -609,7 +609,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 351700
+		"bytes": 149400
 	},
 	{
 		"name": "Hit_Knockback",
@@ -621,7 +621,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 119592
+		"bytes": 55312
 	},
 	{
 		"name": "Hit_Knockback_RM",
@@ -633,7 +633,7 @@
 		"loop": false,
 		"rootMotion": true,
 		"humanoid": true,
-		"bytes": 119596
+		"bytes": 55320
 	},
 	{
 		"name": "Idle_FoldArms_Loop",
@@ -645,7 +645,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249908
+		"bytes": 108128
 	},
 	{
 		"name": "Idle_Lantern_Loop",
@@ -657,7 +657,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249904
+		"bytes": 108128
 	},
 	{
 		"name": "Idle_No_Loop",
@@ -669,7 +669,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249888
+		"bytes": 108112
 	},
 	{
 		"name": "Idle_Rail_Call",
@@ -681,7 +681,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249896
+		"bytes": 108120
 	},
 	{
 		"name": "Idle_Rail_Loop",
@@ -693,7 +693,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249896
+		"bytes": 108116
 	},
 	{
 		"name": "Idle_Shield_Break",
@@ -705,7 +705,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 137836
+		"bytes": 62724
 	},
 	{
 		"name": "Idle_Shield_Loop",
@@ -717,7 +717,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249900
+		"bytes": 108124
 	},
 	{
 		"name": "Idle_TalkingPhone_Loop",
@@ -729,7 +729,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 283800
+		"bytes": 121884
 	},
 	{
 		"name": "LayToIdle",
@@ -741,7 +741,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 174312
+		"bytes": 77488
 	},
 	{
 		"name": "Melee_Hook",
@@ -753,7 +753,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 90916
+		"bytes": 43668
 	},
 	{
 		"name": "Melee_Hook_Rec",
@@ -765,7 +765,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 101352
+		"bytes": 47916
 	},
 	{
 		"name": "NinjaJump_Idle_Loop",
@@ -777,7 +777,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 210820
+		"bytes": 92288
 	},
 	{
 		"name": "NinjaJump_Land",
@@ -789,7 +789,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 153460
+		"bytes": 69052
 	},
 	{
 		"name": "NinjaJump_Start",
@@ -801,7 +801,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 130016
+		"bytes": 59548
 	},
 	{
 		"name": "OverhandThrow",
@@ -813,7 +813,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 158676
+		"bytes": 71164
 	},
 	{
 		"name": "Shield_Dash_RM",
@@ -825,7 +825,7 @@
 		"loop": false,
 		"rootMotion": true,
 		"humanoid": true,
-		"bytes": 140432
+		"bytes": 63768
 	},
 	{
 		"name": "Shield_OneShot",
@@ -837,7 +837,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 119592
+		"bytes": 55316
 	},
 	{
 		"name": "Slide_Exit",
@@ -849,7 +849,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 93504
+		"bytes": 44712
 	},
 	{
 		"name": "Slide_Loop",
@@ -861,7 +861,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 210796
+		"bytes": 92260
 	},
 	{
 		"name": "Slide_Start",
@@ -873,7 +873,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 119584
+		"bytes": 55308
 	},
 	{
 		"name": "Sword_Block",
@@ -885,7 +885,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 150844
+		"bytes": 67988
 	},
 	{
 		"name": "Sword_Dash_RM",
@@ -897,7 +897,7 @@
 		"loop": false,
 		"rootMotion": true,
 		"humanoid": true,
-		"bytes": 176932
+		"bytes": 78556
 	},
 	{
 		"name": "Sword_Regular_A",
@@ -909,7 +909,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 88320
+		"bytes": 42624
 	},
 	{
 		"name": "Sword_Regular_A_Rec",
@@ -921,7 +921,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 130028
+		"bytes": 59560
 	},
 	{
 		"name": "Sword_Regular_B",
@@ -933,7 +933,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 96144
+		"bytes": 45800
 	},
 	{
 		"name": "Sword_Regular_B_Rec",
@@ -945,7 +945,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 135240
+		"bytes": 61672
 	},
 	{
 		"name": "Sword_Regular_C",
@@ -957,7 +957,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 210812
+		"bytes": 92280
 	},
 	{
 		"name": "Sword_Regular_Combo",
@@ -969,7 +969,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 288988
+		"bytes": 123976
 	},
 	{
 		"name": "TreeChopping_Loop",
@@ -981,7 +981,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 130020
+		"bytes": 59552
 	},
 	{
 		"name": "Walk_Carry_Loop",
@@ -993,7 +993,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 210808
+		"bytes": 92276
 	},
 	{
 		"name": "Yes",
@@ -1005,7 +1005,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 249864
+		"bytes": 108088
 	},
 	{
 		"name": "Zombie_Idle_Loop",
@@ -1017,7 +1017,7 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 158684
+		"bytes": 71172
 	},
 	{
 		"name": "Zombie_Scratch",
@@ -1029,7 +1029,7 @@
 		"loop": false,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 195184
+		"bytes": 85956
 	},
 	{
 		"name": "Zombie_Walk_Fwd_Loop",
@@ -1041,6 +1041,6 @@
 		"loop": true,
 		"rootMotion": false,
 		"humanoid": true,
-		"bytes": 158696
+		"bytes": 71184
 	}
 ]
