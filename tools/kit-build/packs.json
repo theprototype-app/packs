@@ -34,6 +34,11 @@
 			"maxExtent": 3,
 			"about": "showcase props, few per scene"
 		},
+		"character": {
+			"tris": 15000,
+			"maxExtent": 3,
+			"about": "rigged humanoid characters (a VRM avatar, a mannequin): a handful per scene"
+		},
 		"set": {
 			"tris": 12000,
 			"maxExtent": 6,
@@ -385,6 +390,13 @@
 			"category": "legacy",
 			"pivot": "any",
 			"about": "upstream-fetch: every row is an absolute URL into KhronosGroup/glTF-Sample-Assets, no bytes here"
+		},
+		"characters-kit": {
+			"textureCap": 2048,
+			"emissive": "allowed",
+			"category": "character",
+			"pivot": "bottom-center",
+			"about": "core roadmap 57 M5: CC0 VRM avatars (100Avatars, Polygonal Mind) + Quaternius mannequins (tools/characters-kit); VRM files ship as they are, so their MToon emissive stays"
 		},
 		"avatars": {
 			"textureCap": 256,

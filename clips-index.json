@@ -1,0 +1,11 @@
+[
+  {
+    "name": "motion-kit",
+    "title": "Motion (humanoid clips)",
+    "value": "motion-kit/clips.json",
+    "attribution": "motion-kit/attribution.html",
+    "copyright": "(c) Quaternius",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/motion-kit"
+  }
+]
