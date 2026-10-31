@@ -12,6 +12,8 @@ cube_diorama/                    Blender Studio's Cube Diorama, split per object
 khronos-sample-assets/           metadata only — model bytes are fetched straight from
                                  github.com/KhronosGroup/glTF-Sample-Assets (CC-BY 4.0)
 audio-essentials/                23 CC0 sounds (Kenney + OpenGameArt), installable .zip
+hdri/                            the five Configure-scene skies (CC0 Poly Haven 1k .hdr) — not a pack;
+                                 the app downloads one on first pick (see hdri/CREDITS.md)
 nature-kit/                      Nature & Terrain: 31 trees/plants/rocks/cliff/path/pond pieces
                                  (made with Meshy.ai, CC0) — see nature-kit/kit.md
 architecture-kit/                Modular Architecture Kit: 32 walls/floors/roof/stairs/tower pieces
@@ -104,6 +106,7 @@ reading the ref they were built against.
   post-processed here (`tools/architecture-kit/`) — see its `attribution.html` and `kit.md`.
 - `props-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) (paid
   plan: the output is ours) plus procedural pieces — see its `attribution.html` and `kit.md`.
+- `hdri/` — all CC0 (Poly Haven); per-file credits in [hdri/CREDITS.md](hdri/CREDITS.md).
 - `audio-essentials/` — all CC0; per-file sources in
   [CREDITS.md](audio-essentials/CREDITS.md) (Kenney.nl, OpenGameArt).
 - `nature-kit/` — © theprototype, CC0; made with [Meshy.ai](https://www.meshy.ai) and
