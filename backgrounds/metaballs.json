@@ -1,0 +1,308 @@
+{
+	"format": 1,
+	"domain": "background",
+	"name": "Metaballs",
+	"preset": "metaballs",
+	"layer": {
+		"pointer": true,
+		"scroll": false
+	},
+	"nodes": [
+		{
+			"id": "uv",
+			"type": "aspectUv",
+			"position": {
+				"x": 40,
+				"y": 40
+			},
+			"data": {}
+		},
+		{
+			"id": "ptr",
+			"type": "pointer",
+			"position": {
+				"x": 40,
+				"y": 220
+			},
+			"data": {}
+		},
+		{
+			"id": "ptrUv",
+			"type": "aspectUv",
+			"position": {
+				"x": 240,
+				"y": 240
+			},
+			"data": {}
+		},
+		{
+			"id": "blobs",
+			"type": "blobs",
+			"position": {
+				"x": 460,
+				"y": 60
+			},
+			"data": {
+				"count": 6,
+				"radius": 0.11,
+				"speed": 0.45,
+				"smoothness": 0.14,
+				"softness": 0.006,
+				"attractRadius": 0.085
+			}
+		},
+		{
+			"id": "chan",
+			"type": "split",
+			"position": {
+				"x": 260,
+				"y": 420
+			},
+			"data": {}
+		},
+		{
+			"id": "bg",
+			"type": "gradient",
+			"position": {
+				"x": 700,
+				"y": 360
+			},
+			"data": {
+				"colorA": "#120a2a",
+				"colorB": "#1c1450",
+				"colorC": "#2a1a5e",
+				"mid": 0.5
+			}
+		},
+		{
+			"id": "fill",
+			"type": "gradient",
+			"position": {
+				"x": 700,
+				"y": 120
+			},
+			"data": {
+				"colorA": "#ff4fa3",
+				"colorB": "#ff9a5a",
+				"colorC": "#ffe46b",
+				"mid": 0.5
+			}
+		},
+		{
+			"id": "body",
+			"type": "mix",
+			"position": {
+				"x": 940,
+				"y": 200
+			},
+			"data": {}
+		},
+		{
+			"id": "glowRise",
+			"type": "smoothstep",
+			"position": {
+				"x": 940,
+				"y": 420
+			},
+			"data": {
+				"edge0": 0,
+				"edge1": 0.16
+			}
+		},
+		{
+			"id": "glowW",
+			"type": "oneMinus",
+			"position": {
+				"x": 1000,
+				"y": 520
+			},
+			"data": {}
+		},
+		{
+			"id": "glowAmt",
+			"type": "float",
+			"position": {
+				"x": 940,
+				"y": 560
+			},
+			"data": {
+				"value": 0.35
+			}
+		},
+		{
+			"id": "glow",
+			"type": "multiply",
+			"position": {
+				"x": 1140,
+				"y": 440
+			},
+			"data": {}
+		},
+		{
+			"id": "glowCol",
+			"type": "color",
+			"position": {
+				"x": 1140,
+				"y": 600
+			},
+			"data": {
+				"value": "#ff6ad5"
+			}
+		},
+		{
+			"id": "glowRgb",
+			"type": "multiply",
+			"position": {
+				"x": 1320,
+				"y": 460
+			},
+			"data": {}
+		},
+		{
+			"id": "lit",
+			"type": "add",
+			"position": {
+				"x": 1500,
+				"y": 260
+			},
+			"data": {}
+		},
+		{
+			"id": "out",
+			"type": "backgroundOutput",
+			"position": {
+				"x": 1700,
+				"y": 260
+			},
+			"data": {}
+		}
+	],
+	"edges": [
+		{
+			"id": "e-uv.out-blobs.uv",
+			"source": "uv",
+			"sourceHandle": "out",
+			"target": "blobs",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-ptr.position-ptrUv.uv",
+			"source": "ptr",
+			"sourceHandle": "position",
+			"target": "ptrUv",
+			"targetHandle": "uv"
+		},
+		{
+			"id": "e-ptrUv.out-blobs.attract",
+			"source": "ptrUv",
+			"sourceHandle": "out",
+			"target": "blobs",
+			"targetHandle": "attract"
+		},
+		{
+			"id": "e-uv.out-chan.value",
+			"source": "uv",
+			"sourceHandle": "out",
+			"target": "chan",
+			"targetHandle": "value"
+		},
+		{
+			"id": "e-chan.y-bg.t",
+			"source": "chan",
+			"sourceHandle": "y",
+			"target": "bg",
+			"targetHandle": "t"
+		},
+		{
+			"id": "e-chan.y-fill.t",
+			"source": "chan",
+			"sourceHandle": "y",
+			"target": "fill",
+			"targetHandle": "t"
+		},
+		{
+			"id": "e-bg.out-body.a",
+			"source": "bg",
+			"sourceHandle": "out",
+			"target": "body",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-fill.out-body.b",
+			"source": "fill",
+			"sourceHandle": "out",
+			"target": "body",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-blobs.mask-body.t",
+			"source": "blobs",
+			"sourceHandle": "mask",
+			"target": "body",
+			"targetHandle": "t"
+		},
+		{
+			"id": "e-blobs.sdf-glowRise.a",
+			"source": "blobs",
+			"sourceHandle": "sdf",
+			"target": "glowRise",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-glowRise.out-glowW.a",
+			"source": "glowRise",
+			"sourceHandle": "out",
+			"target": "glowW",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-glowW.out-glow.a",
+			"source": "glowW",
+			"sourceHandle": "out",
+			"target": "glow",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-glowAmt.out-glow.b",
+			"source": "glowAmt",
+			"sourceHandle": "out",
+			"target": "glow",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-glowCol.out-glowRgb.a",
+			"source": "glowCol",
+			"sourceHandle": "out",
+			"target": "glowRgb",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-glow.out-glowRgb.b",
+			"source": "glow",
+			"sourceHandle": "out",
+			"target": "glowRgb",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-body.out-lit.a",
+			"source": "body",
+			"sourceHandle": "out",
+			"target": "lit",
+			"targetHandle": "a"
+		},
+		{
+			"id": "e-glowRgb.out-lit.b",
+			"source": "glowRgb",
+			"sourceHandle": "out",
+			"target": "lit",
+			"targetHandle": "b"
+		},
+		{
+			"id": "e-lit.out-out.color",
+			"source": "lit",
+			"sourceHandle": "out",
+			"target": "out",
+			"targetHandle": "color"
+		}
+	]
+}
