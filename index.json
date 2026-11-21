@@ -36,6 +36,15 @@
     "source": "https://github.com/theprototype-app/packs"
   },
   {
+    "name": "decals-starter",
+    "title": "Decals Starter",
+    "zip": "/decals-starter/decals-starter.zip",
+    "attribution": "decals-starter/attribution.html",
+    "copyright": "",
+    "license": "CC0-1.0",
+    "source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+  },
+  {
     "name": "nature-kit",
     "title": "Nature & Terrain",
     "value": "nature-kit/default.json",

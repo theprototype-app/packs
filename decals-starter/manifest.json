@@ -1,0 +1,154 @@
+{
+	"id": "decals-starter",
+	"name": "Decals Starter",
+	"author": "theprototype.app (CC0)",
+	"license": "CC0-1.0",
+	"homepage": "https://github.com/theprototype-app/packs",
+	"description": "Arrows, signs, dirt and cracks to project onto surfaces: right-click a surface, Add decal here, then pick one as the image.",
+	"items": [
+		{
+			"name": "Arrow",
+			"file": "assets/arrow.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"arrows"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Chevrons",
+			"file": "assets/chevrons.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"arrows"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Turn arrow",
+			"file": "assets/turn-arrow.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"arrows"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Warning sign",
+			"file": "assets/warning.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"signs"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "No entry sign",
+			"file": "assets/no-entry.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"signs"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Hazard stripes",
+			"file": "assets/hazard-stripes.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"signs"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Dirt splat",
+			"file": "assets/dirt-splat.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"dirt"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Mud smear",
+			"file": "assets/mud-smear.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"dirt"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Footprint",
+			"file": "assets/footprint.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"dirt"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Crack",
+			"file": "assets/crack.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"cracks"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Impact cracks",
+			"file": "assets/impact-crack.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"cracks"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		},
+		{
+			"name": "Scorch mark",
+			"file": "assets/scorch.png",
+			"kind": "texture",
+			"tags": [
+				"decal",
+				"cracks"
+			],
+			"license": "CC0-1.0",
+			"author": "theprototype.app",
+			"source": "https://github.com/theprototype-app/packs/tree/main/tools/decals-kit"
+		}
+	]
+}

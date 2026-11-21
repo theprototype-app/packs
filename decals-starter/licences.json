@@ -1,0 +1,92 @@
+{
+	"assets/arrow.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/arrow.svg",
+		"sha256": "278b0c75895a9a042d0a6b1472ada7b1768539a0dd8844635bab4cc375111954"
+	},
+	"assets/chevrons.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/chevrons.svg",
+		"sha256": "f2163d20b16f9a8134fc382da7230b66ae62127955e88b18259191973c5e40cc"
+	},
+	"assets/turn-arrow.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/turn-arrow.svg",
+		"sha256": "0a610756da3386276b3e96be545c6d81f8e984457f059921825bcb5290dae7aa"
+	},
+	"assets/warning.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/warning.svg",
+		"sha256": "b378dbb65eee1e4f725dad6324f3168a0449987948bad2360614717b555012bf"
+	},
+	"assets/no-entry.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/no-entry.svg",
+		"sha256": "cb99e38cedbf9e44df6132d7fd93fe378d68a9997b0f99de66c6b51073712db3"
+	},
+	"assets/hazard-stripes.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/hazard-stripes.svg",
+		"sha256": "1c0380764c1434334b36a2e649b6528e8d96885709404c394ba0dd30f99c8d0a"
+	},
+	"assets/dirt-splat.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/dirt-splat.svg",
+		"sha256": "021487521ab7d5f1bc51ce7cf34ef25a969f19417ee888f7a1c1160046348678"
+	},
+	"assets/mud-smear.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/mud-smear.svg",
+		"sha256": "ef4dc0ec40129fb7d8ec12d8acf4db81d58746df4e39bb10eca2a35ffc35a54b"
+	},
+	"assets/footprint.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/footprint.svg",
+		"sha256": "35204473679cfa6388b58583658d9746670ca03da3f7819a022fc621f87c2ec2"
+	},
+	"assets/crack.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/crack.svg",
+		"sha256": "ae29035a23031b10d9971d59efc187120302bd587cbfbf6e2b9d0032ab5598f8"
+	},
+	"assets/impact-crack.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/impact-crack.svg",
+		"sha256": "ed2dee56aa71c1e2cfc45a96d0264509c028362150b8cf3bba66d2845f9450cd"
+	},
+	"assets/scorch.png": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/svg/scorch.svg",
+		"sha256": "db5bd9c9cf11df5082f5ee47996c33e50d5b0f9327ec424e7fddd4591df609b5"
+	},
+	"manifest.json": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/build.mjs",
+		"sha256": "32ebd4a8c0c4fc41512e4b2a18b9badf965dedb99ebb076f0266563d1cb0e4d9"
+	},
+	"CREDITS.md": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/build.mjs",
+		"sha256": "169a90e9bcf854ce30bf709b67b4243b0f75ab502d131d7bcc12a6811b5f0add"
+	},
+	"decals-starter.zip": {
+		"licence": "CC0-1.0",
+		"author": "theprototype.app",
+		"source": "tools/decals-kit/build.mjs",
+		"sha256": "714b41f514d7b906eea4738b9b46ea0896c8278d91cd5fef8a6bf14407845848"
+	}
+}
